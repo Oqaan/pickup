@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: pickup
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pickup
+    username: pickup
+    password: dev
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
