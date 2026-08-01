@@ -41,6 +41,6 @@ public class Series {
     @OrderBy("sortOrder ASC")
     private List<Adaptation> adaptations = new ArrayList<>();
 
-    protected Series() {
+    public Series() {
     } // No-Args-Constructor
 }

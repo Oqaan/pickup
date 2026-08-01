@@ -1,0 +1,62 @@
+- slug: jujutsu-kaisen
+  title: Jujutsu Kaisen
+  titleNative: 呪術廻戦
+  adaptations:
+    - name: Season 1
+      episodes: 24
+      continueChapter: 64
+      continueVolume: 8
+      lastCoveredChapter: 63
+      sortOrder: 1
+    - name: Season 2
+      episodes: 23
+      continueChapter: 138
+      continueVolume: 16
+      lastCoveredChapter: 139
+      sortOrder: 2
+      notes: "The finale adapts a couple of pages from 138 and the opening of 139 — start at 138 anyway, you'll only re-read a few panels."
+    - name: "Season 3 — The Culling Game Part 1"
+      episodes: 12
+      continueChapter: 181
+      continueVolume: 21
+      lastCoveredChapter: 181
+      sortOrder: 3
+      notes: "Only fragments of 181 made it into the finale, so read it in full. The arc continues in Season 4."
+    - name: Jujutsu Kaisen 0 (Movie)
+      sortOrder: 0
+      notes: "Canon prequel, adapts the separate single-volume Jujutsu Kaisen 0 manga rather than the main series. Not a continuation point."
+
+- slug: vinland-saga
+  title: Vinland Saga
+  titleNative: ヴィンランド・サガ
+  adaptations:
+    - name: Season 1
+      episodes: 24
+      continueChapter: 55
+      lastCoveredChapter: 54
+      sortOrder: 1
+      notes: "Clean break at the end of the War Arc."
+    - name: Season 2
+      episodes: 24
+      continueChapter: 101
+      lastCoveredChapter: 101
+      sortOrder: 2
+      notes: "The finale only uses the last few pages of 101, so read the whole chapter."
+
+- slug: chainsaw-man
+  title: Chainsaw Man
+  titleNative: チェンソーマン
+  adaptations:
+    - name: Season 1
+      episodes: 12
+      continueChapter: 39
+      continueVolume: 5
+      lastCoveredChapter: 38
+      sortOrder: 1
+      notes: "Ends mid-Katana Man arc, but chapter 38 is fully animated — clean break."
+    - name: "The Movie: Reze Arc"
+      continueChapter: 53
+      continueVolume: 7
+      lastCoveredChapter: 52
+      sortOrder: 2
+      notes: "Picks up exactly where Season 1 ends. Season 2 (Assassins Arc) continues from here."
