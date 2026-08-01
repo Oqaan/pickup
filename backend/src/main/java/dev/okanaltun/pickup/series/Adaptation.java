@@ -40,6 +40,6 @@ public class Adaptation {
 
     private String notes;
 
-    protected Adaptation() {
+    public Adaptation() {
     }
 }
