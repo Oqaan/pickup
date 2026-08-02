@@ -74,3 +74,47 @@
       sortOrder: 2
       notes: "Picks up exactly where Season 1 ends. Season 2 (Assassins Arc) continues from here."
       coverUrl: https://uploads.mangadex.org/covers/a77742b1-befd-49a4-bff5-1ad4e6b0ef7b/ed29e94c-e2c3-4592-b2cc-bffe584c3c1b.jpg.512.jpg
+
+- slug: tokyo-ghoul
+  title: Tokyo Ghoul
+  titleNative: 東京喰種
+  popularity: 70
+  mangadexId: 6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b
+  coverUrl: https://uploads.mangadex.org/covers/6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b/040e8ae9-4ddd-49d2-8986-56782b391714.jpg.512.jpg
+  adaptations:
+    - name: Season 1
+      episodes: 12
+      continueChapter: 67
+      lastCoveredChapter: 66
+      sortOrder: 1
+    - name: "Season 2 — Tokyo Ghoul √A"
+      episodes: 12
+      continueChapter: 67
+      lastCoveredChapter: 66
+      animeOriginal: true
+      sortOrder: 2
+      notes: "√A goes its own way and only borrows scattered chapters. Start at 67 as if you'd stopped after season 1, or you'll skip most of the story."
+
+- slug: spy-x-family
+  title: Spy x Family
+  titleNative: スパイファミリー
+  popularity: 85
+  mangadexId: 6b958848-c885-4735-9201-12ee77abcb3c
+  coverUrl: https://uploads.mangadex.org/covers/6b958848-c885-4735-9201-12ee77abcb3c/d8babd13-5736-4964-8963-b444a950d539.jpg.512.jpg
+  adaptations:
+    - name: Season 1
+      episodes: 25
+      continueChapter: 39
+      lastCoveredChapter: 38
+      sortOrder: 1
+    - name: Season 2
+      episodes: 12
+      continueChapter: 60
+      lastCoveredChapter: 59
+      sortOrder: 2
+    - name: Season 3
+      episodes: 13
+      continueChapter: 88
+      lastCoveredChapter: 87
+      sortOrder: 3
+      notes: "A few short missions were skipped along the way, so you may hit chapters you haven't seen animated."
