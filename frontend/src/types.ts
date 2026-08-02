@@ -6,6 +6,7 @@ export type Adaptation = {
   lastCoveredChapter: number | null;
   animeOriginal: boolean;
   notes: string | null;
+  coverUrl: string | null
 };
 
 export type SeriesDetail = {

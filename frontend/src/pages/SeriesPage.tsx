@@ -14,7 +14,10 @@ export default function SeriesPage() {
     fetchSeriesDetail(slug)
       .then((data) => {
         setSeries(data);
-        setSelected(data.adaptations.length - 1);
+        const lastReal = data.adaptations.findLastIndex(
+          (a) => a.continueChapter !== null,
+        );
+        setSelected(lastReal >= 0 ? lastReal : data.adaptations.length - 1);
       })
       .catch((e: Error) => setError(e.message));
   }, [slug]);

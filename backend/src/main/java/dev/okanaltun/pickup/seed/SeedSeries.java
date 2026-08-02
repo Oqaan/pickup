@@ -8,7 +8,8 @@ public record SeedSeries(
                 String titleNative,
                 String coverUrl,
                 List<SeedAdaptation> adaptations,
-                Integer popularity) {
+                Integer popularity,
+                String mangadexId) {
 
         public record SeedAdaptation(
                         String name,
@@ -18,6 +19,7 @@ public record SeedSeries(
                         Integer continueVolume,
                         Integer lastCoveredChapter,
                         Boolean animeOriginal,
+                        String coverUrl,
                         String notes) {
         }
 }

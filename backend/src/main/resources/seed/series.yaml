@@ -2,6 +2,8 @@
   title: Jujutsu Kaisen
   titleNative: 呪術廻戦
   popularity: 100
+  mangadexId: c52b2ce3-7f95-469c-96b0-479524fb7a1a
+  coverUrl: https://uploads.mangadex.org/covers/c52b2ce3-7f95-469c-96b0-479524fb7a1a/34bbf92f-b92e-43e4-9dde-bbd48bd83bcd.jpg.512.jpg
   adaptations:
     - name: Season 1
       episodes: 24
@@ -9,6 +11,7 @@
       continueVolume: 8
       lastCoveredChapter: 63
       sortOrder: 1
+      coverUrl: https://uploads.mangadex.org/covers/c52b2ce3-7f95-469c-96b0-479524fb7a1a/e4941ede-4550-476f-a418-e6f28d2465a5.jpg.512.jpg
     - name: Season 2
       episodes: 23
       continueChapter: 138
@@ -16,6 +19,7 @@
       lastCoveredChapter: 139
       sortOrder: 2
       notes: "The finale adapts a couple of pages from 138 and the opening of 139 — start at 138 anyway, you'll only re-read a few panels."
+      coverUrl: https://uploads.mangadex.org/covers/c52b2ce3-7f95-469c-96b0-479524fb7a1a/e9c3f65d-be95-4397-a67f-331308e97a4c.jpg.512.jpg
     - name: "Season 3 — The Culling Game Part 1"
       episodes: 12
       continueChapter: 181
@@ -23,14 +27,17 @@
       lastCoveredChapter: 181
       sortOrder: 3
       notes: "Only fragments of 181 made it into the finale, so read it in full. The arc continues in Season 4."
+      coverUrl: https://uploads.mangadex.org/covers/c52b2ce3-7f95-469c-96b0-479524fb7a1a/817defac-886c-4746-943e-0bd2fb626f23.jpg.512.jpg
     - name: Jujutsu Kaisen 0 (Movie)
-      sortOrder: 0
+      sortOrder: 4
       notes: "Canon prequel, adapts the separate single-volume Jujutsu Kaisen 0 manga rather than the main series. Not a continuation point."
 
 - slug: vinland-saga
   title: Vinland Saga
   titleNative: ヴィンランド・サガ
   popularity: 90
+  mangadexId: 5d1fc77e-706a-4fc5-bea8-486c9be0145d
+  coverUrl: https://uploads.mangadex.org/covers/5d1fc77e-706a-4fc5-bea8-486c9be0145d/47e19a12-b0fb-4b52-b105-c202c555b966.jpg.512.jpg
   adaptations:
     - name: Season 1
       episodes: 24
@@ -49,6 +56,8 @@
   title: Chainsaw Man
   titleNative: チェンソーマン
   popularity: 80
+  mangadexId: a77742b1-befd-49a4-bff5-1ad4e6b0ef7b
+  coverUrl: https://uploads.mangadex.org/covers/a77742b1-befd-49a4-bff5-1ad4e6b0ef7b/07b6e139-194a-4438-b07a-57db2f4f22f8.jpg.512.jpg
   adaptations:
     - name: Season 1
       episodes: 12
@@ -57,9 +66,11 @@
       lastCoveredChapter: 38
       sortOrder: 1
       notes: "Ends mid-Katana Man arc, but chapter 38 is fully animated — clean break."
+      coverUrl: https://uploads.mangadex.org/covers/a77742b1-befd-49a4-bff5-1ad4e6b0ef7b/0011ae02-431b-44d6-872d-7e39f6c66009.jpg.512.jpg
     - name: "The Movie: Reze Arc"
       continueChapter: 53
       continueVolume: 7
       lastCoveredChapter: 52
       sortOrder: 2
       notes: "Picks up exactly where Season 1 ends. Season 2 (Assassins Arc) continues from here."
+      coverUrl: https://uploads.mangadex.org/covers/a77742b1-befd-49a4-bff5-1ad4e6b0ef7b/ed29e94c-e2c3-4592-b2cc-bffe584c3c1b.jpg.512.jpg
