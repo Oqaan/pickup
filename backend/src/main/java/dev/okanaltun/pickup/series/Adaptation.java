@@ -40,6 +40,9 @@ public class Adaptation {
 
     private String notes;
 
+    @Column(name = "cover_url")
+    private String coverUrl;
+
     public Adaptation() {
     }
 }

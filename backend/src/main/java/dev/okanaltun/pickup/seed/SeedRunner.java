@@ -55,6 +55,7 @@ public class SeedRunner implements CommandLineRunner {
         series.setTitleNative(entry.titleNative());
         series.setCoverUrl(entry.coverUrl());
         series.setPopularity(entry.popularity() != null ? entry.popularity() : 0);
+        series.setMangadexId(entry.mangadexId());
 
         if (entry.adaptations() != null) {
             for (SeedSeries.SeedAdaptation a : entry.adaptations()) {
@@ -67,6 +68,7 @@ public class SeedRunner implements CommandLineRunner {
                 adaptation.setLastCoveredChapter(a.lastCoveredChapter());
                 adaptation.setAnimeOriginal(Boolean.TRUE.equals(a.animeOriginal()));
                 adaptation.setNotes(a.notes());
+                adaptation.setCoverUrl(a.coverUrl());
                 // Adaptation owns the relationship; without setSeries() the series_id column stays null
                 adaptation.setSeries(series);
                 series.getAdaptations().add(adaptation);
