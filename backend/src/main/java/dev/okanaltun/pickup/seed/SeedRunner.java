@@ -54,6 +54,7 @@ public class SeedRunner implements CommandLineRunner {
         series.setTitle(entry.title());
         series.setTitleNative(entry.titleNative());
         series.setCoverUrl(entry.coverUrl());
+        series.setPopularity(entry.popularity() != null ? entry.popularity() : 0);
 
         if (entry.adaptations() != null) {
             for (SeedSeries.SeedAdaptation a : entry.adaptations()) {

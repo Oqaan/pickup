@@ -37,6 +37,9 @@ public class Series {
     @Column(nullable = false)
     private String status = "published";
 
+    @Column(nullable = false)
+    private int popularity = 0;
+
     @OneToMany(mappedBy = "series", cascade = CascadeType.ALL, orphanRemoval = true)
     @OrderBy("sortOrder ASC")
     private List<Adaptation> adaptations = new ArrayList<>();

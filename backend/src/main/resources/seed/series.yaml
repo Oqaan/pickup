@@ -1,6 +1,7 @@
 - slug: jujutsu-kaisen
   title: Jujutsu Kaisen
   titleNative: 呪術廻戦
+  popularity: 100
   adaptations:
     - name: Season 1
       episodes: 24
@@ -29,6 +30,7 @@
 - slug: vinland-saga
   title: Vinland Saga
   titleNative: ヴィンランド・サガ
+  popularity: 90
   adaptations:
     - name: Season 1
       episodes: 24
@@ -46,6 +48,7 @@
 - slug: chainsaw-man
   title: Chainsaw Man
   titleNative: チェンソーマン
+  popularity: 80
   adaptations:
     - name: Season 1
       episodes: 12
