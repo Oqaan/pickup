@@ -1,0 +1,1 @@
+alter table series add column popularity int not null default 0;
