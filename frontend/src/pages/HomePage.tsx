@@ -20,37 +20,61 @@ export default function HomePage() {
   const results = query ? fuse.search(query).map((r) => r.item) : series;
 
   return (
-    <main className="max-w-2xl mx-auto px-6 py-16">
-      <h1 className="font-display text-6xl text-sumi leading-none">pickup</h1>
-      <p className="font-body text-sumi/70 mt-3">
-        Finished the anime? Find out where to start the manga.
+    <main className="max-w-4xl mx-auto px-6 py-24">
+      <p className="font-mono text-xs tracking-widest text-tone">PICKUP</p>
+
+      <h1 className="font-display text-4xl text-sumi leading-tight mt-6 max-w-lg">
+        Stop watching.
+        <br />
+        Start reading.
+      </h1>
+
+      <p className="font-body text-base text-sumi/70 mt-5 max-w-md leading-relaxed">
+        Wherever you left the anime, pick the series and get the chapter to read
+        from.
       </p>
 
       <input
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search a series"
-        className="font-mono text-lg w-full mt-12 pb-2 bg-transparent border-b border-tone text-sumi placeholder:text-tone focus:outline-none focus:border-jump"
+        className="font-mono text-xl w-full mt-14 pb-3 bg-transparent border-b border-tone text-sumi placeholder:text-tone focus:outline-none focus:border-jump"
       />
 
-      <ul className="mt-8 space-y-1">
+      <p className="font-mono text-xs tracking-widest text-tone mt-16">
+        {query ? `${results.length} RESULTS` : `${series.length} SERIES`}
+      </p>
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-10 mt-6">
         {results.map((s) => (
-          <li key={s.slug}>
-            <Link
-              to={`/anime/${s.slug}`}
-              className="font-body text-lg text-sumi hover:text-jump block py-2"
-            >
+          <Link key={s.slug} to={`/anime/${s.slug}`} className="group">
+            <div className="aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition">
+              {s.coverUrl && (
+                <img
+                  src={s.coverUrl}
+                  alt=""
+                  loading="lazy"
+                  className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
+                />
+              )}
+            </div>
+            <p className="font-body text-sm text-sumi group-hover:text-jump mt-3 leading-snug">
               {s.title}
-            </Link>
-          </li>
+            </p>
+          </Link>
         ))}
-      </ul>
+      </div>
 
       {query && results.length === 0 && (
-        <p className="font-body text-sm text-tone mt-8">
-          Nothing found. It might not be in the database yet.
+        <p className="font-body text-sm text-sumi/70 mt-8 max-w-prose">
+          Not in the database yet. It's a small list for now, growing as I
+          verify each entry by hand.
         </p>
       )}
+
+      <p className="font-mono text-xs text-tone mt-24">
+        Every entry checked against the source material.
+      </p>
     </main>
   );
 }

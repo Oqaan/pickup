@@ -1,12 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-paper: #FAF9F6;
-  --color-sumi: #14110F;
-  --color-tone: #C9C6C0;
-  --color-jump: #E5322B;
+  --color-paper: #faf9f6;
+  --color-sumi: #14110f;
+  --color-tone: #c9c6c0;
+  --color-jump: #e5322b;
 
   --font-display: "Archivo Black", sans-serif;
   --font-body: "IBM Plex Sans", sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
+}
+
+/* Moving interfaces can make some people dizzy. If their OS is set to reduce motion, turn transitions off. */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
 }
