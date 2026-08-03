@@ -26,6 +26,11 @@ export default function HomePage() {
   const results =
     query.length >= 2 ? fuse.search(query).map((r) => r.item) : series;
 
+  const label =
+    query.length < 2
+      ? "MOST READ"
+      : `${results.length} ${results.length === 1 ? "RESULT" : "RESULTS"}`;
+
   return (
     <main className="max-w-4xl mx-auto px-6 pt-16 pb-0">
       <h1 className="font-display text-4xl text-sumi leading-tight mt-6 max-w-lg">
@@ -47,9 +52,7 @@ export default function HomePage() {
       />
 
       <p className="font-mono text-xs tracking-widest text-tone mt-16">
-        {query.length >= 2
-          ? `${results.length} RESULTS`
-          : `${series.length} SERIES`}
+        {label}
       </p>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-10 mt-6">

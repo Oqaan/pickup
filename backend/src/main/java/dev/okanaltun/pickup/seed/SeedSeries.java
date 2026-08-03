@@ -9,6 +9,7 @@ public record SeedSeries(
                 String coverUrl,
                 String notes,
                 List<SeedAdaptation> adaptations,
+                Integer anilistId,
                 Integer popularity,
                 String mangadexId,
                 List<String> aliases,
