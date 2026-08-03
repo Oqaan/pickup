@@ -7,6 +7,7 @@ public record SeedSeries(
                 String title,
                 String titleNative,
                 String coverUrl,
+                String notes,
                 List<SeedAdaptation> adaptations,
                 Integer popularity,
                 String mangadexId,

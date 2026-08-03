@@ -43,6 +43,8 @@ public class Series {
     @Column(name = "mangadex_id")
     private String mangadexId;
 
+    private String notes;
+
     @OneToMany(mappedBy = "series", cascade = CascadeType.ALL, orphanRemoval = true)
     @OrderBy("sortOrder ASC")
     private List<Adaptation> adaptations = new ArrayList<>();

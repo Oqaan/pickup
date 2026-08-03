@@ -51,6 +51,12 @@ export default function SeriesPage() {
         <p className="font-mono text-xs text-tone mt-2">{series.titleNative}</p>
       )}
 
+      {series.notes && (
+        <p className="font-body text-sm text-sumi/70 mt-6 max-w-prose leading-relaxed">
+          {series.notes}
+        </p>
+      )}
+
       <p className="font-mono text-xs tracking-widest text-tone mt-12">
         HOW FAR HAVE YOU WATCHED?
       </p>

@@ -7,6 +7,7 @@ public record SeriesDetailResponse(
                 String title,
                 String titleNative,
                 String coverUrl,
+                String notes,
                 List<AdaptationResponse> adaptations,
                 List<ReadingLinkResponse> readingLinks) {
 }
