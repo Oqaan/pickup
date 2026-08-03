@@ -8,27 +8,27 @@
   adaptations:
     - name: Season 1
       episodes: 24
+      sortOrder: 1
       continueChapter: 64
       continueVolume: 8
       lastCoveredChapter: 63
-      sortOrder: 1
-      coverUrl: https://uploads.mangadex.org/covers/c52b2ce3-7f95-469c-96b0-479524fb7a1a/e4941ede-4550-476f-a418-e6f28d2465a5.jpg.512.jpg
+      coverUrl: https://uploads.mangadex.org/covers/c52b2ce3-7f95-469c-96b0-479524fb7a1a/e4941ede-4550-476f-a418-e6f28d2465a5.jpg
     - name: Season 2
       episodes: 23
+      sortOrder: 2
       continueChapter: 138
       continueVolume: 16
       lastCoveredChapter: 139
-      sortOrder: 2
+      coverUrl: https://uploads.mangadex.org/covers/c52b2ce3-7f95-469c-96b0-479524fb7a1a/e9c3f65d-be95-4397-a67f-331308e97a4c.jpg
       notes: "The finale adapts a couple of pages from 138 and the opening of 139 — start at 138 anyway, you'll only re-read a few panels."
-      coverUrl: https://uploads.mangadex.org/covers/c52b2ce3-7f95-469c-96b0-479524fb7a1a/e9c3f65d-be95-4397-a67f-331308e97a4c.jpg.512.jpg
     - name: "Season 3 — The Culling Game Part 1"
       episodes: 12
+      sortOrder: 3
       continueChapter: 181
       continueVolume: 21
       lastCoveredChapter: 181
-      sortOrder: 3
+      coverUrl: https://uploads.mangadex.org/covers/c52b2ce3-7f95-469c-96b0-479524fb7a1a/817defac-886c-4746-943e-0bd2fb626f23.jpg
       notes: "Only fragments of 181 made it into the finale, so read it in full. The arc continues in Season 4."
-      coverUrl: https://uploads.mangadex.org/covers/c52b2ce3-7f95-469c-96b0-479524fb7a1a/817defac-886c-4746-943e-0bd2fb626f23.jpg.512.jpg
     - name: Jujutsu Kaisen 0 (Movie)
       sortOrder: 4
       notes: "Canon prequel, adapts the separate single-volume Jujutsu Kaisen 0 manga rather than the main series. Not a continuation point."
@@ -42,61 +42,16 @@
   adaptations:
     - name: Season 1
       episodes: 24
+      sortOrder: 1
       continueChapter: 55
       lastCoveredChapter: 54
-      sortOrder: 1
       notes: "Clean break at the end of the War Arc."
     - name: Season 2
       episodes: 24
+      sortOrder: 2
       continueChapter: 101
       lastCoveredChapter: 101
-      sortOrder: 2
       notes: "The finale only uses the last few pages of 101, so read the whole chapter."
-
-- slug: chainsaw-man
-  title: Chainsaw Man
-  titleNative: チェンソーマン
-  aliases: ["CSM"]
-  popularity: 80
-  mangadexId: a77742b1-befd-49a4-bff5-1ad4e6b0ef7b
-  coverUrl: https://uploads.mangadex.org/covers/a77742b1-befd-49a4-bff5-1ad4e6b0ef7b/07b6e139-194a-4438-b07a-57db2f4f22f8.jpg.512.jpg
-  adaptations:
-    - name: Season 1
-      episodes: 12
-      continueChapter: 39
-      continueVolume: 5
-      lastCoveredChapter: 38
-      sortOrder: 1
-      notes: "Ends mid-Katana Man arc, but chapter 38 is fully animated — clean break."
-      coverUrl: https://uploads.mangadex.org/covers/a77742b1-befd-49a4-bff5-1ad4e6b0ef7b/0011ae02-431b-44d6-872d-7e39f6c66009.jpg.512.jpg
-    - name: "The Movie: Reze Arc"
-      continueChapter: 53
-      continueVolume: 7
-      lastCoveredChapter: 52
-      sortOrder: 2
-      notes: "Picks up exactly where Season 1 ends. Season 2 (Assassins Arc) continues from here."
-      coverUrl: https://uploads.mangadex.org/covers/a77742b1-befd-49a4-bff5-1ad4e6b0ef7b/ed29e94c-e2c3-4592-b2cc-bffe584c3c1b.jpg.512.jpg
-
-- slug: tokyo-ghoul
-  title: Tokyo Ghoul
-  titleNative: 東京喰種
-  aliases: ["TG"]
-  popularity: 70
-  mangadexId: 6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b
-  coverUrl: https://uploads.mangadex.org/covers/6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b/040e8ae9-4ddd-49d2-8986-56782b391714.jpg.512.jpg
-  adaptations:
-    - name: Season 1
-      episodes: 12
-      continueChapter: 67
-      lastCoveredChapter: 66
-      sortOrder: 1
-    - name: "Season 2 — Tokyo Ghoul √A"
-      episodes: 12
-      continueChapter: 67
-      lastCoveredChapter: 66
-      animeOriginal: true
-      sortOrder: 2
-      notes: "√A goes its own way and only borrows scattered chapters. Start at 67 as if you'd stopped after season 1, or you'll skip most of the story."
 
 - slug: spy-x-family
   title: Spy x Family
@@ -108,17 +63,72 @@
   adaptations:
     - name: Season 1
       episodes: 25
-      continueChapter: 39
-      lastCoveredChapter: 38
       sortOrder: 1
+      continueChapter: 39
+      continueVolume: 7
+      lastCoveredChapter: 38
+      coverUrl: https://uploads.mangadex.org/covers/6b958848-c885-4735-9201-12ee77abcb3c/45104c74-4a11-4db9-95ca-7e671787c0b4.jpg
     - name: Season 2
       episodes: 12
-      continueChapter: 60
-      lastCoveredChapter: 59
       sortOrder: 2
+      continueChapter: 60
+      continueVolume: 9
+      lastCoveredChapter: 59
+      coverUrl: https://uploads.mangadex.org/covers/6b958848-c885-4735-9201-12ee77abcb3c/253cf5e5-41b7-4585-90cf-161fe329c6cb.jpg
     - name: Season 3
       episodes: 13
-      continueChapter: 88
-      lastCoveredChapter: 87
       sortOrder: 3
+      continueChapter: 88
+      continueVolume: 13
+      lastCoveredChapter: 87
+      coverUrl: https://uploads.mangadex.org/covers/6b958848-c885-4735-9201-12ee77abcb3c/53a05c31-1043-4f74-b1e4-8f1963f04466.jpg
       notes: "A few short missions were skipped along the way, so you may hit chapters you haven't seen animated."
+
+- slug: chainsaw-man
+  title: Chainsaw Man
+  titleNative: チェンソーマン
+  aliases: ["CSM"]
+  popularity: 80
+  mangadexId: a77742b1-befd-49a4-bff5-1ad4e6b0ef7b
+  coverUrl: https://uploads.mangadex.org/covers/a77742b1-befd-49a4-bff5-1ad4e6b0ef7b/07b6e139-194a-4438-b07a-57db2f4f22f8.jpg.512.jpg
+  adaptations:
+    - name: Season 1
+      episodes: 12
+      sortOrder: 1
+      continueChapter: 39
+      continueVolume: 5
+      lastCoveredChapter: 38
+      coverUrl: https://uploads.mangadex.org/covers/a77742b1-befd-49a4-bff5-1ad4e6b0ef7b/0011ae02-431b-44d6-872d-7e39f6c66009.jpg
+      notes: "Ends mid-Katana Man arc, but chapter 38 is fully animated — clean break."
+    - name: "The Movie: Reze Arc"
+      sortOrder: 2
+      continueChapter: 53
+      continueVolume: 7
+      lastCoveredChapter: 52
+      coverUrl: https://uploads.mangadex.org/covers/a77742b1-befd-49a4-bff5-1ad4e6b0ef7b/ed29e94c-e2c3-4592-b2cc-bffe584c3c1b.jpg
+      notes: "Picks up exactly where Season 1 ends. Season 2 (Assassins Arc) continues from here."
+
+- slug: tokyo-ghoul
+  title: Tokyo Ghoul
+  titleNative: 東京喰種
+  aliases: ["TG"]
+  popularity: 70
+  mangadexId: 6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b
+  coverUrl: https://uploads.mangadex.org/covers/6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b/040e8ae9-4ddd-49d2-8986-56782b391714.jpg.512.jpg
+  adaptations:
+    - name: Season 1
+      episodes: 12
+      sortOrder: 1
+      continueChapter: 67
+      continueVolume: 7
+      lastCoveredChapter: 66
+      coverUrl: https://uploads.mangadex.org/covers/6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b/19102e56-16fb-4052-b72f-90e3f3015571.jpg
+    - name: "Season 2 — Tokyo Ghoul √A"
+      episodes: 12
+      sortOrder: 2
+      continueChapter: 67
+      continueVolume: 7
+      lastCoveredChapter: 66
+      animeOriginal: true
+      coverUrl: https://uploads.mangadex.org/covers/6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b/19102e56-16fb-4052-b72f-90e3f3015571.jpg
+      notes: "√A goes its own way and only borrows scattered chapters. Start at 67 as if you'd stopped after season 1, or you'll skip most of the story."
