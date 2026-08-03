@@ -1,5 +1,6 @@
 // Prints cover URLs for pasting into series.yaml. It never writes the file:
 // re-serialising would drop the comments and formatting.
+// Grid thumbnails do fine at 512; detail pages get the full-size upload
 
 import { readFileSync } from "node:fs";
 import { parse } from "yaml";
@@ -33,9 +34,11 @@ function pick(covers, volume) {
   );
 }
 
-function url(mangadexId, cover) {
-  // The file name already ends in .jpg; .512.jpg appends the size variant
-  return `${CDN}/${mangadexId}/${cover.fileName}.512.jpg`;
+function url(mangadexId, cover, size = "512") {
+  // The file name already ends in .jpg; the size is appended after it
+  return size
+    ? `${CDN}/${mangadexId}/${cover.fileName}.${size}.jpg`
+    : `${CDN}/${mangadexId}/${cover.fileName}`
 }
 
 const series = parse(readFileSync(YAML_PATH, "utf8"));
@@ -57,7 +60,7 @@ for (const s of series) {
     const cover = pick(covers, a.continueVolume);
     console.log(`  ${a.name} (vol ${a.continueVolume})`);
     console.log(
-      `    coverUrl: ${cover ? url(s.mangadexId, cover) : "not found"}`,
+      `    coverUrl: ${cover ? url(s.mangadexId, cover, null) : "not found"}`,
     );
   }
 

@@ -78,34 +78,55 @@ export default function SeriesPage() {
         ))}
       </div>
 
-      <div className="mt-10 pt-8 border-t border-tone">
-        {current.continueChapter ? (
-          <>
-            <p className="font-mono text-xs tracking-widest text-tone">
-              START READING AT
+      <div className="mt-10 pt-8 border-t border-tone flex gap-8 items-start">
+        <div className="flex-1 min-w-0">
+          {current.continueChapter ? (
+            <>
+              {current.animeOriginal && (
+                <p className="font-mono text-xs tracking-widest text-jump">
+                  ANIME ORIGINAL STORY
+                </p>
+              )}
+              <p className="font-mono text-xs tracking-widest text-tone">
+                START READING AT
+              </p>
+              <p className="font-display text-7xl text-jump leading-none mt-2">
+                {current.continueChapter}
+                <span className="font-body text-base text-sumi ml-3">
+                  chapter
+                </span>
+              </p>
+              <p className="font-mono text-xs text-sumi mt-4">
+                {current.continueVolume &&
+                  `Volume ${current.continueVolume} · `}
+                {current.name}
+                {current.episodes && ` · ${current.episodes} episodes`}
+              </p>
+            </>
+          ) : (
+            <p className="font-body text-lg text-sumi">
+              Not a continuation point.
             </p>
-            <p className="font-display text-7xl text-jump leading-none mt-2">
-              {current.continueChapter}
-              <span className="font-body text-base text-sumi ml-3">
-                chapter
-              </span>
-            </p>
-            <p className="font-mono text-xs text-sumi mt-4">
-              {current.continueVolume && `Volume ${current.continueVolume} · `}
-              {current.name}
-              {current.episodes && ` · ${current.episodes} episodes`}
-            </p>
-          </>
-        ) : (
-          <p className="font-body text-lg text-sumi">
-            Not a continuation point.
-          </p>
-        )}
+          )}
 
-        {current.notes && (
-          <p className="font-body text-sm text-sumi/70 mt-4 max-w-prose leading-relaxed">
-            {current.notes}
-          </p>
+          {current.notes && (
+            <p className="font-body text-sm text-sumi/70 mt-4 max-w-prose leading-relaxed">
+              {current.notes}
+            </p>
+          )}
+        </div>
+
+        {current.coverUrl && (
+          <div className="w-40 shrink-0">
+            <img
+              src={current.coverUrl}
+              alt={`Volume ${current.continueVolume} cover`}
+              className="w-full aspect-2/3 object-cover"
+            />
+            <p className="font-mono text-xs text-tone mt-2 text-center">
+              Vol. {current.continueVolume}
+            </p>
+          </div>
         )}
       </div>
     </main>
