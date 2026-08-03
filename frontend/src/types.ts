@@ -6,7 +6,7 @@ export type Adaptation = {
   lastCoveredChapter: number | null;
   animeOriginal: boolean;
   notes: string | null;
-  coverUrl: string | null
+  coverUrl: string | null;
 };
 
 export type SeriesDetail = {
@@ -14,6 +14,7 @@ export type SeriesDetail = {
   title: string;
   titleNative: string | null;
   coverUrl: string | null;
+  readingLinks: ReadingLink[]
   adaptations: Adaptation[];
 };
 
@@ -21,5 +22,10 @@ export type SeriesSummary = {
   slug: string;
   title: string;
   coverUrl: string | null;
-  aliases: string[]
+  aliases: string[];
+};
+
+export type ReadingLink = {
+  label: string;
+  url: string;
 };

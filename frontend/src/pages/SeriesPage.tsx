@@ -122,6 +122,27 @@ export default function SeriesPage() {
           </div>
         )}
       </div>
+
+      {series.readingLinks.length > 0 && (
+        <div className="mt-16 pt-8 border-t border-tone">
+          <p className="font-mono text-xs tracking-widest text-tone">
+            WHERE TO READ
+          </p>
+          <div className="flex flex-wrap gap-3 mt-4">
+            {series.readingLinks.map((rl) => (
+              <a
+                key={rl.url}
+                href={rl.url}
+                target="_blank"
+                rel="noreferrer"
+                className="font-body text-sm px-4 py-2 border border-tone text-sumi hover:bg-sumi hover:border-sumi hover:text-paper transition"
+              >
+                {rl.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </main>
   );
 }

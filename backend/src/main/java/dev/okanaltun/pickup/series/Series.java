@@ -50,6 +50,10 @@ public class Series {
     @OneToMany(mappedBy = "series", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<SeriesAlias> aliases = new ArrayList<>();
 
+    @OneToMany(mappedBy = "series", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OrderBy("sortOrder ASC")
+    private List<ReadingLink> readingLinks = new ArrayList<>();
+
     public Series() {
     } // No-Args-Constructor
 }
