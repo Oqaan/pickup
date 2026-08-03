@@ -6,6 +6,7 @@ import dev.okanaltun.pickup.series.Adaptation;
 import dev.okanaltun.pickup.series.Series;
 import dev.okanaltun.pickup.series.SeriesAlias;
 import dev.okanaltun.pickup.series.SeriesRepository;
+import dev.okanaltun.pickup.series.ReadingLink;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -85,6 +86,17 @@ public class SeedRunner implements CommandLineRunner {
                 a.setAlias(alias);
                 a.setSeries(series);
                 series.getAliases().add(a);
+            }
+        }
+
+        if (entry.readingLinks() != null) {
+            for (SeedSeries.SeedReadingLink rl : entry.readingLinks()) {
+                ReadingLink readingLink = new ReadingLink();
+                readingLink.setLabel(rl.label());
+                readingLink.setUrl(rl.url());
+                readingLink.setSortOrder(rl.sortOrder() != null ? rl.sortOrder() : 0);
+                readingLink.setSeries(series);
+                series.getReadingLinks().add(readingLink);
             }
         }
 

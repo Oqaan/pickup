@@ -11,9 +11,11 @@ import dev.okanaltun.pickup.series.dto.*;
 public class SeriesService {
 
         private final SeriesRepository repository;
+        private final ReadingLinkRepository readingLinkRepository;
 
-        public SeriesService(SeriesRepository repository) {
+        public SeriesService(SeriesRepository repository, ReadingLinkRepository readingLinkRepository) {
                 this.repository = repository;
+                this.readingLinkRepository = readingLinkRepository;
         }
 
         @Transactional(readOnly = true)
@@ -41,11 +43,18 @@ public class SeriesService {
                                                 a.getCoverUrl()))
                                 .toList();
 
+                // Fetched separately: Hibernate can't join two list collections in one query
+                List<ReadingLinkResponse> readingLinks = readingLinkRepository
+                                .findBySeriesIdOrderBySortOrder(series.getId()).stream()
+                                .map(rl -> new ReadingLinkResponse(rl.getLabel(), rl.getUrl()))
+                                .toList();
+
                 return new SeriesDetailResponse(
                                 series.getSlug(),
                                 series.getTitle(),
                                 series.getTitleNative(),
                                 series.getCoverUrl(),
-                                adaptations);
+                                adaptations,
+                                readingLinks);
         }
 }

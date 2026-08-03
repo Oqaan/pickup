@@ -10,7 +10,8 @@ public record SeedSeries(
                 List<SeedAdaptation> adaptations,
                 Integer popularity,
                 String mangadexId,
-                List<String> aliases) {
+                List<String> aliases,
+                List<SeedReadingLink> readingLinks) {
 
         public record SeedAdaptation(
                         String name,
@@ -22,5 +23,11 @@ public record SeedSeries(
                         Boolean animeOriginal,
                         String coverUrl,
                         String notes) {
+        }
+
+        public record SeedReadingLink(
+                        String label,
+                        String url,
+                        Integer sortOrder) {
         }
 }
