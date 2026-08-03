@@ -5,6 +5,13 @@
   popularity: 100
   mangadexId: c52b2ce3-7f95-469c-96b0-479524fb7a1a
   coverUrl: https://uploads.mangadex.org/covers/c52b2ce3-7f95-469c-96b0-479524fb7a1a/34bbf92f-b92e-43e4-9dde-bbd48bd83bcd.jpg.512.jpg
+  readingLinks:
+    - label: MANGA Plus
+      url: https://mangaplus.shueisha.co.jp/titles/100034
+      sortOrder: 1
+    - label: Viz
+      url: https://www.viz.com/jujutsu-kaisen
+      sortOrder: 2
   adaptations:
     - name: Season 1
       episodes: 24
@@ -39,6 +46,10 @@
   popularity: 90
   mangadexId: 5d1fc77e-706a-4fc5-bea8-486c9be0145d
   coverUrl: https://uploads.mangadex.org/covers/5d1fc77e-706a-4fc5-bea8-486c9be0145d/47e19a12-b0fb-4b52-b105-c202c555b966.jpg.512.jpg
+  readingLinks:
+    - label: Kodansha
+      url: https://kodansha.us/series/vinland-saga/
+      sortOrder: 1
   adaptations:
     - name: Season 1
       episodes: 24
@@ -60,6 +71,13 @@
   popularity: 85
   mangadexId: 6b958848-c885-4735-9201-12ee77abcb3c
   coverUrl: https://uploads.mangadex.org/covers/6b958848-c885-4735-9201-12ee77abcb3c/d8babd13-5736-4964-8963-b444a950d539.jpg.512.jpg
+  readingLinks:
+    - label: MANGA Plus
+      url: https://mangaplus.shueisha.co.jp/titles/100056
+      sortOrder: 1
+    - label: Viz
+      url: https://www.viz.com/spy-x-family
+      sortOrder: 2
   adaptations:
     - name: Season 1
       episodes: 25
@@ -91,6 +109,13 @@
   popularity: 80
   mangadexId: a77742b1-befd-49a4-bff5-1ad4e6b0ef7b
   coverUrl: https://uploads.mangadex.org/covers/a77742b1-befd-49a4-bff5-1ad4e6b0ef7b/07b6e139-194a-4438-b07a-57db2f4f22f8.jpg.512.jpg
+  readingLinks:
+    - label: MANGA Plus
+      url: https://mangaplus.shueisha.co.jp/titles/100037
+      sortOrder: 1
+    - label: Viz
+      url: https://www.viz.com/shonenjump/chapters/chainsaw-man
+      sortOrder: 2
   adaptations:
     - name: Season 1
       episodes: 12
@@ -115,6 +140,13 @@
   popularity: 70
   mangadexId: 6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b
   coverUrl: https://uploads.mangadex.org/covers/6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b/040e8ae9-4ddd-49d2-8986-56782b391714.jpg.512.jpg
+  readingLinks:
+    - label: MANGA Plus
+      url: https://mangaplus.shueisha.co.jp/titles/100027
+      sortOrder: 1
+    - label: Viz
+      url: https://www.viz.com/tokyo-ghoul
+      sortOrder: 2
   adaptations:
     - name: Season 1
       episodes: 12
