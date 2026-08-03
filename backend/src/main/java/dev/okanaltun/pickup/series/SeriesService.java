@@ -19,7 +19,8 @@ public class SeriesService {
         @Transactional(readOnly = true)
         public List<SeriesSummaryResponse> findAll() {
                 return repository.findAllByOrderByPopularityDesc().stream()
-                                .map(s -> new SeriesSummaryResponse(s.getSlug(), s.getTitle(), s.getCoverUrl()))
+                                .map(s -> new SeriesSummaryResponse(s.getSlug(), s.getTitle(), s.getCoverUrl(),
+                                                s.getAliases().stream().map(SeriesAlias::getAlias).toList()))
                                 .toList();
         }
 

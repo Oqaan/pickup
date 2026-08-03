@@ -13,11 +13,18 @@ export default function HomePage() {
   }, []);
 
   const fuse = useMemo(
-    () => new Fuse(series, { keys: ["title"], threshold: 0.4 }),
+    () =>
+      new Fuse(series, {
+        keys: ["title", "aliases"],
+        threshold: 0.4,
+        ignoreLocation: true,
+        minMatchCharLength: 2,
+      }),
     [series],
   );
 
-  const results = query ? fuse.search(query).map((r) => r.item) : series;
+  const results =
+    query.length >= 2 ? fuse.search(query).map((r) => r.item) : series;
 
   return (
     <main className="max-w-4xl mx-auto px-6 py-24">
@@ -42,7 +49,9 @@ export default function HomePage() {
       />
 
       <p className="font-mono text-xs tracking-widest text-tone mt-16">
-        {query ? `${results.length} RESULTS` : `${series.length} SERIES`}
+        {query.length >= 2
+          ? `${results.length} RESULTS`
+          : `${series.length} SERIES`}
       </p>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-10 mt-6">
@@ -65,7 +74,7 @@ export default function HomePage() {
         ))}
       </div>
 
-      {query && results.length === 0 && (
+      {query.length >= 2 && results.length === 0 && (
         <p className="font-body text-sm text-sumi/70 mt-8 max-w-prose">
           Not in the database yet. It's a small list for now, growing as I
           verify each entry by hand.

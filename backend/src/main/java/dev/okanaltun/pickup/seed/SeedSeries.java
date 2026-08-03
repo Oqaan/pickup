@@ -9,7 +9,8 @@ public record SeedSeries(
                 String coverUrl,
                 List<SeedAdaptation> adaptations,
                 Integer popularity,
-                String mangadexId) {
+                String mangadexId,
+                List<String> aliases) {
 
         public record SeedAdaptation(
                         String name,

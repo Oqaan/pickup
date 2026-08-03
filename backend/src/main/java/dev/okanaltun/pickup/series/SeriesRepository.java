@@ -10,5 +10,7 @@ public interface SeriesRepository extends JpaRepository<Series, Integer> {
 
     @EntityGraph(attributePaths = "adaptations")
     Optional<Series> findBySlug(String slug);
+
+    @EntityGraph(attributePaths = "aliases")
     List<Series> findAllByOrderByPopularityDesc();
 }
