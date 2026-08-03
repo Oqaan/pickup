@@ -1,6 +1,7 @@
 - slug: jujutsu-kaisen
   title: Jujutsu Kaisen
   titleNative: 呪術廻戦
+  aliases: ["JJK", "Sorcery Fight"]
   popularity: 100
   mangadexId: c52b2ce3-7f95-469c-96b0-479524fb7a1a
   coverUrl: https://uploads.mangadex.org/covers/c52b2ce3-7f95-469c-96b0-479524fb7a1a/34bbf92f-b92e-43e4-9dde-bbd48bd83bcd.jpg.512.jpg
@@ -55,6 +56,7 @@
 - slug: chainsaw-man
   title: Chainsaw Man
   titleNative: チェンソーマン
+  aliases: ["CSM"]
   popularity: 80
   mangadexId: a77742b1-befd-49a4-bff5-1ad4e6b0ef7b
   coverUrl: https://uploads.mangadex.org/covers/a77742b1-befd-49a4-bff5-1ad4e6b0ef7b/07b6e139-194a-4438-b07a-57db2f4f22f8.jpg.512.jpg
@@ -78,6 +80,7 @@
 - slug: tokyo-ghoul
   title: Tokyo Ghoul
   titleNative: 東京喰種
+  aliases: ["TG"]
   popularity: 70
   mangadexId: 6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b
   coverUrl: https://uploads.mangadex.org/covers/6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b/040e8ae9-4ddd-49d2-8986-56782b391714.jpg.512.jpg
@@ -98,6 +101,7 @@
 - slug: spy-x-family
   title: Spy x Family
   titleNative: スパイファミリー
+  aliases: ["SxF", "Spy Family"]
   popularity: 85
   mangadexId: 6b958848-c885-4735-9201-12ee77abcb3c
   coverUrl: https://uploads.mangadex.org/covers/6b958848-c885-4735-9201-12ee77abcb3c/d8babd13-5736-4964-8963-b444a950d539.jpg.512.jpg

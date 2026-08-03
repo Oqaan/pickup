@@ -47,6 +47,9 @@ public class Series {
     @OrderBy("sortOrder ASC")
     private List<Adaptation> adaptations = new ArrayList<>();
 
+    @OneToMany(mappedBy = "series", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<SeriesAlias> aliases = new ArrayList<>();
+
     public Series() {
     } // No-Args-Constructor
 }

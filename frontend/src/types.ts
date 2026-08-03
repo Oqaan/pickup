@@ -21,4 +21,5 @@ export type SeriesSummary = {
   slug: string;
   title: string;
   coverUrl: string | null;
+  aliases: string[]
 };

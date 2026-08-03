@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import dev.okanaltun.pickup.series.Adaptation;
 import dev.okanaltun.pickup.series.Series;
+import dev.okanaltun.pickup.series.SeriesAlias;
 import dev.okanaltun.pickup.series.SeriesRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,7 +28,8 @@ public class SeedRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        // Only seed an empty database; slug is unique and a second run would violate the constraint
+        // Only seed an empty database; slug is unique and a second run would violate
+        // the constraint
         if (seriesRepository.count() > 0) {
             logger.info("Seed skipped, database already contains {} series", seriesRepository.count());
             return;
@@ -36,7 +38,8 @@ public class SeedRunner implements CommandLineRunner {
         ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
 
         try (InputStream in = new ClassPathResource("seed/series.yaml").getInputStream()) {
-            // Type erasure: List<SeedSeries>.class doesn't exist, so the type is built at runtime
+            // Type erasure: List<SeedSeries>.class doesn't exist, so the type is built at
+            // runtime
             List<SeedSeries> entries = mapper.readValue(in, mapper.getTypeFactory()
                     .constructCollectionType(List.class, SeedSeries.class));
 
@@ -69,9 +72,19 @@ public class SeedRunner implements CommandLineRunner {
                 adaptation.setAnimeOriginal(Boolean.TRUE.equals(a.animeOriginal()));
                 adaptation.setNotes(a.notes());
                 adaptation.setCoverUrl(a.coverUrl());
-                // Adaptation owns the relationship; without setSeries() the series_id column stays null
+                // Adaptation owns the relationship; without setSeries() the series_id column
+                // stays null
                 adaptation.setSeries(series);
                 series.getAdaptations().add(adaptation);
+            }
+        }
+
+        if (entry.aliases() != null) {
+            for (String alias : entry.aliases()) {
+                SeriesAlias a = new SeriesAlias();
+                a.setAlias(alias);
+                a.setSeries(series);
+                series.getAliases().add(a);
             }
         }
 
