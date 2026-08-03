@@ -43,14 +43,7 @@ export default function SeriesPage() {
   }
 
   return (
-    <main className="max-w-2xl mx-auto px-6 py-16">
-      <Link
-        to="/"
-        className="font-mono text-xs tracking-widest text-tone hover:text-jump"
-      >
-        ← BACK TO SEARCH
-      </Link>
-
+    <main className="max-w-2xl mx-auto px-6 pt-12 pb-0">
       <h1 className="font-display text-5xl text-sumi leading-none mt-8">
         {series.title}
       </h1>
