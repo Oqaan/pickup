@@ -27,9 +27,7 @@ export default function HomePage() {
     query.length >= 2 ? fuse.search(query).map((r) => r.item) : series;
 
   return (
-    <main className="max-w-4xl mx-auto px-6 py-24">
-      <p className="font-mono text-xs tracking-widest text-tone">PICKUP</p>
-
+    <main className="max-w-4xl mx-auto px-6 pt-16 pb-0">
       <h1 className="font-display text-4xl text-sumi leading-tight mt-6 max-w-lg">
         Stop watching.
         <br />
@@ -80,10 +78,6 @@ export default function HomePage() {
           verify each entry by hand.
         </p>
       )}
-
-      <p className="font-mono text-xs text-tone mt-24">
-        Every entry checked against the source material.
-      </p>
     </main>
   );
 }
