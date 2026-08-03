@@ -2,7 +2,8 @@
   title: Jujutsu Kaisen
   titleNative: 呪術廻戦
   aliases: ["JJK", "Sorcery Fight"]
-  popularity: 100
+  anilistId: 101517
+  popularity: 249811
   mangadexId: c52b2ce3-7f95-469c-96b0-479524fb7a1a
   coverUrl: https://uploads.mangadex.org/covers/c52b2ce3-7f95-469c-96b0-479524fb7a1a/34bbf92f-b92e-43e4-9dde-bbd48bd83bcd.jpg.512.jpg
   notes: "Jujutsu Kaisen 0 is canon and worth watching, but it adapts its own prequel volume. Your starting chapter depends only on how many seasons you've seen."
@@ -41,7 +42,8 @@
 - slug: vinland-saga
   title: Vinland Saga
   titleNative: ヴィンランド・サガ
-  popularity: 90
+  anilistId: 30642
+  popularity: 136470
   mangadexId: 5d1fc77e-706a-4fc5-bea8-486c9be0145d
   coverUrl: https://uploads.mangadex.org/covers/5d1fc77e-706a-4fc5-bea8-486c9be0145d/47e19a12-b0fb-4b52-b105-c202c555b966.jpg.512.jpg
   readingLinks:
@@ -66,7 +68,8 @@
   title: Spy x Family
   titleNative: スパイファミリー
   aliases: ["SxF", "Spy Family"]
-  popularity: 85
+  anilistId: 108556
+  popularity: 158065
   mangadexId: 6b958848-c885-4735-9201-12ee77abcb3c
   coverUrl: https://uploads.mangadex.org/covers/6b958848-c885-4735-9201-12ee77abcb3c/d8babd13-5736-4964-8963-b444a950d539.jpg.512.jpg
   readingLinks:
@@ -104,7 +107,8 @@
   title: Chainsaw Man
   titleNative: チェンソーマン
   aliases: ["CSM"]
-  popularity: 80
+  anilistId: 105778
+  popularity: 328247
   mangadexId: a77742b1-befd-49a4-bff5-1ad4e6b0ef7b
   coverUrl: https://uploads.mangadex.org/covers/a77742b1-befd-49a4-bff5-1ad4e6b0ef7b/07b6e139-194a-4438-b07a-57db2f4f22f8.jpg.512.jpg
   readingLinks:
@@ -135,7 +139,8 @@
   title: Tokyo Ghoul
   titleNative: 東京喰種
   aliases: ["TG"]
-  popularity: 70
+  anilistId: 63327
+  popularity: 193652
   mangadexId: 6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b
   coverUrl: https://uploads.mangadex.org/covers/6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b/040e8ae9-4ddd-49d2-8986-56782b391714.jpg.512.jpg
   readingLinks:
