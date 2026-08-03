@@ -5,6 +5,7 @@
   popularity: 100
   mangadexId: c52b2ce3-7f95-469c-96b0-479524fb7a1a
   coverUrl: https://uploads.mangadex.org/covers/c52b2ce3-7f95-469c-96b0-479524fb7a1a/34bbf92f-b92e-43e4-9dde-bbd48bd83bcd.jpg.512.jpg
+  notes: "Jujutsu Kaisen 0 is canon and worth watching, but it adapts its own prequel volume. Your starting chapter depends only on how many seasons you've seen."
   readingLinks:
     - label: MANGA Plus
       url: https://mangaplus.shueisha.co.jp/titles/100034
@@ -36,9 +37,6 @@
       lastCoveredChapter: 181
       coverUrl: https://uploads.mangadex.org/covers/c52b2ce3-7f95-469c-96b0-479524fb7a1a/817defac-886c-4746-943e-0bd2fb626f23.jpg
       notes: "Only fragments of 181 made it into the finale, so read it in full. The arc continues in Season 4."
-    - name: Jujutsu Kaisen 0 (Movie)
-      sortOrder: 4
-      notes: "Canon prequel, adapts the separate single-volume Jujutsu Kaisen 0 manga rather than the main series. Not a continuation point."
 
 - slug: vinland-saga
   title: Vinland Saga

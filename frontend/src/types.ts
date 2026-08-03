@@ -14,6 +14,7 @@ export type SeriesDetail = {
   title: string;
   titleNative: string | null;
   coverUrl: string | null;
+  notes: string | null;
   readingLinks: ReadingLink[]
   adaptations: Adaptation[];
 };

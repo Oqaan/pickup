@@ -54,6 +54,7 @@ public class SeriesService {
                                 series.getTitle(),
                                 series.getTitleNative(),
                                 series.getCoverUrl(),
+                                series.getNotes(),
                                 adaptations,
                                 readingLinks);
         }
