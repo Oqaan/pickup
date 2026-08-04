@@ -23,7 +23,20 @@ export default function SeriesPage() {
     return <p className="font-body p-8">Something went wrong. Try again.</p>;
   }
   if (!series) {
-    return <p className="font-mono p-8 text-tone">Loading…</p>;
+    return (
+      <main className="max-w-2xl mx-auto px-6 pt-12 pb-0" aria-busy="true">
+        <div className="h-12 w-64 bg-tone/30 mt-8" />
+        <div className="h-3 w-24 bg-tone/20 mt-4" />
+        <div className="h-3 w-48 bg-tone/20 mt-14" />
+        <div className="flex gap-2 mt-3">
+          <div className="h-9 w-24 bg-tone/20" />
+          <div className="h-9 w-24 bg-tone/20" />
+        </div>
+        <div className="mt-10 pt-8 border-t border-tone">
+          <div className="h-20 w-40 bg-tone/30" />
+        </div>
+      </main>
+    );
   }
 
   const current = series.adaptations[selected];
