@@ -25,7 +25,7 @@ export default function SeriesPage() {
   if (!series) {
     return (
       <main
-        className="max-w-2xl mx-auto px-6 pt-12 sm:pt-20 pb-0"
+        className="max-w-4xl mx-auto px-6 pt-12 sm:pt-20 pb-0"
         aria-busy="true"
       >
         <div className="h-12 w-64 bg-tone/30" />
@@ -35,7 +35,7 @@ export default function SeriesPage() {
           <div className="h-9 w-24 bg-tone/20" />
           <div className="h-9 w-24 bg-tone/20" />
         </div>
-        <div className="mt-12 sm:mt-16 pt-8 border-t border-tone">
+        <div className="mt-12 sm:mt-16 pt-8 border-t border-tone max-w-2xl">
           <div className="h-20 w-40 bg-tone/30" />
         </div>
       </main>
@@ -53,7 +53,7 @@ export default function SeriesPage() {
   }
 
   return (
-    <main className="max-w-2xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
+    <main className="max-w-4xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
       <h1 className="font-display text-4xl sm:text-5xl text-sumi leading-none">
         {series.title}
       </h1>
@@ -87,7 +87,7 @@ export default function SeriesPage() {
         ))}
       </div>
 
-      <div className="mt-12 sm:mt-16 pt-8 border-t border-tone flex flex-col sm:flex-row gap-6 sm:gap-8 sm:items-start">
+      <div className="mt-12 sm:mt-16 pt-8 border-t border-tone flex flex-col sm:flex-row gap-6 sm:gap-8 sm:items-start max-w-2xl">
         <div className="flex-1 min-w-0">
           {current.caughtUp ? (
             <>
@@ -152,7 +152,7 @@ export default function SeriesPage() {
       </div>
 
       {series.readingLinks.length > 0 && (
-        <div className="mt-12 sm:mt-16 pt-8 border-t border-tone">
+        <div className="mt-12 sm:mt-16 pt-8 border-t border-tone max-w-2xl">
           <p className="font-mono text-xs tracking-widest text-tone">
             WHERE TO READ
           </p>
