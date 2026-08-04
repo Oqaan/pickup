@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SeriesPage from "./pages/SeriesPage";
 import HomePage from "./pages/HomePage";
 import Layout from "./components/Layout";
+import AboutPage from "./pages/AboutPage";
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
         <Routes>
           <Route path="/anime/:slug" element={<SeriesPage />} />
           <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
         </Routes>
       </Layout>
     </BrowserRouter>

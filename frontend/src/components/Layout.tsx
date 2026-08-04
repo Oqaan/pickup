@@ -66,6 +66,17 @@ export default function Layout({ children }: Props) {
                     MangaDex
                   </a>
                 </li>
+                <li>
+                  Popularity from{" "}
+                  <a
+                    href="https://anilist.co"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-sumi hover:text-jump"
+                  >
+                    AniList
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -94,13 +105,27 @@ export default function Layout({ children }: Props) {
                     Suggest a series
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="mailto:hey@pickup.moe"
+                    className="text-sumi hover:text-jump"
+                  >
+                    Contact me
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
 
-          <p className="font-mono text-xs text-tone mt-12 pt-6 border-t border-tone/50">
-            © 2026 pickup · No manga content is hosted here
-          </p>
+          <div className="font-mono text-xs text-tone mt-12 pt-6 border-t border-tone/50 flex flex-wrap gap-x-3 gap-y-2">
+            <span>© 2026 pickup</span>
+            <span>·</span>
+            <Link to="/about" className="hover:text-jump">
+              About
+            </Link>
+            <span>·</span>
+            <span>No manga content is hosted here</span>
+          </div>
         </div>
       </footer>
     </div>
