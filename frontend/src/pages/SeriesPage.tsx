@@ -25,7 +25,7 @@ export default function SeriesPage() {
   if (!series) {
     return (
       <main
-        className="max-w-2xl mx-auto px-6 pt-12 sm:pt-20 pb-0"
+        className="max-w-4xl mx-auto px-6 pt-12 sm:pt-20 pb-0"
         aria-busy="true"
       >
         <div className="h-12 w-64 bg-tone/30" />
@@ -53,7 +53,7 @@ export default function SeriesPage() {
   }
 
   return (
-    <main className="max-w-2xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
+    <main className="max-w-4xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
       <h1 className="font-display text-4xl sm:text-5xl text-sumi leading-none">
         {series.title}
       </h1>
@@ -87,68 +87,70 @@ export default function SeriesPage() {
         ))}
       </div>
 
-      <div className="mt-12 sm:mt-16 pt-8 border-t border-tone flex flex-col sm:flex-row gap-6 sm:gap-8 sm:items-start">
-        <div className="flex-1 min-w-0">
-          {current.caughtUp ? (
-            <>
-              <p className="font-mono text-xs tracking-widest text-tone">
-                NOTHING LEFT
-              </p>
-              <p className="font-display text-4xl text-sumi leading-tight mt-3">
-                You're all caught up.
-              </p>
-              <p className="font-body text-sm text-sumi/70 mt-4 max-w-prose leading-relaxed">
-                The anime covers the manga through to the end.
-              </p>
-            </>
-          ) : current.continueChapter ? (
-            <>
-              {current.animeOriginal && (
-                <p className="font-mono text-xs tracking-widest text-jump">
-                  ANIME ORIGINAL STORY
+      <div className="mt-12 sm:mt-16 pt-8 border-t border-tone">
+        <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 sm:items-start max-w-2xl">
+          <div className="flex-1 min-w-0">
+            {current.caughtUp ? (
+              <>
+                <p className="font-mono text-xs tracking-widest text-tone">
+                  NOTHING LEFT
                 </p>
-              )}
-              <p className="font-mono text-xs tracking-widest text-tone">
-                START READING AT
+                <p className="font-display text-4xl text-sumi leading-tight mt-3">
+                  You're all caught up.
+                </p>
+                <p className="font-body text-sm text-sumi/70 mt-4 max-w-prose leading-relaxed">
+                  The anime covers the manga through to the end.
+                </p>
+              </>
+            ) : current.continueChapter ? (
+              <>
+                {current.animeOriginal && (
+                  <p className="font-mono text-xs tracking-widest text-jump">
+                    ANIME ORIGINAL STORY
+                  </p>
+                )}
+                <p className="font-mono text-xs tracking-widest text-tone">
+                  START READING AT
+                </p>
+                <p className="font-display text-6xl sm:text-7xl text-jump leading-none mt-2">
+                  {current.continueChapter}
+                  <span className="font-body text-base text-sumi ml-3">
+                    chapter
+                  </span>
+                </p>
+                <p className="font-mono text-xs text-sumi mt-4">
+                  {current.continueVolume &&
+                    `Volume ${current.continueVolume} · `}
+                  {current.name}
+                  {current.episodes && ` · ${current.episodes} episodes`}
+                </p>
+              </>
+            ) : (
+              <p className="font-body text-lg text-sumi">
+                Not a continuation point.
               </p>
-              <p className="font-display text-6xl sm:text-7xl text-jump leading-none mt-2">
-                {current.continueChapter}
-                <span className="font-body text-base text-sumi ml-3">
-                  chapter
-                </span>
-              </p>
-              <p className="font-mono text-xs text-sumi mt-4">
-                {current.continueVolume &&
-                  `Volume ${current.continueVolume} · `}
-                {current.name}
-                {current.episodes && ` · ${current.episodes} episodes`}
-              </p>
-            </>
-          ) : (
-            <p className="font-body text-lg text-sumi">
-              Not a continuation point.
-            </p>
-          )}
+            )}
 
-          {current.notes && (
-            <p className="font-body text-sm text-sumi/70 mt-4 max-w-prose leading-relaxed">
-              {current.notes}
-            </p>
+            {current.notes && (
+              <p className="font-body text-sm text-sumi/70 mt-4 max-w-prose leading-relaxed">
+                {current.notes}
+              </p>
+            )}
+          </div>
+
+          {current.coverUrl && (
+            <div className="w-44 sm:w-40 shrink-0">
+              <img
+                src={current.coverUrl}
+                alt={`Volume ${current.continueVolume} cover`}
+                className="w-full aspect-2/3 object-cover"
+              />
+              <p className="font-mono text-xs text-tone mt-2 text-center">
+                Vol. {current.continueVolume}
+              </p>
+            </div>
           )}
         </div>
-
-        {current.coverUrl && (
-          <div className="w-44 sm:w-40 shrink-0">
-            <img
-              src={current.coverUrl}
-              alt={`Volume ${current.continueVolume} cover`}
-              className="w-full aspect-2/3 object-cover"
-            />
-            <p className="font-mono text-xs text-tone mt-2 text-center">
-              Vol. {current.continueVolume}
-            </p>
-          </div>
-        )}
       </div>
 
       {series.readingLinks.length > 0 && (
