@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 export default function HomePage() {
   const [series, setSeries] = useState<SeriesSummary[]>([]);
   const [query, setQuery] = useState("");
+  const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
     fetchSeriesList().then(setSeries);
@@ -16,7 +17,7 @@ export default function HomePage() {
     () =>
       new Fuse(series, {
         keys: ["title", "aliases"],
-        threshold: 0.4,
+        threshold: 0.3,
         ignoreLocation: true,
         minMatchCharLength: 2,
       }),
@@ -25,6 +26,10 @@ export default function HomePage() {
 
   const results =
     query.length >= 2 ? fuse.search(query).map((r) => r.item) : series;
+
+  const perPage = 9;
+  const searching = query.length >= 2;
+  const visible = searching || showAll ? results : results.slice(0, perPage);
 
   const label =
     query.length < 2
@@ -56,7 +61,7 @@ export default function HomePage() {
       </p>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-10 mt-6">
-        {results.map((s) => (
+        {visible.map((s) => (
           <Link key={s.slug} to={`/anime/${s.slug}`} className="group">
             <div className="aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition">
               {s.coverUrl && (
@@ -74,6 +79,15 @@ export default function HomePage() {
           </Link>
         ))}
       </div>
+
+      {!searching && !showAll && results.length > perPage && (
+        <button
+          onClick={() => setShowAll(true)}
+          className="w-full border-t border-tone mt-12 pt-6 font-mono text-xs tracking-widest text-tone hover:text-jump cursor-pointer"
+        >
+          SHOW ALL {results.length} SERIES
+        </button>
+      )}
 
       {query.length >= 2 && results.length === 0 && (
         <p className="font-body text-sm text-sumi/70 mt-8 max-w-prose">
