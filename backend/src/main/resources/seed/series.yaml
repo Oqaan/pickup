@@ -167,3 +167,76 @@
       animeOriginal: true
       coverUrl: https://uploads.mangadex.org/covers/6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b/19102e56-16fb-4052-b72f-90e3f3015571.jpg
       notes: "√A goes its own way and only borrows scattered chapters. Start at 67 as if you'd stopped after season 1, or you'll skip most of the story."
+
+- slug: dandadan
+  title: Dandadan
+  titleNative: ダンダダン
+  aliases: ["DDD"]
+  anilistId: 132029
+  popularity: 114563
+  mangadexId: 68112dc1-2b80-4f20-beb8-2f2a8716a430 
+  coverUrl: 
+  adaptations:
+    - name: Season 1
+      episodes: 12
+      sortOrder: 1
+      continueChapter: 34
+      continueVolume: 5
+      lastCoveredChapter: 34
+      notes: "The finale only animates the opening pages of 34, so read the chapter from the start."
+    - name: Season 2
+      episodes: 12
+      sortOrder: 2
+      continueChapter: 72
+      continueVolume: 9
+      lastCoveredChapter: 71
+
+- slug: dr-stone
+  title: Dr. Stone
+  titleNative: ドクターストーン
+  anilistId: 
+  popularity: 
+  mangadexId: 
+  coverUrl: 
+  adaptations:
+    - name: Season 1
+      episodes: 24
+      sortOrder: 1
+      continueChapter: 60
+      lastCoveredChapter: 60
+      notes: "Chapter 60 is split across the two seasons, so you'll re-read a few pages."
+    - name: Season 2 — Stone Wars
+      episodes: 11
+      sortOrder: 2
+      continueChapter: 84
+      lastCoveredChapter: 84
+    - name: "Ryusui (Special)"
+      sortOrder: 3
+      continueChapter: 90
+      lastCoveredChapter: 89
+    - name: "Season 3 — New World Part 1"
+      episodes: 11
+      sortOrder: 4
+      continueChapter: 116
+      lastCoveredChapter: 116
+      notes: "The last episode stops five pages into 116, so read it in full."
+    - name: "Season 3 — New World Part 2"
+      episodes: 11
+      sortOrder: 5
+      continueChapter: 143
+      lastCoveredChapter: 142
+    - name: "Season 4 — Science Future Part 1"
+      episodes: 12
+      sortOrder: 6
+      continueChapter: 170
+      lastCoveredChapter: 169
+    - name: "Season 4 — Science Future Part 2"
+      episodes: 12
+      sortOrder: 7
+      continueChapter: 199
+      lastCoveredChapter: 198
+    - name: "Season 4 — Science Future Part 3"
+      episodes: 13
+      sortOrder: 8
+      lastCoveredChapter: 232
+      notes: "This is the end of the manga. Nothing left to catch up on."
