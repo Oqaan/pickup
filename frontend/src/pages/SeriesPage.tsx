@@ -12,13 +12,7 @@ export default function SeriesPage() {
   useEffect(() => {
     if (!slug) return;
     fetchSeriesDetail(slug)
-      .then((data) => {
-        setSeries(data);
-        const lastReal = data.adaptations.findLastIndex(
-          (a) => a.continueChapter !== null,
-        );
-        setSelected(lastReal >= 0 ? lastReal : data.adaptations.length - 1);
-      })
+      .then(setSeries)
       .catch((e: Error) => setError(e.message));
   }, [slug]);
 
