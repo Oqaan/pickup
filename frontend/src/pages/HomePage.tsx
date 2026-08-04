@@ -40,14 +40,14 @@ export default function HomePage() {
       : `${results.length} ${results.length === 1 ? "RESULT" : "RESULTS"}`;
 
   return (
-    <main className="max-w-4xl mx-auto px-6 pt-16 pb-0">
-      <h1 className="font-display text-4xl text-sumi leading-tight mt-6 max-w-lg">
+    <main className="max-w-4xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
+      <h1 className="font-display text-4xl text-sumi leading-tight max-w-lg">
         Stop watching.
         <br />
         Start reading.
       </h1>
 
-      <p className="font-body text-base text-sumi/70 mt-5 max-w-md leading-relaxed">
+      <p className="font-body text-base text-sumi/70 mt-4 max-w-md leading-relaxed">
         Wherever you left the anime, pick the series and get the chapter to read
         from.
       </p>
@@ -56,14 +56,14 @@ export default function HomePage() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search a series"
-        className="font-mono text-xl w-full mt-14 pb-3 bg-transparent border-b border-tone text-sumi placeholder:text-tone focus:outline-none focus:border-jump"
+        className="font-mono text-xl w-full mt-12 sm:mt-20 pb-3 bg-transparent border-b border-tone text-sumi placeholder:text-tone focus:outline-none focus:border-jump"
       />
 
-      <p className="font-mono text-xs tracking-widest text-tone mt-16">
+      <p className="font-mono text-xs tracking-widest text-tone mt-12 sm:mt-16">
         {label}
       </p>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-10 mt-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-10 mt-4">
         {loading
           ? Array.from({ length: 9 }).map((_, i) => (
               <div key={i}>
@@ -93,7 +93,7 @@ export default function HomePage() {
       {!searching && !showAll && results.length > perPage && (
         <button
           onClick={() => setShowAll(true)}
-          className="w-full border-t border-tone mt-12 pt-6 font-mono text-xs tracking-widest text-tone hover:text-jump cursor-pointer"
+          className="w-full border-t border-tone mt-10 pt-6 font-mono text-xs tracking-widest text-tone hover:text-jump cursor-pointer"
         >
           SHOW ALL {results.length} SERIES
         </button>

@@ -24,15 +24,18 @@ export default function SeriesPage() {
   }
   if (!series) {
     return (
-      <main className="max-w-2xl mx-auto px-6 pt-12 pb-0" aria-busy="true">
-        <div className="h-12 w-64 bg-tone/30 mt-8" />
+      <main
+        className="max-w-2xl mx-auto px-6 pt-12 sm:pt-20 pb-0"
+        aria-busy="true"
+      >
+        <div className="h-12 w-64 bg-tone/30" />
         <div className="h-3 w-24 bg-tone/20 mt-4" />
-        <div className="h-3 w-48 bg-tone/20 mt-14" />
-        <div className="flex gap-2 mt-3">
+        <div className="h-3 w-48 bg-tone/20 mt-12 sm:mt-16" />
+        <div className="flex gap-2 mt-4">
           <div className="h-9 w-24 bg-tone/20" />
           <div className="h-9 w-24 bg-tone/20" />
         </div>
-        <div className="mt-10 pt-8 border-t border-tone">
+        <div className="mt-12 sm:mt-16 pt-8 border-t border-tone">
           <div className="h-20 w-40 bg-tone/30" />
         </div>
       </main>
@@ -50,8 +53,8 @@ export default function SeriesPage() {
   }
 
   return (
-    <main className="max-w-2xl mx-auto px-6 pt-12 pb-0">
-      <h1 className="font-display text-5xl text-sumi leading-none mt-8">
+    <main className="max-w-2xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
+      <h1 className="font-display text-4xl sm:text-5xl text-sumi leading-none">
         {series.title}
       </h1>
       {series.titleNative && (
@@ -59,16 +62,16 @@ export default function SeriesPage() {
       )}
 
       {series.notes && (
-        <p className="font-body text-sm text-sumi/70 mt-6 max-w-prose leading-relaxed">
+        <p className="font-body text-sm text-sumi/70 mt-4 max-w-prose leading-relaxed">
           {series.notes}
         </p>
       )}
 
-      <p className="font-mono text-xs tracking-widest text-tone mt-12">
+      <p className="font-mono text-xs tracking-widest text-tone mt-12 sm:mt-16">
         HOW FAR HAVE YOU WATCHED?
       </p>
 
-      <div className="flex flex-wrap gap-2 mt-3">
+      <div className="flex flex-wrap gap-2 mt-4">
         {series.adaptations.map((a, i) => (
           <button
             key={a.name}
@@ -84,7 +87,7 @@ export default function SeriesPage() {
         ))}
       </div>
 
-      <div className="mt-10 pt-8 border-t border-tone flex gap-8 items-start">
+      <div className="mt-12 sm:mt-16 pt-8 border-t border-tone flex flex-col sm:flex-row gap-6 sm:gap-8 sm:items-start">
         <div className="flex-1 min-w-0">
           {current.caughtUp ? (
             <>
@@ -108,7 +111,7 @@ export default function SeriesPage() {
               <p className="font-mono text-xs tracking-widest text-tone">
                 START READING AT
               </p>
-              <p className="font-display text-7xl text-jump leading-none mt-2">
+              <p className="font-display text-6xl sm:text-7xl text-jump leading-none mt-2">
                 {current.continueChapter}
                 <span className="font-body text-base text-sumi ml-3">
                   chapter
@@ -135,7 +138,7 @@ export default function SeriesPage() {
         </div>
 
         {current.coverUrl && (
-          <div className="w-40 shrink-0">
+          <div className="w-44 sm:w-40 shrink-0">
             <img
               src={current.coverUrl}
               alt={`Volume ${current.continueVolume} cover`}
@@ -149,7 +152,7 @@ export default function SeriesPage() {
       </div>
 
       {series.readingLinks.length > 0 && (
-        <div className="mt-16 pt-8 border-t border-tone">
+        <div className="mt-12 sm:mt-16 pt-8 border-t border-tone">
           <p className="font-mono text-xs tracking-widest text-tone">
             WHERE TO READ
           </p>
