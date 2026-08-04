@@ -8,9 +8,12 @@ export default function HomePage() {
   const [series, setSeries] = useState<SeriesSummary[]>([]);
   const [query, setQuery] = useState("");
   const [showAll, setShowAll] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchSeriesList().then(setSeries);
+    fetchSeriesList()
+      .then(setSeries)
+      .finally(() => setLoading(false));
   }, []);
 
   const fuse = useMemo(
@@ -61,23 +64,30 @@ export default function HomePage() {
       </p>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-10 mt-6">
-        {visible.map((s) => (
-          <Link key={s.slug} to={`/anime/${s.slug}`} className="group">
-            <div className="aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition">
-              {s.coverUrl && (
-                <img
-                  src={s.coverUrl}
-                  alt=""
-                  loading="lazy"
-                  className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
-                />
-              )}
-            </div>
-            <p className="font-body text-sm text-sumi group-hover:text-jump mt-3 leading-snug">
-              {s.title}
-            </p>
-          </Link>
-        ))}
+        {loading
+          ? Array.from({ length: 9 }).map((_, i) => (
+              <div key={i}>
+                <div className="aspect-2/3 bg-tone/20" />
+                <div className="h-3 w-3/4 bg-tone/20 mt-3" />
+              </div>
+            ))
+          : visible.map((s) => (
+              <Link key={s.slug} to={`/anime/${s.slug}`} className="group">
+                <div className="aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition">
+                  {s.coverUrl && (
+                    <img
+                      src={s.coverUrl}
+                      alt=""
+                      loading="lazy"
+                      className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
+                    />
+                  )}
+                </div>
+                <p className="font-body text-sm text-sumi group-hover:text-jump mt-3 leading-snug">
+                  {s.title}
+                </p>
+              </Link>
+            ))}
       </div>
 
       {!searching && !showAll && results.length > perPage && (

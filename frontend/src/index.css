@@ -17,3 +17,8 @@
     transition: none !important;
   }
 }
+
+/* Reserve scrollbar width even when a page doesn't scroll, so page doesn't shift around when switching */
+html {
+  scrollbar-gutter: stable;
+}
