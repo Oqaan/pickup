@@ -260,3 +260,85 @@
       sortOrder: 8
       lastCoveredChapter: 232
       caughtUp: true
+
+- slug: frieren
+  title: "Frieren: Beyond Journey's End"
+  titleNative: 葬送のフリーレン
+  aliases: ["Sousou no Frieren"]
+  anilistId: 118586
+  popularity: 83984
+  mangadexId: b0b721ff-c388-4486-aa0f-c2b0bb321512
+  coverUrl: https://uploads.mangadex.org/covers/b0b721ff-c388-4486-aa0f-c2b0bb321512/a741289e-d524-4789-a76a-765d34a88aef.jpg.512.jpg
+  adaptations:
+    - name: Season 1
+      episodes: 28
+      sortOrder: 1
+      continueChapter: 61
+      continueVolume: 7
+      lastCoveredChapter: 60
+      coverUrl: https://uploads.mangadex.org/covers/b0b721ff-c388-4486-aa0f-c2b0bb321512/99e8479c-f688-49ca-ba85-08b3fbdd7a08.jpg
+    - name: Season 2
+      episodes: 10
+      sortOrder: 2
+      continueChapter: 81
+      continueVolume: 9
+      lastCoveredChapter: 80
+      coverUrl: https://uploads.mangadex.org/covers/b0b721ff-c388-4486-aa0f-c2b0bb321512/99102eb4-f2f5-4dcf-877c-3ca61f31ce3a.jpg
+      notes: "Season 3 was announced for October 2027 and picks up from here."
+
+- slug: blue-lock
+  title: Blue Lock
+  titleNative: ブルーロック
+  anilistId: 106130
+  popularity: 122059
+  mangadexId: 4141c5dc-c525-4df5-afd7-cc7d192a832f
+  coverUrl: https://uploads.mangadex.org/covers/4141c5dc-c525-4df5-afd7-cc7d192a832f/9b876560-6d0b-4cd8-81bc-c083efc1dcea.jpg.512.jpg
+  readingLinks:
+    - label: Kodansha
+      url: https://kodansha.us/series/blue-lock/
+      sortOrder: 1
+  adaptations:
+    - name: Season 1
+      episodes: 24
+      sortOrder: 1
+      continueChapter: 95
+      continueVolume: 12
+      lastCoveredChapter: 94
+      coverUrl: https://uploads.mangadex.org/covers/4141c5dc-c525-4df5-afd7-cc7d192a832f/8f349a5e-e087-4bbc-803b-e534d4be3168.jpg
+    - name: Season 2 — vs. U-20 Japan
+      episodes: 14
+      sortOrder: 2
+      continueChapter: 150
+      continueVolume: 18
+      lastCoveredChapter: 149
+      coverUrl: https://uploads.mangadex.org/covers/4141c5dc-c525-4df5-afd7-cc7d192a832f/62dc1803-d633-4fd6-9065-9605854bc4c7.jpg
+
+- slug: mob-psycho-100
+  title: Mob Psycho 100
+  titleNative: モブサイコ100
+  aliases: ["Mob Psycho"]
+  anilistId: 85189
+  popularity: 48809
+  mangadexId: 736a2bf0-f875-4b52-a7b4-e8c40505b68a
+  coverUrl: https://uploads.mangadex.org/covers/736a2bf0-f875-4b52-a7b4-e8c40505b68a/c09d7be1-b2e8-42a9-ab84-69e2bc67f74b.jpg.512.jpg
+  readingLinks: []
+  adaptations:
+    - name: Season 1
+      episodes: 12
+      sortOrder: 1
+      continueChapter: 51
+      continueVolume: 6
+      lastCoveredChapter: 50
+      coverUrl: https://uploads.mangadex.org/covers/736a2bf0-f875-4b52-a7b4-e8c40505b68a/f9811c61-5642-481e-9b81-df492b7028d5.jpg
+    - name: Season 2
+      episodes: 13
+      sortOrder: 2
+      continueChapter: 92
+      continueVolume: 13
+      lastCoveredChapter: 91
+      coverUrl: https://uploads.mangadex.org/covers/736a2bf0-f875-4b52-a7b4-e8c40505b68a/b1823b97-c5f6-4212-b177-21f5cc5a612f.jpg
+    - name: Season 3
+      episodes: 12
+      sortOrder: 3
+      lastCoveredChapter: 101
+      caughtUp: true
