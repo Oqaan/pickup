@@ -73,6 +73,7 @@ public class SeedRunner implements CommandLineRunner {
                 adaptation.setContinueVolume(a.continueVolume());
                 adaptation.setLastCoveredChapter(a.lastCoveredChapter());
                 adaptation.setAnimeOriginal(Boolean.TRUE.equals(a.animeOriginal()));
+                adaptation.setCaughtUp(Boolean.TRUE.equals(a.caughtUp()));
                 adaptation.setNotes(a.notes());
                 adaptation.setCoverUrl(a.coverUrl());
                 // Adaptation owns the relationship; without setSeries() the series_id column

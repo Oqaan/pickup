@@ -73,7 +73,19 @@ export default function SeriesPage() {
 
       <div className="mt-10 pt-8 border-t border-tone flex gap-8 items-start">
         <div className="flex-1 min-w-0">
-          {current.continueChapter ? (
+          {current.caughtUp ? (
+            <>
+              <p className="font-mono text-xs tracking-widest text-tone">
+                NOTHING LEFT
+              </p>
+              <p className="font-display text-4xl text-sumi leading-tight mt-3">
+                You're all caught up.
+              </p>
+              <p className="font-body text-sm text-sumi/70 mt-4 max-w-prose leading-relaxed">
+                The anime covers the manga through to the end.
+              </p>
+            </>
+          ) : current.continueChapter ? (
             <>
               {current.animeOriginal && (
                 <p className="font-mono text-xs tracking-widest text-jump">

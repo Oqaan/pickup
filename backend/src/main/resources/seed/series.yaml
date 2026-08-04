@@ -259,4 +259,4 @@
       episodes: 13
       sortOrder: 8
       lastCoveredChapter: 232
-      notes: "This is the end of the manga. Nothing left to catch up on."
+      caughtUp: true

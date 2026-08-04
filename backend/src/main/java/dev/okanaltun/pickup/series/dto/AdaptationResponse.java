@@ -7,6 +7,7 @@ public record AdaptationResponse(
                 Integer continueVolume,
                 Integer lastCoveredChapter,
                 boolean animeOriginal,
+                boolean caughtUp,
                 String notes,
                 String coverUrl) {
 }

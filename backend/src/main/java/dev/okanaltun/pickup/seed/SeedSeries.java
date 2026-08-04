@@ -23,6 +23,7 @@ public record SeedSeries(
                         Integer continueVolume,
                         Integer lastCoveredChapter,
                         Boolean animeOriginal,
+                        Boolean caughtUp,
                         String coverUrl,
                         String notes) {
         }
