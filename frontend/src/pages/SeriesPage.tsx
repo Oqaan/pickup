@@ -12,13 +12,7 @@ export default function SeriesPage() {
   useEffect(() => {
     if (!slug) return;
     fetchSeriesDetail(slug)
-      .then((data) => {
-        setSeries(data);
-        const lastReal = data.adaptations.findLastIndex(
-          (a) => a.continueChapter !== null,
-        );
-        setSelected(lastReal >= 0 ? lastReal : data.adaptations.length - 1);
-      })
+      .then(setSeries)
       .catch((e: Error) => setError(e.message));
   }, [slug]);
 
@@ -68,8 +62,8 @@ export default function SeriesPage() {
             onClick={() => setSelected(i)}
             className={
               i === selected
-                ? "font-body text-sm px-4 py-2 border border-sumi bg-sumi text-paper"
-                : "font-body text-sm px-4 py-2 border border-tone text-sumi hover:border-sumi"
+                ? "font-body text-sm px-4 py-2 border border-sumi bg-sumi text-paper cursor-pointer"
+                : "font-body text-sm px-4 py-2 border border-tone text-sumi hover:border-sumi cursor-pointer"
             }
           >
             {a.name}
@@ -79,7 +73,19 @@ export default function SeriesPage() {
 
       <div className="mt-10 pt-8 border-t border-tone flex gap-8 items-start">
         <div className="flex-1 min-w-0">
-          {current.continueChapter ? (
+          {current.caughtUp ? (
+            <>
+              <p className="font-mono text-xs tracking-widest text-tone">
+                NOTHING LEFT
+              </p>
+              <p className="font-display text-4xl text-sumi leading-tight mt-3">
+                You're all caught up.
+              </p>
+              <p className="font-body text-sm text-sumi/70 mt-4 max-w-prose leading-relaxed">
+                The anime covers the manga through to the end.
+              </p>
+            </>
+          ) : current.continueChapter ? (
             <>
               {current.animeOriginal && (
                 <p className="font-mono text-xs tracking-widest text-jump">

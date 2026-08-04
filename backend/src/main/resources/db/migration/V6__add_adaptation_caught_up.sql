@@ -1,0 +1,1 @@
+alter table adaptation add column caught_up boolean not null default false;

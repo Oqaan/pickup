@@ -43,6 +43,9 @@ public class Adaptation {
     @Column(name = "cover_url")
     private String coverUrl;
 
+    @Column(name = "caught_up", nullable = false)
+    private boolean caughtUp = false;
+
     public Adaptation() {
     }
 }

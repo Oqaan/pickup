@@ -39,6 +39,7 @@ public class SeriesService {
                                                 a.getContinueVolume(),
                                                 a.getLastCoveredChapter(),
                                                 a.isAnimeOriginal(),
+                                                a.isCaughtUp(),
                                                 a.getNotes(),
                                                 a.getCoverUrl()))
                                 .toList();

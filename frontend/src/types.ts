@@ -5,6 +5,7 @@ export type Adaptation = {
   continueVolume: number | null;
   lastCoveredChapter: number | null;
   animeOriginal: boolean;
+  caughtUp: boolean;
   notes: string | null;
   coverUrl: string | null;
 };

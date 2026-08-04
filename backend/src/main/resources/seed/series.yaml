@@ -55,13 +55,17 @@
       episodes: 24
       sortOrder: 1
       continueChapter: 55
+      continueVolume: 8
       lastCoveredChapter: 54
+      coverUrl: https://uploads.mangadex.org/covers/5d1fc77e-706a-4fc5-bea8-486c9be0145d/df31fe1d-b77b-4c68-a2dd-17bbc2a8d52d.jpg
       notes: "Clean break at the end of the War Arc."
     - name: Season 2
       episodes: 24
       sortOrder: 2
       continueChapter: 101
+      continueVolume: 15
       lastCoveredChapter: 101
+      coverUrl: https://uploads.mangadex.org/covers/5d1fc77e-706a-4fc5-bea8-486c9be0145d/c73dfe75-bd7b-4960-b998-2a7c2f562340.jpg
       notes: "The finale only uses the last few pages of 101, so read the whole chapter."
 
 - slug: spy-x-family
@@ -167,3 +171,174 @@
       animeOriginal: true
       coverUrl: https://uploads.mangadex.org/covers/6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b/19102e56-16fb-4052-b72f-90e3f3015571.jpg
       notes: "√A goes its own way and only borrows scattered chapters. Start at 67 as if you'd stopped after season 1, or you'll skip most of the story."
+
+- slug: dandadan
+  title: Dandadan
+  titleNative: ダンダダン
+  aliases: ["DDD"]
+  anilistId: 132029
+  popularity: 114563
+  mangadexId: 68112dc1-2b80-4f20-beb8-2f2a8716a430
+  coverUrl: https://uploads.mangadex.org/covers/68112dc1-2b80-4f20-beb8-2f2a8716a430/1fea11e0-fd26-40a8-9977-9d93b46ef53e.jpg.512.jpg
+  adaptations:
+    - name: Season 1
+      episodes: 12
+      sortOrder: 1
+      continueChapter: 34
+      continueVolume: 5
+      lastCoveredChapter: 34
+      coverUrl: https://uploads.mangadex.org/covers/68112dc1-2b80-4f20-beb8-2f2a8716a430/4f12555c-c498-49d0-a715-7b0a9f3c61d0.jpg
+      notes: "The finale only animates the opening pages of 34, so read the chapter from the start."
+    - name: Season 2
+      episodes: 12
+      sortOrder: 2
+      continueChapter: 72
+      continueVolume: 9
+      lastCoveredChapter: 71
+      coverUrl: https://uploads.mangadex.org/covers/68112dc1-2b80-4f20-beb8-2f2a8716a430/0d14bee6-a535-41df-8384-fa7bdc9b49fb.jpg
+
+- slug: dr-stone
+  title: Dr. Stone
+  titleNative: ドクターストーン
+  anilistId: 98416
+  popularity: 88111
+  mangadexId: cfc3d743-bd89-48e2-991f-63e680cc4edf
+  coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/3415016f-892d-470f-938a-f8a0e4db769e.jpg.512.jpg
+  adaptations:
+    - name: Season 1
+      episodes: 24
+      sortOrder: 1
+      continueChapter: 60
+      continueVolume: 7
+      lastCoveredChapter: 60
+      coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/b7354f9e-9a04-4b7e-a1d8-f56795e457ab.jpg
+      notes: "Chapter 60 is split across the two seasons, so you'll re-read a few pages."
+    - name: Season 2 — Stone Wars
+      episodes: 11
+      sortOrder: 2
+      continueChapter: 84
+      continueVolume: 10
+      lastCoveredChapter: 84
+      coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/a9f2f48e-c8b8-4531-8ab8-12aefaf675be.jpg
+    - name: "Ryusui (Special)"
+      sortOrder: 3
+      continueChapter: 90
+      continueVolume: 11
+      lastCoveredChapter: 89
+      coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/8ab93d97-f644-407e-a24d-04881dbb107a.jpg
+    - name: "Season 3 — New World Part 1"
+      episodes: 11
+      sortOrder: 4
+      continueChapter: 116
+      continueVolume: 14
+      lastCoveredChapter: 116
+      coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/8d4f13e5-4641-467a-b014-4df8f8c0a945.jpg
+      notes: "The last episode stops five pages into 116, so read it in full."
+    - name: "Season 3 — New World Part 2"
+      episodes: 11
+      sortOrder: 5
+      continueChapter: 143
+      continueVolume: 17
+      lastCoveredChapter: 142
+      coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/8a7179ab-193d-494c-a395-18634458bdf0.jpg
+    - name: "Season 4 — Science Future Part 1"
+      episodes: 12
+      sortOrder: 6
+      continueChapter: 170
+      continueVolume: 20
+      lastCoveredChapter: 169
+      coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/a1baed4e-252e-4014-af97-80b7a9380419.jpg
+    - name: "Season 4 — Science Future Part 2"
+      episodes: 12
+      sortOrder: 7
+      continueChapter: 199
+      continueVolume: 23
+      lastCoveredChapter: 198
+      coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/be013204-2ce3-493c-b56d-e99802cd00b9.jpg
+    - name: "Season 4 — Science Future Part 3"
+      episodes: 13
+      sortOrder: 8
+      lastCoveredChapter: 232
+      caughtUp: true
+
+- slug: frieren
+  title: "Frieren: Beyond Journey's End"
+  titleNative: 葬送のフリーレン
+  aliases: ["Sousou no Frieren"]
+  anilistId: 118586
+  popularity: 83984
+  mangadexId: b0b721ff-c388-4486-aa0f-c2b0bb321512
+  coverUrl: https://uploads.mangadex.org/covers/b0b721ff-c388-4486-aa0f-c2b0bb321512/a741289e-d524-4789-a76a-765d34a88aef.jpg.512.jpg
+  adaptations:
+    - name: Season 1
+      episodes: 28
+      sortOrder: 1
+      continueChapter: 61
+      continueVolume: 7
+      lastCoveredChapter: 60
+      coverUrl: https://uploads.mangadex.org/covers/b0b721ff-c388-4486-aa0f-c2b0bb321512/99e8479c-f688-49ca-ba85-08b3fbdd7a08.jpg
+    - name: Season 2
+      episodes: 10
+      sortOrder: 2
+      continueChapter: 81
+      continueVolume: 9
+      lastCoveredChapter: 80
+      coverUrl: https://uploads.mangadex.org/covers/b0b721ff-c388-4486-aa0f-c2b0bb321512/99102eb4-f2f5-4dcf-877c-3ca61f31ce3a.jpg
+      notes: "Season 3 was announced for October 2027 and picks up from here."
+
+- slug: blue-lock
+  title: Blue Lock
+  titleNative: ブルーロック
+  anilistId: 106130
+  popularity: 122059
+  mangadexId: 4141c5dc-c525-4df5-afd7-cc7d192a832f
+  coverUrl: https://uploads.mangadex.org/covers/4141c5dc-c525-4df5-afd7-cc7d192a832f/9b876560-6d0b-4cd8-81bc-c083efc1dcea.jpg.512.jpg
+  readingLinks:
+    - label: Kodansha
+      url: https://kodansha.us/series/blue-lock/
+      sortOrder: 1
+  adaptations:
+    - name: Season 1
+      episodes: 24
+      sortOrder: 1
+      continueChapter: 95
+      continueVolume: 12
+      lastCoveredChapter: 94
+      coverUrl: https://uploads.mangadex.org/covers/4141c5dc-c525-4df5-afd7-cc7d192a832f/8f349a5e-e087-4bbc-803b-e534d4be3168.jpg
+    - name: Season 2 — vs. U-20 Japan
+      episodes: 14
+      sortOrder: 2
+      continueChapter: 150
+      continueVolume: 18
+      lastCoveredChapter: 149
+      coverUrl: https://uploads.mangadex.org/covers/4141c5dc-c525-4df5-afd7-cc7d192a832f/62dc1803-d633-4fd6-9065-9605854bc4c7.jpg
+
+- slug: mob-psycho-100
+  title: Mob Psycho 100
+  titleNative: モブサイコ100
+  aliases: ["Mob Psycho"]
+  anilistId: 85189
+  popularity: 48809
+  mangadexId: 736a2bf0-f875-4b52-a7b4-e8c40505b68a
+  coverUrl: https://uploads.mangadex.org/covers/736a2bf0-f875-4b52-a7b4-e8c40505b68a/c09d7be1-b2e8-42a9-ab84-69e2bc67f74b.jpg.512.jpg
+  readingLinks: []
+  adaptations:
+    - name: Season 1
+      episodes: 12
+      sortOrder: 1
+      continueChapter: 51
+      continueVolume: 6
+      lastCoveredChapter: 50
+      coverUrl: https://uploads.mangadex.org/covers/736a2bf0-f875-4b52-a7b4-e8c40505b68a/f9811c61-5642-481e-9b81-df492b7028d5.jpg
+    - name: Season 2
+      episodes: 13
+      sortOrder: 2
+      continueChapter: 92
+      continueVolume: 13
+      lastCoveredChapter: 91
+      coverUrl: https://uploads.mangadex.org/covers/736a2bf0-f875-4b52-a7b4-e8c40505b68a/b1823b97-c5f6-4212-b177-21f5cc5a612f.jpg
+    - name: Season 3
+      episodes: 12
+      sortOrder: 3
+      lastCoveredChapter: 101
+      caughtUp: true
