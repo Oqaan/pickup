@@ -8,11 +8,16 @@ public record SeedSeries(
                 String titleNative,
                 String coverUrl,
                 String notes,
-                List<SeedAdaptation> adaptations,
+                String author,
+                Integer startYear,
+                String publicationStatus,
+                Integer totalChapters,
+                Integer totalVolumes,
                 Integer anilistId,
                 Integer popularity,
                 String mangadexId,
                 List<String> aliases,
+                List<SeedAdaptation> adaptations,
                 List<SeedReadingLink> readingLinks) {
 
         public record SeedAdaptation(
