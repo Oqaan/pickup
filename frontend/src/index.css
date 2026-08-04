@@ -9,6 +9,7 @@
   --font-display: "Archivo Black", sans-serif;
   --font-body: "IBM Plex Sans", sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
+  --font-jp: "Zen Kaku Gothic New", sans-serif;
 }
 
 /* Moving interfaces can make some people dizzy. If their OS is set to reduce motion, turn transitions off. */
