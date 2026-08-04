@@ -58,7 +58,7 @@ export default function SeriesPage() {
         {series.title}
       </h1>
       {series.titleNative && (
-        <p className="font-mono text-xs text-tone mt-2">{series.titleNative}</p>
+        <p className="font-jp text-sm text-tone mt-2">{series.titleNative}</p>
       )}
 
       {series.notes && (

@@ -52,7 +52,7 @@ export default function HomePage() {
         from.
       </p>
 
-      <div className="mt-12 sm:mt-20 flex items-baseline gap-4 border-b-2 border-sumi focus-within:border-jump pb-3">
+      <div className="mt-12 sm:mt-20 flex items-baseline gap-4 border-b-2 border-tone focus-within:border-sumi pb-3">
         <span className="font-display text-3xl sm:text-4xl text-jump leading-none select-none">
           →
         </span>
