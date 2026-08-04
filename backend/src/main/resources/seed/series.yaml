@@ -174,8 +174,8 @@
   aliases: ["DDD"]
   anilistId: 132029
   popularity: 114563
-  mangadexId: 68112dc1-2b80-4f20-beb8-2f2a8716a430 
-  coverUrl: 
+  mangadexId: 68112dc1-2b80-4f20-beb8-2f2a8716a430
+  coverUrl: https://uploads.mangadex.org/covers/68112dc1-2b80-4f20-beb8-2f2a8716a430/1fea11e0-fd26-40a8-9977-9d93b46ef53e.jpg.512.jpg
   adaptations:
     - name: Season 1
       episodes: 12
@@ -183,6 +183,7 @@
       continueChapter: 34
       continueVolume: 5
       lastCoveredChapter: 34
+      coverUrl: https://uploads.mangadex.org/covers/68112dc1-2b80-4f20-beb8-2f2a8716a430/4f12555c-c498-49d0-a715-7b0a9f3c61d0.jpg
       notes: "The finale only animates the opening pages of 34, so read the chapter from the start."
     - name: Season 2
       episodes: 12
@@ -190,51 +191,66 @@
       continueChapter: 72
       continueVolume: 9
       lastCoveredChapter: 71
+      coverUrl: https://uploads.mangadex.org/covers/68112dc1-2b80-4f20-beb8-2f2a8716a430/0d14bee6-a535-41df-8384-fa7bdc9b49fb.jpg
 
 - slug: dr-stone
   title: Dr. Stone
   titleNative: ドクターストーン
-  anilistId: 
-  popularity: 
-  mangadexId: 
-  coverUrl: 
+  anilistId: 98416
+  popularity: 88111
+  mangadexId: cfc3d743-bd89-48e2-991f-63e680cc4edf
+  coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/3415016f-892d-470f-938a-f8a0e4db769e.jpg.512.jpg
   adaptations:
     - name: Season 1
       episodes: 24
       sortOrder: 1
       continueChapter: 60
+      continueVolume: 7
       lastCoveredChapter: 60
+      coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/b7354f9e-9a04-4b7e-a1d8-f56795e457ab.jpg
       notes: "Chapter 60 is split across the two seasons, so you'll re-read a few pages."
     - name: Season 2 — Stone Wars
       episodes: 11
       sortOrder: 2
       continueChapter: 84
+      continueVolume: 10
       lastCoveredChapter: 84
+      coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/a9f2f48e-c8b8-4531-8ab8-12aefaf675be.jpg
     - name: "Ryusui (Special)"
       sortOrder: 3
       continueChapter: 90
+      continueVolume: 11
       lastCoveredChapter: 89
+      coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/8ab93d97-f644-407e-a24d-04881dbb107a.jpg
     - name: "Season 3 — New World Part 1"
       episodes: 11
       sortOrder: 4
       continueChapter: 116
+      continueVolume: 14
       lastCoveredChapter: 116
+      coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/8d4f13e5-4641-467a-b014-4df8f8c0a945.jpg
       notes: "The last episode stops five pages into 116, so read it in full."
     - name: "Season 3 — New World Part 2"
       episodes: 11
       sortOrder: 5
       continueChapter: 143
+      continueVolume: 17
       lastCoveredChapter: 142
+      coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/8a7179ab-193d-494c-a395-18634458bdf0.jpg
     - name: "Season 4 — Science Future Part 1"
       episodes: 12
       sortOrder: 6
       continueChapter: 170
+      continueVolume: 20
       lastCoveredChapter: 169
+      coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/a1baed4e-252e-4014-af97-80b7a9380419.jpg
     - name: "Season 4 — Science Future Part 2"
       episodes: 12
       sortOrder: 7
       continueChapter: 199
+      continueVolume: 23
       lastCoveredChapter: 198
+      coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/be013204-2ce3-493c-b56d-e99802cd00b9.jpg
     - name: "Season 4 — Science Future Part 3"
       episodes: 13
       sortOrder: 8
