@@ -55,13 +55,17 @@
       episodes: 24
       sortOrder: 1
       continueChapter: 55
+      continueVolume: 8
       lastCoveredChapter: 54
+      coverUrl: https://uploads.mangadex.org/covers/5d1fc77e-706a-4fc5-bea8-486c9be0145d/df31fe1d-b77b-4c68-a2dd-17bbc2a8d52d.jpg
       notes: "Clean break at the end of the War Arc."
     - name: Season 2
       episodes: 24
       sortOrder: 2
       continueChapter: 101
+      continueVolume: 15
       lastCoveredChapter: 101
+      coverUrl: https://uploads.mangadex.org/covers/5d1fc77e-706a-4fc5-bea8-486c9be0145d/c73dfe75-bd7b-4960-b998-2a7c2f562340.jpg
       notes: "The finale only uses the last few pages of 101, so read the whole chapter."
 
 - slug: spy-x-family
