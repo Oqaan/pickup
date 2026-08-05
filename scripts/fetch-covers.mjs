@@ -1,6 +1,7 @@
 // Prints cover URLs for pasting into series.yaml. It never writes the file:
 // re-serialising would drop the comments and formatting.
-// Grid thumbnails do fine at 512; detail pages get the full-size upload
+// Only fetches what's missing; pass --all to refresh everything.
+// Grid thumbnails do fine at 512; detail pages get the full-size upload.
 
 import { readFileSync } from "node:fs";
 import { parse } from "yaml";
@@ -10,6 +11,9 @@ const API = "https://api.mangadex.org";
 const CDN = "https://uploads.mangadex.org/covers";
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// Skip entries that already have data unless --all is passed
+const refreshAll = process.argv.includes("--all");
 
 async function fetchCovers(mangadexId) {
   const res = await fetch(`${API}/cover?manga[]=${mangadexId}&limit=100`, {
@@ -38,7 +42,7 @@ function url(mangadexId, cover, size = "512") {
   // The file name already ends in .jpg; the size is appended after it
   return size
     ? `${CDN}/${mangadexId}/${cover.fileName}.${size}.jpg`
-    : `${CDN}/${mangadexId}/${cover.fileName}`
+    : `${CDN}/${mangadexId}/${cover.fileName}`;
 }
 
 const series = parse(readFileSync(YAML_PATH, "utf8"));
@@ -49,14 +53,24 @@ for (const s of series) {
     continue;
   }
 
+  const needsSeriesCover = refreshAll || !s.coverUrl;
+  const missingAdaptations = (s.adaptations ?? []).filter(
+    (a) => a.continueVolume && (refreshAll || !a.coverUrl),
+  );
+
+  if (!needsSeriesCover && missingAdaptations.length === 0) continue;
+
   const covers = await fetchCovers(s.mangadexId);
   console.log(`\n${s.slug}`);
 
-  const first = pick(covers, 1);
-  console.log(`  coverUrl: ${first ? url(s.mangadexId, first) : "not found"}`);
+  if (needsSeriesCover) {
+    const first = pick(covers, 1);
+    console.log(
+      `  coverUrl: ${first ? url(s.mangadexId, first) : "not found"}`,
+    );
+  }
 
-  for (const a of s.adaptations ?? []) {
-    if (!a.continueVolume) continue;
+  for (const a of missingAdaptations) {
     const cover = pick(covers, a.continueVolume);
     console.log(`  ${a.name} (vol ${a.continueVolume})`);
     console.log(

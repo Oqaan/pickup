@@ -25,25 +25,39 @@ public class Series {
     @Column(name = "title_native")
     private String titleNative;
 
+    @Column(name = "cover_url")
+    private String coverUrl;
+
+    private String notes;
+
+    private String author;
+
+    @Column(name = "start_year")
+    private Integer startYear;
+
+    @Column(name = "publication_status")
+    private String publicationStatus;
+
+    @Column(name = "total_chapters")
+    private Integer totalChapters;
+
+    @Column(name = "total_volumes")
+    private Integer totalVolumes;
+
     @Column(name = "anilist_id")
     private Integer anilistId;
 
     @Column(name = "mal_id")
     private Integer malId;
 
-    @Column(name = "cover_url")
-    private String coverUrl;
-
-    @Column(nullable = false)
-    private String status = "published";
+    @Column(name = "mangadex_id")
+    private String mangadexId;
 
     @Column(nullable = false)
     private int popularity = 0;
 
-    @Column(name = "mangadex_id")
-    private String mangadexId;
-
-    private String notes;
+    @Column(nullable = false)
+    private String status = "published";
 
     @OneToMany(mappedBy = "series", cascade = CascadeType.ALL, orphanRemoval = true)
     @OrderBy("sortOrder ASC")

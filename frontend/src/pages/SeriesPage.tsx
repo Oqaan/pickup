@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { fetchSeriesDetail } from "../api";
+import { Link, useParams } from "react-router-dom";
 import type { SeriesDetail } from "../types";
+import { fetchSeriesDetail } from "../api";
 
 export default function SeriesPage() {
-  const { slug } = useParams<{ slug: string }>();
+  const { slug } = useParams();
   const [series, setSeries] = useState<SeriesDetail | null>(null);
-  const [error, setError] = useState<string | null>(null);
   const [selected, setSelected] = useState(0);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!slug) return;
@@ -17,15 +17,61 @@ export default function SeriesPage() {
   }, [slug]);
 
   if (error === "not-found") {
-    return <p className="font-body p-8">No entry for "{slug}" yet.</p>;
+    return (
+      <main className="max-w-2xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
+        <p className="font-mono text-xs tracking-widest text-tone">NOT FOUND</p>
+        <h1 className="font-display text-4xl text-sumi leading-tight mt-3">
+          No entry for "{slug}" yet.
+        </h1>
+        <p className="font-body text-base text-sumi/70 mt-4 max-w-md leading-relaxed">
+          This one isn't in the database. The list grows by hand, one verified
+          series at a time.
+        </p>
+        <div className="flex gap-4 mt-8 font-mono text-xs tracking-widest">
+          <Link to="/" className="text-sumi hover:text-jump">
+            ← BACK TO SEARCH
+          </Link>
+          <span className="text-tone">·</span>
+          <a
+            href="https://github.com/Oqaan/pickup/issues/new"
+            target="_blank"
+            rel="noreferrer"
+            className="text-sumi hover:text-jump"
+          >
+            SUGGEST IT
+          </a>
+        </div>
+      </main>
+    );
   }
+
   if (error) {
-    return <p className="font-body p-8">Something went wrong. Try again.</p>;
+    return (
+      <main className="max-w-2xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
+        <p className="font-mono text-xs tracking-widest text-tone">
+          SOMETHING WENT WRONG
+        </p>
+        <h1 className="font-display text-4xl text-sumi leading-tight mt-3">
+          Couldn't load this one.
+        </h1>
+        <p className="font-body text-base text-sumi/70 mt-4 max-w-md leading-relaxed">
+          Try reloading the page. If it keeps happening, something's off on my
+          end.
+        </p>
+        <Link
+          to="/"
+          className="inline-block mt-8 font-mono text-xs tracking-widest text-sumi hover:text-jump"
+        >
+          ← BACK TO SEARCH
+        </Link>
+      </main>
+    );
   }
+
   if (!series) {
     return (
       <main
-        className="max-w-4xl mx-auto px-6 pt-12 sm:pt-20 pb-0"
+        className="max-w-2xl mx-auto px-6 pt-12 sm:pt-20 pb-0"
         aria-busy="true"
       >
         <div className="h-12 w-64 bg-tone/30" />
@@ -35,7 +81,7 @@ export default function SeriesPage() {
           <div className="h-9 w-24 bg-tone/20" />
           <div className="h-9 w-24 bg-tone/20" />
         </div>
-        <div className="mt-12 sm:mt-16 pt-8 border-t border-tone max-w-2xl">
+        <div className="mt-12 sm:mt-16 pt-8 border-t border-tone">
           <div className="h-20 w-40 bg-tone/30" />
         </div>
       </main>
@@ -44,16 +90,22 @@ export default function SeriesPage() {
 
   const current = series.adaptations[selected];
 
-  if (!current) {
-    return (
-      <p className="font-body p-8">
-        We don't have the chapter details for {series.title} yet.
-      </p>
-    );
-  }
+  const hasInfo =
+    series.author ||
+    series.startYear ||
+    series.publicationStatus ||
+    series.totalChapters ||
+    series.totalVolumes;
+
+  const status =
+    series.publicationStatus === "RELEASING"
+      ? "Ongoing"
+      : series.publicationStatus === "FINISHED"
+        ? "Finished"
+        : series.publicationStatus;
 
   return (
-    <main className="max-w-4xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
+    <main className="max-w-2xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
       <h1 className="font-display text-4xl sm:text-5xl text-sumi leading-none">
         {series.title}
       </h1>
@@ -87,7 +139,7 @@ export default function SeriesPage() {
         ))}
       </div>
 
-      <div className="mt-12 sm:mt-16 pt-8 border-t border-tone flex flex-col sm:flex-row gap-6 sm:gap-8 sm:items-start max-w-2xl">
+      <div className="mt-12 sm:mt-16 pt-8 border-t border-tone flex flex-col sm:flex-row gap-6 sm:gap-8 sm:items-start">
         <div className="flex-1 min-w-0">
           {current.caughtUp ? (
             <>
@@ -151,8 +203,61 @@ export default function SeriesPage() {
         )}
       </div>
 
+      {hasInfo && (
+        <dl className="mt-10 grid grid-cols-3 gap-x-8 gap-y-6">
+          {series.author && (
+            <div className="col-span-3 sm:col-span-1">
+              <dt className="font-mono text-xs tracking-widest text-tone">
+                AUTHOR
+              </dt>
+              <dd className="font-body text-sm text-sumi mt-1">
+                {series.author}
+              </dd>
+            </div>
+          )}
+          {series.startYear && (
+            <div>
+              <dt className="font-mono text-xs tracking-widest text-tone">
+                STARTED
+              </dt>
+              <dd className="font-body text-sm text-sumi mt-1">
+                {series.startYear}
+              </dd>
+            </div>
+          )}
+          {status && (
+            <div>
+              <dt className="font-mono text-xs tracking-widest text-tone">
+                STATUS
+              </dt>
+              <dd className="font-body text-sm text-sumi mt-1">{status}</dd>
+            </div>
+          )}
+          {series.totalChapters && (
+            <div>
+              <dt className="font-mono text-xs tracking-widest text-tone">
+                CHAPTERS
+              </dt>
+              <dd className="font-body text-sm text-sumi mt-1">
+                {series.totalChapters}
+              </dd>
+            </div>
+          )}
+          {series.totalVolumes && (
+            <div>
+              <dt className="font-mono text-xs tracking-widest text-tone">
+                VOLUMES
+              </dt>
+              <dd className="font-body text-sm text-sumi mt-1">
+                {series.totalVolumes}
+              </dd>
+            </div>
+          )}
+        </dl>
+      )}
+
       {series.readingLinks.length > 0 && (
-        <div className="mt-12 sm:mt-16 pt-8 border-t border-tone max-w-2xl">
+        <div className="mt-12 sm:mt-16 pt-8 border-t border-tone">
           <p className="font-mono text-xs tracking-widest text-tone">
             WHERE TO READ
           </p>

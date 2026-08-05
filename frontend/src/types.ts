@@ -16,8 +16,13 @@ export type SeriesDetail = {
   titleNative: string | null;
   coverUrl: string | null;
   notes: string | null;
-  readingLinks: ReadingLink[]
+  author: string | null;
+  startYear: number | null;
+  publicationStatus: string | null;
+  totalChapters: number | null;
+  totalVolumes: number | null;
   adaptations: Adaptation[];
+  readingLinks: ReadingLink[];
 };
 
 export type SeriesSummary = {

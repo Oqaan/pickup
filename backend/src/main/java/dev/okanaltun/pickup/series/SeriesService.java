@@ -56,6 +56,11 @@ public class SeriesService {
                                 series.getTitleNative(),
                                 series.getCoverUrl(),
                                 series.getNotes(),
+                                series.getAuthor(),
+                                series.getStartYear(),
+                                series.getPublicationStatus(),
+                                series.getTotalChapters(),
+                                series.getTotalVolumes(),
                                 adaptations,
                                 readingLinks);
         }

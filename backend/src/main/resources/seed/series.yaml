@@ -6,6 +6,11 @@
   popularity: 249811
   mangadexId: c52b2ce3-7f95-469c-96b0-479524fb7a1a
   coverUrl: https://uploads.mangadex.org/covers/c52b2ce3-7f95-469c-96b0-479524fb7a1a/34bbf92f-b92e-43e4-9dde-bbd48bd83bcd.jpg.512.jpg
+  author: Gege Akutami
+  startYear: 2018
+  publicationStatus: FINISHED
+  totalChapters: 272
+  totalVolumes: 30
   notes: "Jujutsu Kaisen 0 is canon and worth watching, but it adapts its own prequel volume. Your starting chapter depends only on how many seasons you've seen."
   readingLinks:
     - label: MANGA Plus
@@ -46,6 +51,11 @@
   popularity: 136470
   mangadexId: 5d1fc77e-706a-4fc5-bea8-486c9be0145d
   coverUrl: https://uploads.mangadex.org/covers/5d1fc77e-706a-4fc5-bea8-486c9be0145d/47e19a12-b0fb-4b52-b105-c202c555b966.jpg.512.jpg
+  author: Makoto Yukimura
+  startYear: 2005
+  publicationStatus: FINISHED
+  totalChapters: 220
+  totalVolumes: 29
   readingLinks:
     - label: Kodansha
       url: https://kodansha.us/series/vinland-saga/
@@ -76,6 +86,9 @@
   popularity: 158065
   mangadexId: 6b958848-c885-4735-9201-12ee77abcb3c
   coverUrl: https://uploads.mangadex.org/covers/6b958848-c885-4735-9201-12ee77abcb3c/d8babd13-5736-4964-8963-b444a950d539.jpg.512.jpg
+  author: Tatsuya Endou
+  startYear: 2019
+  publicationStatus: RELEASING
   readingLinks:
     - label: MANGA Plus
       url: https://mangaplus.shueisha.co.jp/titles/100056
@@ -115,6 +128,11 @@
   popularity: 328247
   mangadexId: a77742b1-befd-49a4-bff5-1ad4e6b0ef7b
   coverUrl: https://uploads.mangadex.org/covers/a77742b1-befd-49a4-bff5-1ad4e6b0ef7b/07b6e139-194a-4438-b07a-57db2f4f22f8.jpg.512.jpg
+  author: Tatsuki Fujimoto
+  startYear: 2018
+  publicationStatus: FINISHED
+  totalChapters: 232
+  totalVolumes: 24
   readingLinks:
     - label: MANGA Plus
       url: https://mangaplus.shueisha.co.jp/titles/100037
@@ -147,6 +165,11 @@
   popularity: 193652
   mangadexId: 6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b
   coverUrl: https://uploads.mangadex.org/covers/6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b/040e8ae9-4ddd-49d2-8986-56782b391714.jpg.512.jpg
+  author: Sui Ishida
+  startYear: 2011
+  publicationStatus: FINISHED
+  totalChapters: 144
+  totalVolumes: 14
   readingLinks:
     - label: MANGA Plus
       url: https://mangaplus.shueisha.co.jp/titles/100027
@@ -180,6 +203,9 @@
   popularity: 114563
   mangadexId: 68112dc1-2b80-4f20-beb8-2f2a8716a430
   coverUrl: https://uploads.mangadex.org/covers/68112dc1-2b80-4f20-beb8-2f2a8716a430/1fea11e0-fd26-40a8-9977-9d93b46ef53e.jpg.512.jpg
+  author: Yukinobu Tatsu
+  startYear: 2021
+  publicationStatus: RELEASING
   adaptations:
     - name: Season 1
       episodes: 12
@@ -204,6 +230,12 @@
   popularity: 88111
   mangadexId: cfc3d743-bd89-48e2-991f-63e680cc4edf
   coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/3415016f-892d-470f-938a-f8a0e4db769e.jpg.512.jpg
+  author: Riichiro Inagaki & Boichi
+  startYear: 2017
+  publicationStatus: FINISHED
+  totalChapters: 232
+  totalVolumes: 27
+  notes: "The story ends at chapter 232. Volume 27 collects the Terraforming one-shot and the three-chapter sequel Dr. Stone 4D Science, if you want more."
   adaptations:
     - name: Season 1
       episodes: 24
@@ -269,6 +301,9 @@
   popularity: 83984
   mangadexId: b0b721ff-c388-4486-aa0f-c2b0bb321512
   coverUrl: https://uploads.mangadex.org/covers/b0b721ff-c388-4486-aa0f-c2b0bb321512/a741289e-d524-4789-a76a-765d34a88aef.jpg.512.jpg
+  author: Kanehito Yamada
+  startYear: 2020
+  publicationStatus: RELEASING
   adaptations:
     - name: Season 1
       episodes: 28
@@ -293,6 +328,9 @@
   popularity: 122059
   mangadexId: 4141c5dc-c525-4df5-afd7-cc7d192a832f
   coverUrl: https://uploads.mangadex.org/covers/4141c5dc-c525-4df5-afd7-cc7d192a832f/9b876560-6d0b-4cd8-81bc-c083efc1dcea.jpg.512.jpg
+  author: Muneyuki Kaneshiro & Yuusuke Nomura
+  startYear: 2018
+  publicationStatus: RELEASING
   readingLinks:
     - label: Kodansha
       url: https://kodansha.us/series/blue-lock/
@@ -321,6 +359,11 @@
   popularity: 48809
   mangadexId: 736a2bf0-f875-4b52-a7b4-e8c40505b68a
   coverUrl: https://uploads.mangadex.org/covers/736a2bf0-f875-4b52-a7b4-e8c40505b68a/c09d7be1-b2e8-42a9-ab84-69e2bc67f74b.jpg.512.jpg
+  author: ONE
+  startYear: 2012
+  publicationStatus: FINISHED
+  totalChapters: 101
+  totalVolumes: 16
   readingLinks: []
   adaptations:
     - name: Season 1
