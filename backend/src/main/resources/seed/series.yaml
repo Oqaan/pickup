@@ -35,7 +35,7 @@
       lastCoveredChapter: 139
       coverUrl: https://uploads.mangadex.org/covers/c52b2ce3-7f95-469c-96b0-479524fb7a1a/e9c3f65d-be95-4397-a67f-331308e97a4c.jpg
       notes: "The finale adapts a couple of pages from 138 and the opening of 139 — start at 138 anyway, you'll only re-read a few panels."
-    - name: "Season 3 — The Culling Game Part 1"
+    - name: "Season 3: The Culling Game Part 1"
       episodes: 12
       sortOrder: 3
       continueChapter: 181
@@ -185,7 +185,7 @@
       continueVolume: 7
       lastCoveredChapter: 66
       coverUrl: https://uploads.mangadex.org/covers/6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b/19102e56-16fb-4052-b72f-90e3f3015571.jpg
-    - name: "Season 2 — Tokyo Ghoul √A"
+    - name: "Season 2: Tokyo Ghoul √A"
       episodes: 12
       sortOrder: 2
       continueChapter: 67
@@ -245,7 +245,7 @@
       lastCoveredChapter: 60
       coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/b7354f9e-9a04-4b7e-a1d8-f56795e457ab.jpg
       notes: "Chapter 60 is split across the two seasons, so you'll re-read a few pages."
-    - name: Season 2 — Stone Wars
+    - name: "Season 2: Stone Wars"
       episodes: 11
       sortOrder: 2
       continueChapter: 84
@@ -258,7 +258,7 @@
       continueVolume: 11
       lastCoveredChapter: 89
       coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/8ab93d97-f644-407e-a24d-04881dbb107a.jpg
-    - name: "Season 3 — New World Part 1"
+    - name: "Season 3: New World Part 1"
       episodes: 11
       sortOrder: 4
       continueChapter: 116
@@ -266,28 +266,28 @@
       lastCoveredChapter: 116
       coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/8d4f13e5-4641-467a-b014-4df8f8c0a945.jpg
       notes: "The last episode stops five pages into 116, so read it in full."
-    - name: "Season 3 — New World Part 2"
+    - name: "Season 3: New World Part 2"
       episodes: 11
       sortOrder: 5
       continueChapter: 143
       continueVolume: 17
       lastCoveredChapter: 142
       coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/8a7179ab-193d-494c-a395-18634458bdf0.jpg
-    - name: "Season 4 — Science Future Part 1"
+    - name: "Season 4: Science Future Part 1"
       episodes: 12
       sortOrder: 6
       continueChapter: 170
       continueVolume: 20
       lastCoveredChapter: 169
       coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/a1baed4e-252e-4014-af97-80b7a9380419.jpg
-    - name: "Season 4 — Science Future Part 2"
+    - name: "Season 4: Science Future Part 2"
       episodes: 12
       sortOrder: 7
       continueChapter: 199
       continueVolume: 23
       lastCoveredChapter: 198
       coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/be013204-2ce3-493c-b56d-e99802cd00b9.jpg
-    - name: "Season 4 — Science Future Part 3"
+    - name: "Season 4: Science Future Part 3"
       episodes: 13
       sortOrder: 8
       lastCoveredChapter: 232
@@ -343,7 +343,7 @@
       continueVolume: 12
       lastCoveredChapter: 94
       coverUrl: https://uploads.mangadex.org/covers/4141c5dc-c525-4df5-afd7-cc7d192a832f/8f349a5e-e087-4bbc-803b-e534d4be3168.jpg
-    - name: Season 2 — vs. U-20 Japan
+    - name: "Season 2: vs. U-20 Japan"
       episodes: 14
       sortOrder: 2
       continueChapter: 150
@@ -385,3 +385,54 @@
       sortOrder: 3
       lastCoveredChapter: 101
       caughtUp: true
+
+- slug: demon-slayer
+  title: Demon Slayer
+  titleNative: 鬼滅の刃
+  aliases: ["Kimetsu no Yaiba", "KnY"]
+  anilistId: 87216
+  popularity: 208193
+  mangadexId: 789642f8-ca89-4e4e-8f7b-eee4d17ea08b
+  coverUrl: https://uploads.mangadex.org/covers/789642f8-ca89-4e4e-8f7b-eee4d17ea08b/6fa2282f-282b-41cf-8ab7-fbdbeb822bd5.jpg.512.jpg
+  author: Koyoharu Gotouge
+  startYear: 2016
+  publicationStatus: FINISHED
+  totalChapters: 205
+  totalVolumes: 23
+  adaptations:
+    - name: Season 1
+      episodes: 26
+      sortOrder: 1
+      continueChapter: 54
+      continueVolume: 7
+      lastCoveredChapter: 54
+      coverUrl: https://uploads.mangadex.org/covers/789642f8-ca89-4e4e-8f7b-eee4d17ea08b/39ca6197-f751-492c-9d8b-31c822c895ed.jpg
+      notes: "The finale only adapts the first few pages of 54, so read it from the start."
+    - name: "Season 2: Mugen Train"
+      episodes: 8
+      sortOrder: 2
+      continueChapter: 67
+      continueVolume: 8
+      lastCoveredChapter: 66
+      coverUrl: https://uploads.mangadex.org/covers/789642f8-ca89-4e4e-8f7b-eee4d17ea08b/1d063d96-c160-481f-ab7e-81311aee99b5.jpg
+    - name: "Season 2: Entertainment District"
+      episodes: 11
+      sortOrder: 3
+      continueChapter: 98
+      continueVolume: 12
+      lastCoveredChapter: 97
+      coverUrl: https://uploads.mangadex.org/covers/789642f8-ca89-4e4e-8f7b-eee4d17ea08b/8bcffd3f-a7b9-4ed7-91f9-6c9d46a3f0bb.jpg
+    - name: "Season 3: Swordsmith Village"
+      episodes: 11
+      sortOrder: 4
+      continueChapter: 128
+      continueVolume: 15
+      lastCoveredChapter: 127
+      coverUrl: https://uploads.mangadex.org/covers/789642f8-ca89-4e4e-8f7b-eee4d17ea08b/28da5e95-2397-477b-a131-9ba29dbaeb2e.jpg
+    - name: "Season 4: Hashira Training"
+      episodes: 8
+      sortOrder: 5
+      continueChapter: 140
+      continueVolume: 16
+      lastCoveredChapter: 139
+      coverUrl: https://uploads.mangadex.org/covers/789642f8-ca89-4e4e-8f7b-eee4d17ea08b/a72bfc4d-6189-4f96-a33a-bb0219266cf3.jpg
