@@ -9,10 +9,12 @@ export default function HomePage() {
   const [query, setQuery] = useState("");
   const [showAll, setShowAll] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     fetchSeriesList()
       .then(setSeries)
+      .catch(() => setError(true))
       .finally(() => setLoading(false));
   }, []);
 
@@ -38,6 +40,23 @@ export default function HomePage() {
     query.length < 2
       ? "MOST READ"
       : `${results.length} ${results.length === 1 ? "RESULT" : "RESULTS"}`;
+
+  if (error) {
+    return (
+      <main className="max-w-4xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
+        <p className="font-mono text-xs tracking-widest text-tone">
+          SOMETHING WENT WRONG
+        </p>
+        <h1 className="font-display text-4xl text-sumi leading-tight mt-3">
+          Couldn't load the list.
+        </h1>
+        <p className="font-body text-base text-sumi/70 mt-4 max-w-md leading-relaxed">
+          Try reloading the page. If it keeps happening, something's off on my
+          end.
+        </p>
+      </main>
+    );
+  }
 
   return (
     <main className="max-w-4xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
