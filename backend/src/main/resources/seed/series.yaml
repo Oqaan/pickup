@@ -436,3 +436,73 @@
       continueVolume: 16
       lastCoveredChapter: 139
       coverUrl: https://uploads.mangadex.org/covers/789642f8-ca89-4e4e-8f7b-eee4d17ea08b/a72bfc4d-6189-4f96-a33a-bb0219266cf3.jpg
+
+- slug: my-hero-academia
+  title: My Hero Academia
+  titleNative: 僕のヒーローアカデミア
+  aliases: ["Boku no Hero Academia", "MHA", "BNHA"]
+  anilistId: 85486
+  popularity: 176911
+  mangadexId: 4f3bcae4-2d96-4c9d-932c-90181d9c873e
+  coverUrl: https://uploads.mangadex.org/covers/4f3bcae4-2d96-4c9d-932c-90181d9c873e/c7a7101a-8e22-442b-a1db-55ba9ef5b1ab.jpg.512.jpg
+  author: Kouhei Horikoshi
+  startYear: 2014
+  publicationStatus: FINISHED
+  totalChapters: 431
+  totalVolumes: 42
+  adaptations:
+    - name: Season 1
+      episodes: 13
+      sortOrder: 1
+      continueChapter: 22
+      continueVolume: 3
+      lastCoveredChapter: 21
+      coverUrl: https://uploads.mangadex.org/covers/4f3bcae4-2d96-4c9d-932c-90181d9c873e/43d1808b-4b15-4ac6-985f-ea6a1af67a0c.png
+    - name: Season 2
+      episodes: 25
+      sortOrder: 2
+      continueChapter: 71
+      continueVolume: 8
+      lastCoveredChapter: 70
+      coverUrl: https://uploads.mangadex.org/covers/4f3bcae4-2d96-4c9d-932c-90181d9c873e/69d86065-5c4e-4ba8-9c2a-2bee1f636ae9.jpg
+    - name: Season 3
+      episodes: 25
+      sortOrder: 3
+      continueChapter: 125
+      continueVolume: 14
+      lastCoveredChapter: 124
+      coverUrl: https://uploads.mangadex.org/covers/4f3bcae4-2d96-4c9d-932c-90181d9c873e/5c5f5373-b9bd-4271-a6b9-45ef7a219012.jpg
+    - name: Season 4
+      episodes: 25
+      sortOrder: 4
+      continueChapter: 191
+      continueVolume: 21
+      lastCoveredChapter: 190
+      coverUrl: https://uploads.mangadex.org/covers/4f3bcae4-2d96-4c9d-932c-90181d9c873e/b8eee169-d057-4572-9ad5-dcff4d719841.jpg
+      notes: "The last episodes only sample chapters 192-193. Season 5 picks back up from 190, so there's some overlap either way."
+    - name: Season 5
+      episodes: 25
+      sortOrder: 5
+      continueChapter: 259
+      continueVolume: 27
+      lastCoveredChapter: 258
+      coverUrl: https://uploads.mangadex.org/covers/4f3bcae4-2d96-4c9d-932c-90181d9c873e/cba532f1-3a83-4139-b7bf-b356d7145d64.jpg
+    - name: Season 6
+      episodes: 25
+      sortOrder: 6
+      continueChapter: 329
+      continueVolume: 34
+      lastCoveredChapter: 328
+      coverUrl: https://uploads.mangadex.org/covers/4f3bcae4-2d96-4c9d-932c-90181d9c873e/13c21a26-d8f3-49f0-a634-6b297ce0b2c9.jpg
+    - name: Season 7
+      episodes: 21
+      sortOrder: 7
+      continueChapter: 399
+      continueVolume: 40
+      lastCoveredChapter: 398
+      coverUrl: https://uploads.mangadex.org/covers/4f3bcae4-2d96-4c9d-932c-90181d9c873e/17773464-61da-4885-8084-50f9d2489fbd.jpg
+    - name: Season 8
+      episodes: 12
+      sortOrder: 8
+      lastCoveredChapter: 431
+      caughtUp: true
