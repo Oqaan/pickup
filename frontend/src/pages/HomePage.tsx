@@ -3,8 +3,10 @@ import type { SeriesSummary } from "../types";
 import { fetchSeriesList } from "../api";
 import Fuse from "fuse.js";
 import { Link } from "react-router-dom";
+import { useTitle } from "../useTitle";
 
 export default function HomePage() {
+  useTitle("pickup - where to start the manga after the anime");
   const [series, setSeries] = useState<SeriesSummary[]>([]);
   const [query, setQuery] = useState("");
   const [showAll, setShowAll] = useState(false);
