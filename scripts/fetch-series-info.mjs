@@ -52,11 +52,15 @@ for (const s of series) {
     continue;
   }
 
-  // AniList doesn't sort staff by role, so the first entry is often an assistant
-  // or a cover artist.
+  // AniList doesn't sort staff by role, so pick story and art credits explicitly.
+  // Some series split writing and illustration between two people.
   const edges = media.staff?.edges ?? [];
   const story = edges.find((e) => /story/i.test(e.role ?? ""));
-  const author = (story ?? edges[0])?.node?.name?.full ?? "";
+  const art = edges.find((e) => /art/i.test(e.role ?? ""));
+
+  const names = [story, art].map((e) => e?.node?.name?.full).filter(Boolean);
+  const author =
+    [...new Set(names)].join(" & ") || edges[0]?.node?.name?.full || "";
 
   console.log(`\n${s.slug}`);
   console.log(`  author: ${author}`);
