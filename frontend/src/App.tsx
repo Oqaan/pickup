@@ -3,6 +3,7 @@ import SeriesPage from "./pages/SeriesPage";
 import HomePage from "./pages/HomePage";
 import Layout from "./components/Layout";
 import AboutPage from "./pages/AboutPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
           <Route path="/anime/:slug" element={<SeriesPage />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Layout>
     </BrowserRouter>
