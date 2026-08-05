@@ -565,3 +565,160 @@
       continueVolume: 32
       lastCoveredChapter: 339
       coverUrl: https://uploads.mangadex.org/covers/db692d58-4b13-4174-ae8c-30c515c0689c/84988c08-eb29-4125-a704-8c181474d764.jpg
+
+- slug: naruto
+  title: Naruto
+  titleNative: NARUTO -ナルト-
+  anilistId: 30011
+  popularity: 98136
+  mangadexId: 6b1eb93e-473a-4ab3-9922-1a66d2a29a4a
+  coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/c5a3090c-4ca0-40a2-9102-e0ee0c6dac15.jpg.512.jpg
+  author: Masashi Kishimoto
+  startYear: 1999
+  publicationStatus: FINISHED
+  totalChapters: 700
+  totalVolumes: 72
+  notes: "This covers the first Naruto anime. Shippuden picks up right after, both adapting the same manga. Filler arcs are left out."
+  adaptations:
+    - name: "Land of Waves Arc"
+      episodes: 19
+      sortOrder: 1
+      continueChapter: 34
+      continueVolume: 4
+      lastCoveredChapter: 33
+      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/9a838405-c2e2-4c4a-a666-83f2193a9071.jpg
+    - name: "Chunin Exams Arc"
+      episodes: 48
+      sortOrder: 2
+      continueChapter: 116
+      continueVolume: 13
+      lastCoveredChapter: 115
+      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/d861ac97-697d-4b24-bd6c-64a02641d6d4.jpg
+    - name: "Konoha Crush Arc"
+      episodes: 13
+      sortOrder: 3
+      continueChapter: 139
+      continueVolume: 16
+      lastCoveredChapter: 138
+      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/af2a6695-db80-40a5-9367-e24029a50a26.jpg
+    - name: "Search for Tsunade Arc"
+      episodes: 20
+      sortOrder: 4
+      continueChapter: 172
+      continueVolume: 20
+      lastCoveredChapter: 171
+      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/24be3e66-cf34-4a6a-aa49-e264927eb2dd.jpg
+    - name: "Sasuke Recovery Arc"
+      episodes: 29
+      sortOrder: 5
+      continueChapter: 239
+      continueVolume: 27
+      lastCoveredChapter: 238
+      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/de7ddd06-851e-4366-90b7-e6a3b55c4b7a.jpg
+      notes: "Part 1 ends here. Keep reading from 239. The Shippuden anime later picks up at chapter 245."
+
+- slug: naruto-shippuden
+  title: Naruto Shippuden
+  titleNative: NARUTO -ナルト- 疾風伝
+  aliases: ["Naruto Shippuuden"]
+  anilistId: 30011
+  popularity: 98136
+  mangadexId: 6b1eb93e-473a-4ab3-9922-1a66d2a29a4a
+  coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/07cca30e-d596-4dd0-b496-0c6bc2525b48.jpg.512.jpg
+  author: Masashi Kishimoto
+  startYear: 1999
+  publicationStatus: FINISHED
+  totalChapters: 700
+  totalVolumes: 72
+  notes: "Shippuden adapts the same manga from the time-skip onward, chapter 245 to the end. Filler arcs are left out."
+  adaptations:
+    - name: "Kazekage Rescue Arc"
+      episodes: 32
+      sortOrder: 1
+      continueChapter: 282
+      continueVolume: 32
+      lastCoveredChapter: 281
+      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/21f40155-e750-41d3-8b98-c26b6f549023.jpg
+    - name: "Tenchi Bridge Arc"
+      episodes: 21
+      sortOrder: 2
+      continueChapter: 311
+      continueVolume: 35
+      lastCoveredChapter: 310
+      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/d2d5fa90-a4c5-4c55-abc3-4c97dff40085.jpg
+    - name: "Akatsuki Suppression Arc"
+      episodes: 17
+      sortOrder: 3
+      continueChapter: 343
+      continueVolume: 38
+      lastCoveredChapter: 342
+      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/3980b80a-b454-40f9-a07a-737abd556b31.jpg
+    - name: "Itachi Pursuit Arc"
+      episodes: 12
+      sortOrder: 4
+      continueChapter: 368
+      continueVolume: 40
+      lastCoveredChapter: 367
+      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/f9d62ea2-0c65-4539-aff9-5612ad89424b.jpg
+    - name: "Tale of Jiraiya the Gallant Arc"
+      episodes: 7
+      sortOrder: 5
+      continueChapter: 384
+      continueVolume: 42
+      lastCoveredChapter: 383
+      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/0020babd-c96e-4f66-bffa-97238d0e46e0.jpg
+    - name: "Fated Battle Between Brothers Arc"
+      episodes: 10
+      sortOrder: 6
+      continueChapter: 413
+      continueVolume: 45
+      lastCoveredChapter: 412
+      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/389a6776-c822-4d77-aa6d-f010178d2b11.jpg
+    - name: "Pain's Assault Arc"
+      episodes: 24
+      sortOrder: 7
+      continueChapter: 454
+      continueVolume: 49
+      lastCoveredChapter: 453
+      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/44b74d9b-8a42-4caa-9fbb-46bff133155a.jpg
+    - name: "Five Kage Summit Arc"
+      episodes: 18
+      sortOrder: 8
+      continueChapter: 484
+      continueVolume: 52
+      lastCoveredChapter: 483
+      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/83104813-ce49-41a1-9764-491803884978.jpg
+    - name: "Fourth Shinobi World War: Countdown Arc"
+      episodes: 22
+      sortOrder: 9
+      continueChapter: 516
+      continueVolume: 55
+      lastCoveredChapter: 515
+      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/d68f1905-5f9c-4dec-ba11-6d17986c7b46.jpg
+    - name: "Fourth Shinobi World War: Confrontation Arc"
+      episodes: 55
+      sortOrder: 10
+      continueChapter: 560
+      continueVolume: 59
+      lastCoveredChapter: 559
+      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/324730f8-9e64-4a19-a0dc-3ae7816d5897.jpg
+    - name: "Fourth Shinobi World War: Climax Arc"
+      episodes: 41
+      sortOrder: 11
+      continueChapter: 640
+      continueVolume: 67
+      lastCoveredChapter: 639
+      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/0741da6c-47fb-4995-b968-5c4fa46fc359.jpg
+    - name: "Birth of the Ten-Tails' Jinchuriki Arc"
+      episodes: 34
+      sortOrder: 12
+      continueChapter: 678
+      continueVolume: 70
+      lastCoveredChapter: 677
+      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/c0cf37a9-1e64-486e-96f2-644c39c3c37a.jpg
+    - name: "Kaguya Otsutsuki Strikes Arc"
+      episodes: 22
+      sortOrder: 13
+      lastCoveredChapter: 699
+      caughtUp: true
+      notes: "Only the epilogue chapter (700) is left after this."
