@@ -1,4 +1,7 @@
+import { useTitle } from "../useTitle";
+
 export default function AboutPage() {
+  useTitle("About - pickup");
   return (
     <main className="max-w-2xl mx-auto px-6 pt-16 pb-0">
       <h1 className="font-display text-4xl text-sumi leading-tight">

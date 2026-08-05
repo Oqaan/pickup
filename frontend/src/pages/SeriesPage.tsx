@@ -2,12 +2,15 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import type { SeriesDetail } from "../types";
 import { fetchSeriesDetail } from "../api";
+import { useTitle } from "../useTitle";
 
 export default function SeriesPage() {
   const { slug } = useParams();
   const [series, setSeries] = useState<SeriesDetail | null>(null);
   const [selected, setSelected] = useState(0);
   const [error, setError] = useState<string | null>(null);
+
+  useTitle(series ? `${series.title} - pickup` : "pickup");
 
   useEffect(() => {
     if (!slug) return;
