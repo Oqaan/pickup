@@ -506,3 +506,62 @@
       sortOrder: 8
       lastCoveredChapter: 431
       caughtUp: true
+
+- slug: hunter-x-hunter
+  title: Hunter x Hunter
+  titleNative: HUNTER×HUNTER
+  aliases: ["HxH", "HunterHunter"]
+  anilistId: 30026
+  popularity: 107573
+  mangadexId: db692d58-4b13-4174-ae8c-30c515c0689c
+  coverUrl: https://uploads.mangadex.org/covers/db692d58-4b13-4174-ae8c-30c515c0689c/aa112927-f1e5-4fe4-a4db-7fd4a1536e3c.jpg.512.jpg
+  author: Yoshihiro Togashi
+  startYear: 1998
+  publicationStatus: RELEASING
+  notes: "This maps the 2011 anime. The manga continues well past where it ends, though it updates rarely."
+  adaptations:
+    - name: "Hunter Exam Arc"
+      episodes: 26
+      sortOrder: 1
+      continueChapter: 44
+      continueVolume: 5
+      lastCoveredChapter: 44
+      coverUrl: https://uploads.mangadex.org/covers/db692d58-4b13-4174-ae8c-30c515c0689c/c2c45a58-8ce9-4f66-953d-c7e7eb6722b1.jpg
+      notes: "The arc ends partway into chapter 44, so read it from the start."
+    - name: "Heavens Arena Arc"
+      episodes: 10
+      sortOrder: 2
+      continueChapter: 64
+      continueVolume: 8
+      lastCoveredChapter: 63
+      coverUrl: https://uploads.mangadex.org/covers/db692d58-4b13-4174-ae8c-30c515c0689c/c654f746-e694-4b8c-b2ce-95265ace26a2.jpg
+    - name: "Yorknew City Arc"
+      episodes: 22
+      sortOrder: 3
+      continueChapter: 118
+      continueVolume: 13
+      lastCoveredChapter: 117
+      coverUrl: https://uploads.mangadex.org/covers/db692d58-4b13-4174-ae8c-30c515c0689c/cf26fbca-6c13-43cd-ad30-1d6031d0e0c8.jpg
+    - name: "Greed Island Arc"
+      episodes: 17
+      sortOrder: 4
+      continueChapter: 185
+      continueVolume: 18
+      lastCoveredChapter: 185
+      coverUrl: https://uploads.mangadex.org/covers/db692d58-4b13-4174-ae8c-30c515c0689c/902b48f7-5c6f-499d-b605-49b3ddb21752.jpg
+      notes: "The arc ends partway into chapter 185, so read it from the start."
+    - name: "Chimera Ant Arc"
+      episodes: 61
+      sortOrder: 5
+      continueChapter: 319
+      continueVolume: 30
+      lastCoveredChapter: 318
+      coverUrl: https://uploads.mangadex.org/covers/db692d58-4b13-4174-ae8c-30c515c0689c/b5245768-24b1-4779-8f80-c7db1ac719f3.jpg
+      notes: "The final episodes jump around chapters 315-318 and skip 317. Start at 319 to be safe."
+    - name: "13th Hunter Chairman Election Arc"
+      episodes: 12
+      sortOrder: 6
+      continueChapter: 340
+      continueVolume: 32
+      lastCoveredChapter: 339
+      coverUrl: https://uploads.mangadex.org/covers/db692d58-4b13-4174-ae8c-30c515c0689c/84988c08-eb29-4125-a704-8c181474d764.jpg
