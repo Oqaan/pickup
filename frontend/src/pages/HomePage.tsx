@@ -59,7 +59,7 @@ export default function HomePage() {
   }
 
   return (
-    <main className="max-w-4xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
+    <main className="max-w-4xl mx-auto px-6 pt-12 pb-0">
       <h1 className="font-display text-4xl text-sumi leading-tight max-w-lg">
         Stop watching.
         <br />
