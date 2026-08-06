@@ -1,5 +1,6 @@
 package dev.okanaltun.pickup.series.dto;
 
+import java.time.LocalDate;
 import java.util.List;
 
 public record SeriesDetailResponse(
@@ -13,6 +14,7 @@ public record SeriesDetailResponse(
         String publicationStatus,
         Integer totalChapters,
         Integer totalVolumes,
+        LocalDate verifiedAt,
         List<AdaptationResponse> adaptations,
         List<ReadingLinkResponse> readingLinks) {
 }

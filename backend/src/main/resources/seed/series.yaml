@@ -11,6 +11,7 @@
   publicationStatus: FINISHED
   totalChapters: 272
   totalVolumes: 30
+  verifiedAt: 2026-08-01
   notes: "Jujutsu Kaisen 0 is canon and worth watching, but it adapts its own prequel volume. Your starting chapter depends only on how many seasons you've seen."
   readingLinks:
     - label: MANGA Plus
@@ -56,6 +57,7 @@
   publicationStatus: FINISHED
   totalChapters: 220
   totalVolumes: 29
+  verifiedAt: 2026-08-01
   readingLinks:
     - label: Kodansha
       url: https://kodansha.us/series/vinland-saga/
@@ -89,6 +91,7 @@
   author: Tatsuya Endou
   startYear: 2019
   publicationStatus: RELEASING
+  verifiedAt: 2026-08-02
   readingLinks:
     - label: MANGA Plus
       url: https://mangaplus.shueisha.co.jp/titles/100056
@@ -133,6 +136,7 @@
   publicationStatus: FINISHED
   totalChapters: 232
   totalVolumes: 24
+  verifiedAt: 2026-08-01
   readingLinks:
     - label: MANGA Plus
       url: https://mangaplus.shueisha.co.jp/titles/100037
@@ -170,6 +174,7 @@
   publicationStatus: FINISHED
   totalChapters: 144
   totalVolumes: 14
+  verifiedAt: 2026-08-02
   readingLinks:
     - label: MANGA Plus
       url: https://mangaplus.shueisha.co.jp/titles/100027
@@ -206,6 +211,7 @@
   author: Yukinobu Tatsu
   startYear: 2021
   publicationStatus: RELEASING
+  verifiedAt: 2026-08-04
   adaptations:
     - name: Season 1
       episodes: 12
@@ -235,6 +241,7 @@
   publicationStatus: FINISHED
   totalChapters: 232
   totalVolumes: 27
+  verifiedAt: 2026-08-04
   notes: "The story ends at chapter 232. Volume 27 collects the Terraforming one-shot and the three-chapter sequel Dr. Stone 4D Science, if you want more."
   adaptations:
     - name: Season 1
@@ -304,6 +311,7 @@
   author: Kanehito Yamada
   startYear: 2020
   publicationStatus: RELEASING
+  verifiedAt: 2026-08-04
   adaptations:
     - name: Season 1
       episodes: 28
@@ -331,6 +339,7 @@
   author: Muneyuki Kaneshiro & Yuusuke Nomura
   startYear: 2018
   publicationStatus: RELEASING
+  verifiedAt: 2026-08-04
   readingLinks:
     - label: Kodansha
       url: https://kodansha.us/series/blue-lock/
@@ -364,6 +373,7 @@
   publicationStatus: FINISHED
   totalChapters: 101
   totalVolumes: 16
+  verifiedAt: 2026-08-04
   readingLinks: []
   adaptations:
     - name: Season 1
@@ -399,6 +409,7 @@
   publicationStatus: FINISHED
   totalChapters: 205
   totalVolumes: 23
+  verifiedAt: 2026-08-05
   adaptations:
     - name: Season 1
       episodes: 26
@@ -450,6 +461,7 @@
   publicationStatus: FINISHED
   totalChapters: 431
   totalVolumes: 42
+  verifiedAt: 2026-08-05
   adaptations:
     - name: Season 1
       episodes: 13
@@ -518,6 +530,7 @@
   author: Yoshihiro Togashi
   startYear: 1998
   publicationStatus: RELEASING
+  verifiedAt: 2026-08-05
   notes: "This maps the 2011 anime. The manga continues well past where it ends, though it updates rarely."
   adaptations:
     - name: "Hunter Exam Arc"
@@ -578,6 +591,7 @@
   publicationStatus: FINISHED
   totalChapters: 700
   totalVolumes: 72
+  verifiedAt: 2026-08-05
   notes: "This covers the first Naruto anime. Shippuden picks up right after, both adapting the same manga. Filler arcs are left out."
   adaptations:
     - name: "Land of Waves Arc"
@@ -630,6 +644,7 @@
   publicationStatus: FINISHED
   totalChapters: 700
   totalVolumes: 72
+  verifiedAt: 2026-08-05
   notes: "Shippuden adapts the same manga from the time-skip onward, chapter 245 to the end. Filler arcs are left out."
   adaptations:
     - name: "Kazekage Rescue Arc"

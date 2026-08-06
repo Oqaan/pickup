@@ -259,24 +259,40 @@ export default function SeriesPage() {
         </dl>
       )}
 
-      {series.readingLinks.length > 0 && (
-        <div className="mt-12 sm:mt-16 pt-8 border-t border-tone">
-          <p className="font-mono text-xs tracking-widest text-tone">
-            WHERE TO READ
-          </p>
-          <div className="flex flex-wrap gap-3 mt-4">
-            {series.readingLinks.map((rl) => (
-              <a
-                key={rl.url}
-                href={rl.url}
-                target="_blank"
-                rel="noreferrer"
-                className="font-body text-sm px-4 py-2 border border-tone text-sumi hover:bg-sumi hover:border-sumi hover:text-paper transition"
-              >
-                {rl.label}
-              </a>
-            ))}
+      {(series.readingLinks.length > 0 || series.verifiedAt) && (
+        <div className="mt-12 sm:mt-16 pt-8 border-t border-tone flex items-start justify-between gap-6 max-w-2xl">
+          <div>
+            {series.readingLinks.length > 0 && (
+              <>
+                <p className="font-mono text-xs tracking-widest text-tone">
+                  WHERE TO READ
+                </p>
+                <div className="flex flex-wrap gap-3 mt-4">
+                  {series.readingLinks.map((l) => (
+                    <a
+                      key={l.url}
+                      href={l.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="font-body text-sm px-4 py-2 border border-tone text-sumi hover:bg-sumi hover:border-sumi hover:text-paper transition"
+                    >
+                      {l.label}
+                    </a>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
+
+          {series.verifiedAt && (
+            <p className="font-mono text-xs tracking-widest text-tone shrink-0">
+              VERIFIED{" "}
+              {new Date(series.verifiedAt).toLocaleDateString("en-US", {
+                month: "short",
+                year: "numeric",
+              })}
+            </p>
+          )}
         </div>
       )}
     </main>

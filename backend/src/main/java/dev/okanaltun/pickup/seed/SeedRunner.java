@@ -14,6 +14,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 
 import java.io.InputStream;
+import java.time.LocalDate;
 import java.util.List;
 
 @Component
@@ -64,6 +65,8 @@ public class SeedRunner implements CommandLineRunner {
         series.setPublicationStatus(entry.publicationStatus());
         series.setTotalChapters(entry.totalChapters());
         series.setTotalVolumes(entry.totalVolumes());
+        series.setVerifiedAt(
+                entry.verifiedAt() != null ? LocalDate.parse(entry.verifiedAt()) : null);
         series.setAnilistId(entry.anilistId());
         series.setPopularity(entry.popularity() != null ? entry.popularity() : 0);
         series.setMangadexId(entry.mangadexId());

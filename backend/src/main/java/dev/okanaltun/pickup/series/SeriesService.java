@@ -61,6 +61,7 @@ public class SeriesService {
                                 series.getPublicationStatus(),
                                 series.getTotalChapters(),
                                 series.getTotalVolumes(),
+                                series.getVerifiedAt(),
                                 adaptations,
                                 readingLinks);
         }

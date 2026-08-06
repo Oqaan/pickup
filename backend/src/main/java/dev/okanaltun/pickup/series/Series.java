@@ -3,6 +3,8 @@ package dev.okanaltun.pickup.series;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -58,6 +60,9 @@ public class Series {
 
     @Column(nullable = false)
     private String status = "published";
+
+    @Column(name = "verified_at")
+    private LocalDate verifiedAt;
 
     @OneToMany(mappedBy = "series", cascade = CascadeType.ALL, orphanRemoval = true)
     @OrderBy("sortOrder ASC")
