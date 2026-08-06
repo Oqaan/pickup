@@ -6,15 +6,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class CorsConfig implements WebMvcConfigurer {
-
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
-                .allowedOriginPatterns(
+                .allowedOrigins(
                         "http://localhost:5173",
                         "https://pickup.moe",
-                        "https://www.pickup.moe",
-                        "https://*.vercel.app")
+                        "https://www.pickup.moe")
                 .allowedMethods("GET");
     }
 }
