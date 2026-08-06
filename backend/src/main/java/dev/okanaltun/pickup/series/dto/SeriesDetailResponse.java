@@ -15,6 +15,7 @@ public record SeriesDetailResponse(
         Integer totalChapters,
         Integer totalVolumes,
         LocalDate verifiedAt,
+        List<String> aliases,
         List<AdaptationResponse> adaptations,
         List<ReadingLinkResponse> readingLinks) {
 }

@@ -12,10 +12,14 @@ public class SeriesService {
 
         private final SeriesRepository repository;
         private final ReadingLinkRepository readingLinkRepository;
+        private final SeriesAliasRepository seriesAliasRepository;
 
-        public SeriesService(SeriesRepository repository, ReadingLinkRepository readingLinkRepository) {
+        public SeriesService(SeriesRepository repository,
+                        ReadingLinkRepository readingLinkRepository,
+                        SeriesAliasRepository seriesAliasRepository) {
                 this.repository = repository;
                 this.readingLinkRepository = readingLinkRepository;
+                this.seriesAliasRepository = seriesAliasRepository;
         }
 
         @Transactional(readOnly = true)
@@ -50,6 +54,10 @@ public class SeriesService {
                                 .map(rl -> new ReadingLinkResponse(rl.getLabel(), rl.getUrl()))
                                 .toList();
 
+                List<String> aliases = seriesAliasRepository.findBySeriesId(series.getId()).stream()
+                                .map(SeriesAlias::getAlias)
+                                .toList();
+
                 return new SeriesDetailResponse(
                                 series.getSlug(),
                                 series.getTitle(),
@@ -62,6 +70,7 @@ public class SeriesService {
                                 series.getTotalChapters(),
                                 series.getTotalVolumes(),
                                 series.getVerifiedAt(),
+                                aliases,
                                 adaptations,
                                 readingLinks);
         }
