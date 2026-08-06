@@ -1,6 +1,5 @@
 package dev.okanaltun.pickup.seed;
 
-import java.time.LocalDate;
 import java.util.List;
 
 public record SeedSeries(
@@ -14,7 +13,7 @@ public record SeedSeries(
                 String publicationStatus,
                 Integer totalChapters,
                 Integer totalVolumes,
-                LocalDate verifiedAt,
+                String verifiedAt,
                 Integer anilistId,
                 Integer popularity,
                 String mangadexId,
