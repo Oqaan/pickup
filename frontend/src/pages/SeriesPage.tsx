@@ -115,7 +115,11 @@ export default function SeriesPage() {
       {series.titleNative && (
         <p className="font-jp text-sm text-tone mt-2">{series.titleNative}</p>
       )}
-
+      {series.aliases && series.aliases.length > 0 && (
+        <p className="font-mono text-xs text-tone mt-2">
+          aka {series.aliases.join(", ")}
+        </p>
+      )}
       {series.notes && (
         <p className="font-body text-sm text-sumi/70 mt-4 max-w-prose leading-relaxed">
           {series.notes}
@@ -178,6 +182,12 @@ export default function SeriesPage() {
                 {current.name}
                 {current.episodes && ` · ${current.episodes} episodes`}
               </p>
+              {series.totalChapters && current.continueChapter && (
+                <p className="font-mono text-xs text-tone mt-1">
+                  {series.totalChapters - current.continueChapter + 1} chapters
+                  left to read
+                </p>
+              )}
             </>
           ) : (
             <p className="font-body text-lg text-sumi">

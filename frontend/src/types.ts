@@ -22,6 +22,7 @@ export type SeriesDetail = {
   totalChapters: number | null;
   totalVolumes: number | null;
   verifiedAt: string | null; // no date format in JSON
+  aliases: string[];
   adaptations: Adaptation[];
   readingLinks: ReadingLink[];
 };
