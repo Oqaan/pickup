@@ -106,6 +106,7 @@ export default function HomePage() {
                       src={s.coverUrl}
                       alt=""
                       loading="lazy"
+                      referrerPolicy="no-referrer"
                       className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
                     />
                   )}
