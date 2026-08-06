@@ -1,0 +1,1 @@
+alter table series add column verified_at date;
