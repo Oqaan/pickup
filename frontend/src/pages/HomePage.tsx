@@ -34,7 +34,7 @@ export default function HomePage() {
   const results =
     query.length >= 2 ? fuse.search(query).map((r) => r.item) : series;
 
-  const perPage = 9;
+  const perPage = 10;
   const searching = query.length >= 2;
   const visible = searching || showAll ? results : results.slice(0, perPage);
 
@@ -80,7 +80,7 @@ export default function HomePage() {
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Chainsaw Man, JJK"
+          placeholder="Search a series"
           aria-label="Search a series"
           className="flex-1 min-w-0 font-display text-3xl sm:text-4xl bg-transparent text-sumi placeholder:text-tone focus:outline-none"
         />
@@ -92,14 +92,18 @@ export default function HomePage() {
 
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-10 mt-4">
         {loading
-          ? Array.from({ length: 9 }).map((_, i) => (
-              <div key={i}>
+          ? Array.from({ length: 10 }).map((_, i) => (
+              <div key={i} className={i === 9 ? "sm:hidden" : ""}>
                 <div className="aspect-2/3 bg-tone/20" />
                 <div className="h-3 w-3/4 bg-tone/20 mt-3" />
               </div>
             ))
-          : visible.map((s) => (
-              <Link key={s.slug} to={`/anime/${s.slug}`} className="group">
+          : visible.map((s, i) => (
+              <Link
+                key={s.slug}
+                to={`/anime/${s.slug}`}
+                className={`group ${!searching && !showAll && i === 9 ? "sm:hidden" : ""}`}
+              >
                 <div className="aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition">
                   {s.coverUrl && (
                     <img
