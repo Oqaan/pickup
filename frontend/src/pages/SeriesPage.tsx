@@ -207,7 +207,6 @@ export default function SeriesPage() {
             <img
               src={current.coverUrl}
               alt={`Volume ${current.continueVolume} cover`}
-              referrerPolicy="no-referrer"
               className="w-full aspect-2/3 object-cover"
             />
             <p className="font-mono text-xs text-tone mt-2 text-center">

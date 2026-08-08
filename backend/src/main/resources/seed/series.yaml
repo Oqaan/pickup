@@ -5,7 +5,7 @@
   anilistId: 101517
   popularity: 249811
   mangadexId: c52b2ce3-7f95-469c-96b0-479524fb7a1a
-  coverUrl: https://uploads.mangadex.org/covers/c52b2ce3-7f95-469c-96b0-479524fb7a1a/34bbf92f-b92e-43e4-9dde-bbd48bd83bcd.jpg.512.jpg
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154621/pickup/covers/jujutsu-kaisen-34bbf92fb92.jpg
   author: Gege Akutami
   startYear: 2018
   publicationStatus: FINISHED
@@ -27,14 +27,14 @@
       continueChapter: 64
       continueVolume: 8
       lastCoveredChapter: 63
-      coverUrl: https://uploads.mangadex.org/covers/c52b2ce3-7f95-469c-96b0-479524fb7a1a/e4941ede-4550-476f-a418-e6f28d2465a5.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154622/pickup/covers/jujutsu-kaisen-e4941ede455.jpg
     - name: Season 2
       episodes: 23
       sortOrder: 2
       continueChapter: 138
       continueVolume: 16
       lastCoveredChapter: 139
-      coverUrl: https://uploads.mangadex.org/covers/c52b2ce3-7f95-469c-96b0-479524fb7a1a/e9c3f65d-be95-4397-a67f-331308e97a4c.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154625/pickup/covers/jujutsu-kaisen-e9c3f65dbe9.jpg
       notes: "The finale adapts a couple of pages from 138 and the opening of 139 — start at 138 anyway, you'll only re-read a few panels."
     - name: "Season 3: The Culling Game Part 1"
       episodes: 12
@@ -42,7 +42,7 @@
       continueChapter: 181
       continueVolume: 21
       lastCoveredChapter: 181
-      coverUrl: https://uploads.mangadex.org/covers/c52b2ce3-7f95-469c-96b0-479524fb7a1a/817defac-886c-4746-943e-0bd2fb626f23.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154626/pickup/covers/jujutsu-kaisen-817defac886.jpg
       notes: "Only fragments of 181 made it into the finale, so read it in full. The arc continues in Season 4."
 
 - slug: vinland-saga
@@ -51,7 +51,7 @@
   anilistId: 30642
   popularity: 136470
   mangadexId: 5d1fc77e-706a-4fc5-bea8-486c9be0145d
-  coverUrl: https://uploads.mangadex.org/covers/5d1fc77e-706a-4fc5-bea8-486c9be0145d/47e19a12-b0fb-4b52-b105-c202c555b966.jpg.512.jpg
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154627/pickup/covers/vinland-saga-47e19a12b0f.jpg
   author: Makoto Yukimura
   startYear: 2005
   publicationStatus: FINISHED
@@ -69,7 +69,7 @@
       continueChapter: 55
       continueVolume: 8
       lastCoveredChapter: 54
-      coverUrl: https://uploads.mangadex.org/covers/5d1fc77e-706a-4fc5-bea8-486c9be0145d/df31fe1d-b77b-4c68-a2dd-17bbc2a8d52d.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154628/pickup/covers/vinland-saga-df31fe1db77.jpg
       notes: "Clean break at the end of the War Arc."
     - name: Season 2
       episodes: 24
@@ -77,7 +77,7 @@
       continueChapter: 101
       continueVolume: 15
       lastCoveredChapter: 101
-      coverUrl: https://uploads.mangadex.org/covers/5d1fc77e-706a-4fc5-bea8-486c9be0145d/c73dfe75-bd7b-4960-b998-2a7c2f562340.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154630/pickup/covers/vinland-saga-c73dfe75bd7.jpg
       notes: "The finale only uses the last few pages of 101, so read the whole chapter."
 
 - slug: spy-x-family
@@ -87,7 +87,7 @@
   anilistId: 108556
   popularity: 158065
   mangadexId: 6b958848-c885-4735-9201-12ee77abcb3c
-  coverUrl: https://uploads.mangadex.org/covers/6b958848-c885-4735-9201-12ee77abcb3c/d8babd13-5736-4964-8963-b444a950d539.jpg.512.jpg
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154631/pickup/covers/spy-x-family-d8babd13573.jpg
   author: Tatsuya Endou
   startYear: 2019
   publicationStatus: RELEASING
@@ -106,21 +106,21 @@
       continueChapter: 39
       continueVolume: 7
       lastCoveredChapter: 38
-      coverUrl: https://uploads.mangadex.org/covers/6b958848-c885-4735-9201-12ee77abcb3c/45104c74-4a11-4db9-95ca-7e671787c0b4.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154632/pickup/covers/spy-x-family-45104c744a1.jpg
     - name: Season 2
       episodes: 12
       sortOrder: 2
       continueChapter: 60
       continueVolume: 9
       lastCoveredChapter: 59
-      coverUrl: https://uploads.mangadex.org/covers/6b958848-c885-4735-9201-12ee77abcb3c/253cf5e5-41b7-4585-90cf-161fe329c6cb.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154633/pickup/covers/spy-x-family-253cf5e541b.jpg
     - name: Season 3
       episodes: 13
       sortOrder: 3
       continueChapter: 88
       continueVolume: 13
       lastCoveredChapter: 87
-      coverUrl: https://uploads.mangadex.org/covers/6b958848-c885-4735-9201-12ee77abcb3c/53a05c31-1043-4f74-b1e4-8f1963f04466.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154635/pickup/covers/spy-x-family-53a05c31104.jpg
       notes: "A few short missions were skipped along the way, so you may hit chapters you haven't seen animated."
 
 - slug: chainsaw-man
@@ -130,7 +130,7 @@
   anilistId: 105778
   popularity: 328247
   mangadexId: a77742b1-befd-49a4-bff5-1ad4e6b0ef7b
-  coverUrl: https://uploads.mangadex.org/covers/a77742b1-befd-49a4-bff5-1ad4e6b0ef7b/07b6e139-194a-4438-b07a-57db2f4f22f8.jpg.512.jpg
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154635/pickup/covers/chainsaw-man-07b6e139194.jpg
   author: Tatsuki Fujimoto
   startYear: 2018
   publicationStatus: FINISHED
@@ -151,14 +151,14 @@
       continueChapter: 39
       continueVolume: 5
       lastCoveredChapter: 38
-      coverUrl: https://uploads.mangadex.org/covers/a77742b1-befd-49a4-bff5-1ad4e6b0ef7b/0011ae02-431b-44d6-872d-7e39f6c66009.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154636/pickup/covers/chainsaw-man-0011ae02431.jpg
       notes: "Ends mid-Katana Man arc, but chapter 38 is fully animated — clean break."
     - name: "The Movie: Reze Arc"
       sortOrder: 2
       continueChapter: 53
       continueVolume: 7
       lastCoveredChapter: 52
-      coverUrl: https://uploads.mangadex.org/covers/a77742b1-befd-49a4-bff5-1ad4e6b0ef7b/ed29e94c-e2c3-4592-b2cc-bffe584c3c1b.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154638/pickup/covers/chainsaw-man-ed29e94ce2c.jpg
       notes: "Picks up exactly where Season 1 ends. Season 2 (Assassins Arc) continues from here."
 
 - slug: tokyo-ghoul
@@ -168,7 +168,7 @@
   anilistId: 63327
   popularity: 193652
   mangadexId: 6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b
-  coverUrl: https://uploads.mangadex.org/covers/6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b/040e8ae9-4ddd-49d2-8986-56782b391714.jpg.512.jpg
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154638/pickup/covers/tokyo-ghoul-040e8ae94dd.jpg
   author: Sui Ishida
   startYear: 2011
   publicationStatus: FINISHED
@@ -189,7 +189,7 @@
       continueChapter: 67
       continueVolume: 7
       lastCoveredChapter: 66
-      coverUrl: https://uploads.mangadex.org/covers/6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b/19102e56-16fb-4052-b72f-90e3f3015571.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154639/pickup/covers/tokyo-ghoul-19102e5616f.jpg
     - name: "Season 2: Tokyo Ghoul √A"
       episodes: 12
       sortOrder: 2
@@ -197,7 +197,7 @@
       continueVolume: 7
       lastCoveredChapter: 66
       animeOriginal: true
-      coverUrl: https://uploads.mangadex.org/covers/6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b/19102e56-16fb-4052-b72f-90e3f3015571.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154639/pickup/covers/tokyo-ghoul-19102e5616f.jpg
       notes: "√A goes its own way and only borrows scattered chapters. Start at 67 as if you'd stopped after season 1, or you'll skip most of the story."
 
 - slug: dandadan
@@ -207,7 +207,7 @@
   anilistId: 132029
   popularity: 114563
   mangadexId: 68112dc1-2b80-4f20-beb8-2f2a8716a430
-  coverUrl: https://uploads.mangadex.org/covers/68112dc1-2b80-4f20-beb8-2f2a8716a430/1fea11e0-fd26-40a8-9977-9d93b46ef53e.jpg.512.jpg
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154641/pickup/covers/dandadan-1fea11e0fd2.jpg
   author: Yukinobu Tatsu
   startYear: 2021
   publicationStatus: RELEASING
@@ -219,7 +219,7 @@
       continueChapter: 34
       continueVolume: 5
       lastCoveredChapter: 34
-      coverUrl: https://uploads.mangadex.org/covers/68112dc1-2b80-4f20-beb8-2f2a8716a430/4f12555c-c498-49d0-a715-7b0a9f3c61d0.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154643/pickup/covers/dandadan-4f12555cc49.jpg
       notes: "The finale only animates the opening pages of 34, so read the chapter from the start."
     - name: Season 2
       episodes: 12
@@ -227,7 +227,7 @@
       continueChapter: 72
       continueVolume: 9
       lastCoveredChapter: 71
-      coverUrl: https://uploads.mangadex.org/covers/68112dc1-2b80-4f20-beb8-2f2a8716a430/0d14bee6-a535-41df-8384-fa7bdc9b49fb.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154644/pickup/covers/dandadan-0d14bee6a53.jpg
 
 - slug: dr-stone
   title: Dr. Stone
@@ -235,7 +235,7 @@
   anilistId: 98416
   popularity: 88111
   mangadexId: cfc3d743-bd89-48e2-991f-63e680cc4edf
-  coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/3415016f-892d-470f-938a-f8a0e4db769e.jpg.512.jpg
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154646/pickup/covers/dr-stone-3415016f892.jpg
   author: Riichiro Inagaki & Boichi
   startYear: 2017
   publicationStatus: FINISHED
@@ -250,7 +250,7 @@
       continueChapter: 60
       continueVolume: 7
       lastCoveredChapter: 60
-      coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/b7354f9e-9a04-4b7e-a1d8-f56795e457ab.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154648/pickup/covers/dr-stone-b7354f9e9a0.jpg
       notes: "Chapter 60 is split across the two seasons, so you'll re-read a few pages."
     - name: "Season 2: Stone Wars"
       episodes: 11
@@ -258,20 +258,20 @@
       continueChapter: 84
       continueVolume: 10
       lastCoveredChapter: 84
-      coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/a9f2f48e-c8b8-4531-8ab8-12aefaf675be.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154649/pickup/covers/dr-stone-a9f2f48ec8b.jpg
     - name: "Ryusui (Special)"
       sortOrder: 3
       continueChapter: 90
       continueVolume: 11
       lastCoveredChapter: 89
-      coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/8ab93d97-f644-407e-a24d-04881dbb107a.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154650/pickup/covers/dr-stone-8ab93d97f64.jpg
     - name: "Season 3: New World Part 1"
       episodes: 11
       sortOrder: 4
       continueChapter: 116
       continueVolume: 14
       lastCoveredChapter: 116
-      coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/8d4f13e5-4641-467a-b014-4df8f8c0a945.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154651/pickup/covers/dr-stone-8d4f13e5464.jpg
       notes: "The last episode stops five pages into 116, so read it in full."
     - name: "Season 3: New World Part 2"
       episodes: 11
@@ -279,21 +279,21 @@
       continueChapter: 143
       continueVolume: 17
       lastCoveredChapter: 142
-      coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/8a7179ab-193d-494c-a395-18634458bdf0.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154652/pickup/covers/dr-stone-8a7179ab193.jpg
     - name: "Season 4: Science Future Part 1"
       episodes: 12
       sortOrder: 6
       continueChapter: 170
       continueVolume: 20
       lastCoveredChapter: 169
-      coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/a1baed4e-252e-4014-af97-80b7a9380419.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154653/pickup/covers/dr-stone-a1baed4e252.jpg
     - name: "Season 4: Science Future Part 2"
       episodes: 12
       sortOrder: 7
       continueChapter: 199
       continueVolume: 23
       lastCoveredChapter: 198
-      coverUrl: https://uploads.mangadex.org/covers/cfc3d743-bd89-48e2-991f-63e680cc4edf/be013204-2ce3-493c-b56d-e99802cd00b9.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154654/pickup/covers/dr-stone-be0132042ce.jpg
     - name: "Season 4: Science Future Part 3"
       episodes: 13
       sortOrder: 8
@@ -307,7 +307,7 @@
   anilistId: 118586
   popularity: 83984
   mangadexId: b0b721ff-c388-4486-aa0f-c2b0bb321512
-  coverUrl: https://uploads.mangadex.org/covers/b0b721ff-c388-4486-aa0f-c2b0bb321512/a741289e-d524-4789-a76a-765d34a88aef.jpg.512.jpg
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154655/pickup/covers/frieren-a741289ed52.jpg
   author: Kanehito Yamada
   startYear: 2020
   publicationStatus: RELEASING
@@ -319,14 +319,14 @@
       continueChapter: 61
       continueVolume: 7
       lastCoveredChapter: 60
-      coverUrl: https://uploads.mangadex.org/covers/b0b721ff-c388-4486-aa0f-c2b0bb321512/99e8479c-f688-49ca-ba85-08b3fbdd7a08.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154658/pickup/covers/frieren-99e8479cf68.jpg
     - name: Season 2
       episodes: 10
       sortOrder: 2
       continueChapter: 81
       continueVolume: 9
       lastCoveredChapter: 80
-      coverUrl: https://uploads.mangadex.org/covers/b0b721ff-c388-4486-aa0f-c2b0bb321512/99102eb4-f2f5-4dcf-877c-3ca61f31ce3a.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154659/pickup/covers/frieren-99102eb4f2f.jpg
       notes: "Season 3 was announced for October 2027 and picks up from here."
 
 - slug: blue-lock
@@ -335,7 +335,7 @@
   anilistId: 106130
   popularity: 122059
   mangadexId: 4141c5dc-c525-4df5-afd7-cc7d192a832f
-  coverUrl: https://uploads.mangadex.org/covers/4141c5dc-c525-4df5-afd7-cc7d192a832f/9b876560-6d0b-4cd8-81bc-c083efc1dcea.jpg.512.jpg
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154660/pickup/covers/blue-lock-9b8765606d0.jpg
   author: Muneyuki Kaneshiro & Yuusuke Nomura
   startYear: 2018
   publicationStatus: RELEASING
@@ -351,14 +351,14 @@
       continueChapter: 95
       continueVolume: 12
       lastCoveredChapter: 94
-      coverUrl: https://uploads.mangadex.org/covers/4141c5dc-c525-4df5-afd7-cc7d192a832f/8f349a5e-e087-4bbc-803b-e534d4be3168.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154661/pickup/covers/blue-lock-8f349a5ee08.jpg
     - name: "Season 2: vs. U-20 Japan"
       episodes: 14
       sortOrder: 2
       continueChapter: 150
       continueVolume: 18
       lastCoveredChapter: 149
-      coverUrl: https://uploads.mangadex.org/covers/4141c5dc-c525-4df5-afd7-cc7d192a832f/62dc1803-d633-4fd6-9065-9605854bc4c7.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154662/pickup/covers/blue-lock-62dc1803d63.jpg
 
 - slug: mob-psycho-100
   title: Mob Psycho 100
@@ -367,7 +367,7 @@
   anilistId: 85189
   popularity: 48809
   mangadexId: 736a2bf0-f875-4b52-a7b4-e8c40505b68a
-  coverUrl: https://uploads.mangadex.org/covers/736a2bf0-f875-4b52-a7b4-e8c40505b68a/c09d7be1-b2e8-42a9-ab84-69e2bc67f74b.jpg.512.jpg
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154663/pickup/covers/mob-psycho-100-c09d7be1b2e.jpg
   author: ONE
   startYear: 2012
   publicationStatus: FINISHED
@@ -382,14 +382,14 @@
       continueChapter: 51
       continueVolume: 6
       lastCoveredChapter: 50
-      coverUrl: https://uploads.mangadex.org/covers/736a2bf0-f875-4b52-a7b4-e8c40505b68a/f9811c61-5642-481e-9b81-df492b7028d5.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154664/pickup/covers/mob-psycho-100-f9811c61564.jpg
     - name: Season 2
       episodes: 13
       sortOrder: 2
       continueChapter: 92
       continueVolume: 13
       lastCoveredChapter: 91
-      coverUrl: https://uploads.mangadex.org/covers/736a2bf0-f875-4b52-a7b4-e8c40505b68a/b1823b97-c5f6-4212-b177-21f5cc5a612f.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154665/pickup/covers/mob-psycho-100-b1823b97c5f.jpg
     - name: Season 3
       episodes: 12
       sortOrder: 3
@@ -403,7 +403,7 @@
   anilistId: 87216
   popularity: 208193
   mangadexId: 789642f8-ca89-4e4e-8f7b-eee4d17ea08b
-  coverUrl: https://uploads.mangadex.org/covers/789642f8-ca89-4e4e-8f7b-eee4d17ea08b/6fa2282f-282b-41cf-8ab7-fbdbeb822bd5.jpg.512.jpg
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154666/pickup/covers/demon-slayer-6fa2282f282.jpg
   author: Koyoharu Gotouge
   startYear: 2016
   publicationStatus: FINISHED
@@ -417,7 +417,7 @@
       continueChapter: 54
       continueVolume: 7
       lastCoveredChapter: 54
-      coverUrl: https://uploads.mangadex.org/covers/789642f8-ca89-4e4e-8f7b-eee4d17ea08b/39ca6197-f751-492c-9d8b-31c822c895ed.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154667/pickup/covers/demon-slayer-39ca6197f75.jpg
       notes: "The finale only adapts the first few pages of 54, so read it from the start."
     - name: "Season 2: Mugen Train"
       episodes: 8
@@ -425,28 +425,28 @@
       continueChapter: 67
       continueVolume: 8
       lastCoveredChapter: 66
-      coverUrl: https://uploads.mangadex.org/covers/789642f8-ca89-4e4e-8f7b-eee4d17ea08b/1d063d96-c160-481f-ab7e-81311aee99b5.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154669/pickup/covers/demon-slayer-1d063d96c16.jpg
     - name: "Season 2: Entertainment District"
       episodes: 11
       sortOrder: 3
       continueChapter: 98
       continueVolume: 12
       lastCoveredChapter: 97
-      coverUrl: https://uploads.mangadex.org/covers/789642f8-ca89-4e4e-8f7b-eee4d17ea08b/8bcffd3f-a7b9-4ed7-91f9-6c9d46a3f0bb.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154670/pickup/covers/demon-slayer-8bcffd3fa7b.jpg
     - name: "Season 3: Swordsmith Village"
       episodes: 11
       sortOrder: 4
       continueChapter: 128
       continueVolume: 15
       lastCoveredChapter: 127
-      coverUrl: https://uploads.mangadex.org/covers/789642f8-ca89-4e4e-8f7b-eee4d17ea08b/28da5e95-2397-477b-a131-9ba29dbaeb2e.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154671/pickup/covers/demon-slayer-28da5e95239.jpg
     - name: "Season 4: Hashira Training"
       episodes: 8
       sortOrder: 5
       continueChapter: 140
       continueVolume: 16
       lastCoveredChapter: 139
-      coverUrl: https://uploads.mangadex.org/covers/789642f8-ca89-4e4e-8f7b-eee4d17ea08b/a72bfc4d-6189-4f96-a33a-bb0219266cf3.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154672/pickup/covers/demon-slayer-a72bfc4d618.jpg
 
 - slug: my-hero-academia
   title: My Hero Academia
@@ -455,7 +455,7 @@
   anilistId: 85486
   popularity: 176911
   mangadexId: 4f3bcae4-2d96-4c9d-932c-90181d9c873e
-  coverUrl: https://uploads.mangadex.org/covers/4f3bcae4-2d96-4c9d-932c-90181d9c873e/c7a7101a-8e22-442b-a1db-55ba9ef5b1ab.jpg.512.jpg
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154673/pickup/covers/my-hero-academia-c7a7101a8e2.jpg
   author: Kouhei Horikoshi
   startYear: 2014
   publicationStatus: FINISHED
@@ -469,28 +469,28 @@
       continueChapter: 22
       continueVolume: 3
       lastCoveredChapter: 21
-      coverUrl: https://uploads.mangadex.org/covers/4f3bcae4-2d96-4c9d-932c-90181d9c873e/43d1808b-4b15-4ac6-985f-ea6a1af67a0c.png
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154674/pickup/covers/my-hero-academia-43d1808b4b1.png
     - name: Season 2
       episodes: 25
       sortOrder: 2
       continueChapter: 71
       continueVolume: 8
       lastCoveredChapter: 70
-      coverUrl: https://uploads.mangadex.org/covers/4f3bcae4-2d96-4c9d-932c-90181d9c873e/69d86065-5c4e-4ba8-9c2a-2bee1f636ae9.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154675/pickup/covers/my-hero-academia-69d860655c4.jpg
     - name: Season 3
       episodes: 25
       sortOrder: 3
       continueChapter: 125
       continueVolume: 14
       lastCoveredChapter: 124
-      coverUrl: https://uploads.mangadex.org/covers/4f3bcae4-2d96-4c9d-932c-90181d9c873e/5c5f5373-b9bd-4271-a6b9-45ef7a219012.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154676/pickup/covers/my-hero-academia-5c5f5373b9b.jpg
     - name: Season 4
       episodes: 25
       sortOrder: 4
       continueChapter: 191
       continueVolume: 21
       lastCoveredChapter: 190
-      coverUrl: https://uploads.mangadex.org/covers/4f3bcae4-2d96-4c9d-932c-90181d9c873e/b8eee169-d057-4572-9ad5-dcff4d719841.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154677/pickup/covers/my-hero-academia-b8eee169d05.jpg
       notes: "The last episodes only sample chapters 192-193. Season 5 picks back up from 190, so there's some overlap either way."
     - name: Season 5
       episodes: 25
@@ -498,21 +498,21 @@
       continueChapter: 259
       continueVolume: 27
       lastCoveredChapter: 258
-      coverUrl: https://uploads.mangadex.org/covers/4f3bcae4-2d96-4c9d-932c-90181d9c873e/cba532f1-3a83-4139-b7bf-b356d7145d64.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154678/pickup/covers/my-hero-academia-cba532f13a8.jpg
     - name: Season 6
       episodes: 25
       sortOrder: 6
       continueChapter: 329
       continueVolume: 34
       lastCoveredChapter: 328
-      coverUrl: https://uploads.mangadex.org/covers/4f3bcae4-2d96-4c9d-932c-90181d9c873e/13c21a26-d8f3-49f0-a634-6b297ce0b2c9.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154679/pickup/covers/my-hero-academia-13c21a26d8f.jpg
     - name: Season 7
       episodes: 21
       sortOrder: 7
       continueChapter: 399
       continueVolume: 40
       lastCoveredChapter: 398
-      coverUrl: https://uploads.mangadex.org/covers/4f3bcae4-2d96-4c9d-932c-90181d9c873e/17773464-61da-4885-8084-50f9d2489fbd.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154682/pickup/covers/my-hero-academia-1777346461d.jpg
     - name: Season 8
       episodes: 12
       sortOrder: 8
@@ -526,7 +526,7 @@
   anilistId: 30026
   popularity: 107573
   mangadexId: db692d58-4b13-4174-ae8c-30c515c0689c
-  coverUrl: https://uploads.mangadex.org/covers/db692d58-4b13-4174-ae8c-30c515c0689c/aa112927-f1e5-4fe4-a4db-7fd4a1536e3c.jpg.512.jpg
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154683/pickup/covers/hunter-x-hunter-aa112927f1e.jpg
   author: Yoshihiro Togashi
   startYear: 1998
   publicationStatus: RELEASING
@@ -539,7 +539,7 @@
       continueChapter: 44
       continueVolume: 5
       lastCoveredChapter: 44
-      coverUrl: https://uploads.mangadex.org/covers/db692d58-4b13-4174-ae8c-30c515c0689c/c2c45a58-8ce9-4f66-953d-c7e7eb6722b1.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154684/pickup/covers/hunter-x-hunter-c2c45a588ce.jpg
       notes: "The arc ends partway into chapter 44, so read it from the start."
     - name: "Heavens Arena Arc"
       episodes: 10
@@ -547,21 +547,21 @@
       continueChapter: 64
       continueVolume: 8
       lastCoveredChapter: 63
-      coverUrl: https://uploads.mangadex.org/covers/db692d58-4b13-4174-ae8c-30c515c0689c/c654f746-e694-4b8c-b2ce-95265ace26a2.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154686/pickup/covers/hunter-x-hunter-c654f746e69.jpg
     - name: "Yorknew City Arc"
       episodes: 22
       sortOrder: 3
       continueChapter: 118
       continueVolume: 13
       lastCoveredChapter: 117
-      coverUrl: https://uploads.mangadex.org/covers/db692d58-4b13-4174-ae8c-30c515c0689c/cf26fbca-6c13-43cd-ad30-1d6031d0e0c8.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154687/pickup/covers/hunter-x-hunter-cf26fbca6c1.jpg
     - name: "Greed Island Arc"
       episodes: 17
       sortOrder: 4
       continueChapter: 185
       continueVolume: 18
       lastCoveredChapter: 185
-      coverUrl: https://uploads.mangadex.org/covers/db692d58-4b13-4174-ae8c-30c515c0689c/902b48f7-5c6f-499d-b605-49b3ddb21752.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154688/pickup/covers/hunter-x-hunter-902b48f75c6.jpg
       notes: "The arc ends partway into chapter 185, so read it from the start."
     - name: "Chimera Ant Arc"
       episodes: 61
@@ -569,7 +569,7 @@
       continueChapter: 319
       continueVolume: 30
       lastCoveredChapter: 318
-      coverUrl: https://uploads.mangadex.org/covers/db692d58-4b13-4174-ae8c-30c515c0689c/b5245768-24b1-4779-8f80-c7db1ac719f3.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154689/pickup/covers/hunter-x-hunter-b524576824b.jpg
       notes: "The final episodes jump around chapters 315-318 and skip 317. Start at 319 to be safe."
     - name: "13th Hunter Chairman Election Arc"
       episodes: 12
@@ -577,7 +577,7 @@
       continueChapter: 340
       continueVolume: 32
       lastCoveredChapter: 339
-      coverUrl: https://uploads.mangadex.org/covers/db692d58-4b13-4174-ae8c-30c515c0689c/84988c08-eb29-4125-a704-8c181474d764.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154690/pickup/covers/hunter-x-hunter-84988c08eb2.jpg
 
 - slug: naruto
   title: Naruto
@@ -585,7 +585,7 @@
   anilistId: 30011
   popularity: 98136
   mangadexId: 6b1eb93e-473a-4ab3-9922-1a66d2a29a4a
-  coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/c5a3090c-4ca0-40a2-9102-e0ee0c6dac15.jpg.512.jpg
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154693/pickup/covers/naruto-c5a3090c4ca.jpg
   author: Masashi Kishimoto
   startYear: 1999
   publicationStatus: FINISHED
@@ -600,35 +600,35 @@
       continueChapter: 34
       continueVolume: 4
       lastCoveredChapter: 33
-      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/9a838405-c2e2-4c4a-a666-83f2193a9071.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154694/pickup/covers/naruto-9a838405c2e.jpg
     - name: "Chunin Exams Arc"
       episodes: 48
       sortOrder: 2
       continueChapter: 116
       continueVolume: 13
       lastCoveredChapter: 115
-      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/d861ac97-697d-4b24-bd6c-64a02641d6d4.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154696/pickup/covers/naruto-d861ac97697.jpg
     - name: "Konoha Crush Arc"
       episodes: 13
       sortOrder: 3
       continueChapter: 139
       continueVolume: 16
       lastCoveredChapter: 138
-      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/af2a6695-db80-40a5-9367-e24029a50a26.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154699/pickup/covers/naruto-af2a6695db8.jpg
     - name: "Search for Tsunade Arc"
       episodes: 20
       sortOrder: 4
       continueChapter: 172
       continueVolume: 20
       lastCoveredChapter: 171
-      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/24be3e66-cf34-4a6a-aa49-e264927eb2dd.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154701/pickup/covers/naruto-24be3e66cf3.jpg
     - name: "Sasuke Recovery Arc"
       episodes: 29
       sortOrder: 5
       continueChapter: 239
       continueVolume: 27
       lastCoveredChapter: 238
-      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/de7ddd06-851e-4366-90b7-e6a3b55c4b7a.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154702/pickup/covers/naruto-de7ddd06851.jpg
       notes: "Part 1 ends here. Keep reading from 239. The Shippuden anime later picks up at chapter 245."
 
 - slug: naruto-shippuden
@@ -638,7 +638,7 @@
   anilistId: 30011
   popularity: 98136
   mangadexId: 6b1eb93e-473a-4ab3-9922-1a66d2a29a4a
-  coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/07cca30e-d596-4dd0-b496-0c6bc2525b48.jpg.512.jpg
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154703/pickup/covers/naruto-shippuden-07cca30ed59.jpg
   author: Masashi Kishimoto
   startYear: 1999
   publicationStatus: FINISHED
@@ -653,84 +653,84 @@
       continueChapter: 282
       continueVolume: 32
       lastCoveredChapter: 281
-      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/21f40155-e750-41d3-8b98-c26b6f549023.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154704/pickup/covers/naruto-shippuden-21f40155e75.jpg
     - name: "Tenchi Bridge Arc"
       episodes: 21
       sortOrder: 2
       continueChapter: 311
       continueVolume: 35
       lastCoveredChapter: 310
-      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/d2d5fa90-a4c5-4c55-abc3-4c97dff40085.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154705/pickup/covers/naruto-shippuden-d2d5fa90a4c.jpg
     - name: "Akatsuki Suppression Arc"
       episodes: 17
       sortOrder: 3
       continueChapter: 343
       continueVolume: 38
       lastCoveredChapter: 342
-      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/3980b80a-b454-40f9-a07a-737abd556b31.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154707/pickup/covers/naruto-shippuden-3980b80ab45.jpg
     - name: "Itachi Pursuit Arc"
       episodes: 12
       sortOrder: 4
       continueChapter: 368
       continueVolume: 40
       lastCoveredChapter: 367
-      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/f9d62ea2-0c65-4539-aff9-5612ad89424b.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154708/pickup/covers/naruto-shippuden-f9d62ea20c6.jpg
     - name: "Tale of Jiraiya the Gallant Arc"
       episodes: 7
       sortOrder: 5
       continueChapter: 384
       continueVolume: 42
       lastCoveredChapter: 383
-      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/0020babd-c96e-4f66-bffa-97238d0e46e0.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154709/pickup/covers/naruto-shippuden-0020babdc96.jpg
     - name: "Fated Battle Between Brothers Arc"
       episodes: 10
       sortOrder: 6
       continueChapter: 413
       continueVolume: 45
       lastCoveredChapter: 412
-      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/389a6776-c822-4d77-aa6d-f010178d2b11.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154711/pickup/covers/naruto-shippuden-389a6776c82.jpg
     - name: "Pain's Assault Arc"
       episodes: 24
       sortOrder: 7
       continueChapter: 454
       continueVolume: 49
       lastCoveredChapter: 453
-      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/44b74d9b-8a42-4caa-9fbb-46bff133155a.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154713/pickup/covers/naruto-shippuden-44b74d9b8a4.jpg
     - name: "Five Kage Summit Arc"
       episodes: 18
       sortOrder: 8
       continueChapter: 484
       continueVolume: 52
       lastCoveredChapter: 483
-      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/83104813-ce49-41a1-9764-491803884978.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154714/pickup/covers/naruto-shippuden-83104813ce4.jpg
     - name: "Fourth Shinobi World War: Countdown Arc"
       episodes: 22
       sortOrder: 9
       continueChapter: 516
       continueVolume: 55
       lastCoveredChapter: 515
-      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/d68f1905-5f9c-4dec-ba11-6d17986c7b46.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154715/pickup/covers/naruto-shippuden-d68f19055f9.jpg
     - name: "Fourth Shinobi World War: Confrontation Arc"
       episodes: 55
       sortOrder: 10
       continueChapter: 560
       continueVolume: 59
       lastCoveredChapter: 559
-      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/324730f8-9e64-4a19-a0dc-3ae7816d5897.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154716/pickup/covers/naruto-shippuden-324730f89e6.jpg
     - name: "Fourth Shinobi World War: Climax Arc"
       episodes: 41
       sortOrder: 11
       continueChapter: 640
       continueVolume: 67
       lastCoveredChapter: 639
-      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/0741da6c-47fb-4995-b968-5c4fa46fc359.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154717/pickup/covers/naruto-shippuden-0741da6c47f.jpg
     - name: "Birth of the Ten-Tails' Jinchuriki Arc"
       episodes: 34
       sortOrder: 12
       continueChapter: 678
       continueVolume: 70
       lastCoveredChapter: 677
-      coverUrl: https://uploads.mangadex.org/covers/6b1eb93e-473a-4ab3-9922-1a66d2a29a4a/c0cf37a9-1e64-486e-96f2-644c39c3c37a.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154718/pickup/covers/naruto-shippuden-c0cf37a91e6.jpg
     - name: "Kaguya Otsutsuki Strikes Arc"
       episodes: 22
       sortOrder: 13
