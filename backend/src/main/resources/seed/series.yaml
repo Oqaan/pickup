@@ -737,3 +737,69 @@
       lastCoveredChapter: 699
       caughtUp: true
       notes: "Only the epilogue chapter (700) is left after this."
+
+- slug: attack-on-titan
+  title: Attack on Titan
+  titleNative: 進撃の巨人
+  aliases: ["Shingeki no Kyojin", "AoT", "SnK"]
+  anilistId: 53390
+  popularity: 225507
+  mangadexId: 304ceac3-8cdb-4fe7-acf7-2b6ff7a60613
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786266556/pickup/covers/attack-on-titan-29f82b1db37.jpg
+  author: Hajime Isayama
+  startYear: 2009
+  publicationStatus: FINISHED
+  totalChapters: 139
+  totalVolumes: 34
+  verifiedAt: 2026-08-08
+  notes: "The anime is split across seasons and parts, all adapting the same manga. Filler is minimal here, but the season 1 finale takes some action liberties."
+  adaptations:
+    - name: "Season 1"
+      episodes: 25
+      sortOrder: 1
+      continueChapter: 34
+      continueVolume: 8
+      lastCoveredChapter: 33
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786266558/pickup/covers/attack-on-titan-5197fdb1ef6.jpg
+      notes: "The finale stages the action differently from the manga. For a clean handoff into season 2's story, keep reading from chapter 34."
+    - name: "Season 2"
+      episodes: 12
+      sortOrder: 2
+      continueChapter: 51
+      continueVolume: 13
+      lastCoveredChapter: 50
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786266559/pickup/covers/attack-on-titan-80fcc6fb2cd.jpg
+    - name: "Season 3 Part 1"
+      episodes: 12
+      sortOrder: 3
+      continueChapter: 73
+      continueVolume: 18
+      lastCoveredChapter: 72
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786266560/pickup/covers/attack-on-titan-2586959955f.jpg
+    - name: "Season 3 Part 2"
+      episodes: 10
+      sortOrder: 4
+      continueChapter: 91
+      continueVolume: 23
+      lastCoveredChapter: 90
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786266561/pickup/covers/attack-on-titan-cae719f634e.jpg
+    - name: "Season 4 Part 1"
+      episodes: 16
+      sortOrder: 5
+      continueChapter: 117
+      continueVolume: 29
+      lastCoveredChapter: 116
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786266562/pickup/covers/attack-on-titan-5050b79a8aa.jpg
+    - name: "Season 4 Part 2"
+      episodes: 12
+      sortOrder: 6
+      continueChapter: 131
+      continueVolume: 33
+      lastCoveredChapter: 130
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786266563/pickup/covers/attack-on-titan-8d5686ee7bc.jpg
+    - name: "The Final Chapters"
+      episodes: 2
+      sortOrder: 7
+      lastCoveredChapter: 139
+      caughtUp: true
+      notes: "This covers the manga to its ending, chapter 139."
