@@ -803,3 +803,32 @@
       lastCoveredChapter: 139
       caughtUp: true
       notes: "This covers the manga to its ending, chapter 139."
+
+- slug: sakamoto-days
+  title: Sakamoto Days
+  titleNative: SAKAMOTO DAYS
+  aliases: []
+  anilistId: 125828
+  popularity: 87773
+  mangadexId: 9d9b04ad-9a83-49f4-8ae4-a9a3780fe9c0
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786268615/pickup/covers/sakamoto-days-f8f16ab93f3.jpg
+  author: Yuuto Suzuki
+  startYear: 2020
+  publicationStatus: RELEASING
+  verifiedAt: 2026-08-08
+  notes: "The anime covers the manga from the start. Only the finished first season is mapped here; season 2 has been announced but hasn't aired yet."
+  adaptations:
+    - name: "Season 1 Part 1"
+      episodes: 11
+      sortOrder: 1
+      continueChapter: 38
+      continueVolume: 5
+      lastCoveredChapter: 37
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786268618/pickup/covers/sakamoto-days-f4bc4f8367b.jpg
+    - name: "Season 1 Part 2"
+      episodes: 11
+      sortOrder: 2
+      continueChapter: 74
+      continueVolume: 9
+      lastCoveredChapter: 73
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786268620/pickup/covers/sakamoto-days-1743c1a49a1.jpg
