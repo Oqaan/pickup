@@ -11,7 +11,7 @@ export default function Layout({ children }: Props) {
         <div className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link
             to="/"
-            className="font-display text-xl text-sumi hover:text-jump"
+            className="font-display text-section text-sumi hover:text-jump"
           >
             pickup
           </Link>
