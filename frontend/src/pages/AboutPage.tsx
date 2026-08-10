@@ -4,9 +4,7 @@ export default function AboutPage() {
   useTitle("About - pickup");
   return (
     <main className="max-w-2xl mx-auto px-6 pt-16 pb-0">
-      <h1 className="font-display text-4xl text-sumi leading-tight">
-        About pickup
-      </h1>
+      <h1 className="font-display text-title text-sumi">About pickup</h1>
 
       <div className="mt-10 space-y-6 font-body text-base text-sumi/80 leading-relaxed">
         <p>
@@ -22,7 +20,7 @@ export default function AboutPage() {
         </p>
       </div>
 
-      <h2 className="font-display text-xl text-sumi mt-16">
+      <h2 className="font-display text-section text-sumi mt-16">
         How the data is made
       </h2>
 

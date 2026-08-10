@@ -6,7 +6,7 @@ export default function NotFoundPage() {
   return (
     <main className="max-w-2xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
       <p className="font-mono text-xs tracking-widest text-ash">404</p>
-      <h1 className="font-display text-4xl text-sumi leading-tight mt-3">
+      <h1 className="font-display text-notice text-sumi mt-3">
         This page does not exist
       </h1>
       <p className="font-body text-base text-sumi/70 mt-4 max-w-md leading-relaxed">

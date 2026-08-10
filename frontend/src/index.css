@@ -11,6 +11,24 @@
   --font-body: "IBM Plex Sans", sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
   --font-jp: "Zen Kaku Gothic New", sans-serif;
+
+  --text-answer: clamp(3.75rem, 9vw, 4.5rem);
+  --text-answer--line-height: 0.95;
+
+  --text-answer-prose: 2.25rem;
+  --text-answer-prose--line-height: 1.25;
+
+  --text-title: clamp(2.25rem, 6vw, 3rem);
+  --text-title--line-height: 1.1;
+
+  --text-input: clamp(1.875rem, 5vw, 2.25rem);
+  --text-input--line-height: 1;
+
+  --text-notice: 1.75rem;
+  --text-notice--line-height: 1.15;
+
+  --text-section: 1.25rem;
+  --text-section--line-height: 1.2;
 }
 
 /* Moving interfaces can make some people dizzy. If their OS is set to reduce motion, turn transitions off. */

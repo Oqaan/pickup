@@ -23,7 +23,7 @@ export default function SeriesPage() {
     return (
       <main className="max-w-2xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
         <p className="font-mono text-xs tracking-widest text-ash">NOT FOUND</p>
-        <h1 className="font-display text-4xl text-sumi leading-tight mt-3">
+        <h1 className="font-display text-notice text-sumi mt-3">
           No entry for "{slug}" yet.
         </h1>
         <p className="font-body text-base text-sumi/70 mt-4 max-w-md leading-relaxed">
@@ -54,7 +54,7 @@ export default function SeriesPage() {
         <p className="font-mono text-xs tracking-widest text-ash">
           SOMETHING WENT WRONG
         </p>
-        <h1 className="font-display text-4xl text-sumi leading-tight mt-3">
+        <h1 className="font-display text-notice text-sumi mt-3">
           Couldn't load this one.
         </h1>
         <p className="font-body text-base text-sumi/70 mt-4 max-w-md leading-relaxed">
@@ -109,7 +109,7 @@ export default function SeriesPage() {
 
   return (
     <main className="max-w-2xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
-      <h1 className="font-display text-4xl sm:text-5xl text-sumi leading-none">
+      <h1 className="font-display text-title text-sumi">
         {series.title}
       </h1>
       {series.titleNative && (
@@ -153,7 +153,7 @@ export default function SeriesPage() {
               <p className="font-mono text-xs tracking-widest text-ash">
                 NOTHING LEFT
               </p>
-              <p className="font-display text-4xl text-sumi leading-tight mt-3">
+              <p className="font-display text-answer-prose text-sumi text-balance mt-3">
                 You're all caught up.
               </p>
               <p className="font-body text-sm text-sumi/70 mt-4 max-w-prose leading-relaxed">
@@ -170,7 +170,7 @@ export default function SeriesPage() {
               <p className="font-mono text-xs tracking-widest text-ash">
                 START READING AT
               </p>
-              <p className="font-display text-6xl sm:text-7xl text-jump leading-none mt-2">
+              <p className="font-display text-answer text-jump mt-3">
                 {current.continueChapter}
                 <span className="font-body text-base text-sumi ml-3">
                   chapter
@@ -190,9 +190,14 @@ export default function SeriesPage() {
               )}
             </>
           ) : (
-            <p className="font-body text-lg text-sumi">
-              Not a continuation point.
-            </p>
+            <>
+              <p className="font-mono text-xs tracking-widest text-ash">
+                NO STARTING POINT
+              </p>
+              <p className="font-display text-answer-prose text-sumi text-balance mt-3">
+                Not a continuation point.
+              </p>
+            </>
           )}
 
           {current.notes && (
