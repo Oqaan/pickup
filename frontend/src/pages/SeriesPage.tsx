@@ -22,7 +22,7 @@ export default function SeriesPage() {
   if (error === "not-found") {
     return (
       <main className="max-w-2xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
-        <p className="font-mono text-xs tracking-widest text-tone">NOT FOUND</p>
+        <p className="font-mono text-xs tracking-widest text-ash">NOT FOUND</p>
         <h1 className="font-display text-4xl text-sumi leading-tight mt-3">
           No entry for "{slug}" yet.
         </h1>
@@ -51,7 +51,7 @@ export default function SeriesPage() {
   if (error) {
     return (
       <main className="max-w-2xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
-        <p className="font-mono text-xs tracking-widest text-tone">
+        <p className="font-mono text-xs tracking-widest text-ash">
           SOMETHING WENT WRONG
         </p>
         <h1 className="font-display text-4xl text-sumi leading-tight mt-3">
@@ -113,10 +113,10 @@ export default function SeriesPage() {
         {series.title}
       </h1>
       {series.titleNative && (
-        <p className="font-jp text-sm text-tone mt-2">{series.titleNative}</p>
+        <p className="font-jp text-sm text-ash mt-2">{series.titleNative}</p>
       )}
       {series.aliases && series.aliases.length > 0 && (
-        <p className="font-mono text-xs text-tone mt-2">
+        <p className="font-mono text-xs text-ash mt-2">
           aka {series.aliases.join(", ")}
         </p>
       )}
@@ -126,7 +126,7 @@ export default function SeriesPage() {
         </p>
       )}
 
-      <p className="font-mono text-xs tracking-widest text-tone mt-12 sm:mt-16">
+      <p className="font-mono text-xs tracking-widest text-ash mt-12 sm:mt-16">
         HOW FAR HAVE YOU WATCHED?
       </p>
 
@@ -150,7 +150,7 @@ export default function SeriesPage() {
         <div className="flex-1 min-w-0">
           {current.caughtUp ? (
             <>
-              <p className="font-mono text-xs tracking-widest text-tone">
+              <p className="font-mono text-xs tracking-widest text-ash">
                 NOTHING LEFT
               </p>
               <p className="font-display text-4xl text-sumi leading-tight mt-3">
@@ -167,7 +167,7 @@ export default function SeriesPage() {
                   ANIME ORIGINAL STORY
                 </p>
               )}
-              <p className="font-mono text-xs tracking-widest text-tone">
+              <p className="font-mono text-xs tracking-widest text-ash">
                 START READING AT
               </p>
               <p className="font-display text-6xl sm:text-7xl text-jump leading-none mt-2">
@@ -183,7 +183,7 @@ export default function SeriesPage() {
                 {current.episodes && ` · ${current.episodes} episodes`}
               </p>
               {series.totalChapters && current.continueChapter && (
-                <p className="font-mono text-xs text-tone mt-1">
+                <p className="font-mono text-xs text-ash mt-1">
                   {series.totalChapters - current.continueChapter + 1} chapters
                   left to read
                 </p>
@@ -209,7 +209,7 @@ export default function SeriesPage() {
               alt={`Volume ${current.continueVolume} cover`}
               className="w-full aspect-2/3 object-cover"
             />
-            <p className="font-mono text-xs text-tone mt-2 text-center">
+            <p className="font-mono text-xs text-ash mt-2 text-center">
               Vol. {current.continueVolume}
             </p>
           </div>
@@ -220,7 +220,7 @@ export default function SeriesPage() {
         <dl className="mt-10 grid grid-cols-3 gap-x-8 gap-y-6">
           {series.author && (
             <div className="col-span-3 sm:col-span-1">
-              <dt className="font-mono text-xs tracking-widest text-tone">
+              <dt className="font-mono text-xs tracking-widest text-ash">
                 AUTHOR
               </dt>
               <dd className="font-body text-sm text-sumi mt-1">
@@ -230,7 +230,7 @@ export default function SeriesPage() {
           )}
           {series.startYear && (
             <div>
-              <dt className="font-mono text-xs tracking-widest text-tone">
+              <dt className="font-mono text-xs tracking-widest text-ash">
                 STARTED
               </dt>
               <dd className="font-body text-sm text-sumi mt-1">
@@ -240,7 +240,7 @@ export default function SeriesPage() {
           )}
           {status && (
             <div>
-              <dt className="font-mono text-xs tracking-widest text-tone">
+              <dt className="font-mono text-xs tracking-widest text-ash">
                 STATUS
               </dt>
               <dd className="font-body text-sm text-sumi mt-1">{status}</dd>
@@ -248,7 +248,7 @@ export default function SeriesPage() {
           )}
           {series.totalChapters && (
             <div>
-              <dt className="font-mono text-xs tracking-widest text-tone">
+              <dt className="font-mono text-xs tracking-widest text-ash">
                 CHAPTERS
               </dt>
               <dd className="font-body text-sm text-sumi mt-1">
@@ -258,7 +258,7 @@ export default function SeriesPage() {
           )}
           {series.totalVolumes && (
             <div>
-              <dt className="font-mono text-xs tracking-widest text-tone">
+              <dt className="font-mono text-xs tracking-widest text-ash">
                 VOLUMES
               </dt>
               <dd className="font-body text-sm text-sumi mt-1">
@@ -274,7 +274,7 @@ export default function SeriesPage() {
           <div>
             {series.readingLinks.length > 0 && (
               <>
-                <p className="font-mono text-xs tracking-widest text-tone">
+                <p className="font-mono text-xs tracking-widest text-ash">
                   WHERE TO READ
                 </p>
                 <div className="flex flex-wrap gap-3 mt-4">
@@ -295,7 +295,7 @@ export default function SeriesPage() {
           </div>
 
           {series.verifiedAt && (
-            <p className="font-mono text-xs tracking-widest text-tone shrink-0">
+            <p className="font-mono text-xs tracking-widest text-ash shrink-0">
               VERIFIED{" "}
               {new Date(series.verifiedAt).toLocaleDateString("en-US", {
                 month: "short",

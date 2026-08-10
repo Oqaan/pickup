@@ -46,7 +46,7 @@ export default function HomePage() {
   if (error) {
     return (
       <main className="max-w-4xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
-        <p className="font-mono text-xs tracking-widest text-tone">
+        <p className="font-mono text-xs tracking-widest text-ash">
           SOMETHING WENT WRONG
         </p>
         <h1 className="font-display text-4xl text-sumi leading-tight mt-3">
@@ -82,11 +82,11 @@ export default function HomePage() {
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search a series"
           aria-label="Search a series"
-          className="flex-1 min-w-0 font-display text-3xl sm:text-4xl bg-transparent text-sumi placeholder:text-tone focus:outline-none"
+          className="flex-1 min-w-0 font-display text-3xl sm:text-4xl bg-transparent text-sumi placeholder:text-ash focus:outline-none"
         />
       </div>
 
-      <p className="font-mono text-xs tracking-widest text-tone mt-12 sm:mt-16">
+      <p className="font-mono text-xs tracking-widest text-ash mt-12 sm:mt-16">
         {label}
       </p>
 
@@ -124,7 +124,7 @@ export default function HomePage() {
       {!searching && !showAll && results.length > perPage && (
         <button
           onClick={() => setShowAll(true)}
-          className="w-full border-t border-tone mt-10 pt-6 font-mono text-xs tracking-widest text-tone hover:text-jump cursor-pointer"
+          className="w-full border-t border-tone mt-10 pt-6 font-mono text-xs tracking-widest text-ash hover:text-jump cursor-pointer"
         >
           SHOW ALL {results.length} SERIES
         </button>
