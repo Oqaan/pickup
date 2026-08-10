@@ -162,11 +162,6 @@ export default function SeriesPage() {
             </>
           ) : current.continueChapter ? (
             <>
-              {current.animeOriginal && (
-                <p className="font-mono text-xs tracking-widest text-jump">
-                  ANIME ORIGINAL STORY
-                </p>
-              )}
               <p className="font-mono text-xs tracking-widest text-ash">
                 START READING AT
               </p>
@@ -186,6 +181,11 @@ export default function SeriesPage() {
                 <p className="font-mono text-xs text-ash mt-1">
                   {series.totalChapters - current.continueChapter + 1} chapters
                   left to read
+                </p>
+              )}
+              {current.animeOriginal && (
+                <p className="font-mono text-xs tracking-widest text-sumi border border-sumi px-3 py-2 mt-6 inline-block">
+                  ANIME ORIGINAL STORY
                 </p>
               )}
             </>
