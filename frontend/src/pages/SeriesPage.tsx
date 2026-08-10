@@ -135,11 +135,14 @@ export default function SeriesPage() {
           <button
             key={a.name}
             onClick={() => setSelected(i)}
-            className={
-              i === selected
-                ? "font-body text-sm px-4 py-2 border border-sumi bg-sumi text-paper cursor-pointer"
-                : "font-body text-sm px-4 py-2 border border-tone text-sumi hover:border-sumi cursor-pointer"
-            }
+            aria-pressed={i === selected}
+            className={`font-body text-sm px-4 py-2 border cursor-pointer transition ${
+              i < selected
+                ? "border-sumi bg-sumi/10 text-sumi"
+                : i === selected
+                  ? "border-sumi bg-sumi text-paper"
+                  : "border-tone text-ash hover:border-sumi hover:text-sumi"
+            }`}
           >
             {a.name}
           </button>
