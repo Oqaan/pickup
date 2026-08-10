@@ -20,7 +20,7 @@ export default function Layout({ children }: Props) {
             target="_blank"
             rel="noreferrer"
             aria-label="GitHub repository"
-            className="text-tone hover:text-jump"
+            className="text-ash hover:text-jump"
           >
             <svg
               width="20"
@@ -45,7 +45,7 @@ export default function Layout({ children }: Props) {
                 pickup tells you which manga chapter to start from once you stop
                 watching the anime.
               </p>
-              <p className="font-mono text-xs text-tone mt-4">
+              <p className="font-mono text-xs text-ash mt-4">
                 Built by{" "}
                 <a
                   href="https://github.com/Oqaan"
@@ -59,7 +59,7 @@ export default function Layout({ children }: Props) {
             </div>
 
             <div>
-              <p className="font-mono text-xs tracking-widest text-tone">
+              <p className="font-mono text-xs tracking-widest text-ash">
                 SOURCES
               </p>
               <ul className="mt-3 space-y-2 font-body text-sm text-sumi/70">
@@ -90,7 +90,7 @@ export default function Layout({ children }: Props) {
             </div>
 
             <div>
-              <p className="font-mono text-xs tracking-widest text-tone">
+              <p className="font-mono text-xs tracking-widest text-ash">
                 CONTRIBUTE
               </p>
               <ul className="mt-3 space-y-2 font-body text-sm">
@@ -126,7 +126,7 @@ export default function Layout({ children }: Props) {
             </div>
           </div>
 
-          <div className="font-mono text-xs text-tone mt-12 pt-6 border-t border-tone/50 flex flex-wrap gap-x-3 gap-y-2">
+          <div className="font-mono text-xs text-ash mt-12 pt-6 border-t border-tone/50 flex flex-wrap gap-x-3 gap-y-2">
             <span>© 2026 pickup</span>
             <span>·</span>
             <Link to="/about" className="hover:text-jump">

@@ -5,7 +5,7 @@ export default function NotFoundPage() {
   useTitle("Not found - pickup");
   return (
     <main className="max-w-2xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
-      <p className="font-mono text-xs tracking-widest text-tone">404</p>
+      <p className="font-mono text-xs tracking-widest text-ash">404</p>
       <h1 className="font-display text-4xl text-sumi leading-tight mt-3">
         This page does not exist
       </h1>
