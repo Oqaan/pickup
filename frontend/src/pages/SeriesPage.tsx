@@ -84,8 +84,17 @@ export default function SeriesPage() {
           <div className="h-9 w-24 bg-tone/20" />
           <div className="h-9 w-24 bg-tone/20" />
         </div>
-        <div className="mt-12 sm:mt-16 pt-8 border-t border-tone">
-          <div className="h-20 w-40 bg-tone/30" />
+        <div className="mt-12 sm:mt-16 pt-8 border-t border-tone flex flex-col sm:flex-row gap-6 sm:gap-8 sm:items-start">
+          <div className="flex-1 min-w-0">
+            <div className="h-3 w-32 bg-tone/20" />
+            <div className="h-14 sm:h-17 w-48 bg-tone/30 mt-3" />
+            <div className="h-3 w-56 bg-tone/20 mt-4" />
+            <div className="h-3 w-40 bg-tone/20 mt-1" />
+          </div>
+          <div className="w-44 sm:w-40 shrink-0">
+            <div className="aspect-2/3 bg-tone/30" />
+            <div className="h-3 w-14 bg-tone/20 mt-2 mx-auto" />
+          </div>
         </div>
       </main>
     );
@@ -109,9 +118,7 @@ export default function SeriesPage() {
 
   return (
     <main className="max-w-2xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
-      <h1 className="font-display text-title text-sumi">
-        {series.title}
-      </h1>
+      <h1 className="font-display text-title text-sumi">{series.title}</h1>
       {series.titleNative && (
         <p className="font-jp text-sm text-ash mt-2">{series.titleNative}</p>
       )}
