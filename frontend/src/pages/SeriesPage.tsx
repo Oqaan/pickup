@@ -1,14 +1,27 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import type { SeriesDetail } from "../types";
 import { fetchSeriesDetail } from "../api";
 import { useTitle } from "../useTitle";
+import CountUp from "../components/CountUp";
 
 export default function SeriesPage() {
   const { slug } = useParams();
   const [series, setSeries] = useState<SeriesDetail | null>(null);
   const [selected, setSelected] = useState(0);
   const [error, setError] = useState<string | null>(null);
+  const reduceMotion = useReducedMotion();
+
+  const swap = {
+    initial: { opacity: 0, y: reduceMotion ? 0 : 6 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: reduceMotion ? 0 : -6 },
+    transition: {
+      duration: reduceMotion ? 0 : 0.2,
+      ease: [0.2, 0, 0, 1] as const,
+    },
+  };
 
   useTitle(series ? `${series.title} - pickup` : "pickup");
 
@@ -109,6 +122,12 @@ export default function SeriesPage() {
     series.totalChapters ||
     series.totalVolumes;
 
+  const notes = current.notes ? (
+    <p className="font-body text-sm text-sumi/70 mt-4 max-w-prose leading-relaxed">
+      {current.notes}
+    </p>
+  ) : null;
+
   const status =
     series.publicationStatus === "RELEASING"
       ? "Ongoing"
@@ -156,7 +175,7 @@ export default function SeriesPage() {
         ))}
       </div>
 
-      <div className="mt-12 sm:mt-16 pt-8 border-t border-tone flex flex-col sm:flex-row gap-6 sm:gap-8 sm:items-start">
+      <div className="mt-12 sm:mt-16 pt-8 border-t border-tone flex flex-col sm:flex-row gap-6 sm:gap-8 sm:items-start relative">
         <div className="flex-1 min-w-0">
           {current.caughtUp ? (
             <>
@@ -169,6 +188,7 @@ export default function SeriesPage() {
               <p className="font-body text-sm text-sumi/70 mt-4 max-w-prose leading-relaxed">
                 The anime covers the manga through to the end.
               </p>
+              {notes}
             </>
           ) : current.continueChapter ? (
             <>
@@ -176,7 +196,7 @@ export default function SeriesPage() {
                 START READING AT
               </p>
               <p className="font-display text-answer text-jump mt-3">
-                {current.continueChapter}
+                <CountUp value={current.continueChapter} />
                 <span className="font-body text-base text-sumi ml-3">
                   chapter
                 </span>
@@ -198,6 +218,7 @@ export default function SeriesPage() {
                   ANIME ORIGINAL STORY
                 </p>
               )}
+              {notes}
             </>
           ) : (
             <>
@@ -207,28 +228,29 @@ export default function SeriesPage() {
               <p className="font-display text-answer-prose text-sumi text-balance mt-3">
                 Not a continuation point.
               </p>
+              {notes}
             </>
-          )}
-
-          {current.notes && (
-            <p className="font-body text-sm text-sumi/70 mt-4 max-w-prose leading-relaxed">
-              {current.notes}
-            </p>
           )}
         </div>
 
-        {current.coverUrl && (
-          <div className="w-44 sm:w-40 shrink-0">
-            <img
-              src={current.coverUrl}
-              alt={`Volume ${current.continueVolume} cover`}
-              className="w-full aspect-2/3 object-cover"
-            />
-            <p className="font-mono text-xs text-ash mt-2 text-center">
-              Vol. {current.continueVolume}
-            </p>
-          </div>
-        )}
+        <AnimatePresence mode="popLayout" initial={false}>
+          {current.coverUrl && (
+            <motion.div
+              key={current.coverUrl}
+              {...swap}
+              className="w-44 sm:w-40 shrink-0"
+            >
+              <img
+                src={current.coverUrl}
+                alt={`Volume ${current.continueVolume} cover`}
+                className="w-full aspect-2/3 object-cover"
+              />
+              <p className="font-mono text-xs text-ash mt-2 text-center">
+                Vol. {current.continueVolume}
+              </p>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       {hasInfo && (
