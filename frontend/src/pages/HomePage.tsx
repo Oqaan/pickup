@@ -15,6 +15,16 @@ export default function HomePage() {
   const [error, setError] = useState(false);
   const reduceMotion = useReducedMotion();
 
+  const grid = {
+    hidden: {},
+    shown: { transition: { staggerChildren: reduceMotion ? 0 : 0.03 } },
+  };
+
+  const card = {
+    hidden: { opacity: 0, y: reduceMotion ? 0 : 8 },
+    shown: { opacity: 1, y: 0 },
+  };
+
   useEffect(() => {
     fetchSeriesList()
       .then(setSeries)
@@ -90,7 +100,10 @@ export default function HomePage() {
         {label}
       </p>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-10 mt-4">
+      <div
+        className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-10 mt-4"
+        aria-busy={loading}
+      >
         {loading ? (
           Array.from({ length: 10 }).map((_, i) => (
             <div key={i} className={i === 9 ? "sm:hidden" : ""}>
@@ -99,39 +112,47 @@ export default function HomePage() {
             </div>
           ))
         ) : (
-          <AnimatePresence mode="popLayout" initial={false}>
-            {visible.map((s, i) => (
-              <motion.div
-                key={s.slug}
-                layout={reduceMotion ? false : "position"}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={
-                  reduceMotion
-                    ? { duration: 0 }
-                    : { duration: 0.25, ease: [0.2, 0, 0, 1] }
-                }
-                className={!searching && !showAll && i === 9 ? "sm:hidden" : ""}
-              >
-                <Link to={`/anime/${s.slug}`} className="group block">
-                  <div className="aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition">
-                    {s.coverUrl && (
-                      <img
-                        src={s.coverUrl}
-                        alt=""
-                        loading="lazy"
-                        className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
-                      />
-                    )}
-                  </div>
-                  <p className="font-body text-sm text-sumi group-hover:text-jump mt-3 leading-snug">
-                    {s.title}
-                  </p>
-                </Link>
-              </motion.div>
-            ))}
-          </AnimatePresence>
+          <motion.div
+            className="contents"
+            variants={grid}
+            initial="hidden"
+            animate="shown"
+          >
+            <AnimatePresence mode="popLayout">
+              {visible.map((s, i) => (
+                <motion.div
+                  key={s.slug}
+                  layout={reduceMotion ? false : "position"}
+                  variants={card}
+                  exit={{ opacity: 0 }}
+                  transition={
+                    reduceMotion
+                      ? { duration: 0 }
+                      : { duration: 0.25, ease: [0.2, 0, 0, 1] }
+                  }
+                  className={
+                    !searching && !showAll && i === 9 ? "sm:hidden" : ""
+                  }
+                >
+                  <Link to={`/anime/${s.slug}`} className="group block">
+                    <div className="aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition">
+                      {s.coverUrl && (
+                        <img
+                          src={s.coverUrl}
+                          alt=""
+                          loading="lazy"
+                          className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
+                        />
+                      )}
+                    </div>
+                    <p className="font-body text-sm text-sumi group-hover:text-jump mt-3 leading-snug">
+                      {s.title}
+                    </p>
+                  </Link>
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </motion.div>
         )}
       </div>
 
