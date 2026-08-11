@@ -1,19 +1,47 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import type { SeriesSummary } from "../types";
 import { fetchSeriesList } from "../api";
 import Fuse from "fuse.js";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useTitle } from "../useTitle";
+
+// Opening a series throws this page away, so save what the user had open.
+// Saved per history entry, so going back finds it and a fresh visit does not
+type Remembered = { showAll: boolean; scroll: number };
+
+const remembered = (key: string): Remembered | null => {
+  const raw = sessionStorage.getItem(`home:${key}`);
+  return raw ? (JSON.parse(raw) as Remembered) : null;
+};
+
+const remember = (key: string, patch: Partial<Remembered>) => {
+  const base = remembered(key) ?? { showAll: false, scroll: 0 };
+  sessionStorage.setItem(`home:${key}`, JSON.stringify({ ...base, ...patch }));
+};
+
+// A reload starts clean, so drop it all unless the user came back. The history
+// key cannot tell us that, it survives a reload too. Runs once per page load
+const [navigation] = performance.getEntriesByType(
+  "navigation",
+) as PerformanceNavigationTiming[];
+if (navigation?.type !== "back_forward") {
+  for (const k of Object.keys(sessionStorage)) {
+    if (k.startsWith("home:")) sessionStorage.removeItem(k);
+  }
+}
 
 export default function HomePage() {
   useTitle("pickup - where to start the manga after the anime");
   const [series, setSeries] = useState<SeriesSummary[]>([]);
   const [query, setQuery] = useState("");
-  const [showAll, setShowAll] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const reduceMotion = useReducedMotion();
+  const { key: historyKey } = useLocation();
+  const [showAll, setShowAll] = useState(
+    () => remembered(historyKey)?.showAll ?? false,
+  );
 
   const grid = {
     hidden: {},
@@ -31,6 +59,17 @@ export default function HomePage() {
       .catch(() => setError(true))
       .finally(() => setLoading(false));
   }, []);
+
+  useEffect(() => {
+    remember(historyKey, { showAll });
+  }, [historyKey, showAll]);
+
+  // Wait for the cards, the skeleton is too short to scroll that far
+  useLayoutEffect(() => {
+    if (loading) return;
+    const y = remembered(historyKey)?.scroll ?? 0;
+    if (y > 0) window.scrollTo(0, y);
+  }, [loading, historyKey]);
 
   const fuse = useMemo(
     () =>
@@ -134,7 +173,14 @@ export default function HomePage() {
                     !searching && !showAll && i === 9 ? "sm:hidden" : ""
                   }
                 >
-                  <Link to={`/anime/${s.slug}`} className="group block">
+                  <Link
+                    to={`/anime/${s.slug}`}
+                    // Save the scroll position on the way out
+                    onClick={() =>
+                      remember(historyKey, { scroll: window.scrollY })
+                    }
+                    className="group block"
+                  >
                     <div className="aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition">
                       {s.coverUrl && (
                         <img
