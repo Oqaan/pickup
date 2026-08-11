@@ -3,6 +3,7 @@ import type { SeriesSummary } from "../types";
 import { fetchSeriesList } from "../api";
 import Fuse from "fuse.js";
 import { Link } from "react-router-dom";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useTitle } from "../useTitle";
 
 export default function HomePage() {
@@ -12,6 +13,7 @@ export default function HomePage() {
   const [showAll, setShowAll] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const reduceMotion = useReducedMotion();
 
   useEffect(() => {
     fetchSeriesList()
@@ -74,9 +76,7 @@ export default function HomePage() {
       </p>
 
       <div className="mt-12 sm:mt-20 flex items-baseline gap-4 border-b-2 border-tone focus-within:border-sumi pb-3">
-        <span className="font-display text-input text-jump select-none">
-          →
-        </span>
+        <span className="font-display text-input text-jump select-none">→</span>
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
@@ -91,34 +91,48 @@ export default function HomePage() {
       </p>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-10 mt-4">
-        {loading
-          ? Array.from({ length: 10 }).map((_, i) => (
-              <div key={i} className={i === 9 ? "sm:hidden" : ""}>
-                <div className="aspect-2/3 bg-tone/20" />
-                <div className="h-3 w-3/4 bg-tone/20 mt-3" />
-              </div>
-            ))
-          : visible.map((s, i) => (
-              <Link
+        {loading ? (
+          Array.from({ length: 10 }).map((_, i) => (
+            <div key={i} className={i === 9 ? "sm:hidden" : ""}>
+              <div className="aspect-2/3 bg-tone/20" />
+              <div className="h-3 w-3/4 bg-tone/20 mt-3" />
+            </div>
+          ))
+        ) : (
+          <AnimatePresence mode="popLayout" initial={false}>
+            {visible.map((s, i) => (
+              <motion.div
                 key={s.slug}
-                to={`/anime/${s.slug}`}
-                className={`group ${!searching && !showAll && i === 9 ? "sm:hidden" : ""}`}
+                layout={reduceMotion ? false : "position"}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={
+                  reduceMotion
+                    ? { duration: 0 }
+                    : { duration: 0.25, ease: [0.2, 0, 0, 1] }
+                }
+                className={!searching && !showAll && i === 9 ? "sm:hidden" : ""}
               >
-                <div className="aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition">
-                  {s.coverUrl && (
-                    <img
-                      src={s.coverUrl}
-                      alt=""
-                      loading="lazy"
-                      className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
-                    />
-                  )}
-                </div>
-                <p className="font-body text-sm text-sumi group-hover:text-jump mt-3 leading-snug">
-                  {s.title}
-                </p>
-              </Link>
+                <Link to={`/anime/${s.slug}`} className="group block">
+                  <div className="aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition">
+                    {s.coverUrl && (
+                      <img
+                        src={s.coverUrl}
+                        alt=""
+                        loading="lazy"
+                        className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
+                      />
+                    )}
+                  </div>
+                  <p className="font-body text-sm text-sumi group-hover:text-jump mt-3 leading-snug">
+                    {s.title}
+                  </p>
+                </Link>
+              </motion.div>
             ))}
+          </AnimatePresence>
+        )}
       </div>
 
       {!searching && !showAll && results.length > perPage && (
