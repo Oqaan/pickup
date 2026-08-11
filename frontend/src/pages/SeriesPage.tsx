@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import type { SeriesDetail } from "../types";
 import { fetchSeriesDetail } from "../api";
@@ -12,6 +12,28 @@ export default function SeriesPage() {
   const [selected, setSelected] = useState(0);
   const [error, setError] = useState<string | null>(null);
   const reduceMotion = useReducedMotion();
+  const navigate = useNavigate();
+  // Going back is what leaves the home list as the user had it. The key is
+  // "default" when they opened this link directly, so there is nothing to go
+  // back to
+  const { key: historyKey } = useLocation();
+  const cameFromApp = historyKey !== "default";
+
+  const backToSearch = cameFromApp ? (
+    <button
+      onClick={() => navigate(-1)}
+      className="font-mono text-xs tracking-widest text-ash hover:text-jump cursor-pointer"
+    >
+      ← BACK TO SEARCH
+    </button>
+  ) : (
+    <Link
+      to="/"
+      className="font-mono text-xs tracking-widest text-ash hover:text-jump"
+    >
+      ← BACK TO SEARCH
+    </Link>
+  );
 
   const swap = {
     initial: { opacity: 0, y: reduceMotion ? 0 : 6 },
@@ -90,6 +112,7 @@ export default function SeriesPage() {
         className="max-w-2xl mx-auto px-6 pt-12 sm:pt-20 pb-0"
         aria-busy="true"
       >
+        <div className="h-3 w-32 bg-tone/20 mb-8" />
         <div className="h-12 w-64 bg-tone/30" />
         <div className="h-3 w-24 bg-tone/20 mt-4" />
         <div className="h-3 w-48 bg-tone/20 mt-12 sm:mt-16" />
@@ -137,6 +160,7 @@ export default function SeriesPage() {
 
   return (
     <main className="max-w-2xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
+      <div className="mb-8">{backToSearch}</div>
       <h1 className="font-display text-title text-sumi">{series.title}</h1>
       {series.titleNative && (
         <p className="font-jp text-sm text-ash mt-2">{series.titleNative}</p>
