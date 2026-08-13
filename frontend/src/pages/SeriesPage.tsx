@@ -4,6 +4,7 @@ import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import type { SeriesDetail } from "../types";
 import { fetchSeriesDetail } from "../api";
 import { useTitle } from "../useTitle";
+import { cover } from "../cover";
 import CountUp from "../components/CountUp";
 
 export default function SeriesPage() {
@@ -265,8 +266,9 @@ export default function SeriesPage() {
               className="w-44 sm:w-40 shrink-0"
             >
               <img
-                src={current.coverUrl}
+                {...cover(current.coverUrl, [200, 400], "176px")}
                 alt={`Volume ${current.continueVolume} cover`}
+                fetchPriority="high"
                 className="w-full aspect-2/3 object-cover"
               />
               <p className="font-mono text-xs text-ash mt-2 text-center">
