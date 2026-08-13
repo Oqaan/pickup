@@ -832,3 +832,35 @@
       continueVolume: 9
       lastCoveredChapter: 73
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786268620/pickup/covers/sakamoto-days-1743c1a49a1.jpg
+
+- slug: kaiju-no-8
+  title: Kaiju No. 8
+  titleNative: 怪獣8号
+  aliases: ["Kaijuu 8-gou", "Monster #8"]
+  anilistId: 120760
+  popularity: 105530
+  mangadexId: 237d527f-adb5-420e-8e6e-b7dd006fbe47
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786639921/pickup/covers/kaiju-no-8-98abbd31483.jpg
+  author: Naoya Matsumoto
+  startYear: 2020
+  publicationStatus: FINISHED
+  totalChapters: 129
+  totalVolumes: 16
+  verifiedAt: 2026-08-08
+  notes: "The anime adapts the manga from the start. Season 2's finale is rushed and skips material, so the continue point is set a little earlier for a cleaner read."
+  adaptations:
+    - name: "Season 1"
+      episodes: 12
+      sortOrder: 1
+      continueChapter: 39
+      continueVolume: 5
+      lastCoveredChapter: 38
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786639922/pickup/covers/kaiju-no-8-59779884960.jpg
+    - name: "Season 2"
+      episodes: 11
+      sortOrder: 2
+      continueChapter: 70
+      continueVolume: 9
+      lastCoveredChapter: 69
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786639924/pickup/covers/kaiju-no-8-043a99399cd.jpg
+      notes: "The last couple of episodes rushed through the manga and cut a lot. The anime reaches chapter 82 in spots, but starting around chapter 70 gives you the full version of what it skipped."
