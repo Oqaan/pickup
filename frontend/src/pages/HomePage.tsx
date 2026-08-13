@@ -1,7 +1,11 @@
 import { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import type { SeriesSummary } from "../types";
-import { fetchSeriesList } from "../api";
-import Fuse from "fuse.js";
+import {
+  cachedSeriesList,
+  fetchSeriesList,
+  prefetchSeriesDetail,
+} from "../api";
+import { cover } from "../cover";
 import { Link, useLocation } from "react-router-dom";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useTitle } from "../useTitle";
@@ -9,6 +13,11 @@ import { useTitle } from "../useTitle";
 // Opening a series throws this page away, so save what the user had open.
 // Saved per history entry, so going back finds it and a fresh visit does not
 type Remembered = { showAll: boolean; scroll: number };
+
+type FuseModule = typeof import("fuse.js").default;
+
+// How wide a cover lands on screen: three per row from 640px up, two below
+const COVER_SIZES = "(min-width: 640px) 280px, 50vw";
 
 const remembered = (key: string): Remembered | null => {
   const raw = sessionStorage.getItem(`home:${key}`);
@@ -33,15 +42,23 @@ if (navigation?.type !== "back_forward") {
 
 export default function HomePage() {
   useTitle("pickup - where to start the manga after the anime");
-  const [series, setSeries] = useState<SeriesSummary[]>([]);
+  const [series, setSeries] = useState<SeriesSummary[]>(
+    () => cachedSeriesList() ?? [],
+  );
   const [query, setQuery] = useState("");
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(() => cachedSeriesList() === null);
   const [error, setError] = useState(false);
   const reduceMotion = useReducedMotion();
   const { key: historyKey } = useLocation();
   const [showAll, setShowAll] = useState(
     () => remembered(historyKey)?.showAll ?? false,
   );
+  const [Fuse, setFuse] = useState<FuseModule | null>(null);
+  const [wantsFuse, setWantsFuse] = useState(false);
+  // A saved scroll position means the user is coming back to a list they have
+  // already seen. The cards then skip their entrance, which would otherwise
+  // run as a wave down the page while they wait at the bottom for their spot
+  const [returning] = useState(() => (remembered(historyKey)?.scroll ?? 0) > 0);
 
   const grid = {
     hidden: {},
@@ -71,19 +88,32 @@ export default function HomePage() {
     if (y > 0) window.scrollTo(0, y);
   }, [loading, historyKey]);
 
+  // Most visitors never search, so the search library is only fetched once
+  // the field is clicked, well before the second character starts a search
+  useEffect(() => {
+    if (!wantsFuse) return;
+    let live = true;
+    void import("fuse.js").then((m) => live && setFuse(() => m.default));
+    return () => {
+      live = false;
+    };
+  }, [wantsFuse]);
+
   const fuse = useMemo(
     () =>
-      new Fuse(series, {
-        keys: ["title", "aliases"],
-        threshold: 0.3,
-        ignoreLocation: true,
-        minMatchCharLength: 2,
-      }),
-    [series],
+      Fuse
+        ? new Fuse(series, {
+            keys: ["title", "aliases"],
+            threshold: 0.3,
+            ignoreLocation: true,
+            minMatchCharLength: 2,
+          })
+        : null,
+    [Fuse, series],
   );
 
   const results =
-    query.length >= 2 ? fuse.search(query).map((r) => r.item) : series;
+    query.length >= 2 && fuse ? fuse.search(query).map((r) => r.item) : series;
 
   const perPage = 10;
   const searching = query.length >= 2;
@@ -129,6 +159,7 @@ export default function HomePage() {
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
+          onFocus={() => setWantsFuse(true)}
           placeholder="Search a series"
           aria-label="Search a series"
           className="flex-1 min-w-0 font-display text-input bg-transparent text-sumi placeholder:text-tone focus:outline-none"
@@ -154,7 +185,7 @@ export default function HomePage() {
           <motion.div
             className="contents"
             variants={grid}
-            initial="hidden"
+            initial={returning ? "shown" : "hidden"}
             animate="shown"
           >
             <AnimatePresence mode="popLayout">
@@ -179,14 +210,24 @@ export default function HomePage() {
                     onClick={() =>
                       remember(historyKey, { scroll: window.scrollY })
                     }
+                    // Load the series before the click, not after it
+                    onPointerEnter={() => prefetchSeriesDetail(s.slug)}
+                    onFocus={() => prefetchSeriesDetail(s.slug)}
                     className="group block"
                   >
                     <div className="aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition">
                       {s.coverUrl && (
                         <img
-                          src={s.coverUrl}
+                          {...cover(s.coverUrl, [300, 600], COVER_SIZES)}
                           alt=""
-                          loading="lazy"
+                          // The first row is the biggest thing a visitor sees,
+                          // so it loads straight away. On the way back it sits
+                          // above their scroll position and would only take
+                          // bandwidth from the covers they are looking at
+                          loading={i < 4 && !returning ? "eager" : "lazy"}
+                          fetchPriority={
+                            i < 4 && !returning ? "high" : undefined
+                          }
                           className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
                         />
                       )}
