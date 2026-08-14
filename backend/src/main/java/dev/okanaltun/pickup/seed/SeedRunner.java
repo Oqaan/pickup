@@ -17,7 +17,8 @@ import org.springframework.transaction.annotation.Transactional;
 import java.io.InputStream;
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Optional;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @Component
 public class SeedRunner implements CommandLineRunner {
@@ -41,45 +42,38 @@ public class SeedRunner implements CommandLineRunner {
             List<SeedSeries> entries = mapper.readValue(in, mapper.getTypeFactory()
                     .constructCollectionType(List.class, SeedSeries.class));
 
-            int inserted = 0;
+            // The slug is the sync key. Everything is loaded up front so the loop below
+            // needs one query in total instead of one lookup per entry
+            Map<String, Series> bySlug = seriesRepository.findAll().stream()
+                    .collect(Collectors.toMap(Series::getSlug, series -> series));
+
             int updated = 0;
 
             for (SeedSeries entry : entries) {
-                // The slug is the sync key, so an existing row is updated in place and keeps
-                // its id instead of being replaced
-                Optional<Series> existing = seriesRepository.findBySlug(entry.slug());
+                // An existing row is updated in place and keeps its id instead of being
+                // replaced
+                Series series = bySlug.get(entry.slug());
 
-                if (existing.isPresent()) {
-                    updateEntity(existing.get(), entry);
+                if (series != null) {
                     updated++;
                 } else {
-                    seriesRepository.save(toEntity(entry));
-                    inserted++;
+                    series = new Series();
                 }
+
+                applyFields(series, entry);
+                // orphanRemoval on the collections deletes the old child rows, so rebuilding
+                // them from the YAML can't pile up duplicates
+                series.getAdaptations().clear();
+                series.getAliases().clear();
+                series.getReadingLinks().clear();
+                applyChildren(series, entry);
+                seriesRepository.save(series);
             }
 
             // Series that vanished from the YAML stay in the database on purpose, an
             // accidental removal shouldn't wipe live data
-            logger.info("Seed synced: {} inserted, {} updated", inserted, updated);
+            logger.info("Seed synced: {} inserted, {} updated", entries.size() - updated, updated);
         }
-    }
-
-    private Series toEntity(SeedSeries entry) {
-        Series series = new Series();
-        applyFields(series, entry);
-        applyChildren(series, entry);
-        return series;
-    }
-
-    private void updateEntity(Series series, SeedSeries entry) {
-        applyFields(series, entry);
-        // orphanRemoval on the collections deletes the old child rows, so rebuilding
-        // them from the YAML can't pile up duplicates
-        series.getAdaptations().clear();
-        series.getAliases().clear();
-        series.getReadingLinks().clear();
-        applyChildren(series, entry);
-        seriesRepository.save(series);
     }
 
     private void applyFields(Series series, SeedSeries entry) {
