@@ -12,10 +12,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.io.InputStream;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class SeedRunner implements CommandLineRunner {
@@ -29,14 +31,8 @@ public class SeedRunner implements CommandLineRunner {
     }
 
     @Override
+    @Transactional
     public void run(String... args) throws Exception {
-        // Only seed an empty database; slug is unique and a second run would violate
-        // the constraint
-        if (seriesRepository.count() > 0) {
-            logger.info("Seed skipped, database already contains {} series", seriesRepository.count());
-            return;
-        }
-
         ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
 
         try (InputStream in = new ClassPathResource("seed/series.yaml").getInputStream()) {
@@ -45,16 +41,48 @@ public class SeedRunner implements CommandLineRunner {
             List<SeedSeries> entries = mapper.readValue(in, mapper.getTypeFactory()
                     .constructCollectionType(List.class, SeedSeries.class));
 
+            int inserted = 0;
+            int updated = 0;
+
             for (SeedSeries entry : entries) {
-                seriesRepository.save(toEntity(entry));
+                // The slug is the sync key, so an existing row is updated in place and keeps
+                // its id instead of being replaced
+                Optional<Series> existing = seriesRepository.findBySlug(entry.slug());
+
+                if (existing.isPresent()) {
+                    updateEntity(existing.get(), entry);
+                    updated++;
+                } else {
+                    seriesRepository.save(toEntity(entry));
+                    inserted++;
+                }
             }
 
-            logger.info("Seeded {} series", entries.size());
+            // Series that vanished from the YAML stay in the database on purpose, an
+            // accidental removal shouldn't wipe live data
+            logger.info("Seed synced: {} inserted, {} updated", inserted, updated);
         }
     }
 
     private Series toEntity(SeedSeries entry) {
         Series series = new Series();
+        applyFields(series, entry);
+        applyChildren(series, entry);
+        return series;
+    }
+
+    private void updateEntity(Series series, SeedSeries entry) {
+        applyFields(series, entry);
+        // orphanRemoval on the collections deletes the old child rows, so rebuilding
+        // them from the YAML can't pile up duplicates
+        series.getAdaptations().clear();
+        series.getAliases().clear();
+        series.getReadingLinks().clear();
+        applyChildren(series, entry);
+        seriesRepository.save(series);
+    }
+
+    private void applyFields(Series series, SeedSeries entry) {
         series.setSlug(entry.slug());
         series.setTitle(entry.title());
         series.setTitleNative(entry.titleNative());
@@ -70,7 +98,9 @@ public class SeedRunner implements CommandLineRunner {
         series.setAnilistId(entry.anilistId());
         series.setPopularity(entry.popularity() != null ? entry.popularity() : 0);
         series.setMangadexId(entry.mangadexId());
+    }
 
+    private void applyChildren(Series series, SeedSeries entry) {
         if (entry.adaptations() != null) {
             for (SeedSeries.SeedAdaptation a : entry.adaptations()) {
                 Adaptation adaptation = new Adaptation();
@@ -110,7 +140,5 @@ public class SeedRunner implements CommandLineRunner {
                 series.getReadingLinks().add(readingLink);
             }
         }
-
-        return series;
     }
 }
