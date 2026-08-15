@@ -864,3 +864,27 @@
       lastCoveredChapter: 69
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786639924/pickup/covers/kaiju-no-8-043a99399cd.jpg
       notes: "The last couple of episodes rushed through the manga and cut a lot. The anime reaches chapter 82 in spots, but starting around chapter 70 gives you the full version of what it skipped."
+
+- slug: blue-box
+  title: Blue Box
+  titleNative: アオのハコ
+  aliases: ["Ao no Hako"]
+  anilistId: 132182
+  popularity: 54561
+  mangadexId: ed5dddc0-999d-4fd2-a702-9fef1ec2c955
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786779761/pickup/covers/blue-box-d1571711faf.jpg
+  author: Kouji Miura
+  startYear: 2021
+  publicationStatus: FINISHED
+  totalChapters: 250
+  totalVolumes: 28
+  verifiedAt: 2026-08-08
+  notes: "The anime adapts the manga from the start. Only the finished first season is mapped here. Season 2 is scheduled to premiere on October 4, 2026 and will be added once it airs."
+  adaptations:
+    - name: "Season 1"
+      episodes: 25
+      sortOrder: 1
+      continueChapter: 81
+      continueVolume: 10
+      lastCoveredChapter: 80
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786779762/pickup/covers/blue-box-c8b630c4778.jpg
