@@ -928,3 +928,40 @@
       lastCoveredChapter: 127
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786781296/pickup/covers/oshi-no-ko-6470426a22f.jpg
       notes: "Season 3 stops partway through chapter 127, so start there again to catch the second half you haven't seen yet."
+
+- slug: one-punch-man
+  title: One Punch Man
+  titleNative: ワンパンマン
+  aliases: ["One-Punch Man", "OPM"]
+  anilistId: 74347
+  popularity: 172147
+  mangadexId: d8a959f7-648e-4c8d-8f23-f1f3f8e129f3
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786790534/pickup/covers/one-punch-man-dfc14954f85.jpg
+  author: ONE & Yusuke Murata
+  startYear: 2012
+  publicationStatus: RELEASING
+  verifiedAt: 2026-08-08
+  notes: "The anime adapts Murata's manga, not the original webcomic. Season 3 Part 1 has a heavily stitched-together finale, and Season 3 Part 2 arrives in 2027."
+  adaptations:
+    - name: "Season 1"
+      episodes: 12
+      sortOrder: 1
+      continueChapter: 38
+      continueVolume: 8
+      lastCoveredChapter: 37
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786790535/pickup/covers/one-punch-man-7b7fc4dd109.jpg
+    - name: "Season 2"
+      episodes: 12
+      sortOrder: 2
+      continueChapter: 86
+      continueVolume: 17
+      lastCoveredChapter: 85
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786790537/pickup/covers/one-punch-man-519524f941a.jpg
+    - name: "Season 3 Part 1"
+      episodes: 12
+      sortOrder: 3
+      continueChapter: 116
+      continueVolume: 24
+      lastCoveredChapter: 115
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786790539/pickup/covers/one-punch-man-36eda1b54ed.jpg
+      notes: "The finale is heavily cut together and only uses fragments of chapters 116 and 117. Start from chapter 116 to get those fights and scenes in full."
