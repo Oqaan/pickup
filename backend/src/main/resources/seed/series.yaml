@@ -888,3 +888,43 @@
       continueVolume: 10
       lastCoveredChapter: 80
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786779762/pickup/covers/blue-box-c8b630c4778.jpg
+
+- slug: oshi-no-ko
+  title: Oshi no Ko
+  titleNative: 【推しの子】
+  aliases: ["My Star", "Oshi no Ko"]
+  anilistId: 117195
+  popularity: 105913
+  mangadexId: 296cbc31-af1a-4b5b-a34b-fee2b4cad542
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786781292/pickup/covers/oshi-no-ko-b5c23352302.jpg
+  author: Aka Akasaka & Mengo Yokoyari
+  startYear: 2020
+  publicationStatus: FINISHED
+  totalChapters: 166
+  totalVolumes: 16
+  verifiedAt: 2026-08-08
+  notes: "The anime rearranges some chapters. Season 2 pulls a scene from much later forward as a teaser, and Season 3 goes back to fill in what was skipped."
+  adaptations:
+    - name: "Season 1"
+      episodes: 11
+      sortOrder: 1
+      continueChapter: 41
+      continueVolume: 5
+      lastCoveredChapter: 40
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786781294/pickup/covers/oshi-no-ko-fc17d91b2f5.jpg
+    - name: "Season 2"
+      episodes: 13
+      sortOrder: 2
+      continueChapter: 81
+      continueVolume: 9
+      lastCoveredChapter: 80
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786781295/pickup/covers/oshi-no-ko-19647603439.jpg
+      notes: "The finale pulls a scene from a much later chapter forward as a teaser. Keep reading from chapter 81 anyway, Season 3 covers what comes in between."
+    - name: "Season 3"
+      episodes: 11
+      sortOrder: 3
+      continueChapter: 127
+      continueVolume: 13
+      lastCoveredChapter: 127
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786781296/pickup/covers/oshi-no-ko-6470426a22f.jpg
+      notes: "Season 3 stops partway through chapter 127, so start there again to catch the second half you haven't seen yet."
