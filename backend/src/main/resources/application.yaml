@@ -1,13 +1,31 @@
 spring:
   application:
     name: pickup
-  datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5432/pickup}
-    username: ${DB_USERNAME:pickup}
-    password: ${DB_PASSWORD:dev}
+  profiles:
+    default: dev
   jpa:
     hibernate:
       ddl-auto: validate
     open-in-view: false
   flyway:
     enabled: true
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pickup
+    username: pickup
+    password: dev
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
