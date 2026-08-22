@@ -12,12 +12,20 @@ import { useTitle } from "../useTitle";
 
 // Opening a series throws this page away, so save what the user had open.
 // Saved per history entry, so going back finds it and a fresh visit does not
-type Remembered = { showAll: boolean; scroll: number };
+type Remembered = { shown: number; scroll: number };
 
 type FuseModule = typeof import("fuse.js").default;
 
 // How wide a cover lands on screen: three per row from 640px up, two below
 const COVER_SIZES = "(min-width: 640px) 280px, 50vw";
+
+// How many cards the list starts with, and how many each click adds
+const PER_PAGE = 10;
+const STEP = 30;
+
+// Cards past this point appear without animating. A layout animation measures
+// every element it sits on, and the entrance is over before they are scrolled to
+const ANIMATED = 20;
 
 const remembered = (key: string): Remembered | null => {
   const raw = sessionStorage.getItem(`home:${key}`);
@@ -25,7 +33,7 @@ const remembered = (key: string): Remembered | null => {
 };
 
 const remember = (key: string, patch: Partial<Remembered>) => {
-  const base = remembered(key) ?? { showAll: false, scroll: 0 };
+  const base = remembered(key) ?? { shown: PER_PAGE, scroll: 0 };
   sessionStorage.setItem(`home:${key}`, JSON.stringify({ ...base, ...patch }));
 };
 
@@ -50,8 +58,8 @@ export default function HomePage() {
   const [error, setError] = useState(false);
   const reduceMotion = useReducedMotion();
   const { key: historyKey } = useLocation();
-  const [showAll, setShowAll] = useState(
-    () => remembered(historyKey)?.showAll ?? false,
+  const [shown, setShown] = useState(
+    () => remembered(historyKey)?.shown ?? PER_PAGE,
   );
   const [Fuse, setFuse] = useState<FuseModule | null>(null);
   const [wantsFuse, setWantsFuse] = useState(false);
@@ -78,8 +86,8 @@ export default function HomePage() {
   }, []);
 
   useEffect(() => {
-    remember(historyKey, { showAll });
-  }, [historyKey, showAll]);
+    remember(historyKey, { shown });
+  }, [historyKey, shown]);
 
   // Wait for the cards, the skeleton is too short to scroll that far
   useLayoutEffect(() => {
@@ -115,9 +123,11 @@ export default function HomePage() {
   const results =
     query.length >= 2 && fuse ? fuse.search(query).map((r) => r.item) : series;
 
-  const perPage = 10;
+  // A search shows all its hits, the browsing list grows a page at a time
   const searching = query.length >= 2;
-  const visible = searching || showAll ? results : results.slice(0, perPage);
+  const visible = searching ? results : results.slice(0, shown);
+  const clamped = !searching && shown === PER_PAGE;
+  const remaining = results.length - shown;
 
   const label =
     query.length < 2
@@ -175,7 +185,7 @@ export default function HomePage() {
         aria-busy={loading}
       >
         {loading ? (
-          Array.from({ length: 10 }).map((_, i) => (
+          Array.from({ length: PER_PAGE }).map((_, i) => (
             <div key={i} className={i === 9 ? "sm:hidden" : ""}>
               <div className="aspect-2/3 bg-tone/20" />
               <div className="h-3 w-3/4 bg-tone/20 mt-3" />
@@ -189,66 +199,70 @@ export default function HomePage() {
             animate="shown"
           >
             <AnimatePresence mode="popLayout">
-              {visible.map((s, i) => (
-                <motion.div
-                  key={s.slug}
-                  layout={reduceMotion ? false : "position"}
-                  variants={card}
-                  exit={{ opacity: 0 }}
-                  transition={
-                    reduceMotion
-                      ? { duration: 0 }
-                      : { duration: 0.25, ease: [0.2, 0, 0, 1] }
-                  }
-                  className={
-                    !searching && !showAll && i === 9 ? "sm:hidden" : ""
-                  }
-                >
-                  <Link
-                    to={`/anime/${s.slug}`}
-                    // Save the scroll position on the way out
-                    onClick={() =>
-                      remember(historyKey, { scroll: window.scrollY })
-                    }
-                    // Load the series before the click, not after it
-                    onPointerEnter={() => prefetchSeriesDetail(s.slug)}
-                    onFocus={() => prefetchSeriesDetail(s.slug)}
-                    className="group block"
+              {visible.map((s, i) => {
+                const animated = i < ANIMATED;
+                const Card = animated ? motion.div : "div";
+                return (
+                  <Card
+                    key={s.slug}
+                    {...(animated && {
+                      layout: reduceMotion ? false : ("position" as const),
+                      variants: card,
+                      exit: { opacity: 0 },
+                      transition: reduceMotion
+                        ? { duration: 0 }
+                        : { duration: 0.25, ease: [0.2, 0, 0, 1] as const },
+                    })}
+                    className={clamped && i === 9 ? "sm:hidden" : ""}
                   >
-                    <div className="aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition">
-                      {s.coverUrl && (
-                        <img
-                          {...cover(s.coverUrl, [300, 600], COVER_SIZES)}
-                          alt=""
-                          // The first row is the biggest thing a visitor sees,
-                          // so it loads straight away. On the way back it sits
-                          // above their scroll position and would only take
-                          // bandwidth from the covers they are looking at
-                          loading={i < 4 && !returning ? "eager" : "lazy"}
-                          fetchPriority={
-                            i < 4 && !returning ? "high" : undefined
-                          }
-                          className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
-                        />
-                      )}
-                    </div>
-                    <p className="font-body text-sm text-sumi group-hover:text-jump mt-3 leading-snug">
-                      {s.title}
-                    </p>
-                  </Link>
-                </motion.div>
-              ))}
+                    <Link
+                      to={`/anime/${s.slug}`}
+                      // Save the scroll position on the way out
+                      onClick={() =>
+                        remember(historyKey, { scroll: window.scrollY })
+                      }
+                      // Load the series before the click, not after it
+                      onPointerEnter={() => prefetchSeriesDetail(s.slug)}
+                      onFocus={() => prefetchSeriesDetail(s.slug)}
+                      className="group block"
+                    >
+                      <div className="aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition">
+                        {s.coverUrl && (
+                          <img
+                            {...cover(s.coverUrl, [300, 600], COVER_SIZES)}
+                            alt=""
+                            // The first row is the biggest thing a visitor sees,
+                            // so it loads straight away. On the way back it sits
+                            // above their scroll position and would only take
+                            // bandwidth from the covers they are looking at
+                            loading={i < 4 && !returning ? "eager" : "lazy"}
+                            fetchPriority={
+                              i < 4 && !returning ? "high" : undefined
+                            }
+                            className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
+                          />
+                        )}
+                      </div>
+                      <p className="font-body text-sm text-sumi group-hover:text-jump mt-3 leading-snug">
+                        {s.title}
+                      </p>
+                    </Link>
+                  </Card>
+                );
+              })}
             </AnimatePresence>
           </motion.div>
         )}
       </div>
 
-      {!searching && !showAll && results.length > perPage && (
+      {!searching && remaining > 0 && (
         <button
-          onClick={() => setShowAll(true)}
+          onClick={() => setShown((n) => n + STEP)}
           className="w-full border-t border-tone mt-10 pt-6 font-mono text-xs tracking-widest text-ash hover:text-jump cursor-pointer"
         >
-          SHOW ALL {results.length} SERIES
+          {remaining <= STEP
+            ? `SHOW ALL ${results.length} SERIES`
+            : `SHOW ${STEP} MORE`}
         </button>
       )}
 
