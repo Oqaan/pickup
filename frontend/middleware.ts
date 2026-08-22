@@ -7,14 +7,19 @@ export const config = {
 
 const API = "https://api.pickup.moe";
 
+// The path is whatever the visitor typed and it goes into a URL we call
+const SLUG = /^[a-z0-9-]{1,100}$/;
+
 export default async function middleware(request: Request) {
   const url = new URL(request.url);
   const slug = url.pathname.replace("/anime/", "").replace(/\/$/, "");
 
+  if (!SLUG.test(slug)) return next();
+
   // grab the html shell and the series data at the same time to save a round trip
   const [pageRes, seriesRes] = await Promise.all([
     fetch(new URL("/index.html", url.origin)),
-    fetch(`${API}/api/series/${slug}`),
+    fetch(`${API}/api/series/${encodeURIComponent(slug)}`),
   ]);
 
   // unknown slug, let the app render its own not-found page
