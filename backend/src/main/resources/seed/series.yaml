@@ -965,3 +965,39 @@
       lastCoveredChapter: 115
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786790539/pickup/covers/one-punch-man-36eda1b54ed.jpg
       notes: "The finale is heavily cut together and only uses fragments of chapters 116 and 117. Start from chapter 116 to get those fights and scenes in full."
+
+- slug: dorohedoro
+  title: Dorohedoro
+  titleNative: ドロヘドロ
+  aliases: []
+  anilistId: 31133
+  popularity: 87847
+  mangadexId: 34f45c13-2b78-4900-8af2-d0bb551101f4
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787400627/pickup/covers/dorohedoro-d004bed49ba.jpg
+  author: Q Hayashida
+  startYear: 2000
+  publicationStatus: FINISHED
+  totalChapters: 167
+  totalVolumes: 23
+  verifiedAt: 2026-08-22
+  notes: "Season 3 has been announced but has not aired yet."
+  readingLinks:
+    - label: Viz
+      url: https://www.viz.com/dorohedoro
+      sortOrder: 1
+  adaptations:
+    - name: "Season 1"
+      episodes: 12
+      sortOrder: 1
+      continueChapter: 41
+      continueVolume: 7
+      lastCoveredChapter: 40
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787400629/pickup/covers/dorohedoro-468a52e6386.jpg
+      notes: "Season 1 ends mid-volume at chapter 40, so chapter 41 is the direct continuation. That said, the anime skips chapters 11 and 32 and trims a lot of lore and bonus content, so many readers recommend starting from chapter 1 instead."
+    - name: "Season 2"
+      episodes: 11
+      sortOrder: 2
+      continueChapter: 80
+      continueVolume: 14
+      lastCoveredChapter: 79
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787401099/pickup/covers/dorohedoro-b0f8032de60.jpg
