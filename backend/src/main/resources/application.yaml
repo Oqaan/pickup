@@ -1,3 +1,7 @@
+server:
+  # Without this every caller looks like Railway's proxy and shares one rate limit
+  forward-headers-strategy: framework
+
 spring:
   application:
     name: pickup
