@@ -1037,3 +1037,36 @@
       lastCoveredChapter: 89
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787504705/pickup/covers/hells-paradise-afaf56fa4a3.jpg
       notes: "The finale adapts through chapter 89 and flashes forward to chapter 94. Chapters 90 to 93 aren't fully covered, so start at 90 and read in order."
+
+- slug: 100-girlfriends
+  title: "The 100 Girlfriends Who Really, Really, Really, Really, REALLY Love You"
+  titleNative: 君のことが大大大大大好きな100人の彼女
+  aliases: ["Kimi no Koto ga Dai Dai Dai Dai Daisuki na 100-nin no Kanojo", "100 Kanojo"]
+  anilistId: 114416
+  popularity: 38673
+  mangadexId: efb4278c-a761-406b-9d69-19603c5e4c8b
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787507726/pickup/covers/100-girlfriends-62f301f0476.jpg
+  author: Rikito Nakamura & Yukiko Nozawa
+  startYear: 2019
+  publicationStatus: RELEASING
+  verifiedAt: 2026-08-23
+  notes: "Season 3 is still airing, so it will be added once it finishes."
+  readingLinks:
+    - label: Seven Seas
+      url: https://sevenseasentertainment.com/series/the-100-girlfriends-who-really-really-really-really-really-love-you/
+      sortOrder: 1
+  adaptations:
+    - name: "Season 1"
+      episodes: 12
+      sortOrder: 1
+      continueChapter: 23
+      continueVolume: 3
+      lastCoveredChapter: 22
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787507727/pickup/covers/100-girlfriends-41d3f6bda68.jpg
+    - name: "Season 2"
+      episodes: 12
+      sortOrder: 2
+      continueChapter: 51
+      continueVolume: 7
+      lastCoveredChapter: 50
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787507728/pickup/covers/100-girlfriends-5f4fa2c47e5.jpg
