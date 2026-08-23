@@ -1001,3 +1001,39 @@
       continueVolume: 14
       lastCoveredChapter: 79
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787401099/pickup/covers/dorohedoro-b0f8032de60.jpg
+
+- slug: hells-paradise
+  title: "Hell's Paradise"
+  titleNative: 地獄楽
+  aliases: ["Jigokuraku", "Hell's Paradise: Jigokuraku", "Jigoku Raku"]
+  anilistId: 100994
+  popularity: 97481
+  mangadexId: cb77e4a6-3921-43b9-9d64-7d78cd3205ce
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787502082/pickup/covers/hells-paradise-3a8e86f30b9.jpg
+  author: Yuuji Kaku
+  startYear: 2018
+  publicationStatus: FINISHED
+  totalChapters: 127
+  totalVolumes: 13
+  verifiedAt: 2026-08-23
+  readingLinks:
+    - label: Viz
+      url: https://www.viz.com/hell-s-paradise-jigokuraku
+      sortOrder: 1
+  adaptations:
+    - name: "Season 1"
+      episodes: 13
+      sortOrder: 1
+      continueChapter: 46
+      continueVolume: 5
+      lastCoveredChapter: 45
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787504791/pickup/covers/hells-paradise-b001de0df3d.jpg
+      notes: "Season 1 covers the manga through chapter 45. Season 2 skips chapter 46, so read it before continuing."
+    - name: "Season 2"
+      episodes: 12
+      sortOrder: 2
+      continueChapter: 90
+      continueVolume: 10
+      lastCoveredChapter: 89
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787504705/pickup/covers/hells-paradise-afaf56fa4a3.jpg
+      notes: "The finale adapts through chapter 89 and flashes forward to chapter 94. Chapters 90 to 93 aren't fully covered, so start at 90 and read in order."
