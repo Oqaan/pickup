@@ -1097,3 +1097,94 @@
       lastCoveredChapter: 26
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787564970/pickup/covers/the-summer-hikaru-died-cb55df0cb12.jpg
       notes: "The finale adapts most of chapter 26 but cuts the last page or two. You can start at chapter 27 without missing much, or glance at the end of 26 first."
+
+- slug: bleach
+  title: Bleach
+  titleNative: ブリーチ
+  aliases: ["BLEACH"]
+  anilistId: 30012
+  popularity: 119993
+  mangadexId: 239d6260-d71f-43b0-afff-074e3619e3de
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787597995/pickup/covers/bleach-3cbb1b1c663.jpg
+  author: Tite Kubo
+  startYear: 2001
+  publicationStatus: FINISHED
+  totalChapters: 686
+  totalVolumes: 74
+  verifiedAt: 2026-08-24
+  notes: "The original anime (2004-2012) has several filler stretches between arcs, so the arc blocks below are not continuous in episode count. Thousand-Year Blood War is the newer adaptation. Its fourth and final part is still airing and will be added once it finishes."
+  adaptations:
+    - name: "Agent of the Shinigami arc"
+      episodes: 20
+      sortOrder: 1
+      continueChapter: 71
+      continueVolume: 9
+      lastCoveredChapter: 70
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787597996/pickup/covers/bleach-a3dc31b3f1f.jpg
+    - name: "Soul Society arc"
+      episodes: 43
+      sortOrder: 2
+      continueChapter: 183
+      continueVolume: 21
+      lastCoveredChapter: 182
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787597998/pickup/covers/bleach-879e0641b34.jpg
+    - name: "Arrancar arc"
+      episodes: 58
+      sortOrder: 3
+      continueChapter: 286
+      continueVolume: 32
+      lastCoveredChapter: 286
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787598467/pickup/covers/bleach-739006a6cfa.jpg
+      notes: "The arc finale stops partway into chapter 286, so start there again to catch the second half you haven't seen yet."
+    - name: "Arrancar vs. Shinigami arc"
+      episodes: 14
+      sortOrder: 4
+      continueChapter: 316
+      continueVolume: 37
+      lastCoveredChapter: 315
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787598000/pickup/covers/bleach-dfe9528e0e3.jpg
+    - name: "The Decisive Battle of Karakura arc"
+      episodes: 13
+      sortOrder: 5
+      continueChapter: 341
+      continueVolume: 40
+      lastCoveredChapter: 340
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787598001/pickup/covers/bleach-e2cc6cf1421.jpg
+    - name: "Arrancar Downfall arc"
+      episodes: 43
+      sortOrder: 6
+      continueChapter: 422
+      continueVolume: 48
+      lastCoveredChapter: 421
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787598002/pickup/covers/bleach-fcad203ef13.jpg
+    - name: "The Lost Substitute Shinigami arc"
+      episodes: 24
+      sortOrder: 7
+      continueChapter: 480
+      continueVolume: 55
+      lastCoveredChapter: 479
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787598004/pickup/covers/bleach-7c8e9588978.jpg
+    - name: "Thousand-Year Blood War: The Blood Warfare"
+      episodes: 13
+      sortOrder: 8
+      continueChapter: 542
+      continueVolume: 61
+      lastCoveredChapter: 542
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787598005/pickup/covers/bleach-50245f2fe15.jpg
+      notes: "The part ends partway into chapter 542, so start there again to catch the second half you haven't seen yet."
+    - name: "Thousand-Year Blood War: The Separation"
+      episodes: 13
+      sortOrder: 9
+      continueChapter: 609
+      continueVolume: 67
+      lastCoveredChapter: 609
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787598006/pickup/covers/bleach-59dd5391fa1.jpg
+      notes: "The part ends partway into chapter 609, so start there again to catch the second half you haven't seen yet."
+    - name: "Thousand-Year Blood War: The Conflict"
+      episodes: 14
+      sortOrder: 10
+      continueChapter: 661
+      continueVolume: 72
+      lastCoveredChapter: 661
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787598283/pickup/covers/bleach-9e0df9b730e.jpg
+      notes: "The part ends partway into chapter 661, so start there again to catch the second half you haven't seen yet. It also adds anime-original scenes that aren't in the manga."
