@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pickup.moe/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-24</lastmod>
   </url>
   <url>
     <loc>https://pickup.moe/about</loc>
@@ -102,5 +102,9 @@
   <url>
     <loc>https://pickup.moe/anime/100-girlfriends</loc>
     <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://pickup.moe/anime/the-summer-hikaru-died</loc>
+    <lastmod>2026-08-24</lastmod>
   </url>
 </urlset>

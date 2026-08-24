@@ -1070,3 +1070,30 @@
       continueVolume: 7
       lastCoveredChapter: 50
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787507728/pickup/covers/100-girlfriends-5f4fa2c47e5.jpg
+
+- slug: the-summer-hikaru-died
+  title: The Summer Hikaru Died
+  titleNative: 光が死んだ夏
+  aliases: ["Hikaru ga Shinda Natsu", "Hikanatsu"]
+  anilistId: 138603
+  popularity: 41498
+  mangadexId: 9e954c6b-7a02-4fd7-986d-6331c0ba95d4
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787564969/pickup/covers/the-summer-hikaru-died-2581a896d5d.jpg
+  author: Mokumokuren
+  startYear: 2021
+  publicationStatus: RELEASING
+  verifiedAt: 2026-08-24
+  notes: "The manga is in its final stages but is still ongoing. Only Season 1 is listed here. Season 2 has been announced but has not aired yet."
+  readingLinks:
+    - label: Yen Press
+      url: https://yenpress.com/series/the-summer-hikaru-died
+      sortOrder: 1
+  adaptations:
+    - name: "Season 1"
+      episodes: 12
+      sortOrder: 1
+      continueChapter: 27
+      continueVolume: 6
+      lastCoveredChapter: 26
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787564970/pickup/covers/the-summer-hikaru-died-cb55df0cb12.jpg
+      notes: "The finale adapts most of chapter 26 but cuts the last page or two. You can start at chapter 27 without missing much, or glance at the end of 26 first."
