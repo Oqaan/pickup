@@ -1188,3 +1188,92 @@
       lastCoveredChapter: 661
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787598283/pickup/covers/bleach-9e0df9b730e.jpg
       notes: "The part ends partway into chapter 661, so start there again to catch the second half you haven't seen yet. It also adds anime-original scenes that aren't in the manga."
+
+- slug: black-clover
+  title: Black Clover
+  titleNative: ブラッククローバー
+  aliases: ["BC"]
+  anilistId: 86123
+  popularity: 106693
+  mangadexId: e7eabe96-aa17-476f-b431-2497d5e9d060
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787600469/pickup/covers/black-clover-a8ce375586a.jpg
+  author: Yuuki Tabata
+  startYear: 2015
+  publicationStatus: FINISHED
+  totalChapters: 392
+  totalVolumes: 38
+  verifiedAt: 2026-08-24
+  notes: "The anime ran as one continuous series in Japan, so the arc blocks below are what you can stop after. A new season is announced for October 2026 and will be added once it airs."
+  adaptations:
+    - name: "Magic Knights Entrance arc"
+      episodes: 13
+      sortOrder: 1
+      continueChapter: 11
+      continueVolume: 2
+      lastCoveredChapter: 10
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787600471/pickup/covers/black-clover-1eff5cf7d15.jpg
+    - name: "Dungeon Exploration arc"
+      episodes: 6
+      sortOrder: 2
+      continueChapter: 22
+      continueVolume: 3
+      lastCoveredChapter: 21
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787600472/pickup/covers/black-clover-5313af081dc.jpg
+    - name: "Royal Capital Assault arc"
+      episodes: 8
+      sortOrder: 3
+      continueChapter: 38
+      continueVolume: 5
+      lastCoveredChapter: 37
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787600473/pickup/covers/black-clover-4918a2605a9.jpg
+    - name: "Eye of the Midnight Sun Encounter arc"
+      episodes: 12
+      sortOrder: 4
+      continueChapter: 57
+      continueVolume: 7
+      lastCoveredChapter: 56
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787600474/pickup/covers/black-clover-98d3b7d9a56.jpg
+    - name: "Seabed Temple arc"
+      episodes: 12
+      sortOrder: 5
+      continueChapter: 75
+      continueVolume: 9
+      lastCoveredChapter: 74
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787600475/pickup/covers/black-clover-0f10e5102fd.jpg
+    - name: "Witches' Forest arc"
+      episodes: 14
+      sortOrder: 6
+      continueChapter: 102
+      continueVolume: 12
+      lastCoveredChapter: 101
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787600476/pickup/covers/black-clover-d36a5fc2374.jpg
+    - name: "Royal Knights arc"
+      episodes: 31
+      sortOrder: 7
+      continueChapter: 150
+      continueVolume: 16
+      lastCoveredChapter: 149
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787600478/pickup/covers/black-clover-e45fdceb5b5.jpg
+    - name: "Elf Reincarnation arc"
+      episodes: 61
+      sortOrder: 8
+      continueChapter: 229
+      continueVolume: 24
+      lastCoveredChapter: 228
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787600479/pickup/covers/black-clover-d5cec3b8d9f.jpg
+      notes: "The arc stops adapting the manga after chapter 228. Its later episodes fill in a six month time skip that the manga skips over, written with the author supervising. You won't find those events in the manga, so read on from chapter 229."
+    - name: "Heart Kingdom Joint Struggle arc"
+      episodes: 10
+      sortOrder: 9
+      continueChapter: 261
+      continueVolume: 26
+      lastCoveredChapter: 260
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787600480/pickup/covers/black-clover-882b16a4f75.jpg
+    - name: "Spade Kingdom Raid arc"
+      episodes: 3
+      sortOrder: 10
+      continueChapter: 270
+      continueVolume: 27
+      lastCoveredChapter: 270
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787600481/pickup/covers/black-clover-4c5506df3e8.jpg
+      notes: "The anime only adapted the first three episodes of this arc and stops partway into chapter 270, so start there again to catch the second half you haven't seen yet. The arc runs to the end of the manga."
