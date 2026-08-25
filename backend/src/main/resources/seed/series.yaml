@@ -1375,3 +1375,81 @@
       lastCoveredChapter: 270
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787600481/pickup/covers/black-clover-4c5506df3e8.jpg
       notes: "The anime only adapted the first three episodes of this arc and stops partway into chapter 270, so start there again to catch the second half you haven't seen yet. The arc runs to the end of the manga."
+
+- slug: solo-leveling
+  title: Solo Leveling
+  titleNative: 나 혼자만 레벨업
+  aliases: ["Na Honjaman Level Up", "Ore dake Level Up na Ken", "Only I Level Up"]
+  anilistId: 105398
+  popularity: 283267
+  mangadexId: 32d76d19-8a05-4db0-9fc2-e0b0648fe9d0
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787648851/pickup/covers/solo-leveling-abf3b54de8f.webp
+  author: Chu-Gong & Seong-Rak Jang
+  startYear: 2018
+  publicationStatus: FINISHED
+  totalChapters: 200
+  totalVolumes: 15
+  verifiedAt: 2026-08-25
+  notes: "The main story ends with chapter 179. Chapters 180 to 200 are a side story set after it."
+  readingLinks:
+    - label: Tappytoon
+      url: https://www.tappytoon.com/en/book/solo-leveling-official
+      sortOrder: 1
+  adaptations:
+    - name: "Season 1"
+      episodes: 12
+      sortOrder: 1
+      continueChapter: 46
+      continueVolume: 4
+      lastCoveredChapter: 45
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787648851/pickup/covers/solo-leveling-65e2a690aba.webp
+    - name: "Season 2: Arise from the Shadow"
+      episodes: 13
+      sortOrder: 2
+      continueChapter: 111
+      continueVolume: 8
+      lastCoveredChapter: 110
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787648852/pickup/covers/solo-leveling-409792b5601.webp
+
+- slug: tokyo-revengers
+  title: Tokyo Revengers
+  titleNative: 東京卍リベンジャーズ
+  aliases: ["Toukyou Revengers", "TokyoRev"]
+  anilistId: 102988
+  popularity: 117365
+  mangadexId: 59b36734-f2d6-46d7-97c0-06cfd2380852
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787649983/pickup/covers/tokyo-revengers-8489db46426.jpg
+  author: Ken Wakui
+  startYear: 2017
+  publicationStatus: FINISHED
+  totalChapters: 278
+  totalVolumes: 31
+  verifiedAt: 2026-08-25
+  notes: "Season 4 has been announced for October 2026 but has not aired yet."
+  readingLinks:
+    - label: Kodansha
+      url: https://kodansha.us/series/tokyo-revengers/
+      sortOrder: 1
+  adaptations:
+    - name: "Season 1"
+      episodes: 24
+      sortOrder: 1
+      continueChapter: 74
+      continueVolume: 9
+      lastCoveredChapter: 73
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787649984/pickup/covers/tokyo-revengers-b066597ad79.jpg
+    - name: "Season 2: Christmas Showdown"
+      episodes: 13
+      sortOrder: 2
+      continueChapter: 126
+      continueVolume: 15
+      lastCoveredChapter: 125
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787649986/pickup/covers/tokyo-revengers-5cf778d209a.jpg
+      notes: "The season jumps over chapter 123 and only adapts it in Season 3, so read that one before carrying on from 126."
+    - name: "Season 3: Tenjiku"
+      episodes: 13
+      sortOrder: 3
+      continueChapter: 186
+      continueVolume: 21
+      lastCoveredChapter: 185
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787649987/pickup/covers/tokyo-revengers-0a6f083106c.jpg

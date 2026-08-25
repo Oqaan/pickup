@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pickup.moe/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://pickup.moe/about</loc>
@@ -114,5 +114,13 @@
   <url>
     <loc>https://pickup.moe/anime/black-clover</loc>
     <lastmod>2026-08-24</lastmod>
+  </url>
+  <url>
+    <loc>https://pickup.moe/anime/solo-leveling</loc>
+    <lastmod>2026-08-25</lastmod>
+  </url>
+  <url>
+    <loc>https://pickup.moe/anime/tokyo-revengers</loc>
+    <lastmod>2026-08-25</lastmod>
   </url>
 </urlset>
