@@ -100,6 +100,8 @@ public class SeedRunner implements CommandLineRunner {
                 Adaptation adaptation = new Adaptation();
                 adaptation.setName(a.name());
                 adaptation.setEpisodes(a.episodes());
+                adaptation.setEpisodeStart(a.episodeStart());
+                adaptation.setEpisodeEnd(a.episodeEnd());
                 adaptation.setSortOrder(a.sortOrder() != null ? a.sortOrder() : 0);
                 adaptation.setContinueChapter(a.continueChapter());
                 adaptation.setContinueVolume(a.continueVolume());

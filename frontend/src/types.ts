@@ -1,6 +1,8 @@
 export type Adaptation = {
   name: string;
   episodes: number | null;
+  episodeStart: number | null;
+  episodeEnd: number | null;
   continueChapter: number | null;
   continueVolume: number | null;
   lastCoveredChapter: number | null;

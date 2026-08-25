@@ -24,6 +24,8 @@ public record SeedSeries(
         public record SeedAdaptation(
                         String name,
                         Integer episodes,
+                        Integer episodeStart,
+                        Integer episodeEnd,
                         Integer sortOrder,
                         Integer continueChapter,
                         Integer continueVolume,

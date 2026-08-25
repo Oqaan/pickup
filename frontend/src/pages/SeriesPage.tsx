@@ -230,7 +230,9 @@ export default function SeriesPage() {
                 {current.continueVolume &&
                   `Volume ${current.continueVolume} · `}
                 {current.name}
-                {current.episodes && ` · ${current.episodes} episodes`}
+                {current.episodeStart && current.episodeEnd
+                  ? ` · Episodes ${current.episodeStart}-${current.episodeEnd}`
+                  : current.episodes && ` · ${current.episodes} episodes`}
               </p>
               {series.totalChapters && current.continueChapter && (
                 <p className="font-mono text-xs text-ash mt-1">
