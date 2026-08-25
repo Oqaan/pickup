@@ -535,6 +535,8 @@
   adaptations:
     - name: "Hunter Exam Arc"
       episodes: 26
+      episodeStart: 1
+      episodeEnd: 26
       sortOrder: 1
       continueChapter: 44
       continueVolume: 5
@@ -543,6 +545,8 @@
       notes: "The arc ends partway into chapter 44, so read it from the start."
     - name: "Heavens Arena Arc"
       episodes: 10
+      episodeStart: 27
+      episodeEnd: 36
       sortOrder: 2
       continueChapter: 64
       continueVolume: 8
@@ -550,6 +554,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154686/pickup/covers/hunter-x-hunter-c654f746e69.jpg
     - name: "Yorknew City Arc"
       episodes: 22
+      episodeStart: 37
+      episodeEnd: 58
       sortOrder: 3
       continueChapter: 118
       continueVolume: 13
@@ -557,6 +563,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154687/pickup/covers/hunter-x-hunter-cf26fbca6c1.jpg
     - name: "Greed Island Arc"
       episodes: 17
+      episodeStart: 59
+      episodeEnd: 75
       sortOrder: 4
       continueChapter: 185
       continueVolume: 18
@@ -565,6 +573,8 @@
       notes: "The arc ends partway into chapter 185, so read it from the start."
     - name: "Chimera Ant Arc"
       episodes: 61
+      episodeStart: 76
+      episodeEnd: 136
       sortOrder: 5
       continueChapter: 319
       continueVolume: 30
@@ -573,6 +583,8 @@
       notes: "The final episodes jump around chapters 315-318 and skip 317. Start at 319 to be safe."
     - name: "13th Hunter Chairman Election Arc"
       episodes: 12
+      episodeStart: 137
+      episodeEnd: 148
       sortOrder: 6
       continueChapter: 340
       continueVolume: 32
@@ -596,6 +608,8 @@
   adaptations:
     - name: "Land of Waves Arc"
       episodes: 19
+      episodeStart: 1
+      episodeEnd: 19
       sortOrder: 1
       continueChapter: 34
       continueVolume: 4
@@ -603,6 +617,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154694/pickup/covers/naruto-9a838405c2e.jpg
     - name: "Chunin Exams Arc"
       episodes: 48
+      episodeStart: 20
+      episodeEnd: 67
       sortOrder: 2
       continueChapter: 116
       continueVolume: 13
@@ -610,6 +626,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154696/pickup/covers/naruto-d861ac97697.jpg
     - name: "Konoha Crush Arc"
       episodes: 13
+      episodeStart: 68
+      episodeEnd: 80
       sortOrder: 3
       continueChapter: 139
       continueVolume: 16
@@ -617,6 +635,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154699/pickup/covers/naruto-af2a6695db8.jpg
     - name: "Search for Tsunade Arc"
       episodes: 20
+      episodeStart: 81
+      episodeEnd: 100
       sortOrder: 4
       continueChapter: 172
       continueVolume: 20
@@ -624,6 +644,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154701/pickup/covers/naruto-24be3e66cf3.jpg
     - name: "Sasuke Recovery Arc"
       episodes: 29
+      episodeStart: 107
+      episodeEnd: 135
       sortOrder: 5
       continueChapter: 239
       continueVolume: 27
@@ -649,6 +671,8 @@
   adaptations:
     - name: "Kazekage Rescue Arc"
       episodes: 32
+      episodeStart: 1
+      episodeEnd: 32
       sortOrder: 1
       continueChapter: 282
       continueVolume: 32
@@ -656,6 +680,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154704/pickup/covers/naruto-shippuden-21f40155e75.jpg
     - name: "Tenchi Bridge Arc"
       episodes: 21
+      episodeStart: 33
+      episodeEnd: 53
       sortOrder: 2
       continueChapter: 311
       continueVolume: 35
@@ -663,6 +689,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154705/pickup/covers/naruto-shippuden-d2d5fa90a4c.jpg
     - name: "Akatsuki Suppression Arc"
       episodes: 17
+      episodeStart: 72
+      episodeEnd: 88
       sortOrder: 3
       continueChapter: 343
       continueVolume: 38
@@ -670,6 +698,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154707/pickup/covers/naruto-shippuden-3980b80ab45.jpg
     - name: "Itachi Pursuit Arc"
       episodes: 12
+      episodeStart: 113
+      episodeEnd: 126
       sortOrder: 4
       continueChapter: 368
       continueVolume: 40
@@ -677,6 +707,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154708/pickup/covers/naruto-shippuden-f9d62ea20c6.jpg
     - name: "Tale of Jiraiya the Gallant Arc"
       episodes: 7
+      episodeStart: 127
+      episodeEnd: 133
       sortOrder: 5
       continueChapter: 384
       continueVolume: 42
@@ -684,6 +716,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154709/pickup/covers/naruto-shippuden-0020babdc96.jpg
     - name: "Fated Battle Between Brothers Arc"
       episodes: 10
+      episodeStart: 134
+      episodeEnd: 143
       sortOrder: 6
       continueChapter: 413
       continueVolume: 45
@@ -691,6 +725,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154711/pickup/covers/naruto-shippuden-389a6776c82.jpg
     - name: "Pain's Assault Arc"
       episodes: 24
+      episodeStart: 152
+      episodeEnd: 175
       sortOrder: 7
       continueChapter: 454
       continueVolume: 49
@@ -698,6 +734,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154713/pickup/covers/naruto-shippuden-44b74d9b8a4.jpg
     - name: "Five Kage Summit Arc"
       episodes: 18
+      episodeStart: 197
+      episodeEnd: 214
       sortOrder: 8
       continueChapter: 484
       continueVolume: 52
@@ -705,6 +743,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154714/pickup/covers/naruto-shippuden-83104813ce4.jpg
     - name: "Fourth Shinobi World War: Countdown Arc"
       episodes: 22
+      episodeStart: 215
+      episodeEnd: 256
       sortOrder: 9
       continueChapter: 516
       continueVolume: 55
@@ -712,6 +752,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154715/pickup/covers/naruto-shippuden-d68f19055f9.jpg
     - name: "Fourth Shinobi World War: Confrontation Arc"
       episodes: 55
+      episodeStart: 261
+      episodeEnd: 321
       sortOrder: 10
       continueChapter: 560
       continueVolume: 59
@@ -719,6 +761,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154716/pickup/covers/naruto-shippuden-324730f89e6.jpg
     - name: "Fourth Shinobi World War: Climax Arc"
       episodes: 41
+      episodeStart: 322
+      episodeEnd: 375
       sortOrder: 11
       continueChapter: 640
       continueVolume: 67
@@ -726,6 +770,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154717/pickup/covers/naruto-shippuden-0741da6c47f.jpg
     - name: "Birth of the Ten-Tails' Jinchuriki Arc"
       episodes: 34
+      episodeStart: 378
+      episodeEnd: 431
       sortOrder: 12
       continueChapter: 678
       continueVolume: 70
@@ -733,6 +779,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154718/pickup/covers/naruto-shippuden-c0cf37a91e6.jpg
     - name: "Kaguya Otsutsuki Strikes Arc"
       episodes: 22
+      episodeStart: 451
+      episodeEnd: 479
       sortOrder: 13
       lastCoveredChapter: 699
       caughtUp: true
@@ -1116,6 +1164,8 @@
   adaptations:
     - name: "Agent of the Shinigami arc"
       episodes: 20
+      episodeStart: 1
+      episodeEnd: 20
       sortOrder: 1
       continueChapter: 71
       continueVolume: 9
@@ -1123,6 +1173,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787597996/pickup/covers/bleach-a3dc31b3f1f.jpg
     - name: "Soul Society arc"
       episodes: 43
+      episodeStart: 21
+      episodeEnd: 63
       sortOrder: 2
       continueChapter: 183
       continueVolume: 21
@@ -1130,6 +1182,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787597998/pickup/covers/bleach-879e0641b34.jpg
     - name: "Arrancar arc"
       episodes: 58
+      episodeStart: 110
+      episodeEnd: 167
       sortOrder: 3
       continueChapter: 286
       continueVolume: 32
@@ -1138,35 +1192,55 @@
       notes: "The arc finale stops partway into chapter 286, so start there again to catch the second half you haven't seen yet."
     - name: "Arrancar vs. Shinigami arc"
       episodes: 14
+      episodeStart: 190
+      episodeEnd: 205
       sortOrder: 4
       continueChapter: 316
       continueVolume: 37
       lastCoveredChapter: 315
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787598000/pickup/covers/bleach-dfe9528e0e3.jpg
+    - name: "The Past arc"
+      episodes: 7
+      episodeStart: 206
+      episodeEnd: 212
+      sortOrder: 5
+      continueChapter: 316
+      continueVolume: 37
+      lastCoveredChapter: 315
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787598000/pickup/covers/bleach-dfe9528e0e3.jpg
+      notes: "These episodes adapt the Turn Back the Pendulum flashback, chapters -108 to -97. In the manga it sits in volume 36, between chapters 315 and 316, so your reading point stays the same as after the previous block."
     - name: "The Decisive Battle of Karakura arc"
       episodes: 13
-      sortOrder: 5
+      episodeStart: 213
+      episodeEnd: 229
+      sortOrder: 6
       continueChapter: 341
       continueVolume: 40
       lastCoveredChapter: 340
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787598001/pickup/covers/bleach-e2cc6cf1421.jpg
     - name: "Arrancar Downfall arc"
       episodes: 43
-      sortOrder: 6
+      episodeStart: 266
+      episodeEnd: 316
+      sortOrder: 7
       continueChapter: 422
       continueVolume: 48
       lastCoveredChapter: 421
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787598002/pickup/covers/bleach-fcad203ef13.jpg
     - name: "The Lost Substitute Shinigami arc"
       episodes: 24
-      sortOrder: 7
+      episodeStart: 343
+      episodeEnd: 366
+      sortOrder: 8
       continueChapter: 480
       continueVolume: 55
       lastCoveredChapter: 479
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787598004/pickup/covers/bleach-7c8e9588978.jpg
     - name: "Thousand-Year Blood War: The Blood Warfare"
       episodes: 13
-      sortOrder: 8
+      episodeStart: 1
+      episodeEnd: 13
+      sortOrder: 9
       continueChapter: 542
       continueVolume: 61
       lastCoveredChapter: 542
@@ -1174,7 +1248,9 @@
       notes: "The part ends partway into chapter 542, so start there again to catch the second half you haven't seen yet."
     - name: "Thousand-Year Blood War: The Separation"
       episodes: 13
-      sortOrder: 9
+      episodeStart: 14
+      episodeEnd: 26
+      sortOrder: 10
       continueChapter: 609
       continueVolume: 67
       lastCoveredChapter: 609
@@ -1182,7 +1258,9 @@
       notes: "The part ends partway into chapter 609, so start there again to catch the second half you haven't seen yet."
     - name: "Thousand-Year Blood War: The Conflict"
       episodes: 14
-      sortOrder: 10
+      episodeStart: 27
+      episodeEnd: 40
+      sortOrder: 11
       continueChapter: 661
       continueVolume: 72
       lastCoveredChapter: 661
@@ -1207,6 +1285,8 @@
   adaptations:
     - name: "Magic Knights Entrance arc"
       episodes: 13
+      episodeStart: 1
+      episodeEnd: 13
       sortOrder: 1
       continueChapter: 11
       continueVolume: 2
@@ -1214,6 +1294,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787600471/pickup/covers/black-clover-1eff5cf7d15.jpg
     - name: "Dungeon Exploration arc"
       episodes: 6
+      episodeStart: 14
+      episodeEnd: 19
       sortOrder: 2
       continueChapter: 22
       continueVolume: 3
@@ -1221,6 +1303,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787600472/pickup/covers/black-clover-5313af081dc.jpg
     - name: "Royal Capital Assault arc"
       episodes: 8
+      episodeStart: 20
+      episodeEnd: 27
       sortOrder: 3
       continueChapter: 38
       continueVolume: 5
@@ -1228,6 +1312,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787600473/pickup/covers/black-clover-4918a2605a9.jpg
     - name: "Eye of the Midnight Sun Encounter arc"
       episodes: 12
+      episodeStart: 28
+      episodeEnd: 39
       sortOrder: 4
       continueChapter: 57
       continueVolume: 7
@@ -1235,6 +1321,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787600474/pickup/covers/black-clover-98d3b7d9a56.jpg
     - name: "Seabed Temple arc"
       episodes: 12
+      episodeStart: 40
+      episodeEnd: 51
       sortOrder: 5
       continueChapter: 75
       continueVolume: 9
@@ -1242,6 +1330,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787600475/pickup/covers/black-clover-0f10e5102fd.jpg
     - name: "Witches' Forest arc"
       episodes: 14
+      episodeStart: 52
+      episodeEnd: 65
       sortOrder: 6
       continueChapter: 102
       continueVolume: 12
@@ -1249,6 +1339,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787600476/pickup/covers/black-clover-d36a5fc2374.jpg
     - name: "Royal Knights arc"
       episodes: 31
+      episodeStart: 66
+      episodeEnd: 96
       sortOrder: 7
       continueChapter: 150
       continueVolume: 16
@@ -1256,6 +1348,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787600478/pickup/covers/black-clover-e45fdceb5b5.jpg
     - name: "Elf Reincarnation arc"
       episodes: 61
+      episodeStart: 97
+      episodeEnd: 157
       sortOrder: 8
       continueChapter: 229
       continueVolume: 24
@@ -1264,6 +1358,8 @@
       notes: "The arc stops adapting the manga after chapter 228. Its later episodes fill in a six month time skip that the manga skips over, written with the author supervising. You won't find those events in the manga, so read on from chapter 229."
     - name: "Heart Kingdom Joint Struggle arc"
       episodes: 10
+      episodeStart: 158
+      episodeEnd: 167
       sortOrder: 9
       continueChapter: 261
       continueVolume: 26
@@ -1271,6 +1367,8 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787600480/pickup/covers/black-clover-882b16a4f75.jpg
     - name: "Spade Kingdom Raid arc"
       episodes: 3
+      episodeStart: 168
+      episodeEnd: 170
       sortOrder: 10
       continueChapter: 270
       continueVolume: 27
