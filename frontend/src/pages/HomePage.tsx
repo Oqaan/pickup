@@ -61,6 +61,7 @@ export default function HomePage() {
   const [shown, setShown] = useState(
     () => remembered(historyKey)?.shown ?? PER_PAGE,
   );
+  const [searchShown, setSearchShown] = useState(PER_PAGE);
   const [Fuse, setFuse] = useState<FuseModule | null>(null);
   const [wantsFuse, setWantsFuse] = useState(false);
   // A saved scroll position means the user is coming back to a list they have
@@ -123,11 +124,15 @@ export default function HomePage() {
   const results =
     query.length >= 2 && fuse ? fuse.search(query).map((r) => r.item) : series;
 
-  // A search shows all its hits, the browsing list grows a page at a time
+  // Both lists grow a page at a time. A search keeps its own count so that
+  // clearing the field puts the browsing list back where the user left it
   const searching = query.length >= 2;
-  const visible = searching ? results : results.slice(0, shown);
-  const clamped = !searching && shown === PER_PAGE;
-  const remaining = results.length - shown;
+  const limit = searching ? searchShown : shown;
+  const visible = results.slice(0, limit);
+  const remaining = results.length - limit;
+  // Three columns leave the tenth card alone on its own row, so it waits for
+  // the next page. Only while there is a next page to wait for
+  const clamped = limit === PER_PAGE && remaining > 0;
 
   const label =
     query.length < 2
@@ -168,7 +173,11 @@ export default function HomePage() {
         <span className="font-display text-input text-jump select-none">→</span>
         <input
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={(e) => {
+            setQuery(e.target.value);
+            // A new query is a new list, so it starts at the first page again
+            setSearchShown(PER_PAGE);
+          }}
           onFocus={() => setWantsFuse(true)}
           placeholder="Search a series"
           aria-label="Search a series"
@@ -255,13 +264,17 @@ export default function HomePage() {
         )}
       </div>
 
-      {!searching && remaining > 0 && (
+      {remaining > 0 && (
         <button
-          onClick={() => setShown((n) => n + STEP)}
+          onClick={() =>
+            searching
+              ? setSearchShown((n) => n + STEP)
+              : setShown((n) => n + STEP)
+          }
           className="w-full border-t border-tone mt-10 pt-6 font-mono text-xs tracking-widest text-ash hover:text-jump cursor-pointer"
         >
           {remaining <= STEP
-            ? `SHOW ALL ${results.length} SERIES`
+            ? `SHOW ALL ${results.length} ${searching ? "RESULTS" : "SERIES"}`
             : `SHOW ${STEP} MORE`}
         </button>
       )}
