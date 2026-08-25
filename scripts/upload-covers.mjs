@@ -1,4 +1,5 @@
 import { readFileSync, writeFileSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { v2 as cloudinary } from "cloudinary";
 
 // Reads CLOUDINARY_URL from the environment automatically.
@@ -22,7 +23,12 @@ let currentSlug = "series";
 const uploads = [];
 
 const slugRe = /^\s*-?\s*slug:\s*(\S+)/;
-const coverRe = /^(\s*)coverUrl:\s*(https:\/\/uploads\.mangadex\.org\/\S+)/;
+// Covers come from MangaDex, series it doesn't have covers for, such as
+// webtoons, fall back to the images on their fandom wiki
+const COVER_HOSTS = ["uploads.mangadex.org", "static.wikia.nocookie.net"];
+const coverRe = new RegExp(
+  `^(\\s*)coverUrl:\\s*(https://(?:${COVER_HOSTS.map((h) => h.replace(/\./g, "\\.")).join("|")})/\\S+)`,
+);
 
 lines.forEach((line, i) => {
   const slugMatch = line.match(slugRe);
@@ -32,11 +38,12 @@ lines.forEach((line, i) => {
   }
   const coverMatch = line.match(coverRe);
   if (coverMatch) {
-    const shortHash = coverMatch[2]
-      .split("/")
-      .pop()
-      .slice(0, 12)
-      .replace(/\W/g, "");
+    // Naming covers after a hash of their source URL keeps the names unique no
+    // matter what the URL itself looks like
+    const shortHash = createHash("sha1")
+      .update(coverMatch[2])
+      .digest("hex")
+      .slice(0, 11);
     const name = `${currentSlug}-${shortHash}`;
     uploads.push({
       lineIndex: i,
@@ -51,7 +58,7 @@ console.log(`Found ${uploads.length} cover URLs to migrate.`);
 
 for (const u of uploads) {
   try {
-    // Cloudinary fetches the image from MangaDex itself
+    // Cloudinary fetches the image from the source host itself
     const res = await cloudinary.uploader.upload(u.url, {
       public_id: u.name,
       folder: FOLDER,
