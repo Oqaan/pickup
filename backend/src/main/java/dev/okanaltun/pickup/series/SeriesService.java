@@ -39,6 +39,8 @@ public class SeriesService {
                                 .map(a -> new AdaptationResponse(
                                                 a.getName(),
                                                 a.getEpisodes(),
+                                                a.getEpisodeStart(),
+                                                a.getEpisodeEnd(),
                                                 a.getContinueChapter(),
                                                 a.getContinueVolume(),
                                                 a.getLastCoveredChapter(),

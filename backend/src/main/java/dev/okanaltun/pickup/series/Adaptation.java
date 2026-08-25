@@ -23,6 +23,12 @@ public class Adaptation {
 
     private Integer episodes;
 
+    @Column(name = "episode_start")
+    private Integer episodeStart;
+
+    @Column(name = "episode_end")
+    private Integer episodeEnd;
+
     @Column(name = "sort_order", nullable = false)
     private int sortOrder = 0;
 
