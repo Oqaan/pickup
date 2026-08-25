@@ -1528,3 +1528,38 @@
       lastCoveredChapter: 151
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787655957/pickup/covers/kaguya-sama-49ac2c5e17a.jpg
       notes: "These two episodes cherry-pick single chapters from all over the rest of the manga instead of continuing the story, so start from the same place as after the film."
+
+- slug: the-promised-neverland
+  title: The Promised Neverland
+  titleNative: 約束のネバーランド
+  aliases: ["Yakusoku no Neverland", "TPN", "YakuNeba"]
+  anilistId: 87423
+  popularity: 133141
+  mangadexId: 46e9cae5-4407-4576-9b9e-4c517ae9298e
+  coverUrl: https://uploads.mangadex.org/covers/46e9cae5-4407-4576-9b9e-4c517ae9298e/f788dfec-a589-4c47-89f9-e3c45dc07158.jpg.512.jpg
+  author: Kaiu Shirai & Posuka Demizu
+  startYear: 2016
+  publicationStatus: FINISHED
+  totalChapters: 181
+  totalVolumes: 20
+  verifiedAt: 2026-08-25
+  readingLinks:
+    - label: Viz
+      url: https://www.viz.com/the-promised-neverland
+      sortOrder: 1
+  adaptations:
+    - name: Season 1
+      episodes: 12
+      sortOrder: 1
+      continueChapter: 38
+      continueVolume: 5
+      lastCoveredChapter: 37
+      coverUrl: https://uploads.mangadex.org/covers/46e9cae5-4407-4576-9b9e-4c517ae9298e/2f408da5-3a50-415b-b143-48ce08d893d8.jpg.512.jpg
+    - name: Season 2
+      episodes: 11
+      sortOrder: 2
+      continueChapter: 38
+      continueVolume: 5
+      lastCoveredChapter: 37
+      coverUrl: https://uploads.mangadex.org/covers/46e9cae5-4407-4576-9b9e-4c517ae9298e/2f408da5-3a50-415b-b143-48ce08d893d8.jpg.512.jpg
+      notes: "The season rushes to the ending and drops most of what it passes on the way: chapters 55-70, 74-103, 110-117, 131-144, 155-158, 160-164 and 171 never appear. Pick up at 38 as if you had stopped after Season 1."
