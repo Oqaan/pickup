@@ -409,7 +409,7 @@
   publicationStatus: FINISHED
   totalChapters: 205
   totalVolumes: 23
-  verifiedAt: 2026-08-05
+  verifiedAt: 2026-08-25
   adaptations:
     - name: Season 1
       episodes: 26
@@ -420,7 +420,7 @@
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154667/pickup/covers/demon-slayer-39ca6197f75.jpg
       notes: "The finale only adapts the first few pages of 54, so read it from the start."
     - name: "Season 2: Mugen Train"
-      episodes: 8
+      episodes: 7
       sortOrder: 2
       continueChapter: 67
       continueVolume: 8
@@ -447,6 +447,13 @@
       continueVolume: 16
       lastCoveredChapter: 139
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154672/pickup/covers/demon-slayer-a72bfc4d618.jpg
+    - name: "The Movie: Infinity Castle Part 1"
+      sortOrder: 6
+      continueChapter: 157
+      continueVolume: 18
+      lastCoveredChapter: 157
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787651234/pickup/covers/demon-slayer-ac124049d12.jpg
+      notes: "The film ends partway into chapter 157, so start there again to catch the second half you haven't seen yet."
 
 - slug: my-hero-academia
   title: My Hero Academia
@@ -461,7 +468,7 @@
   publicationStatus: FINISHED
   totalChapters: 431
   totalVolumes: 42
-  verifiedAt: 2026-08-05
+  verifiedAt: 2026-08-25
   adaptations:
     - name: Season 1
       episodes: 13
@@ -514,8 +521,15 @@
       lastCoveredChapter: 398
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154682/pickup/covers/my-hero-academia-1777346461d.jpg
     - name: Season 8
-      episodes: 12
+      episodes: 11
       sortOrder: 8
+      continueChapter: 431
+      continueVolume: 42
+      lastCoveredChapter: 430
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787651235/pickup/covers/my-hero-academia-866846bcfff.jpg
+      notes: "Chapter 431 is an extended epilogue that never ran in the magazine. It came with the final volume and the season does not adapt it."
+    - name: "No. 170+1: More (Special)"
+      sortOrder: 9
       lastCoveredChapter: 431
       caughtUp: true
 
