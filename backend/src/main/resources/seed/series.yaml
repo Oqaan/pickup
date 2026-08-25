@@ -1467,3 +1467,64 @@
       continueVolume: 21
       lastCoveredChapter: 185
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787649987/pickup/covers/tokyo-revengers-0a6f083106c.jpg
+
+- slug: kaguya-sama
+  title: "Kaguya-sama: Love is War"
+  titleNative: かぐや様は告らせたい〜天才たちの恋愛頭脳戦〜
+  aliases: ["Kaguya-sama wa Kokurasetai", "Kaguya-sama"]
+  anilistId: 86635
+  popularity: 118789
+  mangadexId: 37f5cce0-8070-4ada-96e5-fa24b1bd4ff9
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787655953/pickup/covers/kaguya-sama-57362fc528b.jpg
+  author: Aka Akasaka
+  startYear: 2015
+  publicationStatus: FINISHED
+  totalChapters: 281
+  totalVolumes: 28
+  verifiedAt: 2026-08-25
+  notes: "The anime jumps around the chapter order a lot, so treat every starting point here as the first chapter you are unlikely to have seen. A final film has been announced but has not released yet."
+  readingLinks:
+    - label: Viz
+      url: https://www.viz.com/kaguya-sama-love-is-war
+      sortOrder: 1
+  adaptations:
+    - name: Season 1
+      episodes: 12
+      sortOrder: 1
+      continueChapter: 47
+      continueVolume: 5
+      lastCoveredChapter: 46
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787655954/pickup/covers/kaguya-sama-04dba33b2e1.jpg
+      notes: "Chapters 2, 3, 4, 10, 13, 15, 22, 30 and 32 were left out, and chapter 55 was pulled forward, so a few of the chapters ahead of you will still be new."
+    - name: Season 2
+      episodes: 12
+      sortOrder: 2
+      continueChapter: 92
+      continueVolume: 10
+      lastCoveredChapter: 91
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787655955/pickup/covers/kaguya-sama-99fe1301f80.jpg
+      notes: "The last two episodes skip ahead to chapters 100 and 101, so you will run into those again on the way."
+    - name: "Season 3: Ultra Romantic"
+      episodes: 13
+      sortOrder: 3
+      continueChapter: 139
+      continueVolume: 14
+      lastCoveredChapter: 138
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787655956/pickup/covers/kaguya-sama-d78edb7b497.jpg
+      notes: "This season goes back and picks up most of what Season 2 skipped. Chapters 92 and 96 have never been animated."
+    - name: "The First Kiss That Never Ends"
+      episodes: 4
+      sortOrder: 4
+      continueChapter: 152
+      continueVolume: 16
+      lastCoveredChapter: 151
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787655957/pickup/covers/kaguya-sama-49ac2c5e17a.jpg
+      notes: "Chapters 159 and 160 are worked in early, so you will meet them again shortly after this starting point."
+    - name: "Stairway to Adulthood (Special)"
+      episodes: 2
+      sortOrder: 5
+      continueChapter: 152
+      continueVolume: 16
+      lastCoveredChapter: 151
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787655957/pickup/covers/kaguya-sama-49ac2c5e17a.jpg
+      notes: "These two episodes cherry-pick single chapters from all over the rest of the manga instead of continuing the story, so start from the same place as after the film."
