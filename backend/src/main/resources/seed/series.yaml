@@ -1563,3 +1563,63 @@
       lastCoveredChapter: 37
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787658093/pickup/covers/the-promised-neverland-ddeeb928418.jpg
       notes: "The season rushes to the ending and drops most of what it passes on the way: chapters 55-70, 74-103, 110-117, 131-144, 155-158, 160-164 and 171 never appear. Pick up at 38 as if you had stopped after Season 1."
+
+- slug: berserk
+  title: Berserk
+  titleNative: ベルセルク
+  aliases: ["Beruseruku", "Kenpuu Denki Berserk"]
+  anilistId: 30002
+  popularity: 243565
+  mangadexId: 801513ba-a712-498c-8f57-cae55b38cc92
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787773744/pickup/covers/berserk-44a3a27c244.jpg
+  author: Kentarou Miura, continued by Studio Gaga
+  startYear: 1989
+  publicationStatus: RELEASING
+  totalChapters: 386
+  totalVolumes: 43
+  verifiedAt: 2026-08-26
+  notes: "The same story has been animated twice: the 1997 series and the film trilogy both cover the Golden Age and stop at the Eclipse, and the Memorial Edition is that trilogy recut for TV. Only the 2016 and 2017 series carry on past it. Berserk numbers its chapters as episodes, and the 16 that open the manga are numbered 0-01 to 0-16."
+  readingLinks:
+    - label: Dark Horse
+      url: https://www.darkhorse.com/Search/berserk
+      sortOrder: 1
+  adaptations:
+    - name: 1997 anime
+      episodes: 25
+      sortOrder: 1
+      continueChapter: 87
+      continueVolume: 13
+      lastCoveredChapter: 87
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787773746/pickup/covers/berserk-bcdfb9ef034.jpg
+      notes: "The finale stops halfway into chapter 87 and only borrows its closing scene from 93 and 94."
+    - name: "Golden Age Arc films I-III"
+      sortOrder: 2
+      continueChapter: 92
+      continueVolume: 14
+      lastCoveredChapter: 91
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787773747/pickup/covers/berserk-7f4298411f0.jpg
+      notes: "Part III runs to the end of chapter 91 and then jumps straight to Guts as the Black Swordsman, skipping 92 to 94."
+    - name: "Golden Age Arc: Memorial Edition"
+      episodes: 13
+      sortOrder: 3
+      continueChapter: 92
+      continueVolume: 14
+      lastCoveredChapter: 91
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787773747/pickup/covers/berserk-7f4298411f0.jpg
+      notes: "This is the film trilogy recut for television with a few scenes restored, so it leaves you exactly where the films do."
+    - name: 2016 anime
+      episodes: 12
+      sortOrder: 4
+      continueChapter: 177
+      continueVolume: 22
+      lastCoveredChapter: 176
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787773750/pickup/covers/berserk-76cae656124.jpg
+      notes: "The season opens after the Golden Age and skips the Lost Children chapter, 95 to 118, on its way in. Read those before you carry on from 177."
+    - name: 2017 anime
+      episodes: 12
+      sortOrder: 5
+      continueChapter: 250
+      continueVolume: 29
+      lastCoveredChapter: 249
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787773751/pickup/covers/berserk-d132d9c79f6.jpg
+      notes: "Chapters 231 to 235 and 238 never made it in, but the season itself ends cleanly at 249."
