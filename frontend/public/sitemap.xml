@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pickup.moe/</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://pickup.moe/about</loc>
@@ -134,5 +134,9 @@
   <url>
     <loc>https://pickup.moe/anime/berserk</loc>
     <lastmod>2026-08-26</lastmod>
+  </url>
+  <url>
+    <loc>https://pickup.moe/anime/haikyuu</loc>
+    <lastmod>2026-08-27</lastmod>
   </url>
 </urlset>
