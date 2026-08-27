@@ -1842,3 +1842,117 @@
       sortOrder: 3
       lastCoveredChapter: 304
       caughtUp: true
+
+- slug: one-piece
+  title: One Piece
+  titleNative: ONE PIECE
+  aliases: ["Wan Piisu"]
+  anilistId: 30013
+  popularity: 231620
+  mangadexId: a1c7c817-4e59-43b7-9365-09675a149a6f
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787853778/pickup/covers/one-piece-16ae8c35fb0.jpg
+  author: Eiichirou Oda
+  startYear: 1997
+  publicationStatus: RELEASING
+  verifiedAt: 2026-08-27
+  notes: "Split by saga rather than season, since the anime runs continuously. The episode ranges include the filler that sits between the canon arcs. The Elbaph arc is still airing and gets its own block once it is done."
+  adaptations:
+    - name: "East Blue Saga"
+      episodes: 61
+      episodeStart: 1
+      episodeEnd: 61
+      sortOrder: 1
+      continueChapter: 101
+      continueVolume: 12
+      lastCoveredChapter: 100
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787853780/pickup/covers/one-piece-4cae50afcf6.png
+    - name: "Arabasta Saga"
+      episodes: 74
+      episodeStart: 62
+      episodeEnd: 135
+      sortOrder: 2
+      continueChapter: 218
+      continueVolume: 24
+      lastCoveredChapter: 217
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787853782/pickup/covers/one-piece-43333f4c8b7.png
+    - name: "Sky Island Saga"
+      episodes: 71
+      episodeStart: 136
+      episodeEnd: 206
+      sortOrder: 3
+      continueChapter: 303
+      continueVolume: 32
+      lastCoveredChapter: 302
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787853784/pickup/covers/one-piece-8bedc56dd46.png
+    - name: "Water 7 Saga"
+      episodes: 119
+      episodeStart: 207
+      episodeEnd: 325
+      sortOrder: 4
+      continueChapter: 442
+      continueVolume: 46
+      lastCoveredChapter: 441
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787853786/pickup/covers/one-piece-8aa34c4cc83.png
+    - name: "Thriller Bark Saga"
+      episodes: 59
+      episodeStart: 326
+      episodeEnd: 384
+      sortOrder: 5
+      continueChapter: 490
+      continueVolume: 50
+      lastCoveredChapter: 489
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787853788/pickup/covers/one-piece-12b5a7cc907.png
+    - name: "Summit War Saga"
+      episodes: 132
+      episodeStart: 385
+      episodeEnd: 516
+      sortOrder: 6
+      continueChapter: 598
+      continueVolume: 61
+      lastCoveredChapter: 597
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787853790/pickup/covers/one-piece-e12b2843070.png
+    - name: "Fish-Man Island Saga"
+      episodes: 58
+      episodeStart: 517
+      episodeEnd: 574
+      sortOrder: 7
+      continueChapter: 654
+      continueVolume: 66
+      lastCoveredChapter: 653
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787853792/pickup/covers/one-piece-f6e100058eb.png
+    - name: "Dressrosa Saga"
+      episodes: 172
+      episodeStart: 575
+      episodeEnd: 746
+      sortOrder: 8
+      continueChapter: 802
+      continueVolume: 80
+      lastCoveredChapter: 801
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787853796/pickup/covers/one-piece-4a518a86ac1.png
+    - name: "Whole Cake Island Saga"
+      episodes: 143
+      episodeStart: 747
+      episodeEnd: 889
+      sortOrder: 9
+      continueChapter: 909
+      continueVolume: 90
+      lastCoveredChapter: 908
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787853798/pickup/covers/one-piece-bd1b15831c2.png
+    - name: "Wano Country Saga"
+      episodes: 196
+      episodeStart: 890
+      episodeEnd: 1085
+      sortOrder: 10
+      continueChapter: 1058
+      continueVolume: 105
+      lastCoveredChapter: 1057
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787853800/pickup/covers/one-piece-711c6ad2bd6.jpg
+    - name: "Egghead Arc"
+      episodes: 70
+      episodeStart: 1086
+      episodeEnd: 1155
+      sortOrder: 11
+      continueChapter: 1126
+      continueVolume: 111
+      lastCoveredChapter: 1125
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787853802/pickup/covers/one-piece-c5853d1c6fb.png
