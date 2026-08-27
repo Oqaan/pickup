@@ -1684,3 +1684,82 @@
       continueVolume: 37
       lastCoveredChapter: 326
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787820543/pickup/covers/haikyuu-75572e65b08.jpg
+
+- slug: delicious-in-dungeon
+  title: Delicious in Dungeon
+  titleNative: ダンジョン飯
+  aliases: ["Dungeon Meshi"]
+  anilistId: 86082
+  popularity: 55248
+  mangadexId: d90ea6cb-7bc3-4d80-8af0-28557e6c4e17
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787821818/pickup/covers/delicious-in-dungeon-680fd595933.jpg
+  author: Ryouko Kui
+  startYear: 2014
+  publicationStatus: FINISHED
+  totalChapters: 97
+  totalVolumes: 14
+  verifiedAt: 2026-08-27
+  adaptations:
+    - name: "Season 1"
+      episodes: 24
+      sortOrder: 1
+      continueChapter: 53
+      continueVolume: 8
+      lastCoveredChapter: 52
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787821818/pickup/covers/delicious-in-dungeon-afcbd779b3d.jpg
+
+- slug: undead-unluck
+  title: Undead Unluck
+  titleNative: アンデッドアンラック
+  aliases: ["Andeddo Anrakku"]
+  anilistId: 114791
+  popularity: 29266
+  mangadexId: cc1b8669-82b2-4232-99c1-40d48fc2d988
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787821819/pickup/covers/undead-unluck-20a777575f7.jpg
+  author: Yoshifumi Tozuka
+  startYear: 2020
+  publicationStatus: FINISHED
+  totalChapters: 239
+  totalVolumes: 27
+  verifiedAt: 2026-08-27
+  adaptations:
+    - name: "Season 1"
+      episodes: 24
+      sortOrder: 1
+      continueChapter: 53
+      continueVolume: 7
+      lastCoveredChapter: 53
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787821821/pickup/covers/undead-unluck-f337cb6ec3c.png
+      notes: "The finale takes the opening and closing pages of chapter 53 but leaves the middle out. Start at 53 so you do not miss it, or watch the Winter Arc special first, which adapts exactly those pages."
+    - name: "Winter Arc"
+      episodes: 1
+      sortOrder: 2
+      continueChapter: 57
+      continueVolume: 7
+      lastCoveredChapter: 56
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787821821/pickup/covers/undead-unluck-f337cb6ec3c.png
+      notes: "A single special that picks up straight from Season 1 and fills in the middle of chapter 53 before carrying on."
+
+- slug: ao-ashi
+  title: Ao Ashi
+  titleNative: アオアシ
+  aliases: ["Aoashi"]
+  anilistId: 107279
+  popularity: 25183
+  mangadexId: b73371d4-02dd-4db0-b448-d9afa3d698f1
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787821824/pickup/covers/ao-ashi-8d57a887026.jpg
+  author: Naohiko Ueno & Yuugo Kobayashi
+  startYear: 2015
+  publicationStatus: FINISHED
+  totalChapters: 410
+  totalVolumes: 40
+  verifiedAt: 2026-08-27
+  adaptations:
+    - name: "Season 1"
+      episodes: 24
+      sortOrder: 1
+      continueChapter: 118
+      continueVolume: 12
+      lastCoveredChapter: 117
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787821825/pickup/covers/ao-ashi-e23aeb43a76.jpg
+      notes: "The finale ends on chapter 117 and only borrows two pages from 119 to close out."
