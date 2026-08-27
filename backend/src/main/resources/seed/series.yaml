@@ -1763,3 +1763,82 @@
       lastCoveredChapter: 117
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787821825/pickup/covers/ao-ashi-e23aeb43a76.jpg
       notes: "The finale ends on chapter 117 and only borrows two pages from 119 to close out."
+
+- slug: fullmetal-alchemist
+  title: Fullmetal Alchemist
+  titleNative: 鋼の錬金術師
+  aliases: ["Hagane no Renkinjutsushi", "FMA", "Fullmetal Alchemist: Brotherhood"]
+  anilistId: 30025
+  popularity: 79764
+  mangadexId: dd8a907a-3850-4f95-ba03-ba201a8399e3
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787850118/pickup/covers/fullmetal-alchemist-36c7ccec323.jpg
+  author: Hiromu Arakawa
+  startYear: 2001
+  publicationStatus: FINISHED
+  totalChapters: 108
+  totalVolumes: 27
+  verifiedAt: 2026-08-27
+  notes: "The 2003 anime is a separate story that leaves the manga early and invents its own ending. Only Brotherhood follows the manga."
+  adaptations:
+    - name: "Brotherhood"
+      episodes: 64
+      sortOrder: 1
+      lastCoveredChapter: 108
+      caughtUp: true
+
+- slug: death-note
+  title: Death Note
+  titleNative: デスノート
+  aliases: ["Desu Nooto"]
+  anilistId: 30021
+  popularity: 99225
+  mangadexId: 75ee72ab-c6bf-4b87-badd-de839156934c
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787850119/pickup/covers/death-note-f0e0a22d5aa.jpg
+  author: Tsugumi Ooba & Takeshi Obata
+  startYear: 2003
+  publicationStatus: FINISHED
+  totalChapters: 108
+  totalVolumes: 12
+  verifiedAt: 2026-08-27
+  adaptations:
+    - name: "Season 1"
+      episodes: 37
+      sortOrder: 1
+      lastCoveredChapter: 108
+      caughtUp: true
+      notes: "The anime covers the whole manga but stages the ending differently."
+
+- slug: fire-force
+  title: Fire Force
+  titleNative: 炎炎ノ消防隊
+  aliases: ["Enen no Shouboutai", "En'en no Shouboutai"]
+  anilistId: 86310
+  popularity: 65746
+  mangadexId: ec514ef4-fb77-43b9-b9b4-528229de1308
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787850120/pickup/covers/fire-force-1459136994f.jpg
+  author: Atsushi Ookubo
+  startYear: 2015
+  publicationStatus: FINISHED
+  totalChapters: 304
+  totalVolumes: 34
+  verifiedAt: 2026-08-27
+  adaptations:
+    - name: "Season 1"
+      episodes: 24
+      sortOrder: 1
+      continueChapter: 91
+      continueVolume: 11
+      lastCoveredChapter: 90
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787850121/pickup/covers/fire-force-616a089079c.jpg
+    - name: "Season 2"
+      episodes: 24
+      sortOrder: 2
+      continueChapter: 175
+      continueVolume: 20
+      lastCoveredChapter: 174
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787850123/pickup/covers/fire-force-330aac6fc90.jpg
+    - name: "Season 3"
+      episodes: 25
+      sortOrder: 3
+      lastCoveredChapter: 304
+      caughtUp: true
