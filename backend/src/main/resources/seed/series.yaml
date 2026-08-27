@@ -1956,3 +1956,24 @@
       continueVolume: 111
       lastCoveredChapter: 1125
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787853802/pickup/covers/one-piece-c5853d1c6fb.png
+
+- slug: gachiakuta
+  title: Gachiakuta
+  titleNative: ガチアクタ
+  aliases: ["Gachi Akuta"]
+  anilistId: 144946
+  popularity: 65969
+  mangadexId: 192aa767-2479-42c1-9780-8d65a2efd36a
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787854152/pickup/covers/gachiakuta-d58fc771801.jpg
+  author: Kei Urana
+  startYear: 2022
+  publicationStatus: RELEASING
+  verifiedAt: 2026-08-27
+  adaptations:
+    - name: "Season 1"
+      episodes: 24
+      sortOrder: 1
+      continueChapter: 88
+      continueVolume: 11
+      lastCoveredChapter: 87
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787854153/pickup/covers/gachiakuta-17674dcdada.jpg
