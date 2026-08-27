@@ -1623,3 +1623,64 @@
       lastCoveredChapter: 249
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787773751/pickup/covers/berserk-d132d9c79f6.jpg
       notes: "Chapters 231 to 235 and 238 never made it in, but the season itself ends cleanly at 249."
+
+- slug: haikyuu
+  title: "Haikyu!!"
+  titleNative: ハイキュー!!
+  aliases: ["Haikyuu!!", "Haikyū!!"]
+  anilistId: 65243
+  popularity: 101546
+  mangadexId: 8f8b7cb0-7109-46e8-b12c-0448a6453dfa
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787820536/pickup/covers/haikyuu-0bae0ab2189.jpg
+  author: Haruichi Furudate
+  startYear: 2012
+  publicationStatus: FINISHED
+  totalChapters: 402
+  totalVolumes: 45
+  verifiedAt: 2026-08-27
+  notes: "The four TV seasons stop well before the end. The story carries on in films instead: The Dumpster Battle covers the next stretch and the final film is set for 2027, so everything past it has to be read for now."
+  adaptations:
+    - name: "Season 1"
+      episodes: 25
+      sortOrder: 1
+      continueChapter: 71
+      continueVolume: 8
+      lastCoveredChapter: 71
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787820538/pickup/covers/haikyuu-eb05fad2469.jpg
+      notes: "The finale only uses the first half of chapter 71, and Season 2 opens by adapting the rest of it."
+    - name: "Season 2"
+      episodes: 25
+      sortOrder: 2
+      continueChapter: 150
+      continueVolume: 17
+      lastCoveredChapter: 149
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787820539/pickup/covers/haikyuu-8491dcd9870.jpg
+    - name: "Season 3"
+      episodes: 10
+      sortOrder: 3
+      continueChapter: 191
+      continueVolume: 22
+      lastCoveredChapter: 190
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787820540/pickup/covers/haikyuu-5b06bbb91e8.jpg
+      notes: "The last episode ends at chapter 190 and then tacks on chapter 207 as a look ahead to the Nationals. Carry on from 191, Season 4 adapts 207 properly."
+    - name: "Season 4 Part 1"
+      episodes: 13
+      sortOrder: 4
+      continueChapter: 250
+      continueVolume: 28
+      lastCoveredChapter: 249
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787820541/pickup/covers/haikyuu-e925e982ccf.jpg
+      notes: "This part opens at chapter 207, so chapters 191 to 206 are skipped entirely by the anime. Read those first if you came straight from Season 3."
+    - name: "Season 4 Part 2"
+      episodes: 12
+      sortOrder: 5
+      continueChapter: 293
+      continueVolume: 33
+      lastCoveredChapter: 292
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787820542/pickup/covers/haikyuu-458cef7ae9c.jpg
+    - name: "The Dumpster Battle"
+      sortOrder: 6
+      continueChapter: 327
+      continueVolume: 37
+      lastCoveredChapter: 326
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787820543/pickup/covers/haikyuu-75572e65b08.jpg
