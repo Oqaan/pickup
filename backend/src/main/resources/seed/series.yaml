@@ -2039,3 +2039,123 @@
       lastCoveredChapter: 86
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787918902/pickup/covers/my-dress-up-darling-3beb5f3ddd9.jpg
       notes: "The finale condenses chapter 86 and trims a little setup for the next arc. Reread from 86 if you want the full version."
+
+- slug: dragon-ball
+  title: Dragon Ball
+  titleNative: ドラゴンボール
+  aliases: ["DB", "Dragon Ball Z", "DBZ"]
+  anilistId: 30042
+  popularity: 53692
+  mangadexId: 40bc649f-7b49-4645-859e-6cd94136e722
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787933719/pickup/covers/dragon-ball-6341bee30ff.jpg
+  author: Akira Toriyama
+  startYear: 1984
+  publicationStatus: FINISHED
+  totalChapters: 519
+  totalVolumes: 42
+  verifiedAt: 2026-08-28
+  readingLinks:
+    - label: Viz
+      url: https://www.viz.com/dragon-ball
+      sortOrder: 1
+  adaptations:
+    - name: "Dragon Ball"
+      episodes: 153
+      sortOrder: 1
+      continueChapter: 195
+      continueVolume: 17
+      lastCoveredChapter: 194
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787933720/pickup/covers/dragon-ball-41c9c1a7652.jpg
+      notes: "The original anime ends at the 23rd Tenkaichi Budokai. Everything from here is the Dragon Ball Z half of the same manga."
+    - name: "Dragon Ball Z"
+      episodes: 291
+      sortOrder: 2
+      lastCoveredChapter: 519
+      caughtUp: true
+      notes: "Dragon Ball Z adapts the manga to its ending. Dragon Ball Super is a separate sequel manga and GT is anime only."
+
+- slug: assassination-classroom
+  title: Assassination Classroom
+  titleNative: 暗殺教室
+  aliases: ["Ansatsu Kyoushitsu", "AssClass"]
+  anilistId: 69883
+  popularity: 54493
+  mangadexId: 333f4d22-7753-4e3b-b0da-0a69b2cdce4f
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787933721/pickup/covers/assassination-classroom-1b45279d6ba.jpg
+  author: Yuusei Matsui
+  startYear: 2012
+  publicationStatus: FINISHED
+  totalChapters: 180
+  totalVolumes: 21
+  verifiedAt: 2026-08-28
+  readingLinks:
+    - label: Viz
+      url: https://www.viz.com/assassination-classroom
+      sortOrder: 1
+  adaptations:
+    - name: "Season 1"
+      episodes: 22
+      sortOrder: 1
+      continueChapter: 74
+      continueVolume: 9
+      lastCoveredChapter: 73
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787933722/pickup/covers/assassination-classroom-0dea5bcde82.jpg
+    - name: "Season 2"
+      episodes: 25
+      sortOrder: 2
+      lastCoveredChapter: 180
+      caughtUp: true
+      notes: "The anime adapts the main story through to Koro-sensei and the graduation. Only a few bonus side stories in the final volume are left."
+
+- slug: yu-yu-hakusho
+  title: Yu Yu Hakusho
+  titleNative: 幽☆遊☆白書
+  aliases: ["YuYu Hakusho", "YYH", "Ghost Files"]
+  anilistId: 30053
+  popularity: 27169
+  mangadexId: 44a5cbe1-0204-4cc7-a1ff-0fda2ac004b6
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787933723/pickup/covers/yu-yu-hakusho-ae622971047.jpg
+  author: Yoshihiro Togashi
+  startYear: 1990
+  publicationStatus: FINISHED
+  totalChapters: 175
+  totalVolumes: 19
+  verifiedAt: 2026-08-28
+  readingLinks:
+    - label: Viz
+      url: https://www.viz.com/yuyu-hakusho
+      sortOrder: 1
+  adaptations:
+    - name: "Anime"
+      episodes: 112
+      sortOrder: 1
+      lastCoveredChapter: 175
+      caughtUp: true
+      notes: "The 112 episode anime adapts the whole manga, including the final Three Kings arc, so there is nothing left to continue."
+
+- slug: dragon-ball-super
+  title: Dragon Ball Super
+  titleNative: ドラゴンボール超
+  aliases: ["DBS", "Dragon Ball Chou"]
+  anilistId: 86508
+  popularity: 34815
+  mangadexId: 37b87be0-b1f4-4507-affa-06c99ebb27f8
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787933724/pickup/covers/dragon-ball-super-65dbf58e79a.jpg
+  author: Toyotarou
+  startYear: 2015
+  publicationStatus: RELEASING
+  verifiedAt: 2026-08-28
+  notes: "A separate sequel manga by Toyotarou, not a continuation of the original Dragon Ball manga."
+  readingLinks:
+    - label: Viz
+      url: https://www.viz.com/shonenjump/chapters/dragon-ball-super
+      sortOrder: 1
+  adaptations:
+    - name: "Super"
+      episodes: 131
+      sortOrder: 1
+      continueChapter: 43
+      continueVolume: 9
+      lastCoveredChapter: 42
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787933725/pickup/covers/dragon-ball-super-20ab28ade55.jpg
+      notes: "The Super anime and manga tell the shared arcs differently. Chapter 43 opens the Galactic Patrol Prisoner arc, the first story the anime never adapted."
