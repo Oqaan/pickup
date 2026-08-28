@@ -2159,3 +2159,91 @@
       lastCoveredChapter: 42
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787933725/pickup/covers/dragon-ball-super-20ab28ade55.jpg
       notes: "The Super anime and manga tell the shared arcs differently. Chapter 43 opens the Galactic Patrol Prisoner arc, the first story the anime never adapted."
+
+- slug: golden-kamuy
+  title: Golden Kamuy
+  titleNative: ゴールデンカムイ
+  aliases: ["Golden Kamui"]
+  anilistId: 86559
+  popularity: 51114
+  mangadexId: 8847f905-550d-4fe6-bcda-ac2b896789c7
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787938108/pickup/covers/golden-kamuy-5498907ad76.jpg
+  author: Satoru Noda
+  startYear: 2014
+  publicationStatus: FINISHED
+  totalChapters: 314
+  totalVolumes: 31
+  verifiedAt: 2026-08-28
+  readingLinks:
+    - label: Viz
+      url: https://www.viz.com/golden-kamuy
+      sortOrder: 1
+  adaptations:
+    - name: "Season 1"
+      episodes: 12
+      sortOrder: 1
+      continueChapter: 70
+      continueVolume: 8
+      lastCoveredChapter: 69
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787938110/pickup/covers/golden-kamuy-3ced150a722.png
+    - name: "Season 2"
+      episodes: 12
+      sortOrder: 2
+      continueChapter: 140
+      continueVolume: 14
+      lastCoveredChapter: 139
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787938111/pickup/covers/golden-kamuy-1fa9008bc02.jpg
+    - name: "Season 3"
+      episodes: 12
+      sortOrder: 3
+      continueChapter: 201
+      continueVolume: 21
+      lastCoveredChapter: 200
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787938112/pickup/covers/golden-kamuy-ead295e0986.jpg
+    - name: "Season 4"
+      episodes: 13
+      sortOrder: 4
+      continueChapter: 244
+      continueVolume: 25
+      lastCoveredChapter: 243
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787938113/pickup/covers/golden-kamuy-bd9b8a2e73f.jpg
+    - name: "Season 5"
+      episodes: 13
+      sortOrder: 5
+      continueChapter: 303
+      continueVolume: 31
+      lastCoveredChapter: 302
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787938114/pickup/covers/golden-kamuy-3bf8f8b61c7.jpg
+      notes: "The final arc, chapters 303 to 314, has not aired yet. A later installment is set to finish the story."
+
+- slug: wind-breaker
+  title: Wind Breaker
+  titleNative: ウィンドブレイカー
+  aliases: ["Windbreaker"]
+  anilistId: 135083
+  popularity: 21563
+  mangadexId: 9eb78304-0436-484d-9a79-a925b45e2731
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787938115/pickup/covers/wind-breaker-92492c8fe64.jpg
+  author: Satoru Nii
+  startYear: 2021
+  publicationStatus: RELEASING
+  verifiedAt: 2026-08-28
+  readingLinks:
+    - label: Kodansha
+      url: https://kodansha.us/series/wind-breaker/
+      sortOrder: 1
+  adaptations:
+    - name: "Season 1"
+      episodes: 13
+      sortOrder: 1
+      continueChapter: 42
+      continueVolume: 6
+      lastCoveredChapter: 41
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787938116/pickup/covers/wind-breaker-b00da625a24.jpg
+    - name: "Season 2"
+      episodes: 13
+      sortOrder: 2
+      continueChapter: 91
+      continueVolume: 12
+      lastCoveredChapter: 90
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787938117/pickup/covers/wind-breaker-6c0d9017b10.jpg
