@@ -2247,3 +2247,158 @@
       continueVolume: 12
       lastCoveredChapter: 90
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787938117/pickup/covers/wind-breaker-6c0d9017b10.jpg
+
+- slug: monster
+  title: Monster
+  titleNative: MONSTER
+  aliases: ["Naoki Urasawa's Monster"]
+  anilistId: 30001
+  popularity: 106744
+  mangadexId: d9e30523-9d65-469e-92a2-302995770950
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787939890/pickup/covers/monster-d30f01090a7.jpg
+  author: Naoki Urasawa
+  startYear: 1994
+  publicationStatus: FINISHED
+  totalChapters: 162
+  totalVolumes: 18
+  verifiedAt: 2026-08-28
+  readingLinks:
+    - label: Viz
+      url: https://www.viz.com/monster
+      sortOrder: 1
+  adaptations:
+    - name: "Anime"
+      episodes: 74
+      sortOrder: 1
+      lastCoveredChapter: 162
+      caughtUp: true
+      notes: "The 74 episode anime follows the manga almost scene for scene to the end, so there is nothing left to continue."
+
+- slug: beastars
+  title: Beastars
+  titleNative: BEASTARS
+  aliases: ["Beast Complex"]
+  anilistId: 98587
+  popularity: 48779
+  mangadexId: f5e3baad-3cd4-427c-a2ec-ad7d776b370d
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787939892/pickup/covers/beastars-f5a8c0052bb.jpg
+  author: Paru Itagaki
+  startYear: 2016
+  publicationStatus: FINISHED
+  totalChapters: 196
+  totalVolumes: 22
+  verifiedAt: 2026-08-28
+  readingLinks:
+    - label: Viz
+      url: https://www.viz.com/beastars
+      sortOrder: 1
+  adaptations:
+    - name: "Season 1"
+      episodes: 12
+      sortOrder: 1
+      continueChapter: 49
+      continueVolume: 6
+      lastCoveredChapter: 48
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787939893/pickup/covers/beastars-13abd7d8353.jpg
+    - name: "Season 2"
+      episodes: 12
+      sortOrder: 2
+      continueChapter: 100
+      continueVolume: 12
+      lastCoveredChapter: 99
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787939895/pickup/covers/beastars-cc8efac21c8.jpg
+    - name: "Final Season"
+      episodes: 24
+      sortOrder: 3
+      lastCoveredChapter: 196
+      caughtUp: true
+      notes: "The final season reshapes the manga's messy ending but adapts it in full, so there is nothing left to continue."
+
+- slug: seven-deadly-sins
+  title: The Seven Deadly Sins
+  titleNative: 七つの大罪
+  aliases: ["Nanatsu no Taizai", "7DS"]
+  anilistId: 74485
+  popularity: 54928
+  mangadexId: e52d9403-3356-403b-b7bb-d7d6a420dd50
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787939896/pickup/covers/seven-deadly-sins-35e3ee18847.jpg
+  author: Nakaba Suzuki
+  startYear: 2012
+  publicationStatus: FINISHED
+  totalChapters: 346
+  totalVolumes: 41
+  verifiedAt: 2026-08-28
+  readingLinks:
+    - label: Kodansha
+      url: https://kodansha.us/series/the-seven-deadly-sins/
+      sortOrder: 1
+  adaptations:
+    - name: "Season 1"
+      episodes: 24
+      sortOrder: 1
+      continueChapter: 104
+      continueVolume: 13
+      lastCoveredChapter: 103
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787939898/pickup/covers/seven-deadly-sins-2af2bd50daa.jpg
+      notes: "The finale also pulls chapter 108 in early. Start at 104 so you do not skip 104 to 107."
+    - name: "Season 2: Revival of the Commandments"
+      episodes: 24
+      sortOrder: 2
+      continueChapter: 198
+      continueVolume: 25
+      lastCoveredChapter: 197
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787939899/pickup/covers/seven-deadly-sins-5be71bd8ea6.jpg
+    - name: "Season 3: Imperial Wrath of the Gods"
+      episodes: 24
+      sortOrder: 3
+      continueChapter: 273
+      continueVolume: 33
+      lastCoveredChapter: 272
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787939900/pickup/covers/seven-deadly-sins-b000a1b9075.jpg
+      notes: "The finale jumps ahead to chapter 285. Start at 273 so you do not skip 273 to 284."
+    - name: "Season 4: Dragon's Judgement"
+      episodes: 24
+      sortOrder: 4
+      lastCoveredChapter: 346
+      caughtUp: true
+      notes: "The four episode Signs of Holy War special is an original side story and adapts no manga chapters."
+
+- slug: fairy-tail
+  title: Fairy Tail
+  titleNative: FAIRY TAIL
+  aliases: ["FT"]
+  anilistId: 30598
+  popularity: 56843
+  mangadexId: 227e3f72-863f-46f9-bafe-c43104ca29ee
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787939901/pickup/covers/fairy-tail-2f05e7bca51.jpg
+  author: Hiro Mashima
+  startYear: 2006
+  publicationStatus: FINISHED
+  totalChapters: 545
+  totalVolumes: 63
+  verifiedAt: 2026-08-28
+  readingLinks:
+    - label: Kodansha
+      url: https://kodansha.us/series/fairy-tail/
+      sortOrder: 1
+  adaptations:
+    - name: "Series 1"
+      episodes: 175
+      sortOrder: 1
+      continueChapter: 298
+      continueVolume: 35
+      lastCoveredChapter: 297
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787939902/pickup/covers/fairy-tail-235c7dbf4dc.jpg
+    - name: "Series 2"
+      episodes: 102
+      sortOrder: 2
+      continueChapter: 418
+      continueVolume: 49
+      lastCoveredChapter: 417
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787939904/pickup/covers/fairy-tail-18c7fa7b3ae.jpg
+    - name: "Final Series"
+      episodes: 51
+      sortOrder: 3
+      lastCoveredChapter: 545
+      caughtUp: true
+      notes: "The Final Series adapts the Alvarez arc to the manga's ending, so there is nothing left to continue."
