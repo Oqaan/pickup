@@ -1,7 +1,7 @@
 import { next } from "@vercel/functions";
 
 export const config = {
-  matcher: "/anime/:slug*",
+  matcher: ["/", "/anime/:slug*"],
 };
 
 const API = "https://api.pickup.moe";
@@ -31,6 +31,8 @@ type Series = {
   readingLinks: { label: string; url: string }[];
 };
 
+type Listed = { slug: string; title: string };
+
 const esc = (s: string) =>
   s
     .replace(/&/g, "&amp;")
@@ -39,6 +41,21 @@ const esc = (s: string) =>
     .replace(/"/g, "&quot;");
 
 const cap = (s: string) => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s);
+
+// The < escape keeps a stray "</script>" in the data from closing the tag early
+const ldScript = (data: unknown) =>
+  `<script type="application/ld+json">${JSON.stringify(data).replace(
+    /</g,
+    "\\u003c",
+  )}</script>`;
+
+const shell = (origin: string) =>
+  fetch(new URL("/index.html", origin)).then((r) => r.text());
+
+const respond = (html: string) =>
+  new Response(html, {
+    headers: { "content-type": "text/html; charset=utf-8" },
+  });
 
 function pickup(a: Adaptation): string {
   if (a.caughtUp) {
@@ -64,19 +81,60 @@ function statusClause(s: Series): string {
 
 export default async function middleware(request: Request) {
   const url = new URL(request.url);
+  return url.pathname === "/" ? homepage(url) : seriesPage(url);
+}
+
+// Seed #root with a crawlable list of every series, React clears it on mount
+async function homepage(url: URL) {
+  const [html, listRes] = await Promise.all([
+    shell(url.origin),
+    fetch(`${API}/api/series`),
+  ]);
+
+  if (!listRes.ok) return next();
+
+  const list = (await listRes.json()) as Listed[];
+
+  const items = list
+    .map((s) => `<li><a href="/anime/${esc(s.slug)}">${esc(s.title)}</a></li>`)
+    .join("");
+
+  const body = `<nav style="max-width:640px;margin:0 auto;padding:24px;font-family:system-ui,sans-serif;line-height:1.6">
+    <h1>Where to start the manga after the anime</h1>
+    <ul>${items}</ul>
+  </nav>`;
+
+  const itemList = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: list.map((s, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: `https://pickup.moe/anime/${s.slug}`,
+      name: s.title,
+    })),
+  };
+
+  return respond(
+    html
+      .replace("</head>", `${ldScript(itemList)}</head>`)
+      .replace('<div id="root"></div>', `<div id="root">${body}</div>`),
+  );
+}
+
+async function seriesPage(url: URL) {
   const slug = url.pathname.replace("/anime/", "").replace(/\/$/, "");
 
   if (!SLUG.test(slug)) return next();
 
-  const [pageRes, seriesRes] = await Promise.all([
-    fetch(new URL("/index.html", url.origin)),
+  const [html, seriesRes] = await Promise.all([
+    shell(url.origin),
     fetch(`${API}/api/series/${encodeURIComponent(slug)}`),
   ]);
 
   if (!seriesRes.ok) return next();
 
   const series = (await seriesRes.json()) as Series;
-  let html = await pageRes.text();
 
   const title = `Where to continue the ${series.title} manga`;
   const description = `Finished the ${series.title} anime? Find the exact chapter and volume to continue the manga from, for each season`;
@@ -131,17 +189,6 @@ export default async function middleware(request: Request) {
     acceptedAnswer: { "@type": "Answer", text: statusClause(series) },
   });
 
-  const faq = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: questions,
-  };
-
-  // The \u003c escape keeps a stray "</script>" in the data from closing the tag early
-  const jsonLd = `<script type="application/ld+json">${JSON.stringify(
-    faq,
-  ).replace(/</g, "\\u003c")}</script>`;
-
   const tags = `
     <title>${esc(title)}</title>
     <meta name="description" content="${esc(description)}" />
@@ -155,17 +202,19 @@ export default async function middleware(request: Request) {
     <meta name="twitter:title" content="${esc(title)}" />
     <meta name="twitter:description" content="${esc(description)}" />
     <meta name="twitter:image" content="${esc(image)}" />
-    ${jsonLd}
+    ${ldScript({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: questions,
+    })}
   `;
 
-  html = html
-    .replace(/<title>.*?<\/title>/s, "")
-    .replace(/<meta\s+name="description"[^>]*>/s, "")
-    .replace(/<meta\s+property="og:[^"]*"[^>]*>/gs, "")
-    .replace("</head>", `${tags}</head>`)
-    .replace('<div id="root"></div>', `<div id="root">${body}</div>`);
-
-  return new Response(html, {
-    headers: { "content-type": "text/html; charset=utf-8" },
-  });
+  return respond(
+    html
+      .replace(/<title>.*?<\/title>/s, "")
+      .replace(/<meta\s+name="description"[^>]*>/s, "")
+      .replace(/<meta\s+property="og:[^"]*"[^>]*>/gs, "")
+      .replace("</head>", `${tags}</head>`)
+      .replace('<div id="root"></div>', `<div id="root">${body}</div>`),
+  );
 }
