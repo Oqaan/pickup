@@ -2402,3 +2402,106 @@
       lastCoveredChapter: 545
       caughtUp: true
       notes: "The Final Series adapts the Alvarez arc to the manga's ending, so there is nothing left to continue."
+
+- slug: gintama
+  title: Gintama
+  titleNative: 銀魂
+  aliases: ["Gin Tama", "Silver Soul"]
+  anilistId: 30044
+  popularity: 31619
+  mangadexId: f65444dc-3694-4e31-a166-8afb2938ed55
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787960781/pickup/covers/gintama-4cc972ce61a.jpg
+  author: Hideaki Sorachi
+  startYear: 2003
+  publicationStatus: FINISHED
+  totalChapters: 704
+  totalVolumes: 77
+  verifiedAt: 2026-08-29
+  notes: "Gintama's anime adapts almost everything, just not in order. The TV run skipped chapters and animated them later out of sequence, and one whole season (Porori-hen) exists only to catch up on gag arcs it had passed over. The continue points below show how far each season takes the main story, so if you want every chapter in order, read the manga from the start."
+  readingLinks:
+    - label: Viz
+      url: https://www.viz.com/gin-tama
+      sortOrder: 1
+  adaptations:
+    - name: "Gintama (Season 1)"
+      episodes: 201
+      episodeStart: 1
+      episodeEnd: 201
+      sortOrder: 1
+      continueChapter: 293
+      continueVolume: 34
+      lastCoveredChapter: 292
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787960782/pickup/covers/gintama-4971cd917b8.jpg
+    - name: "Gintama' (Season 2)"
+      episodes: 51
+      episodeStart: 202
+      episodeEnd: 252
+      sortOrder: 2
+      continueChapter: 384
+      continueVolume: 44
+      lastCoveredChapter: 383
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787960783/pickup/covers/gintama-fb834b47ce9.jpg
+      notes: "Episode 252 is an anime-original send-off, so the last real chapter this season adapts is 383."
+    - name: "Gintama' Enchousen (Season 3)"
+      episodes: 13
+      episodeStart: 253
+      episodeEnd: 265
+      sortOrder: 3
+      continueChapter: 403
+      continueVolume: 46
+      lastCoveredChapter: 402
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787960784/pickup/covers/gintama-ba73f9020a0.jpg
+    - name: "Gintama° (Season 4)"
+      episodes: 51
+      episodeStart: 266
+      episodeEnd: 316
+      sortOrder: 4
+      continueChapter: 552
+      continueVolume: 62
+      lastCoveredChapter: 551
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787960785/pickup/covers/gintama-4e453f12f0f.jpg
+    - name: "Gintama. (Season 5)"
+      episodes: 12
+      episodeStart: 317
+      episodeEnd: 328
+      sortOrder: 5
+      continueChapter: 596
+      continueVolume: 66
+      lastCoveredChapter: 595
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787960786/pickup/covers/gintama-bfa89c57c29.jpg
+      notes: "Wraps up the Rakuyou Decisive Battle arc."
+    - name: "Gintama. Porori-hen (Season 6)"
+      episodes: 13
+      episodeStart: 329
+      episodeEnd: 341
+      sortOrder: 6
+      continueChapter: 596
+      continueVolume: 66
+      lastCoveredChapter: 595
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787960786/pickup/covers/gintama-bfa89c57c29.jpg
+      notes: "This season goes back to animate lighter side and gag arcs the earlier run had skipped, so it isn't new story. If you watched through season 5, you're still picking the manga up at chapter 596."
+    - name: "Gintama. Silver Soul Arc (Season 7)"
+      episodes: 12
+      episodeStart: 342
+      episodeEnd: 353
+      sortOrder: 7
+      continueChapter: 632
+      continueVolume: 70
+      lastCoveredChapter: 631
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787960789/pickup/covers/gintama-addf7fa68fa.jpg
+    - name: "Gintama. Silver Soul Arc - Second Half (Season 8)"
+      episodes: 14
+      episodeStart: 354
+      episodeEnd: 367
+      sortOrder: 8
+      continueChapter: 687
+      continueVolume: 76
+      lastCoveredChapter: 686
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787960790/pickup/covers/gintama-16d7c3bdc77.jpg
+      notes: "The TV anime stops at chapter 686 and covers the gap with an original scene. The real finale is in the film Gintama: The Final."
+    - name: "Gintama: The Final (movie)"
+      episodes: 1
+      sortOrder: 9
+      lastCoveredChapter: 704
+      caughtUp: true
+      notes: "The 2021 film adapts the closing chapters of the Silver Soul arc (roughly 687-704) to the manga's ending."
