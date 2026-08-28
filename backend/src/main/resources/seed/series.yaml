@@ -1977,3 +1977,65 @@
       continueVolume: 11
       lastCoveredChapter: 87
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787854153/pickup/covers/gachiakuta-17674dcdada.jpg
+
+- slug: call-of-the-night
+  title: Call of the Night
+  titleNative: よふかしのうた
+  aliases: ["Yofukashi no Uta"]
+  anilistId: 111233
+  popularity: 65178
+  mangadexId: 259dfd8a-f06a-4825-8fa6-a2dcd7274230
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787918895/pickup/covers/call-of-the-night-b9cf77005b8.jpg
+  author: Kotoyama
+  startYear: 2019
+  publicationStatus: FINISHED
+  totalChapters: 200
+  totalVolumes: 20
+  verifiedAt: 2026-08-28
+  adaptations:
+    - name: "Season 1"
+      episodes: 13
+      sortOrder: 1
+      continueChapter: 47
+      continueVolume: 5
+      lastCoveredChapter: 46
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787918896/pickup/covers/call-of-the-night-4c730a45d02.jpg
+    - name: "Season 2"
+      episodes: 12
+      sortOrder: 2
+      continueChapter: 97
+      continueVolume: 10
+      lastCoveredChapter: 96
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787918898/pickup/covers/call-of-the-night-9e38373593d.png
+      notes: "The final episode is largely anime-original to give the season a cleaner close, so the manga picks back up at chapter 97."
+
+- slug: my-dress-up-darling
+  title: My Dress-Up Darling
+  titleNative: その着せ替え人形は恋をする
+  aliases: ["Sono Bisque Doll wa Koi wo Suru", "Kisekoi"]
+  anilistId: 101583
+  popularity: 99004
+  mangadexId: aa6c76f7-5f5f-46b6-a800-911145f81b9b
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787918900/pickup/covers/my-dress-up-darling-7cd2d23724d.jpg
+  author: Shinichi Fukuda
+  startYear: 2018
+  publicationStatus: FINISHED
+  totalChapters: 115
+  totalVolumes: 15
+  verifiedAt: 2026-08-28
+  adaptations:
+    - name: "Season 1"
+      episodes: 12
+      sortOrder: 1
+      continueChapter: 40
+      continueVolume: 6
+      lastCoveredChapter: 39
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787918901/pickup/covers/my-dress-up-darling-6697ab90a51.jpg
+    - name: "Season 2"
+      episodes: 12
+      sortOrder: 2
+      continueChapter: 87
+      continueVolume: 11
+      lastCoveredChapter: 86
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787918902/pickup/covers/my-dress-up-darling-3beb5f3ddd9.jpg
+      notes: "The finale condenses chapter 86 and trims a little setup for the next arc. Reread from 86 if you want the full version."
