@@ -2505,3 +2505,126 @@
       lastCoveredChapter: 704
       caughtUp: true
       notes: "The 2021 film adapts the closing chapters of the Silver Soul arc (roughly 687-704) to the manga's ending."
+
+- slug: kingdom
+  title: Kingdom
+  titleNative: キングダム
+  anilistId: 46765
+  popularity: 75784
+  mangadexId: 077a3fed-1634-424f-be7a-9a96b7f07b78
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788012276/pickup/covers/kingdom-66ecc41a2d8.jpg
+  author: Yasuhisa Hara
+  startYear: 2006
+  publicationStatus: RELEASING
+  verifiedAt: 2026-08-29
+  adaptations:
+    - name: Season 1
+      episodes: 38
+      episodeStart: 1
+      episodeEnd: 38
+      sortOrder: 1
+      continueChapter: 174
+      continueVolume: 17
+      lastCoveredChapter: 173
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788012278/pickup/covers/kingdom-8137f999009.jpg
+      notes: "This season skips two arcs: the Escape from Zhao arc (chapters 74-81), which Season 2 later goes back and adapts, and the Assassination Plot arc (chapters 82-100), which the anime never covers."
+    - name: Season 2
+      episodes: 39
+      episodeStart: 39
+      episodeEnd: 77
+      sortOrder: 2
+      continueChapter: 262
+      continueVolume: 25
+      lastCoveredChapter: 261
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788012279/pickup/covers/kingdom-47b6a342128.jpg
+    - name: Season 3
+      episodes: 26
+      episodeStart: 78
+      episodeEnd: 103
+      sortOrder: 3
+      continueChapter: 365
+      continueVolume: 34
+      lastCoveredChapter: 364
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788012281/pickup/covers/kingdom-fec717b70eb.jpg
+    - name: Season 4
+      episodes: 26
+      episodeStart: 104
+      episodeEnd: 129
+      sortOrder: 4
+      continueChapter: 442
+      continueVolume: 41
+      lastCoveredChapter: 441
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788012283/pickup/covers/kingdom-5536a0987eb.jpg
+    - name: Season 5
+      episodes: 13
+      episodeStart: 130
+      episodeEnd: 142
+      sortOrder: 5
+      continueChapter: 490
+      continueVolume: 45
+      lastCoveredChapter: 489
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788012284/pickup/covers/kingdom-56352b92644.jpg
+
+- slug: mashle
+  title: Mashle
+  titleNative: マッシュル-MASHLE-
+  aliases: ["Mashle: Magic and Muscles"]
+  anilistId: 114960
+  popularity: 59600
+  mangadexId: 558c2122-7342-4649-85e9-a866727bb2e8
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788012285/pickup/covers/mashle-aa1fd775ae8.jpg
+  author: Hajime Koumoto
+  startYear: 2020
+  publicationStatus: FINISHED
+  totalChapters: 162
+  totalVolumes: 18
+  verifiedAt: 2026-08-29
+  readingLinks:
+    - label: Viz
+      url: https://www.viz.com/mashle-magic-and-muscles
+      sortOrder: 1
+  adaptations:
+    - name: Season 1
+      episodes: 12
+      episodeStart: 1
+      episodeEnd: 12
+      sortOrder: 1
+      continueChapter: 39
+      continueVolume: 5
+      lastCoveredChapter: 38
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788012286/pickup/covers/mashle-6074ca7874d.jpg
+    - name: "Season 2: Divine Visionary Candidate Exam Arc"
+      episodes: 12
+      episodeStart: 13
+      episodeEnd: 24
+      sortOrder: 2
+      continueChapter: 75
+      continueVolume: 9
+      lastCoveredChapter: 74
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788012288/pickup/covers/mashle-f1e6dd65cde.jpg
+      notes: "The finale ends the Divine Visionary Selection Exam arc at chapter 74, then flashes ahead to a teaser scene from chapter 81. The story picks back up at chapter 75."
+
+- slug: zom-100
+  title: "Zom 100: Bucket List of the Dead"
+  titleNative: ゾン100～ゾンビになるまでにしたい100のこと～
+  aliases: ["Zom 100", "Zombie ni Naru Made ni Shitai 100 no Koto"]
+  anilistId: 104660
+  popularity: 30227
+  mangadexId: efd02206-1cd8-4823-b497-02bb8b8d09ca
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788012289/pickup/covers/zom-100-2cd37c6c189.jpg
+  author: Haro Aso & Koutarou Takata
+  startYear: 2018
+  publicationStatus: RELEASING
+  verifiedAt: 2026-08-29
+  readingLinks:
+    - label: Viz
+      url: https://www.viz.com/zom-100
+      sortOrder: 1
+  adaptations:
+    - name: Season 1
+      episodes: 12
+      sortOrder: 1
+      continueChapter: 23
+      continueVolume: 7
+      lastCoveredChapter: 22
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788012291/pickup/covers/zom-100-b887c7d53a2.jpg
