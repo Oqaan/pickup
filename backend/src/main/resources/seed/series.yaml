@@ -2628,3 +2628,68 @@
       continueVolume: 7
       lastCoveredChapter: 22
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788012291/pickup/covers/zom-100-b887c7d53a2.jpg
+
+- slug: food-wars
+  title: "Food Wars: Shokugeki no Soma"
+  titleNative: 食戟のソーマ
+  aliases: ["Shokugeki no Soma", "Food Wars!: Shokugeki no Soma"]
+  anilistId: 75757
+  popularity: 47752
+  mangadexId: 5f20891f-0136-4fa8-afb7-d72f2af23c65
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788014663/pickup/covers/food-wars-ec46623c880.jpg
+  author: Yuuto Tsukuda & Shun Saeki
+  startYear: 2012
+  publicationStatus: FINISHED
+  totalChapters: 315
+  totalVolumes: 36
+  verifiedAt: 2026-08-29
+  readingLinks:
+    - label: Viz
+      url: https://www.viz.com/food-wars
+      sortOrder: 1
+  adaptations:
+    - name: Season 1
+      episodes: 24
+      episodeStart: 1
+      episodeEnd: 24
+      sortOrder: 1
+      continueChapter: 61
+      continueVolume: 8
+      lastCoveredChapter: 60
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788014665/pickup/covers/food-wars-9f383b218fe.jpg
+    - name: "The Second Plate"
+      episodes: 13
+      episodeStart: 25
+      episodeEnd: 37
+      sortOrder: 2
+      continueChapter: 118
+      continueVolume: 14
+      lastCoveredChapter: 117
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788014666/pickup/covers/food-wars-d13e33238f6.jpg
+    - name: "The Third Plate"
+      episodes: 24
+      episodeStart: 38
+      episodeEnd: 61
+      sortOrder: 3
+      continueChapter: 218
+      continueVolume: 26
+      lastCoveredChapter: 217
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788014667/pickup/covers/food-wars-91a0347f1f6.jpg
+    - name: "The Fourth Plate"
+      episodes: 12
+      episodeStart: 62
+      episodeEnd: 73
+      sortOrder: 4
+      continueChapter: 264
+      continueVolume: 31
+      lastCoveredChapter: 263
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788014668/pickup/covers/food-wars-c3d5213e663.jpg
+      notes: "The anime only shows the Hot Spring Investigation arc (chapters 264-276) as a quick montage over the closing credits, and Season 5 skips it entirely, so start at chapter 264 to read that arc properly."
+    - name: "The Fifth Plate"
+      episodes: 13
+      episodeStart: 74
+      episodeEnd: 86
+      sortOrder: 5
+      lastCoveredChapter: 315
+      caughtUp: true
+      notes: "This season jumps straight from the Promotion Exams to the Beach Exam and BLUE arcs, adapting the manga through its finale at chapter 315."
