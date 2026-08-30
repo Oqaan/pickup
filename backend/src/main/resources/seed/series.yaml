@@ -2693,3 +2693,110 @@
       lastCoveredChapter: 315
       caughtUp: true
       notes: "This season jumps straight from the Promotion Exams to the Beach Exam and BLUE arcs, adapting the manga through its finale at chapter 315."
+
+- slug: apothecary-diaries
+  title: The Apothecary Diaries
+  titleNative: 薬屋のひとりごと
+  aliases: ["Kusuriya no Hitorigoto"]
+  anilistId: 99022
+  popularity: 46313
+  mangadexId: e18fe8c6-f6dc-4f05-8462-7b2083ff9a6c
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788097574/pickup/covers/apothecary-diaries-41ffa34090b.jpg
+  author: Natsu Hyuuga & Nekokurage
+  startYear: 2017
+  publicationStatus: RELEASING
+  verifiedAt: 2026-08-30
+  adaptations:
+    - name: "Season 1"
+      episodes: 24
+      sortOrder: 1
+      continueChapter: 41
+      continueVolume: 8
+      lastCoveredChapter: 40
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788097575/pickup/covers/apothecary-diaries-3ed1841e52a.jpg
+    - name: "Season 2"
+      episodes: 24
+      sortOrder: 2
+      continueChapter: 86
+      continueVolume: 18
+      lastCoveredChapter: 85
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788097576/pickup/covers/apothecary-diaries-aeb21ca9c13.jpg
+
+- slug: rent-a-girlfriend
+  title: Rent-a-Girlfriend
+  titleNative: 彼女、お借りします
+  aliases: ["Kanojo, Okarishimasu", "Kanojo Okarishimasu", "Rent-A-Girlfriend"]
+  anilistId: 99943
+  popularity: 62029
+  mangadexId: 32fdfe9b-6e11-4a13-9e36-dcd8ea77b4e4
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788097578/pickup/covers/rent-a-girlfriend-c41713197eb.jpg
+  author: Reiji Miyajima
+  startYear: 2017
+  publicationStatus: RELEASING
+  verifiedAt: 2026-08-30
+  adaptations:
+    - name: "Season 1"
+      episodes: 12
+      sortOrder: 1
+      continueChapter: 51
+      continueVolume: 7
+      lastCoveredChapter: 50
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788097579/pickup/covers/rent-a-girlfriend-cea4d65f754.jpg
+    - name: "Season 2"
+      episodes: 12
+      sortOrder: 2
+      continueChapter: 103
+      continueVolume: 12
+      lastCoveredChapter: 102
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788097580/pickup/covers/rent-a-girlfriend-8e0403b635a.jpg
+    - name: "Season 3"
+      episodes: 12
+      sortOrder: 3
+      continueChapter: 168
+      continueVolume: 20
+      lastCoveredChapter: 167
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788097581/pickup/covers/rent-a-girlfriend-d5c3ca602a5.jpg
+
+- slug: hajime-no-ippo
+  title: Hajime no Ippo
+  titleNative: はじめの一歩
+  aliases: ["Fighting Spirit", "The First Step"]
+  anilistId: 30007
+  popularity: 35346
+  mangadexId: f7888782-0727-49b0-95ec-a3530c70f83b
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788097582/pickup/covers/hajime-no-ippo-318aead7e5a.jpg
+  author: George Morikawa
+  startYear: 1989
+  publicationStatus: RELEASING
+  verifiedAt: 2026-08-30
+  adaptations:
+    - name: "Season 1"
+      episodes: 75
+      sortOrder: 1
+      continueChapter: 270
+      continueVolume: 31
+      lastCoveredChapter: 269
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788097585/pickup/covers/hajime-no-ippo-0099ddfdfbf.jpg
+    - name: "Champion Road"
+      sortOrder: 2
+      continueChapter: 315
+      continueVolume: 35
+      lastCoveredChapter: 314
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788097588/pickup/covers/hajime-no-ippo-844a17ffbd9.jpg
+      notes: "This TV special covers Ippo's first title defense against Sanada, but jumps past the Kimura vs Mashiba title fight in chapters 270 to 290. Read that first if you came straight from Season 1."
+    - name: "New Challenger"
+      episodes: 26
+      sortOrder: 3
+      continueChapter: 421
+      continueVolume: 47
+      lastCoveredChapter: 420
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788097590/pickup/covers/hajime-no-ippo-e6c0a17e210.jpg
+      notes: "This season skips the flashback to Kamogawa's youth in chapters 399 to 414. Rising adapts it at the very end, so read those first if you stop here."
+    - name: "Rising"
+      episodes: 25
+      sortOrder: 4
+      continueChapter: 559
+      continueVolume: 61
+      lastCoveredChapter: 558
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788097592/pickup/covers/hajime-no-ippo-d9af9f0b36c.jpg
+      notes: "The final four episodes are a flashback to Kamogawa's youth. The main story left off at chapter 558, so that is where you continue."
