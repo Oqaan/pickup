@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pickup.moe/</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
   </url>
   <url>
     <loc>https://pickup.moe/about</loc>
@@ -238,5 +238,17 @@
   <url>
     <loc>https://pickup.moe/anime/food-wars</loc>
     <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://pickup.moe/anime/apothecary-diaries</loc>
+    <lastmod>2026-08-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pickup.moe/anime/rent-a-girlfriend</loc>
+    <lastmod>2026-08-30</lastmod>
+  </url>
+  <url>
+    <loc>https://pickup.moe/anime/hajime-no-ippo</loc>
+    <lastmod>2026-08-30</lastmod>
   </url>
 </urlset>
