@@ -2800,3 +2800,88 @@
       lastCoveredChapter: 558
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788097592/pickup/covers/hajime-no-ippo-d9af9f0b36c.jpg
       notes: "The final four episodes are a flashback to Kamogawa's youth. The main story left off at chapter 558, so that is where you continue."
+
+- slug: slam-dunk
+  title: Slam Dunk
+  titleNative: スラムダンク
+  aliases: ["SLAM DUNK"]
+  anilistId: 30051
+  popularity: 73970
+  mangadexId: 319df2e2-e6a6-4e3a-a31c-68539c140a84
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788336797/pickup/covers/slam-dunk-89216df3778.jpg
+  author: Takehiko Inoue
+  startYear: 1990
+  publicationStatus: FINISHED
+  totalChapters: 276
+  totalVolumes: 31
+  verifiedAt: 2026-09-02
+  adaptations:
+    - name: "1993 anime"
+      episodes: 101
+      sortOrder: 1
+      continueChapter: 185
+      continueVolume: 21
+      lastCoveredChapter: 184
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788336798/pickup/covers/slam-dunk-136ec1e9ed1.jpg
+      notes: "The last three episodes are an anime original game. The National tournament was never adapted."
+    - name: "The First Slam Dunk"
+      sortOrder: 2
+      continueChapter: 185
+      continueVolume: 21
+      lastCoveredChapter: 184
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788336798/pickup/covers/slam-dunk-136ec1e9ed1.jpg
+      notes: "This film adapts only the final match against Sannoh Kogyo, chapters 221 to 276, with new flashbacks. It skips the rest of the National tournament."
+
+- slug: made-in-abyss
+  title: Made in Abyss
+  titleNative: メイドインアビス
+  aliases: ["MiA"]
+  anilistId: 86551
+  popularity: 57652
+  mangadexId: 80422e14-b9ad-4fda-970f-de370d5fa4e5
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788336801/pickup/covers/made-in-abyss-a623aefcab5.jpg
+  author: Akihito Tsukushi
+  startYear: 2012
+  publicationStatus: RELEASING
+  verifiedAt: 2026-09-02
+  adaptations:
+    - name: Season 1
+      episodes: 13
+      sortOrder: 1
+      continueChapter: 27
+      continueVolume: 4
+      lastCoveredChapter: 26
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788336802/pickup/covers/made-in-abyss-16629d177ef.jpg
+    - name: "Dawn of the Deep Soul"
+      sortOrder: 2
+      continueChapter: 39
+      continueVolume: 6
+      lastCoveredChapter: 38
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788336804/pickup/covers/made-in-abyss-7e64fddee81.jpg
+    - name: "Season 2: The Golden City of the Scorching Sun"
+      episodes: 12
+      sortOrder: 3
+      continueChapter: 61
+      continueVolume: 11
+      lastCoveredChapter: 60
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788336805/pickup/covers/made-in-abyss-be9ffce05e6.jpg
+
+- slug: blue-period
+  title: Blue Period
+  titleNative: ブルーピリオド
+  anilistId: 107237
+  popularity: 76824
+  mangadexId: f8e294c0-7c11-4c66-bdd7-4e25df52bf69
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788336806/pickup/covers/blue-period-6e268e98eb2.jpg
+  author: Tsubasa Yamaguchi
+  startYear: 2017
+  publicationStatus: RELEASING
+  verifiedAt: 2026-09-02
+  adaptations:
+    - name: Season 1
+      episodes: 12
+      sortOrder: 1
+      continueChapter: 26
+      continueVolume: 7
+      lastCoveredChapter: 25
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788336809/pickup/covers/blue-period-a5b8fb99a89.png
