@@ -35,7 +35,7 @@
       continueVolume: 16
       lastCoveredChapter: 139
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154625/pickup/covers/jujutsu-kaisen-e9c3f65dbe9.jpg
-      notes: "The finale adapts a couple of pages from 138 and the opening of 139 — start at 138 anyway, you'll only re-read a few panels."
+      notes: "The finale adapts a couple of pages from 138 and the opening of 139, so you'll only re-read a few panels."
     - name: "Season 3: The Culling Game Part 1"
       episodes: 12
       sortOrder: 3
@@ -198,7 +198,7 @@
       lastCoveredChapter: 66
       animeOriginal: true
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154639/pickup/covers/tokyo-ghoul-19102e5616f.jpg
-      notes: "√A goes its own way and only borrows scattered chapters. Start at 67 as if you'd stopped after season 1, or you'll skip most of the story."
+      notes: "√A goes its own way and only borrows scattered chapters, so treat it as if you'd stopped after season 1 or you'll skip most of the story."
 
 - slug: dandadan
   title: Dandadan
@@ -498,7 +498,7 @@
       continueVolume: 21
       lastCoveredChapter: 190
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154677/pickup/covers/my-hero-academia-b8eee169d05.jpg
-      notes: "The last episodes only sample chapters 192-193. Season 5 picks back up from 190, so there's some overlap either way."
+      notes: "The last episodes only sample chapters 192-193, so there's some overlap with where Season 5 resumes."
     - name: Season 5
       episodes: 25
       sortOrder: 5
@@ -665,7 +665,7 @@
       continueVolume: 27
       lastCoveredChapter: 238
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154702/pickup/covers/naruto-de7ddd06851.jpg
-      notes: "Part 1 ends here. Keep reading from 239. The Shippuden anime later picks up at chapter 245."
+      notes: "Part 1 ends here. The Shippuden anime later picks up at chapter 245."
 
 - slug: naruto-shippuden
   title: Naruto Shippuden
@@ -1026,7 +1026,7 @@
       continueVolume: 24
       lastCoveredChapter: 115
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786790539/pickup/covers/one-punch-man-36eda1b54ed.jpg
-      notes: "The finale is heavily cut together and only uses fragments of chapters 116 and 117. Start from chapter 116 to get those fights and scenes in full."
+      notes: "The finale is heavily cut together and only uses fragments of chapters 116 and 117, so read them in full for the fights and scenes it skipped."
 
 - slug: dorohedoro
   title: Dorohedoro
@@ -1098,7 +1098,7 @@
       continueVolume: 10
       lastCoveredChapter: 89
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787504705/pickup/covers/hells-paradise-afaf56fa4a3.jpg
-      notes: "The finale adapts through chapter 89 and flashes forward to chapter 94. Chapters 90 to 93 aren't fully covered, so start at 90 and read in order."
+      notes: "The finale adapts through chapter 89 and flashes forward to chapter 94, so chapters 90 to 93 aren't fully covered."
 
 - slug: 100-girlfriends
   title: "The 100 Girlfriends Who Really, Really, Really, Really, REALLY Love You"
@@ -1158,7 +1158,7 @@
       continueVolume: 6
       lastCoveredChapter: 26
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787564970/pickup/covers/the-summer-hikaru-died-cb55df0cb12.jpg
-      notes: "The finale adapts most of chapter 26 but cuts the last page or two. You can start at chapter 27 without missing much, or glance at the end of 26 first."
+      notes: "The finale adapts most of chapter 26 but only cuts the last page or two, so glance at the end of 26 if you want the little you missed."
 
 - slug: bleach
   title: Bleach
@@ -1369,7 +1369,7 @@
       continueVolume: 24
       lastCoveredChapter: 228
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787600479/pickup/covers/black-clover-d5cec3b8d9f.jpg
-      notes: "The arc stops adapting the manga after chapter 228. Its later episodes fill in a six month time skip that the manga skips over, written with the author supervising. You won't find those events in the manga, so read on from chapter 229."
+      notes: "The arc stops adapting the manga after chapter 228. Its later episodes fill in a six month time skip that the manga skips over, written with the author supervising, so you won't find those events in the manga."
     - name: "Heart Kingdom Joint Struggle arc"
       episodes: 10
       episodeStart: 158
@@ -1562,7 +1562,7 @@
       continueVolume: 5
       lastCoveredChapter: 37
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787658093/pickup/covers/the-promised-neverland-ddeeb928418.jpg
-      notes: "The season rushes to the ending and drops most of what it passes on the way: chapters 55-70, 74-103, 110-117, 131-144, 155-158, 160-164 and 171 never appear. Pick up at 38 as if you had stopped after Season 1."
+      notes: "The season rushes to the ending and drops most of what it passes on the way: chapters 55-70, 74-103, 110-117, 131-144, 155-158, 160-164 and 171 never appear, so treat it as if you had stopped after Season 1."
 
 - slug: berserk
   title: Berserk
@@ -1614,7 +1614,7 @@
       continueVolume: 22
       lastCoveredChapter: 176
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787773750/pickup/covers/berserk-76cae656124.jpg
-      notes: "The season opens after the Golden Age and skips the Lost Children chapter, 95 to 118, on its way in. Read those before you carry on from 177."
+      notes: "The season opens after the Golden Age and skips the Lost Children chapter, 95 to 118, on its way in. Read those first."
     - name: 2017 anime
       episodes: 12
       sortOrder: 5
@@ -1662,7 +1662,7 @@
       continueVolume: 22
       lastCoveredChapter: 190
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787820540/pickup/covers/haikyuu-5b06bbb91e8.jpg
-      notes: "The last episode ends at chapter 190 and then tacks on chapter 207 as a look ahead to the Nationals. Carry on from 191, Season 4 adapts 207 properly."
+      notes: "The last episode ends at chapter 190 and then tacks on chapter 207 as a look ahead to the Nationals. Season 4 adapts 207 properly."
     - name: "Season 4 Part 1"
       episodes: 13
       sortOrder: 4
@@ -1730,7 +1730,7 @@
       continueVolume: 7
       lastCoveredChapter: 53
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787821821/pickup/covers/undead-unluck-f337cb6ec3c.png
-      notes: "The finale takes the opening and closing pages of chapter 53 but leaves the middle out. Start at 53 so you do not miss it, or watch the Winter Arc special first, which adapts exactly those pages."
+      notes: "The finale takes the opening and closing pages of chapter 53 but leaves the middle out, so read it in full or watch the Winter Arc special first, which adapts exactly those pages."
     - name: "Winter Arc"
       episodes: 1
       sortOrder: 2
@@ -2007,7 +2007,7 @@
       continueVolume: 10
       lastCoveredChapter: 96
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787918898/pickup/covers/call-of-the-night-9e38373593d.png
-      notes: "The final episode is largely anime-original to give the season a cleaner close, so the manga picks back up at chapter 97."
+      notes: "The final episode is largely anime-original to give the season a cleaner close."
 
 - slug: my-dress-up-darling
   title: My Dress-Up Darling
@@ -2340,7 +2340,7 @@
       continueVolume: 13
       lastCoveredChapter: 103
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787939898/pickup/covers/seven-deadly-sins-2af2bd50daa.jpg
-      notes: "The finale also pulls chapter 108 in early. Start at 104 so you do not skip 104 to 107."
+      notes: "The finale also pulls chapter 108 in early, ahead of chapters 104 to 107."
     - name: "Season 2: Revival of the Commandments"
       episodes: 24
       sortOrder: 2
@@ -2355,7 +2355,7 @@
       continueVolume: 33
       lastCoveredChapter: 272
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787939900/pickup/covers/seven-deadly-sins-b000a1b9075.jpg
-      notes: "The finale jumps ahead to chapter 285. Start at 273 so you do not skip 273 to 284."
+      notes: "The finale jumps ahead to chapter 285, skipping chapters 273 to 284."
     - name: "Season 4: Dragon's Judgement"
       episodes: 24
       sortOrder: 4
@@ -2479,7 +2479,7 @@
       continueVolume: 66
       lastCoveredChapter: 595
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787960786/pickup/covers/gintama-bfa89c57c29.jpg
-      notes: "This season goes back to animate lighter side and gag arcs the earlier run had skipped, so it isn't new story. If you watched through season 5, you're still picking the manga up at chapter 596."
+      notes: "This season goes back to animate lighter side and gag arcs the earlier run had skipped, so it isn't new story. If you watched through season 5, your reading position hasn't moved."
     - name: "Gintama. Silver Soul Arc (Season 7)"
       episodes: 12
       episodeStart: 342
@@ -2602,7 +2602,7 @@
       continueVolume: 9
       lastCoveredChapter: 74
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788012288/pickup/covers/mashle-f1e6dd65cde.jpg
-      notes: "The finale ends the Divine Visionary Selection Exam arc at chapter 74, then flashes ahead to a teaser scene from chapter 81. The story picks back up at chapter 75."
+      notes: "The finale ends the Divine Visionary Selection Exam arc at chapter 74, then flashes ahead to a teaser scene from chapter 81."
 
 - slug: zom-100
   title: "Zom 100: Bucket List of the Dead"
@@ -2684,7 +2684,7 @@
       continueVolume: 31
       lastCoveredChapter: 263
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788014668/pickup/covers/food-wars-c3d5213e663.jpg
-      notes: "The anime only shows the Hot Spring Investigation arc (chapters 264-276) as a quick montage over the closing credits, and Season 5 skips it entirely, so start at chapter 264 to read that arc properly."
+      notes: "The anime only shows the Hot Spring Investigation arc (chapters 264-276) as a quick montage over the closing credits, and Season 5 skips it entirely, so read that arc in full."
     - name: "The Fifth Plate"
       episodes: 13
       episodeStart: 74
