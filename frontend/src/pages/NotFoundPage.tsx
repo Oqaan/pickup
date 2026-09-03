@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { useTitle } from "../useTitle";
+import { useSeo } from "../useSeo";
 
 export default function NotFoundPage() {
-  useTitle("Not found - pickup");
+  useSeo({ title: "Not found - pickup", noindex: true });
   return (
     <main className="max-w-2xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
       <p className="font-mono text-xs tracking-widest text-ash">404</p>

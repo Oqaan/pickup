@@ -3,7 +3,8 @@ import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import type { SeriesDetail } from "../types";
 import { fetchSeriesDetail } from "../api";
-import { useTitle } from "../useTitle";
+import { useSeo } from "../useSeo";
+import { seriesDescription, seriesTitle } from "../seo";
 import { cover } from "../cover";
 import CountUp from "../components/CountUp";
 
@@ -46,7 +47,18 @@ export default function SeriesPage() {
     },
   };
 
-  useTitle(series ? `${series.title} - pickup` : "pickup");
+  const canonical = slug ? `/anime/${slug}` : undefined;
+  useSeo(
+    series
+      ? {
+          title: seriesTitle(series.title),
+          description: seriesDescription(series),
+          canonical,
+          image: series.coverUrl ?? undefined,
+          ogType: "article",
+        }
+      : { title: "pickup", canonical },
+  );
 
   useEffect(() => {
     if (!slug) return;
