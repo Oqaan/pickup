@@ -2885,3 +2885,117 @@
       continueVolume: 7
       lastCoveredChapter: 25
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788336809/pickup/covers/blue-period-a5b8fb99a89.png
+
+- slug: parasyte
+  title: Parasyte
+  titleNative: 寄生獣
+  aliases: ["Kiseijuu", "Parasyte: The Maxim"]
+  anilistId: 30401
+  popularity: 32762
+  mangadexId: 07823fcd-f2c9-458c-9824-3eae62b2a006
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788433862/pickup/covers/parasyte-2b0c58affb0.jpg
+  author: Hitoshi Iwaaki
+  startYear: 1988
+  publicationStatus: FINISHED
+  totalChapters: 64
+  totalVolumes: 10
+  verifiedAt: 2026-09-02
+  readingLinks:
+    - label: Kodansha
+      url: https://kodansha.us/series/parasyte/
+      sortOrder: 1
+  adaptations:
+    - name: "Parasyte -the maxim-"
+      episodes: 24
+      sortOrder: 1
+      lastCoveredChapter: 64
+      caughtUp: true
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788433863/pickup/covers/parasyte-14cbc648936.jpg
+
+- slug: blue-exorcist
+  title: Blue Exorcist
+  titleNative: 青の祓魔師
+  aliases: ["Ao no Exorcist", "Ao no Ekusoshisuto"]
+  anilistId: 43492
+  popularity: 42629
+  mangadexId: 3ee952f1-45c7-4c39-aea2-7df7676606d4
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788433864/pickup/covers/blue-exorcist-f0695d58d88.jpg
+  author: Kazue Kato
+  startYear: 2009
+  publicationStatus: RELEASING
+  verifiedAt: 2026-09-02
+  readingLinks:
+    - label: Viz
+      url: https://www.viz.com/blue-exorcist
+      sortOrder: 1
+  adaptations:
+    - name: Season 1
+      episodes: 25
+      sortOrder: 1
+      continueChapter: 16
+      continueVolume: 5
+      lastCoveredChapter: 15
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788433866/pickup/covers/blue-exorcist-ff75c7dde7e.jpg
+      notes: "Episodes 17-25 are an anime-original ending; the manga continues into the Kyoto arc, which Season 2 re-adapts."
+    - name: "Season 2: Kyoto Saga"
+      episodes: 12
+      sortOrder: 2
+      continueChapter: 35
+      continueVolume: 9
+      lastCoveredChapter: 34
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788433867/pickup/covers/blue-exorcist-14b742c06cd.jpg
+    - name: "Season 3: Shimane Illuminati Saga"
+      episodes: 12
+      sortOrder: 3
+      continueChapter: 69
+      continueVolume: 16
+      lastCoveredChapter: 68
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788433869/pickup/covers/blue-exorcist-55571e61a70.jpg
+    - name: "Season 4: Beyond the Snow Saga"
+      episodes: 12
+      sortOrder: 4
+      continueChapter: 100
+      continueVolume: 22
+      lastCoveredChapter: 99
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788433870/pickup/covers/blue-exorcist-bb133dcf9aa.jpg
+    - name: "Season 4: The Blue Night Saga"
+      episodes: 12
+      sortOrder: 5
+      continueChapter: 121
+      continueVolume: 26
+      lastCoveredChapter: 120
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788433872/pickup/covers/blue-exorcist-b5e931bfc00.jpg
+
+- slug: komi-cant-communicate
+  title: Komi Can't Communicate
+  titleNative: 古見さんは、コミュ症です。
+  aliases: ["Komi-san wa Komyushou Desu", "Komi-san"]
+  anilistId: 97852
+  popularity: 106670
+  mangadexId: a96676e5-8ae2-425e-b549-7f15dd34a6d8
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788433873/pickup/covers/komi-cant-communicate-94612cb87e2.jpg
+  author: Tomohito Oda
+  startYear: 2016
+  publicationStatus: FINISHED
+  totalChapters: 500
+  totalVolumes: 37
+  verifiedAt: 2026-09-02
+  readingLinks:
+    - label: Viz
+      url: https://www.viz.com/komi-can-t-communicate
+      sortOrder: 1
+  adaptations:
+    - name: Season 1
+      episodes: 12
+      sortOrder: 1
+      continueChapter: 74
+      continueVolume: 6
+      lastCoveredChapter: 73
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788433874/pickup/covers/komi-cant-communicate-a7ee3ca51c6.jpg
+    - name: Season 2
+      episodes: 12
+      sortOrder: 2
+      continueChapter: 130
+      continueVolume: 10
+      lastCoveredChapter: 129
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788433875/pickup/covers/komi-cant-communicate-04cf86f91cb.jpg
