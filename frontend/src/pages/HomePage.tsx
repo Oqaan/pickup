@@ -8,7 +8,7 @@ import {
 import { cover } from "../cover";
 import { Link, useLocation } from "react-router-dom";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import { useTitle } from "../useTitle";
+import { useSeo } from "../useSeo";
 
 // Opening a series throws this page away, so save what the user had open.
 // Saved per history entry, so going back finds it and a fresh visit does not
@@ -49,7 +49,10 @@ if (navigation?.type !== "back_forward") {
 }
 
 export default function HomePage() {
-  useTitle("pickup - where to start the manga after the anime");
+  useSeo({
+    title: "pickup - where to start the manga after the anime",
+    canonical: "/",
+  });
   const [series, setSeries] = useState<SeriesSummary[]>(
     () => cachedSeriesList() ?? [],
   );

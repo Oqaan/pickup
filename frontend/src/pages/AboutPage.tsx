@@ -1,7 +1,12 @@
-import { useTitle } from "../useTitle";
+import { useSeo } from "../useSeo";
 
 export default function AboutPage() {
-  useTitle("About - pickup");
+  useSeo({
+    title: "About - pickup",
+    description:
+      "How pickup works: every anime to manga stopping point is checked by hand, one series at a time.",
+    canonical: "/about",
+  });
   return (
     <main className="max-w-2xl mx-auto px-6 pt-16 pb-0">
       <h1 className="font-display text-title text-sumi">About pickup</h1>
