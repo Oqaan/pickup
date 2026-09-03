@@ -7,6 +7,7 @@ import { useSeo } from "../useSeo";
 import { seriesDescription, seriesTitle } from "../seo";
 import { cover } from "../cover";
 import CountUp from "../components/CountUp";
+import AdaptationProgress from "../components/AdaptationProgress";
 
 export default function SeriesPage() {
   const { slug } = useParams();
@@ -246,11 +247,15 @@ export default function SeriesPage() {
                   ? ` · Episodes ${current.episodeStart}-${current.episodeEnd}`
                   : current.episodes && ` · ${current.episodes} episodes`}
               </p>
-              {series.totalChapters && current.continueChapter && (
-                <p className="font-mono text-xs text-ash mt-1">
-                  {series.totalChapters - current.continueChapter + 1} chapters
-                  left to read
-                </p>
+              {series.totalChapters && (
+                <AdaptationProgress
+                  coveredChapter={
+                    current.lastCoveredChapter ?? current.continueChapter - 1
+                  }
+                  continueChapter={current.continueChapter}
+                  totalChapters={series.totalChapters}
+                  ongoing={series.publicationStatus === "RELEASING"}
+                />
               )}
               {current.animeOriginal && (
                 <p className="font-mono text-xs tracking-widest text-sumi border border-sumi px-3 py-2 mt-6 inline-block">
