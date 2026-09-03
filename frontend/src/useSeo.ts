@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 
-// Keeps the head in sync as you move between pages. Crawlers get the same tags
-// baked into the static HTML by scripts/prerender.mjs, so this only runs once
-// the app has taken over.
+// Keeps the head in sync as you move between pages. Crawlers get their tags
+// injected at the edge by middleware.ts, so this only runs once the app has
+// taken over for real visitors.
 
 const ORIGIN = "https://pickup.moe";
 const DEFAULT_DESCRIPTION =
