@@ -78,12 +78,12 @@ export default function Layout({ children }: Props) {
                 <li>
                   Popularity from{" "}
                   <a
-                    href="https://anilist.co"
+                    href="https://myanimelist.net"
                     target="_blank"
                     rel="noreferrer"
                     className="text-sumi hover:text-jump"
                   >
-                    AniList
+                    MyAnimeList
                   </a>
                 </li>
               </ul>

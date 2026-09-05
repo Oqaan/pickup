@@ -1,0 +1,278 @@
+{
+  "jujutsu-kaisen": {
+    "anime": 40748,
+    "manga": 113138
+  },
+  "vinland-saga": {
+    "anime": 37521,
+    "manga": 642
+  },
+  "spy-x-family": {
+    "anime": 50265,
+    "manga": 119161
+  },
+  "chainsaw-man": {
+    "anime": 44511,
+    "manga": 116778
+  },
+  "tokyo-ghoul": {
+    "anime": 22319,
+    "manga": 33327
+  },
+  "dandadan": {
+    "anime": 57334,
+    "manga": 135496
+  },
+  "dr-stone": {
+    "anime": 38691,
+    "manga": 103897
+  },
+  "frieren": {
+    "anime": 52991,
+    "manga": 126287
+  },
+  "blue-lock": {
+    "anime": 49596,
+    "manga": 114745
+  },
+  "mob-psycho-100": {
+    "anime": 32182,
+    "manga": 60783
+  },
+  "demon-slayer": {
+    "anime": 38000,
+    "manga": 96792
+  },
+  "my-hero-academia": {
+    "anime": 31964,
+    "manga": 75989
+  },
+  "hunter-x-hunter": {
+    "anime": 11061,
+    "manga": 26
+  },
+  "naruto": {
+    "anime": 20,
+    "manga": 11
+  },
+  "naruto-shippuden": {
+    "anime": 1735,
+    "manga": 11
+  },
+  "attack-on-titan": {
+    "anime": 16498,
+    "manga": 23390
+  },
+  "sakamoto-days": {
+    "anime": 58939,
+    "manga": 131334
+  },
+  "kaiju-no-8": {
+    "anime": 52588,
+    "manga": 127907
+  },
+  "blue-box": {
+    "anime": 57181,
+    "manga": 135545
+  },
+  "oshi-no-ko": {
+    "anime": 52034,
+    "manga": 126146
+  },
+  "one-punch-man": {
+    "anime": 30276,
+    "manga": 44347
+  },
+  "dorohedoro": {
+    "anime": 38668,
+    "manga": 1133
+  },
+  "hells-paradise": {
+    "anime": 46569,
+    "manga": 112318
+  },
+  "100-girlfriends": {
+    "anime": 54714,
+    "manga": 123681
+  },
+  "the-summer-hikaru-died": {
+    "anime": 58913,
+    "manga": 141833
+  },
+  "bleach": {
+    "anime": 269,
+    "manga": 12
+  },
+  "black-clover": {
+    "anime": 34572,
+    "manga": 86337
+  },
+  "solo-leveling": {
+    "anime": 52299,
+    "manga": 121496
+  },
+  "tokyo-revengers": {
+    "anime": 42249,
+    "manga": 104565
+  },
+  "kaguya-sama": {
+    "anime": 37999,
+    "manga": 90125
+  },
+  "the-promised-neverland": {
+    "anime": 37779,
+    "manga": 100128
+  },
+  "berserk": {
+    "anime": 33,
+    "manga": 2
+  },
+  "haikyuu": {
+    "anime": 20583,
+    "manga": 35243
+  },
+  "delicious-in-dungeon": {
+    "anime": 52701,
+    "manga": 85781
+  },
+  "undead-unluck": {
+    "anime": 52741,
+    "manga": 123956
+  },
+  "ao-ashi": {
+    "anime": 49052,
+    "manga": 102256
+  },
+  "fullmetal-alchemist": {
+    "anime": 5114,
+    "manga": 25
+  },
+  "death-note": {
+    "anime": 1535,
+    "manga": 21
+  },
+  "fire-force": {
+    "anime": 38671,
+    "manga": 91037
+  },
+  "one-piece": {
+    "anime": 21,
+    "manga": 13
+  },
+  "gachiakuta": {
+    "anime": 59062,
+    "manga": 144180
+  },
+  "call-of-the-night": {
+    "anime": 50346,
+    "manga": 121480
+  },
+  "my-dress-up-darling": {
+    "anime": 48736,
+    "manga": 112268
+  },
+  "dragon-ball": {
+    "anime": 813,
+    "manga": 42
+  },
+  "assassination-classroom": {
+    "anime": 24833,
+    "manga": 39883
+  },
+  "yu-yu-hakusho": {
+    "anime": 392,
+    "manga": 53
+  },
+  "dragon-ball-super": {
+    "anime": 30694,
+    "manga": 89734
+  },
+  "golden-kamuy": {
+    "anime": 36028,
+    "manga": 85968
+  },
+  "wind-breaker": {
+    "anime": 54900,
+    "manga": 133081
+  },
+  "monster": {
+    "anime": 19,
+    "manga": 1
+  },
+  "beastars": {
+    "anime": 39195,
+    "manga": 103701
+  },
+  "seven-deadly-sins": {
+    "anime": 23755,
+    "manga": 44485
+  },
+  "fairy-tail": {
+    "anime": 6702,
+    "manga": 598
+  },
+  "gintama": {
+    "anime": 918,
+    "manga": 44
+  },
+  "kingdom": {
+    "anime": 12031,
+    "manga": 16765
+  },
+  "mashle": {
+    "anime": 52211,
+    "manga": 124085
+  },
+  "zom-100": {
+    "anime": 54112,
+    "manga": 122392
+  },
+  "food-wars": {
+    "anime": 28171,
+    "manga": 45757
+  },
+  "apothecary-diaries": {
+    "anime": 54492,
+    "manga": 107562
+  },
+  "rent-a-girlfriend": {
+    "anime": 40839,
+    "manga": 108407
+  },
+  "hajime-no-ippo": {
+    "anime": 263,
+    "manga": 7
+  },
+  "slam-dunk": {
+    "anime": 170,
+    "manga": 51
+  },
+  "made-in-abyss": {
+    "anime": 34599,
+    "manga": 91941
+  },
+  "blue-period": {
+    "anime": 46352,
+    "manga": 107931
+  },
+  "parasyte": {
+    "anime": 22535,
+    "manga": 401
+  },
+  "blue-exorcist": {
+    "anime": 9919,
+    "manga": 13492
+  },
+  "komi-cant-communicate": {
+    "anime": 48926,
+    "manga": 99007
+  },
+  "kurokos-basketball": {
+    "anime": 11771,
+    "manga": 11652
+  },
+  "fruits-basket": {
+    "anime": 38680,
+    "manga": 102
+  }
+}
