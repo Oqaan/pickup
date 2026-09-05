@@ -2999,3 +2999,84 @@
       continueVolume: 10
       lastCoveredChapter: 129
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788433875/pickup/covers/komi-cant-communicate-04cf86f91cb.jpg
+
+- slug: kurokos-basketball
+  title: Kuroko's Basketball
+  titleNative: 黒子のバスケ
+  aliases: ["Kuroko no Basket", "Kuroko no Basuke", "KnB"]
+  anilistId: 41652
+  popularity: 17318
+  mangadexId: f8e41a48-5ca9-41e3-94a7-a1379a4fda62
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788623274/pickup/covers/kurokos-basketball-d24749c8569.jpg
+  author: Tadatoshi Fujimaki
+  startYear: 2008
+  publicationStatus: FINISHED
+  totalChapters: 275
+  totalVolumes: 30
+  verifiedAt: 2026-09-05
+  readingLinks:
+    - label: Viz
+      url: https://www.viz.com/kurokos-basketball
+      sortOrder: 1
+  adaptations:
+    - name: Season 1
+      episodes: 25
+      sortOrder: 1
+      continueChapter: 74
+      continueVolume: 9
+      lastCoveredChapter: 73
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788623275/pickup/covers/kurokos-basketball-1265c397483.jpg
+    - name: Season 2
+      episodes: 25
+      sortOrder: 2
+      continueChapter: 170
+      continueVolume: 19
+      lastCoveredChapter: 169
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788623276/pickup/covers/kurokos-basketball-96f531c92a1.jpg
+    - name: Season 3
+      episodes: 25
+      sortOrder: 3
+      lastCoveredChapter: 275
+      caughtUp: true
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788623278/pickup/covers/kurokos-basketball-ebeed69f661.jpg
+
+- slug: fruits-basket
+  title: Fruits Basket
+  titleNative: フルーツバスケット
+  aliases: ["Furuba"]
+  anilistId: 30102
+  popularity: 34958
+  mangadexId: e9b1d4ba-b8fb-48c3-8d52-5a4eefd05980
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788623279/pickup/covers/fruits-basket-805e3247759.jpg
+  author: Natsuki Takaya
+  startYear: 1998
+  publicationStatus: FINISHED
+  totalChapters: 136
+  totalVolumes: 23
+  verifiedAt: 2026-09-05
+  readingLinks:
+    - label: Yen Press
+      url: https://yenpress.com/series/fruits-basket-collector-s-edition
+      sortOrder: 1
+  adaptations:
+    - name: Season 1
+      episodes: 25
+      sortOrder: 1
+      continueChapter: 49
+      continueVolume: 9
+      lastCoveredChapter: 48
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788623280/pickup/covers/fruits-basket-ade1a0c288d.jpg
+    - name: Season 2
+      episodes: 25
+      sortOrder: 2
+      continueChapter: 98
+      continueVolume: 17
+      lastCoveredChapter: 97
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788623281/pickup/covers/fruits-basket-24d9e76dede.jpg
+      notes: "The season finale only adapts the first two pages of chapter 98, so read it from the start."
+    - name: The Final
+      episodes: 13
+      sortOrder: 3
+      lastCoveredChapter: 136
+      caughtUp: true
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788623282/pickup/covers/fruits-basket-7c1144a5f60.jpg
