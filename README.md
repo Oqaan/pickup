@@ -20,7 +20,7 @@ For each season I:
 
 Not every anime ends neatly at the end of a chapter. Sometimes a finale only adapts half a chapter, and sometimes a series barely follows the manga at all. *Tokyo Ghoul √A* is the classic example. Whenever that happens, I leave a note instead of pretending there's a clean chapter to continue from.
 
-Cover art comes from MangaDex and is re-hosted on Cloudinary, while the popularity ordering comes from AniList. I still look up both IDs manually because title searches tend to return spin-offs, one-shots, and alternate editions just as often as the series I actually want.
+Cover art comes from MangaDex and is re-hosted on Cloudinary. The popularity ordering comes from MyAnimeList member counts, blended so a series ranks by whichever medium it's bigger in, anime or manga. I still look up every ID manually because title searches tend to return spin-offs, one-shots, and alternate editions just as often as the series I actually want.
 
 ## Running it locally
 
@@ -68,6 +68,8 @@ node scripts/fetch-series-info.mjs
 ```
 
 Both scripts print the values you need to paste back into the file. They intentionally don't modify it themselves, since that would strip comments and formatting. Pass `--all` if you want to refresh every entry instead of only the missing ones.
+
+Popularity is its own step: add the new slug with its MyAnimeList anime and manga IDs to `scripts/mal-ids.json`, then run `node scripts/fetch-popularity.mjs`. It scrapes MAL member counts and rewrites every entry's `popularity` in place (the ordering is normalised across the whole set, so all entries get rewritten, not just the new one).
 
 Once the MangaDex cover URLs are in place, move them to Cloudinary so the site isn't hotlinking someone else's servers:
 

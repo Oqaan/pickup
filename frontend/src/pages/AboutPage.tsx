@@ -55,14 +55,14 @@ export default function AboutPage() {
           >
             MangaDex
           </a>
-          . The reading numbers behind the ordering on the home page come from{" "}
+          . The popularity ordering on the home page comes from{" "}
           <a
-            href="https://anilist.co"
+            href="https://myanimelist.net"
             target="_blank"
             rel="noreferrer"
             className="text-sumi hover:text-jump underline underline-offset-4"
           >
-            AniList
+            MyAnimeList
           </a>
           .
         </p>

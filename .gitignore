@@ -8,3 +8,4 @@ dist/
 .vscode/
 .DS_Store
 docs/add-series.md
+scripts/mal-members.json
