@@ -68,6 +68,19 @@ export default function SeriesPage() {
       .catch((e: Error) => setError(e.message));
   }, [slug]);
 
+  // Warm the other seasons' covers so switching between them stays instant
+  useEffect(() => {
+    if (!series) return;
+    for (const a of series.adaptations) {
+      if (!a.coverUrl) continue;
+      const img = new Image();
+      const warmed = cover(a.coverUrl, [200, 400], "176px");
+      img.sizes = warmed.sizes;
+      img.srcset = warmed.srcSet;
+      img.src = warmed.src;
+    }
+  }, [series]);
+
   if (error === "not-found") {
     return (
       <main className="max-w-2xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
