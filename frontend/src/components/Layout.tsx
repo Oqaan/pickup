@@ -133,7 +133,7 @@ export default function Layout({ children }: Props) {
               About
             </Link>
             <span>·</span>
-            <span>No manga content is hosted here</span>
+            <span>pickup hosts nothing — it only points you to the chapter</span>
           </div>
         </div>
       </footer>
