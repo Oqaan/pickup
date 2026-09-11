@@ -101,6 +101,7 @@ async function homepage(url: URL) {
 
   const body = `<nav style="max-width:640px;margin:0 auto;padding:24px;font-family:system-ui,sans-serif;line-height:1.6">
     <h1>Where to start the manga after the anime</h1>
+    <p>Finished the anime and not sure where to pick up the manga? pickup gives you the exact chapter to start from, checked by hand for each series.</p>
     <ul>${items}</ul>
   </nav>`;
 
@@ -115,9 +116,26 @@ async function homepage(url: URL) {
     })),
   };
 
+  // Lets Google offer a sitelinks search box. The target is the ?q= the
+  // homepage reads on load, so a search Google links to actually filters
+  const website = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "pickup",
+    url: "https://pickup.moe/",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: "https://pickup.moe/?q={search_term_string}",
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   return respond(
     html
-      .replace("</head>", `${ldScript(itemList)}</head>`)
+      .replace("</head>", `${ldScript(website)}${ldScript(itemList)}</head>`)
       .replace('<div id="root"></div>', `<div id="root">${body}</div>`),
   );
 }
