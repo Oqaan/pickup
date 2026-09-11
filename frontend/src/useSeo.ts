@@ -7,7 +7,7 @@ import { useEffect } from "react";
 const ORIGIN = "https://pickup.moe";
 const DEFAULT_DESCRIPTION =
   "Finished the anime? pickup tells you which manga chapter to start from, checked by hand for each series.";
-const DEFAULT_IMAGE = `${ORIGIN}/og-default.png`;
+const DEFAULT_IMAGE = `${ORIGIN}/og-default.jpg`;
 
 export type Seo = {
   title: string;
