@@ -6,7 +6,7 @@ import {
   prefetchSeriesDetail,
 } from "../api";
 import { cover } from "../cover";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useSearchParams } from "react-router-dom";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useSeo } from "../useSeo";
 
@@ -56,7 +56,10 @@ export default function HomePage() {
   const [series, setSeries] = useState<SeriesSummary[]>(
     () => cachedSeriesList() ?? [],
   );
-  const [query, setQuery] = useState("");
+  // A search Google links to arrives as /?q=term, so seed the field from it
+  const [searchParams] = useSearchParams();
+  const initialQuery = searchParams.get("q") ?? "";
+  const [query, setQuery] = useState(initialQuery);
   const [loading, setLoading] = useState(() => cachedSeriesList() === null);
   const [error, setError] = useState(false);
   const reduceMotion = useReducedMotion();
@@ -66,7 +69,8 @@ export default function HomePage() {
   );
   const [searchShown, setSearchShown] = useState(PER_PAGE);
   const [Fuse, setFuse] = useState<FuseModule | null>(null);
-  const [wantsFuse, setWantsFuse] = useState(false);
+  // A query from the URL needs the search library right away, not on first click
+  const [wantsFuse, setWantsFuse] = useState(initialQuery.length >= 2);
   // A saved scroll position means the user is coming back to a list they have
   // already seen. The cards then skip their entrance, which would otherwise
   // run as a wave down the page while they wait at the bottom for their spot
