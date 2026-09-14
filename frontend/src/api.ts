@@ -1,17 +1,21 @@
 import type { SeriesDetail, SeriesSummary } from "./types";
 import { cover } from "./cover";
 
-declare global {
-  interface Window {
-    // What the middleware baked into the page, so the app opens with content
-    // instead of a blank skeleton. Keyed by slug.
-    __PICKUP__?: Record<string, SeriesDetail>;
+// The series the middleware left in the page, when it's the one we want. It's
+// a JSON island we read from the DOM, not a global, so the strict CSP doesn't
+// block it
+export function seededSeries(slug: string): SeriesDetail | null {
+  if (typeof document === "undefined") return null;
+  const el = document.getElementById("__pickup__");
+  if (!el?.textContent) return null;
+  try {
+    const series = JSON.parse(el.textContent) as SeriesDetail;
+    // After a client-side navigation the island still holds the first page
+    return series.slug === slug ? series : null;
+  } catch {
+    return null;
   }
 }
-
-// The series for this slug, if the middleware left one in the page
-export const seededSeries = (slug: string): SeriesDetail | null =>
-  (typeof window !== "undefined" && window.__PICKUP__?.[slug]) || null;
 
 // Empty in local dev, so requests stay relative and hit the Vite proxy.
 // In production, set to the backend's URL (e.g. https://api.pickup.moe).

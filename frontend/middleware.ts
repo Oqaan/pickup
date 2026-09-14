@@ -49,12 +49,13 @@ const ldScript = (data: unknown) =>
     "\\u003c",
   )}</script>`;
 
-// Hand the series to the app so it doesn't open on a blank skeleton. Same <
-// escape as above
-const seed = (slug: string, series: Series) =>
-  `<script>window.__PICKUP__={${JSON.stringify(slug)}:${JSON.stringify(
+// Hand the series to the app as data, not code, so it doesn't open on a blank
+// skeleton. A JSON island rather than an inline script, so the strict CSP
+// (script-src 'self') lets it through. Same < escape as above
+const seed = (series: Series) =>
+  `<script type="application/json" id="__pickup__">${JSON.stringify(
     series,
-  ).replace(/</g, "\\u003c")}}</script>`;
+  ).replace(/</g, "\\u003c")}</script>`;
 
 const shell = (origin: string) =>
   fetch(new URL("/index.html", origin)).then((r) => r.text());
@@ -232,7 +233,7 @@ async function seriesPage(url: URL) {
       "@type": "FAQPage",
       mainEntity: questions,
     })}
-    ${seed(slug, series)}
+    ${seed(series)}
   `;
 
   return respond(
