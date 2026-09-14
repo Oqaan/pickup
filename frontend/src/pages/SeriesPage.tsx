@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import type { SeriesDetail } from "../types";
-import { fetchSeriesDetail, seededSeries } from "../api";
+import { fetchSeriesDetail, seededSeries, primeSeriesDetail } from "../api";
 import { useSeo } from "../useSeo";
 import { seriesDescription, seriesTitle } from "../seo";
 import { cover } from "../cover";
@@ -67,13 +67,9 @@ export default function SeriesPage() {
 
   useEffect(() => {
     if (!slug) return;
-    // We already have the page we opened on, so only fetch when the user
-    // clicks through to another one
-    const seeded = seededSeries(slug);
-    if (seeded) {
-      setSeries(seeded);
-      return;
-    }
+    // Resolve the page we opened on from the embedded series, not an API call
+    // the crawler can't make
+    primeSeriesDetail(slug, seededSeries(slug));
     fetchSeriesDetail(slug)
       .then(setSeries)
       .catch((e: Error) => setError(e.message));

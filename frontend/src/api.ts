@@ -46,6 +46,14 @@ export function fetchSeriesList(): Promise<SeriesSummary[]> {
   return listCache;
 }
 
+// Put the embedded series in the cache so the first fetch for this slug
+// resolves from it, instead of an API call that crawlers can't reach
+export function primeSeriesDetail(slug: string, series: SeriesDetail | null) {
+  if (series && !detailCache.has(slug)) {
+    detailCache.set(slug, Promise.resolve(series));
+  }
+}
+
 export function fetchSeriesDetail(slug: string): Promise<SeriesDetail> {
   const cached = detailCache.get(slug);
   if (cached) return cached;
