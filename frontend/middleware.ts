@@ -49,6 +49,13 @@ const ldScript = (data: unknown) =>
     "\\u003c",
   )}</script>`;
 
+// Hand the series to the app so it doesn't open on a blank skeleton. Same <
+// escape as above
+const seed = (slug: string, series: Series) =>
+  `<script>window.__PICKUP__={${JSON.stringify(slug)}:${JSON.stringify(
+    series,
+  ).replace(/</g, "\\u003c")}}</script>`;
+
 const shell = (origin: string) =>
   fetch(new URL("/index.html", origin)).then((r) => r.text());
 
@@ -225,6 +232,7 @@ async function seriesPage(url: URL) {
       "@type": "FAQPage",
       mainEntity: questions,
     })}
+    ${seed(slug, series)}
   `;
 
   return respond(
