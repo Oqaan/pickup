@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import type { SeriesDetail } from "../types";
-import { fetchSeriesDetail } from "../api";
+import { fetchSeriesDetail, seededSeries } from "../api";
 import { useSeo } from "../useSeo";
 import { seriesDescription, seriesTitle } from "../seo";
 import { cover } from "../cover";
@@ -11,7 +11,11 @@ import AdaptationProgress from "../components/AdaptationProgress";
 
 export default function SeriesPage() {
   const { slug } = useParams();
-  const [series, setSeries] = useState<SeriesDetail | null>(null);
+  // Start with what the middleware embedded. A blank first render is what
+  // Google was reading as a soft 404
+  const [series, setSeries] = useState<SeriesDetail | null>(
+    slug ? seededSeries(slug) : null,
+  );
   const [selected, setSelected] = useState(0);
   const [error, setError] = useState<string | null>(null);
   const reduceMotion = useReducedMotion();
@@ -63,6 +67,13 @@ export default function SeriesPage() {
 
   useEffect(() => {
     if (!slug) return;
+    // We already have the page we opened on, so only fetch when the user
+    // clicks through to another one
+    const seeded = seededSeries(slug);
+    if (seeded) {
+      setSeries(seeded);
+      return;
+    }
     fetchSeriesDetail(slug)
       .then(setSeries)
       .catch((e: Error) => setError(e.message));

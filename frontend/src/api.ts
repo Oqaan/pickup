@@ -1,6 +1,18 @@
 import type { SeriesDetail, SeriesSummary } from "./types";
 import { cover } from "./cover";
 
+declare global {
+  interface Window {
+    // What the middleware baked into the page, so the app opens with content
+    // instead of a blank skeleton. Keyed by slug.
+    __PICKUP__?: Record<string, SeriesDetail>;
+  }
+}
+
+// The series for this slug, if the middleware left one in the page
+export const seededSeries = (slug: string): SeriesDetail | null =>
+  (typeof window !== "undefined" && window.__PICKUP__?.[slug]) || null;
+
 // Empty in local dev, so requests stay relative and hit the Vite proxy.
 // In production, set to the backend's URL (e.g. https://api.pickup.moe).
 const API_BASE = import.meta.env.VITE_API_URL ?? "";
