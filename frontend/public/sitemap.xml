@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pickup.moe/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-14</lastmod>
   </url>
   <url>
     <loc>https://pickup.moe/about</loc>
@@ -310,5 +310,17 @@
   <url>
     <loc>https://pickup.moe/anime/rurouni-kenshin</loc>
     <lastmod>2026-09-07</lastmod>
+  </url>
+  <url>
+    <loc>https://pickup.moe/anime/to-your-eternity</loc>
+    <lastmod>2026-09-14</lastmod>
+  </url>
+  <url>
+    <loc>https://pickup.moe/anime/seraph-of-the-end</loc>
+    <lastmod>2026-09-14</lastmod>
+  </url>
+  <url>
+    <loc>https://pickup.moe/anime/akame-ga-kill</loc>
+    <lastmod>2026-09-14</lastmod>
   </url>
 </urlset>
