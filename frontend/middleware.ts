@@ -241,6 +241,10 @@ async function seriesPage(url: URL) {
       .replace(/<title>.*?<\/title>/s, "")
       .replace(/<meta\s+name="description"[^>]*>/s, "")
       .replace(/<meta\s+property="og:[^"]*"[^>]*>/gs, "")
+      .replace(/<meta\s+name="twitter:[^"]*"[^>]*>/gs, "")
+      // index.html's canonical points at the homepage. If we leave it, each page
+      // has two canonicals and Google drops the series pages as homepage copies.
+      .replace(/<link\s+rel="canonical"[^>]*>/gs, "")
       .replace("</head>", `${tags}</head>`)
       .replace('<div id="root"></div>', `<div id="root">${body}</div>`),
   );
