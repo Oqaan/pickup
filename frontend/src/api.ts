@@ -17,6 +17,35 @@ export function seededSeries(slug: string): SeriesDetail | null {
   }
 }
 
+// The full list the page came with, for when we can't call the API. No aliases in it
+export function seededList(): SeriesSummary[] | null {
+  const raw = readIsland<
+    { slug: string; title: string; coverUrl: string | null }[]
+  >("__pickup_list__");
+  return raw ? raw.map((s) => ({ ...s, aliases: [] as string[] })) : null;
+}
+
+// The "more series" set the page came with. Might be a previous page's, so check the slug
+export function seededRelated(slug: string): SeriesSummary[] | null {
+  const data = readIsland<{
+    slug: string;
+    items: { slug: string; title: string; coverUrl: string | null }[];
+  }>("__pickup_related__");
+  if (!data || data.slug !== slug) return null;
+  return data.items.map((s) => ({ ...s, aliases: [] as string[] }));
+}
+
+function readIsland<T>(id: string): T | null {
+  if (typeof document === "undefined") return null;
+  const el = document.getElementById(id);
+  if (!el?.textContent) return null;
+  try {
+    return JSON.parse(el.textContent) as T;
+  } catch {
+    return null;
+  }
+}
+
 // Empty in local dev, so requests stay relative and hit the Vite proxy.
 // In production, set to the backend's URL (e.g. https://api.pickup.moe).
 const API_BASE = import.meta.env.VITE_API_URL ?? "";

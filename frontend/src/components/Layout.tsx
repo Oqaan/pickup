@@ -129,11 +129,15 @@ export default function Layout({ children }: Props) {
           <div className="font-mono text-xs text-ash mt-12 pt-6 border-t border-tone/50 flex flex-wrap gap-x-3 gap-y-2">
             <span>© 2026 pickup</span>
             <span>·</span>
+            <Link to="/browse" className="hover:text-jump">
+              All series
+            </Link>
+            <span>·</span>
             <Link to="/about" className="hover:text-jump">
               About
             </Link>
             <span>·</span>
-            <span>pickup hosts nothing — it only points you to the chapter</span>
+            <span>pickup hosts nothing, it only points you to the chapter</span>
           </div>
         </div>
       </footer>

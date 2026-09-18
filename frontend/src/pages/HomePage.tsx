@@ -4,6 +4,7 @@ import {
   cachedSeriesList,
   fetchSeriesList,
   prefetchSeriesDetail,
+  seededList,
 } from "../api";
 import { cover } from "../cover";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
@@ -53,14 +54,17 @@ export default function HomePage() {
     title: "pickup - where to start the manga after the anime",
     canonical: "/",
   });
+  // Start with the list the page came with, so it shows right away without the API
   const [series, setSeries] = useState<SeriesSummary[]>(
-    () => cachedSeriesList() ?? [],
+    () => cachedSeriesList() ?? seededList() ?? [],
   );
   // A search Google links to arrives as /?q=term, so seed the field from it
   const [searchParams] = useSearchParams();
   const initialQuery = searchParams.get("q") ?? "";
   const [query, setQuery] = useState(initialQuery);
-  const [loading, setLoading] = useState(() => cachedSeriesList() === null);
+  const [loading, setLoading] = useState(
+    () => cachedSeriesList() === null && seededList() === null,
+  );
   const [error, setError] = useState(false);
   const reduceMotion = useReducedMotion();
   const { key: historyKey } = useLocation();

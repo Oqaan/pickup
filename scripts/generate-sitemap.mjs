@@ -15,6 +15,7 @@ const verified = series.map((s) => asDate(s.verifiedAt)).filter(Boolean);
 // About has no date at all rather than one nobody remembers to bump
 const entries = [
   { path: "/", lastmod: verified.sort().at(-1) },
+  { path: "/browse", lastmod: verified.sort().at(-1) },
   { path: "/about" },
   ...series.map((s) => ({
     path: `/anime/${s.slug}`,

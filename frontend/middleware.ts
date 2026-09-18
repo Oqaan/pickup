@@ -1,7 +1,7 @@
 import { next } from "@vercel/functions";
 
 export const config = {
-  matcher: ["/", "/anime/:slug*"],
+  matcher: ["/", "/browse", "/anime/:slug*"],
 };
 
 const API = "https://api.pickup.moe";
@@ -31,7 +31,7 @@ type Series = {
   readingLinks: { label: string; url: string }[];
 };
 
-type Listed = { slug: string; title: string };
+type Listed = { slug: string; title: string; coverUrl: string | null };
 
 const esc = (s: string) =>
   s
@@ -56,6 +56,26 @@ const seed = (series: Series) =>
   `<script type="application/json" id="__pickup__">${JSON.stringify(
     series,
   ).replace(/</g, "\\u003c")}</script>`;
+
+// The app reads this back off the page. It's data, not a script, so it's allowed
+const island = (id: string, data: unknown) =>
+  `<script type="application/json" id="${id}">${JSON.stringify(data).replace(
+    /</g,
+    "\\u003c",
+  )}</script>`;
+
+const listData = (list: Listed[]) =>
+  list.map((s) => ({ slug: s.slug, title: s.title, coverUrl: s.coverUrl }));
+
+// The next n series, wrapping at the end, so every series gets linked, not just popular ones
+function ring(list: Listed[], slug: string, n: number): Listed[] {
+  const i = list.findIndex((s) => s.slug === slug);
+  const out: Listed[] = [];
+  for (let k = 1; k <= n && k < list.length; k++) {
+    out.push(list[((i < 0 ? 0 : i) + k) % list.length]);
+  }
+  return out;
+}
 
 const shell = (origin: string) =>
   fetch(new URL("/index.html", origin)).then((r) => r.text());
@@ -89,7 +109,9 @@ function statusClause(s: Series): string {
 
 export default async function middleware(request: Request) {
   const url = new URL(request.url);
-  return url.pathname === "/" ? homepage(url) : seriesPage(url);
+  if (url.pathname === "/") return homepage(url);
+  if (url.pathname === "/browse") return browsePage(url);
+  return seriesPage(url);
 }
 
 // Seed #root with a crawlable list of every series, React clears it on mount
@@ -143,7 +165,74 @@ async function homepage(url: URL) {
 
   return respond(
     html
-      .replace("</head>", `${ldScript(website)}${ldScript(itemList)}</head>`)
+      .replace(
+        "</head>",
+        `${ldScript(website)}${ldScript(itemList)}${island(
+          "__pickup_list__",
+          listData(list),
+        )}</head>`,
+      )
+      .replace('<div id="root"></div>', `<div id="root">${body}</div>`),
+  );
+}
+
+// One page linking to every series, so Google reaches them all by links, not just the sitemap
+async function browsePage(url: URL) {
+  const [html, listRes] = await Promise.all([
+    shell(url.origin),
+    fetch(`${API}/api/series`),
+  ]);
+
+  if (!listRes.ok) return next();
+
+  const list = (await listRes.json()) as Listed[];
+
+  const title = "All series on pickup";
+  const description =
+    "Every series pickup covers. Find the anime you finished and get the exact manga chapter and volume to continue from.";
+  const pageUrl = "https://pickup.moe/browse";
+
+  const items = list
+    .map((s) => `<li><a href="/anime/${esc(s.slug)}">${esc(s.title)}</a></li>`)
+    .join("");
+
+  const body = `<main style="max-width:640px;margin:0 auto;padding:24px;font-family:system-ui,sans-serif;line-height:1.6">
+    <h1>${esc(title)}</h1>
+    <p>${esc(description)}</p>
+    <ul>${items}</ul>
+  </main>`;
+
+  const itemList = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: list.map((s, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: `https://pickup.moe/anime/${s.slug}`,
+      name: s.title,
+    })),
+  };
+
+  const tags = `
+    <title>${esc(title)}</title>
+    <meta name="description" content="${esc(description)}" />
+    <link rel="canonical" href="${esc(pageUrl)}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="${esc(title)}" />
+    <meta property="og:description" content="${esc(description)}" />
+    <meta property="og:url" content="${esc(pageUrl)}" />
+    ${ldScript(itemList)}
+    ${island("__pickup_list__", listData(list))}
+  `;
+
+  return respond(
+    html
+      .replace(/<title>.*?<\/title>/s, "")
+      .replace(/<meta\s+name="description"[^>]*>/s, "")
+      .replace(/<meta\s+property="og:[^"]*"[^>]*>/gs, "")
+      .replace(/<meta\s+name="twitter:[^"]*"[^>]*>/gs, "")
+      .replace(/<link\s+rel="canonical"[^>]*>/gs, "")
+      .replace("</head>", `${tags}</head>`)
       .replace('<div id="root"></div>', `<div id="root">${body}</div>`),
   );
 }
@@ -153,14 +242,19 @@ async function seriesPage(url: URL) {
 
   if (!SLUG.test(slug)) return next();
 
-  const [html, seriesRes] = await Promise.all([
+  const [html, seriesRes, listRes] = await Promise.all([
     shell(url.origin),
     fetch(`${API}/api/series/${encodeURIComponent(slug)}`),
+    fetch(`${API}/api/series`),
   ]);
 
   if (!seriesRes.ok) return next();
 
   const series = (await seriesRes.json()) as Series;
+  // A few links to other series, so no page is a dead end
+  const related = listRes.ok
+    ? ring((await listRes.json()) as Listed[], slug, 5)
+    : [];
 
   const title = `Where to continue the ${series.title} manga`;
   const description = `Finished the ${series.title} anime? Find the exact chapter and volume to continue the manga from, for each season`;
@@ -188,12 +282,21 @@ async function seriesPage(url: URL) {
         .join(", ")}.</p>`
     : "";
 
+  const more = related.length
+    ? `<nav style="max-width:640px;margin:24px auto 0;padding:0 24px;font-family:system-ui,sans-serif;line-height:1.6">
+    <h2>More series</h2>
+    <ul>${related
+      .map((s) => `<li><a href="/anime/${esc(s.slug)}">${esc(s.title)}</a></li>`)
+      .join("")}</ul>
+  </nav>`
+    : "";
+
   const body = `<article style="max-width:640px;margin:0 auto;padding:24px;font-family:system-ui,sans-serif;line-height:1.5">
     <h1>${esc(title)}</h1>
     <p>${esc(intro)}</p>
     <ul>${items}</ul>
     ${links}
-  </article>`;
+  </article>${more}`;
 
   const faqAnswer = (series.adaptations ?? [])
     .map((a) => ({ a, s: pickup(a) }))
@@ -234,6 +337,7 @@ async function seriesPage(url: URL) {
       mainEntity: questions,
     })}
     ${seed(series)}
+    ${island("__pickup_related__", { slug, items: listData(related) })}
   `;
 
   return respond(

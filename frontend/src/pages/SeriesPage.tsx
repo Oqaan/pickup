@@ -1,8 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import type { SeriesDetail } from "../types";
-import { fetchSeriesDetail, seededSeries, primeSeriesDetail } from "../api";
+import type { SeriesDetail, SeriesSummary } from "../types";
+import {
+  cachedSeriesList,
+  fetchSeriesDetail,
+  fetchSeriesList,
+  prefetchSeriesDetail,
+  primeSeriesDetail,
+  seededRelated,
+  seededSeries,
+} from "../api";
 import { useSeo } from "../useSeo";
 import { seriesDescription, seriesTitle } from "../seo";
 import { cover } from "../cover";
@@ -18,6 +26,9 @@ export default function SeriesPage() {
   );
   const [selected, setSelected] = useState(0);
   const [error, setError] = useState<string | null>(null);
+  const [list, setList] = useState<SeriesSummary[]>(
+    () => cachedSeriesList() ?? [],
+  );
   const reduceMotion = useReducedMotion();
   const navigate = useNavigate();
   // Going back is what leaves the home list as the user had it. The key is
@@ -87,6 +98,27 @@ export default function SeriesPage() {
       img.src = warmed.src;
     }
   }, [series]);
+
+  useEffect(() => {
+    fetchSeriesList()
+      .then(setList)
+      .catch(() => {});
+  }, []);
+
+  // The next few series, from the list once it loads, or the seeded set before that
+  const related = useMemo<SeriesSummary[]>(() => {
+    if (list.length && slug) {
+      const i = list.findIndex((s) => s.slug === slug);
+      if (i >= 0) {
+        const out: SeriesSummary[] = [];
+        for (let k = 1; k <= 5 && k < list.length; k++) {
+          out.push(list[(i + k) % list.length]);
+        }
+        return out;
+      }
+    }
+    return slug ? (seededRelated(slug) ?? []) : [];
+  }, [list, slug]);
 
   if (error === "not-found") {
     return (
@@ -171,6 +203,8 @@ export default function SeriesPage() {
   }
 
   const current = series.adaptations[selected];
+  // Webtoons have no per-volume covers, so use the series cover instead of nothing
+  const answerCover = current.coverUrl ?? series.coverUrl;
 
   const hasInfo =
     series.author ||
@@ -298,21 +332,27 @@ export default function SeriesPage() {
         </div>
 
         <AnimatePresence mode="popLayout" initial={false}>
-          {current.coverUrl && (
+          {answerCover && (
             <motion.div
-              key={current.coverUrl}
+              key={answerCover}
               {...swap}
               className="w-44 sm:w-40 shrink-0"
             >
               <img
-                {...cover(current.coverUrl, [200, 400], "176px")}
-                alt={`Volume ${current.continueVolume} cover`}
+                {...cover(answerCover, [200, 400], "176px")}
+                alt={
+                  current.continueVolume
+                    ? `Volume ${current.continueVolume} cover`
+                    : `${series.title} cover`
+                }
                 fetchPriority="high"
                 className="w-full aspect-2/3 object-cover"
               />
-              <p className="font-mono text-xs text-ash mt-2 text-center">
-                Vol. {current.continueVolume}
-              </p>
+              {current.continueVolume && (
+                <p className="font-mono text-xs text-ash mt-2 text-center">
+                  Vol. {current.continueVolume}
+                </p>
+              )}
             </motion.div>
           )}
         </AnimatePresence>
@@ -406,6 +446,39 @@ export default function SeriesPage() {
             </p>
           )}
         </div>
+      )}
+
+      {related.length > 0 && (
+        <section className="mt-16 sm:mt-24 pt-8 border-t border-tone">
+          <p className="font-mono text-xs tracking-widest text-ash">
+            MORE SERIES
+          </p>
+          <div className="grid grid-cols-5 gap-2 sm:gap-4 mt-4">
+            {related.map((s) => (
+              <Link
+                key={s.slug}
+                to={`/anime/${s.slug}`}
+                onPointerEnter={() => prefetchSeriesDetail(s.slug)}
+                onFocus={() => prefetchSeriesDetail(s.slug)}
+                className="group block"
+              >
+                <div className="aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition">
+                  {s.coverUrl && (
+                    <img
+                      {...cover(s.coverUrl, [150, 300], "(min-width: 640px) 120px, 18vw")}
+                      alt=""
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                    />
+                  )}
+                </div>
+                <p className="font-body text-xs text-sumi group-hover:text-jump mt-2 leading-snug truncate">
+                  {s.title}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
       )}
     </main>
   );
