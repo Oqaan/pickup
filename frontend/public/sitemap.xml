@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pickup.moe/</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-09-18</lastmod>
   </url>
   <url>
     <loc>https://pickup.moe/about</loc>
@@ -334,5 +334,17 @@
   <url>
     <loc>https://pickup.moe/anime/the-dangers-in-my-heart</loc>
     <lastmod>2026-09-15</lastmod>
+  </url>
+  <url>
+    <loc>https://pickup.moe/anime/ranma-1-2</loc>
+    <lastmod>2026-09-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pickup.moe/anime/tower-of-god</loc>
+    <lastmod>2026-09-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pickup.moe/anime/bocchi-the-rock</loc>
+    <lastmod>2026-09-18</lastmod>
   </url>
 </urlset>
