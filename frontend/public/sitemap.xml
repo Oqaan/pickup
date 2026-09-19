@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pickup.moe/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-19</lastmod>
   </url>
   <url>
     <loc>https://pickup.moe/browse</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-19</lastmod>
   </url>
   <url>
     <loc>https://pickup.moe/about</loc>
@@ -350,5 +350,21 @@
   <url>
     <loc>https://pickup.moe/anime/bocchi-the-rock</loc>
     <lastmod>2026-09-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pickup.moe/anime/shangri-la-frontier</loc>
+    <lastmod>2026-09-19</lastmod>
+  </url>
+  <url>
+    <loc>https://pickup.moe/anime/iruma-kun</loc>
+    <lastmod>2026-09-19</lastmod>
+  </url>
+  <url>
+    <loc>https://pickup.moe/anime/boruto</loc>
+    <lastmod>2026-09-19</lastmod>
+  </url>
+  <url>
+    <loc>https://pickup.moe/anime/wistoria</loc>
+    <lastmod>2026-09-19</lastmod>
   </url>
 </urlset>
