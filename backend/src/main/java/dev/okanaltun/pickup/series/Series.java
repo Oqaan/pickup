@@ -71,6 +71,12 @@ public class Series {
     @OneToMany(mappedBy = "series", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<SeriesAlias> aliases = new ArrayList<>();
 
+    @ElementCollection
+    @CollectionTable(name = "series_related", joinColumns = @JoinColumn(name = "series_id"))
+    @OrderColumn(name = "sort_order")
+    @Column(name = "related_slug", nullable = false)
+    private List<String> related = new ArrayList<>();
+
     @OneToMany(mappedBy = "series", cascade = CascadeType.ALL, orphanRemoval = true)
     @OrderBy("sortOrder ASC")
     private List<ReadingLink> readingLinks = new ArrayList<>();

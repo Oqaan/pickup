@@ -1,14 +1,11 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import type { SeriesDetail, SeriesSummary } from "../types";
+import type { SeriesDetail } from "../types";
 import {
-  cachedSeriesList,
   fetchSeriesDetail,
-  fetchSeriesList,
   prefetchSeriesDetail,
   primeSeriesDetail,
-  seededRelated,
   seededSeries,
 } from "../api";
 import { useSeo } from "../useSeo";
@@ -26,9 +23,6 @@ export default function SeriesPage() {
   );
   const [selected, setSelected] = useState(0);
   const [error, setError] = useState<string | null>(null);
-  const [list, setList] = useState<SeriesSummary[]>(
-    () => cachedSeriesList() ?? [],
-  );
   const reduceMotion = useReducedMotion();
   const navigate = useNavigate();
   // Going back is what leaves the home list as the user had it. The key is
@@ -99,26 +93,7 @@ export default function SeriesPage() {
     }
   }, [series]);
 
-  useEffect(() => {
-    fetchSeriesList()
-      .then(setList)
-      .catch(() => {});
-  }, []);
-
-  // The next few series, from the list once it loads, or the seeded set before that
-  const related = useMemo<SeriesSummary[]>(() => {
-    if (list.length && slug) {
-      const i = list.findIndex((s) => s.slug === slug);
-      if (i >= 0) {
-        const out: SeriesSummary[] = [];
-        for (let k = 1; k <= 5 && k < list.length; k++) {
-          out.push(list[(i + k) % list.length]);
-        }
-        return out;
-      }
-    }
-    return slug ? (seededRelated(slug) ?? []) : [];
-  }, [list, slug]);
+  const related = series?.related ?? [];
 
   if (error === "not-found") {
     return (
@@ -453,19 +428,20 @@ export default function SeriesPage() {
           <p className="font-mono text-xs tracking-widest text-ash">
             MORE SERIES
           </p>
-          <div className="grid grid-cols-5 gap-2 sm:gap-4 mt-4">
-            {related.map((s) => (
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 sm:gap-4 mt-4">
+            {related.map((s, i) => (
               <Link
                 key={s.slug}
                 to={`/anime/${s.slug}`}
                 onPointerEnter={() => prefetchSeriesDetail(s.slug)}
                 onFocus={() => prefetchSeriesDetail(s.slug)}
-                className="group block"
+                // Hidden on mobile so the two-column grid stays an even 2x2
+                className={`group block ${i >= 4 ? "hidden sm:block" : ""}`}
               >
                 <div className="aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition">
                   {s.coverUrl && (
                     <img
-                      {...cover(s.coverUrl, [150, 300], "(min-width: 640px) 120px, 18vw")}
+                      {...cover(s.coverUrl, [200, 400], "(min-width: 640px) 120px, 45vw")}
                       alt=""
                       loading="lazy"
                       className="w-full h-full object-cover"

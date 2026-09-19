@@ -66,6 +66,10 @@ public class SeedRunner implements CommandLineRunner {
                 series.getAdaptations().clear();
                 series.getAliases().clear();
                 series.getReadingLinks().clear();
+                series.getRelated().clear();
+                if (entry.related() != null) {
+                    series.getRelated().addAll(entry.related());
+                }
                 applyChildren(series, entry);
                 seriesRepository.save(series);
             }
