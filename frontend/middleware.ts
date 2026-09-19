@@ -19,6 +19,8 @@ type Adaptation = {
   notes: string | null;
 };
 
+type Related = { slug: string; title: string; coverUrl: string | null };
+
 type Series = {
   title: string;
   author: string | null;
@@ -27,6 +29,7 @@ type Series = {
   totalChapters: number | null;
   totalVolumes: number | null;
   coverUrl: string | null;
+  related: Related[];
   adaptations: Adaptation[];
   readingLinks: { label: string; url: string }[];
 };
@@ -66,16 +69,6 @@ const island = (id: string, data: unknown) =>
 
 const listData = (list: Listed[]) =>
   list.map((s) => ({ slug: s.slug, title: s.title, coverUrl: s.coverUrl }));
-
-// The next n series, wrapping at the end, so every series gets linked, not just popular ones
-function ring(list: Listed[], slug: string, n: number): Listed[] {
-  const i = list.findIndex((s) => s.slug === slug);
-  const out: Listed[] = [];
-  for (let k = 1; k <= n && k < list.length; k++) {
-    out.push(list[((i < 0 ? 0 : i) + k) % list.length]);
-  }
-  return out;
-}
 
 const shell = (origin: string) =>
   fetch(new URL("/index.html", origin)).then((r) => r.text());
@@ -242,19 +235,15 @@ async function seriesPage(url: URL) {
 
   if (!SLUG.test(slug)) return next();
 
-  const [html, seriesRes, listRes] = await Promise.all([
+  const [html, seriesRes] = await Promise.all([
     shell(url.origin),
     fetch(`${API}/api/series/${encodeURIComponent(slug)}`),
-    fetch(`${API}/api/series`),
   ]);
 
   if (!seriesRes.ok) return next();
 
   const series = (await seriesRes.json()) as Series;
-  // A few links to other series, so no page is a dead end
-  const related = listRes.ok
-    ? ring((await listRes.json()) as Listed[], slug, 5)
-    : [];
+  const related = series.related ?? [];
 
   const title = `Where to continue the ${series.title} manga`;
   const description = `Finished the ${series.title} anime? Find the exact chapter and volume to continue the manga from, for each season`;
@@ -337,7 +326,6 @@ async function seriesPage(url: URL) {
       mainEntity: questions,
     })}
     ${seed(series)}
-    ${island("__pickup_related__", { slug, items: listData(related) })}
   `;
 
   return respond(

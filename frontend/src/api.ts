@@ -25,16 +25,6 @@ export function seededList(): SeriesSummary[] | null {
   return raw ? raw.map((s) => ({ ...s, aliases: [] as string[] })) : null;
 }
 
-// The "more series" set the page came with. Might be a previous page's, so check the slug
-export function seededRelated(slug: string): SeriesSummary[] | null {
-  const data = readIsland<{
-    slug: string;
-    items: { slug: string; title: string; coverUrl: string | null }[];
-  }>("__pickup_related__");
-  if (!data || data.slug !== slug) return null;
-  return data.items.map((s) => ({ ...s, aliases: [] as string[] }));
-}
-
 function readIsland<T>(id: string): T | null {
   if (typeof document === "undefined") return null;
   const el = document.getElementById(id);

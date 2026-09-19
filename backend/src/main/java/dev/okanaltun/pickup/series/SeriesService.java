@@ -1,6 +1,9 @@
 package dev.okanaltun.pickup.series;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -60,6 +63,8 @@ public class SeriesService {
                                 .map(SeriesAlias::getAlias)
                                 .toList();
 
+                List<RelatedSeriesResponse> related = resolveRelated(series.getRelated());
+
                 return new SeriesDetailResponse(
                                 series.getSlug(),
                                 series.getTitle(),
@@ -73,7 +78,21 @@ public class SeriesService {
                                 series.getTotalVolumes(),
                                 series.getVerifiedAt(),
                                 aliases,
+                                related,
                                 adaptations,
                                 readingLinks);
+        }
+
+        private List<RelatedSeriesResponse> resolveRelated(List<String> slugs) {
+                if (slugs == null || slugs.isEmpty()) {
+                        return List.of();
+                }
+                Map<String, Series> bySlug = repository.findBySlugIn(slugs).stream()
+                                .collect(Collectors.toMap(Series::getSlug, s -> s));
+                return slugs.stream()
+                                .map(bySlug::get)
+                                .filter(Objects::nonNull)
+                                .map(s -> new RelatedSeriesResponse(s.getSlug(), s.getTitle(), s.getCoverUrl()))
+                                .toList();
         }
 }

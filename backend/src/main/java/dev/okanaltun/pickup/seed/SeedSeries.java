@@ -18,6 +18,7 @@ public record SeedSeries(
                 Integer popularity,
                 String mangadexId,
                 List<String> aliases,
+                List<String> related,
                 List<SeedAdaptation> adaptations,
                 List<SeedReadingLink> readingLinks) {
 

@@ -25,8 +25,15 @@ export type SeriesDetail = {
   totalVolumes: number | null;
   verifiedAt: string | null; // no date format in JSON
   aliases: string[];
+  related: RelatedSeries[];
   adaptations: Adaptation[];
   readingLinks: ReadingLink[];
+};
+
+export type RelatedSeries = {
+  slug: string;
+  title: string;
+  coverUrl: string | null;
 };
 
 export type SeriesSummary = {

@@ -2,6 +2,7 @@
   title: Jujutsu Kaisen
   titleNative: 呪術廻戦
   aliases: ["JJK", "Sorcery Fight"]
+  related: [chainsaw-man, blue-exorcist, dandadan, dorohedoro, yu-yu-hakusho]
   anilistId: 101517
   popularity: 702628
   mangadexId: c52b2ce3-7f95-469c-96b0-479524fb7a1a
@@ -48,6 +49,7 @@
 - slug: vinland-saga
   title: Vinland Saga
   titleNative: ヴィンランド・サガ
+  related: [berserk, one-piece, golden-kamuy, kingdom, hunter-x-hunter]
   anilistId: 30642
   popularity: 454233
   mangadexId: 5d1fc77e-706a-4fc5-bea8-486c9be0145d
@@ -84,6 +86,7 @@
   title: Spy x Family
   titleNative: スパイファミリー
   aliases: ["SxF", "Spy Family"]
+  related: [mission-yozakura-family, sakamoto-days, chainsaw-man, kaguya-sama, one-piece]
   anilistId: 108556
   popularity: 437059
   mangadexId: 6b958848-c885-4735-9201-12ee77abcb3c
@@ -127,6 +130,7 @@
   title: Chainsaw Man
   titleNative: チェンソーマン
   aliases: ["CSM"]
+  related: [berserk, dorohedoro, jujutsu-kaisen, attack-on-titan, tokyo-ghoul]
   anilistId: 105778
   popularity: 922150
   mangadexId: a77742b1-befd-49a4-bff5-1ad4e6b0ef7b
@@ -165,6 +169,7 @@
   title: Tokyo Ghoul
   titleNative: 東京喰種
   aliases: ["TG"]
+  related: [berserk, chainsaw-man, dorohedoro, attack-on-titan, parasyte]
   anilistId: 63327
   popularity: 713088
   mangadexId: 6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b
@@ -204,6 +209,7 @@
   title: Dandadan
   titleNative: ダンダダン
   aliases: ["DDD"]
+  related: [noragami, blue-exorcist, jujutsu-kaisen, fruits-basket, bleach]
   anilistId: 132029
   popularity: 270863
   mangadexId: 68112dc1-2b80-4f20-beb8-2f2a8716a430
@@ -232,6 +238,7 @@
 - slug: dr-stone
   title: Dr. Stone
   titleNative: ドクターストーン
+  related: [one-piece, made-in-abyss, golden-kamuy, vinland-saga, dragon-ball]
   anilistId: 98416
   popularity: 449639
   mangadexId: cfc3d743-bd89-48e2-991f-63e680cc4edf
@@ -304,6 +311,7 @@
   title: "Frieren: Beyond Journey's End"
   titleNative: 葬送のフリーレン
   aliases: ["Sousou no Frieren"]
+  related: [berserk, delicious-in-dungeon, seven-deadly-sins, black-clover, tower-of-god]
   anilistId: 118586
   popularity: 342382
   mangadexId: b0b721ff-c388-4486-aa0f-c2b0bb321512
@@ -332,6 +340,7 @@
 - slug: blue-lock
   title: Blue Lock
   titleNative: ブルーロック
+  related: [blue-box, ao-ashi, haikyuu, slam-dunk, tower-of-god]
   anilistId: 106130
   popularity: 280164
   mangadexId: 4141c5dc-c525-4df5-afd7-cc7d192a832f
@@ -364,6 +373,7 @@
   title: Mob Psycho 100
   titleNative: モブサイコ100
   aliases: ["Mob Psycho"]
+  related: [call-of-the-night, one-punch-man, yu-yu-hakusho, chainsaw-man, dandadan]
   anilistId: 85189
   popularity: 532796
   mangadexId: 736a2bf0-f875-4b52-a7b4-e8c40505b68a
@@ -400,6 +410,7 @@
   title: Demon Slayer
   titleNative: 鬼滅の刃
   aliases: ["Kimetsu no Yaiba", "KnY"]
+  related: [berserk, vinland-saga, black-butler, chainsaw-man, hells-paradise]
   anilistId: 87216
   popularity: 792534
   mangadexId: 789642f8-ca89-4e4e-8f7b-eee4d17ea08b
@@ -459,6 +470,7 @@
   title: My Hero Academia
   titleNative: 僕のヒーローアカデミア
   aliases: ["Boku no Hero Academia", "MHA", "BNHA"]
+  related: [wind-breaker, one-piece, hunter-x-hunter, fire-force, one-punch-man]
   anilistId: 85486
   popularity: 756945
   mangadexId: 4f3bcae4-2d96-4c9d-932c-90181d9c873e
@@ -537,6 +549,7 @@
   title: Hunter x Hunter
   titleNative: HUNTER×HUNTER
   aliases: ["HxH", "HunterHunter"]
+  related: [one-piece, tower-of-god, yu-yu-hakusho, berserk, vinland-saga]
   anilistId: 30026
   popularity: 732270
   mangadexId: db692d58-4b13-4174-ae8c-30c515c0689c
@@ -608,6 +621,7 @@
 - slug: naruto
   title: Naruto
   titleNative: NARUTO -ナルト-
+  related: [naruto-shippuden, dragon-ball, tower-of-god, hells-paradise, yu-yu-hakusho]
   anilistId: 30011
   popularity: 713741
   mangadexId: 6b1eb93e-473a-4ab3-9922-1a66d2a29a4a
@@ -671,6 +685,7 @@
   title: Naruto Shippuden
   titleNative: NARUTO -ナルト- 疾風伝
   aliases: ["Naruto Shippuuden"]
+  related: [naruto, dragon-ball, tower-of-god, hells-paradise, yu-yu-hakusho]
   anilistId: 30011
   popularity: 629893
   mangadexId: 6b1eb93e-473a-4ab3-9922-1a66d2a29a4a
@@ -804,6 +819,7 @@
   title: Attack on Titan
   titleNative: 進撃の巨人
   aliases: ["Shingeki no Kyojin", "AoT", "SnK"]
+  related: [berserk, chainsaw-man, hells-paradise, gachiakuta, fullmetal-alchemist]
   anilistId: 53390
   popularity: 1000000
   mangadexId: 304ceac3-8cdb-4fe7-acf7-2b6ff7a60613
@@ -870,6 +886,7 @@
   title: Sakamoto Days
   titleNative: SAKAMOTO DAYS
   aliases: []
+  related: [spy-x-family, one-piece, golden-kamuy, hunter-x-hunter, mission-yozakura-family]
   anilistId: 125828
   popularity: 197669
   mangadexId: 9d9b04ad-9a83-49f4-8ae4-a9a3780fe9c0
@@ -899,6 +916,7 @@
   title: Kaiju No. 8
   titleNative: 怪獣8号
   aliases: ["Kaijuu 8-gou", "Monster #8"]
+  related: [chainsaw-man, attack-on-titan, one-punch-man, undead-unluck, dandadan]
   anilistId: 120760
   popularity: 242687
   mangadexId: 237d527f-adb5-420e-8e6e-b7dd006fbe47
@@ -931,6 +949,7 @@
   title: Blue Box
   titleNative: アオのハコ
   aliases: ["Ao no Hako"]
+  related: [kaguya-sama, slam-dunk, blue-lock, beastars, kurokos-basketball]
   anilistId: 132182
   popularity: 132282
   mangadexId: ed5dddc0-999d-4fd2-a702-9fef1ec2c955
@@ -955,6 +974,7 @@
   title: Oshi no Ko
   titleNative: 【推しの子】
   aliases: ["My Star", "Oshi no Ko"]
+  related: [fruits-basket, monster, my-dress-up-darling, chainsaw-man, call-of-the-night]
   anilistId: 117195
   popularity: 274657
   mangadexId: 296cbc31-af1a-4b5b-a34b-fee2b4cad542
@@ -995,6 +1015,7 @@
   title: One Punch Man
   titleNative: ワンパンマン
   aliases: ["One-Punch Man", "OPM"]
+  related: [undead-unluck, mob-psycho-100, chainsaw-man, gintama, kaiju-no-8]
   anilistId: 74347
   popularity: 804027
   mangadexId: d8a959f7-648e-4c8d-8f23-f1f3f8e129f3
@@ -1032,6 +1053,7 @@
   title: Dorohedoro
   titleNative: ドロヘドロ
   aliases: []
+  related: [berserk, chainsaw-man, tokyo-ghoul, made-in-abyss, akame-ga-kill]
   anilistId: 31133
   popularity: 259432
   mangadexId: 34f45c13-2b78-4900-8af2-d0bb551101f4
@@ -1068,6 +1090,7 @@
   title: "Hell's Paradise"
   titleNative: 地獄楽
   aliases: ["Jigokuraku", "Hell's Paradise: Jigokuraku", "Jigoku Raku"]
+  related: [berserk, attack-on-titan, rurouni-kenshin, the-elusive-samurai, dorohedoro]
   anilistId: 100994
   popularity: 241656
   mangadexId: cb77e4a6-3921-43b9-9d64-7d78cd3205ce
@@ -1104,6 +1127,7 @@
   title: "The 100 Girlfriends Who Really, Really, Really, Really, REALLY Love You"
   titleNative: 君のことが大大大大大好きな100人の彼女
   aliases: ["Kimi no Koto ga Dai Dai Dai Dai Daisuki na 100-nin no Kanojo", "100 Kanojo"]
+  related: [kaguya-sama, bocchi-the-rock, komi-cant-communicate, my-dress-up-darling, grand-blue]
   anilistId: 114416
   popularity: 89316
   mangadexId: efb4278c-a761-406b-9d69-19603c5e4c8b
@@ -1137,6 +1161,7 @@
   title: The Summer Hikaru Died
   titleNative: 光が死んだ夏
   aliases: ["Hikaru ga Shinda Natsu", "Hikanatsu"]
+  related: [the-promised-neverland, death-note, tokyo-ghoul, berserk, dorohedoro]
   anilistId: 138603
   popularity: 92459
   mangadexId: 9e954c6b-7a02-4fd7-986d-6331c0ba95d4
@@ -1164,6 +1189,7 @@
   title: Bleach
   titleNative: ブリーチ
   aliases: ["BLEACH"]
+  related: [dandadan, noragami, akame-ga-kill, chainsaw-man, mob-psycho-100]
   anilistId: 30012
   popularity: 534246
   mangadexId: 239d6260-d71f-43b0-afff-074e3619e3de
@@ -1285,6 +1311,7 @@
   title: Black Clover
   titleNative: ブラッククローバー
   aliases: ["BC"]
+  related: [frieren, berserk, dorohedoro, delicious-in-dungeon, seven-deadly-sins]
   anilistId: 86123
   popularity: 438110
   mangadexId: e7eabe96-aa17-476f-b431-2497d5e9d060
@@ -1394,6 +1421,7 @@
   title: Solo Leveling
   titleNative: 나 혼자만 레벨업
   aliases: ["Na Honjaman Level Up", "Ore dake Level Up na Ken", "Only I Level Up"]
+  related: [tower-of-god, delicious-in-dungeon, dorohedoro, fullmetal-alchemist, that-time-i-got-reincarnated-as-a-slime]
   anilistId: 105398
   popularity: 775524
   mangadexId: 32d76d19-8a05-4db0-9fc2-e0b0648fe9d0
@@ -1429,6 +1457,7 @@
   title: Tokyo Revengers
   titleNative: 東京卍リベンジャーズ
   aliases: ["Toukyou Revengers", "TokyoRev"]
+  related: [wind-breaker, beastars, yu-yu-hakusho, sakamoto-days, chainsaw-man]
   anilistId: 102988
   popularity: 322644
   mangadexId: 59b36734-f2d6-46d7-97c0-06cfd2380852
@@ -1472,6 +1501,7 @@
   title: "Kaguya-sama: Love is War"
   titleNative: かぐや様は告らせたい〜天才たちの恋愛頭脳戦〜
   aliases: ["Kaguya-sama wa Kokurasetai", "Kaguya-sama"]
+  related: [100-girlfriends, komi-cant-communicate, fruits-basket, spy-x-family, blue-box]
   anilistId: 86635
   popularity: 445598
   mangadexId: 37f5cce0-8070-4ada-96e5-fa24b1bd4ff9
@@ -1533,6 +1563,7 @@
   title: The Promised Neverland
   titleNative: 約束のネバーランド
   aliases: ["Yakusoku no Neverland", "TPN", "YakuNeba"]
+  related: [berserk, made-in-abyss, death-note, tokyo-ghoul, to-your-eternity]
   anilistId: 87423
   popularity: 492907
   mangadexId: 46e9cae5-4407-4576-9b9e-4c517ae9298e
@@ -1568,6 +1599,7 @@
   title: Berserk
   titleNative: ベルセルク
   aliases: ["Beruseruku", "Kenpuu Denki Berserk"]
+  related: [vinland-saga, attack-on-titan, dorohedoro, fullmetal-alchemist, chainsaw-man]
   anilistId: 30002
   popularity: 1000000
   mangadexId: 801513ba-a712-498c-8f57-cae55b38cc92
@@ -1628,6 +1660,7 @@
   title: "Haikyu!!"
   titleNative: ハイキュー!!
   aliases: ["Haikyuu!!", "Haikyū!!"]
+  related: [slam-dunk, blue-box, ao-ashi, kurokos-basketball, beastars]
   anilistId: 65243
   popularity: 497646
   mangadexId: 8f8b7cb0-7109-46e8-b12c-0448a6453dfa
@@ -1689,6 +1722,7 @@
   title: Delicious in Dungeon
   titleNative: ダンジョン飯
   aliases: ["Dungeon Meshi"]
+  related: [frieren, berserk, that-time-i-got-reincarnated-as-a-slime, solo-leveling, vinland-saga]
   anilistId: 86082
   popularity: 145802
   mangadexId: d90ea6cb-7bc3-4d80-8af0-28557e6c4e17
@@ -1712,6 +1746,7 @@
   title: Undead Unluck
   titleNative: アンデッドアンラック
   aliases: ["Andeddo Anrakku"]
+  related: [one-punch-man, kaiju-no-8, dandadan, fire-force, dragon-ball]
   anilistId: 114791
   popularity: 81013
   mangadexId: cc1b8669-82b2-4232-99c1-40d48fc2d988
@@ -1744,6 +1779,7 @@
   title: Ao Ashi
   titleNative: アオアシ
   aliases: ["Aoashi"]
+  related: [haikyuu, blue-lock, blue-box, slam-dunk, kurokos-basketball]
   anilistId: 107279
   popularity: 60077
   mangadexId: b73371d4-02dd-4db0-b448-d9afa3d698f1
@@ -1768,6 +1804,7 @@
   title: Fullmetal Alchemist
   titleNative: 鋼の錬金術師
   aliases: ["Hagane no Renkinjutsushi", "FMA", "Fullmetal Alchemist: Brotherhood"]
+  related: [berserk, one-piece, attack-on-titan, golden-kamuy, hunter-x-hunter]
   anilistId: 30025
   popularity: 843851
   mangadexId: dd8a907a-3850-4f95-ba03-ba201a8399e3
@@ -1790,6 +1827,7 @@
   title: Death Note
   titleNative: デスノート
   aliases: ["Desu Nooto"]
+  related: [monster, the-promised-neverland, tokyo-ghoul, the-summer-hikaru-died, black-butler]
   anilistId: 30021
   popularity: 986015
   mangadexId: 75ee72ab-c6bf-4b87-badd-de839156934c
@@ -1812,6 +1850,7 @@
   title: Fire Force
   titleNative: 炎炎ノ消防隊
   aliases: ["Enen no Shouboutai", "En'en no Shouboutai"]
+  related: [my-hero-academia, blue-exorcist, one-punch-man, dandadan, chainsaw-man]
   anilistId: 86310
   popularity: 354936
   mangadexId: ec514ef4-fb77-43b9-b9b4-528229de1308
@@ -1847,6 +1886,7 @@
   title: One Piece
   titleNative: ONE PIECE
   aliases: ["Wan Piisu"]
+  related: [vinland-saga, golden-kamuy, berserk, hunter-x-hunter, fullmetal-alchemist]
   anilistId: 30013
   popularity: 873712
   mangadexId: a1c7c817-4e59-43b7-9365-09675a149a6f
@@ -1961,6 +2001,7 @@
   title: Gachiakuta
   titleNative: ガチアクタ
   aliases: ["Gachi Akuta"]
+  related: [attack-on-titan, berserk, chainsaw-man, hunter-x-hunter, dorohedoro]
   anilistId: 144946
   popularity: 135033
   mangadexId: 192aa767-2479-42c1-9780-8d65a2efd36a
@@ -1982,6 +2023,7 @@
   title: Call of the Night
   titleNative: よふかしのうた
   aliases: ["Yofukashi no Uta"]
+  related: [beastars, chainsaw-man, mob-psycho-100, fruits-basket, kaguya-sama]
   anilistId: 111233
   popularity: 181039
   mangadexId: 259dfd8a-f06a-4825-8fa6-a2dcd7274230
@@ -2013,6 +2055,7 @@
   title: My Dress-Up Darling
   titleNative: その着せ替え人形は恋をする
   aliases: ["Sono Bisque Doll wa Koi wo Suru", "Kisekoi"]
+  related: [100-girlfriends, kaguya-sama, grand-blue, dandadan, oshi-no-ko]
   anilistId: 101583
   popularity: 309608
   mangadexId: aa6c76f7-5f5f-46b6-a800-911145f81b9b
@@ -2044,6 +2087,7 @@
   title: Dragon Ball
   titleNative: ドラゴンボール
   aliases: ["DB", "Dragon Ball Z", "DBZ"]
+  related: [hunter-x-hunter, tower-of-god, naruto, naruto-shippuden, one-piece]
   anilistId: 30042
   popularity: 303009
   mangadexId: 40bc649f-7b49-4645-859e-6cd94136e722
@@ -2078,6 +2122,7 @@
   title: Assassination Classroom
   titleNative: 暗殺教室
   aliases: ["Ansatsu Kyoushitsu", "AssClass"]
+  related: [one-punch-man, dandadan, mob-psycho-100, spy-x-family, the-elusive-samurai]
   anilistId: 69883
   popularity: 507502
   mangadexId: 333f4d22-7753-4e3b-b0da-0a69b2cdce4f
@@ -2111,6 +2156,7 @@
   title: Yu Yu Hakusho
   titleNative: 幽☆遊☆白書
   aliases: ["YuYu Hakusho", "YYH", "Ghost Files"]
+  related: [hunter-x-hunter, dandadan, jujutsu-kaisen, mob-psycho-100, noragami]
   anilistId: 30053
   popularity: 172321
   mangadexId: 44a5cbe1-0204-4cc7-a1ff-0fda2ac004b6
@@ -2137,6 +2183,7 @@
   title: Dragon Ball Super
   titleNative: ドラゴンボール超
   aliases: ["DBS", "Dragon Ball Chou"]
+  related: [dragon-ball, gintama, dandadan, parasyte, kaiju-no-8]
   anilistId: 86508
   popularity: 209702
   mangadexId: 37b87be0-b1f4-4507-affa-06c99ebb27f8
@@ -2164,6 +2211,7 @@
   title: Golden Kamuy
   titleNative: ゴールデンカムイ
   aliases: ["Golden Kamui"]
+  related: [one-piece, berserk, vinland-saga, chainsaw-man, sakamoto-days]
   anilistId: 86559
   popularity: 138726
   mangadexId: 8847f905-550d-4fe6-bcda-ac2b896789c7
@@ -2220,6 +2268,7 @@
   title: Wind Breaker
   titleNative: ウィンドブレイカー
   aliases: ["Windbreaker"]
+  related: [my-hero-academia, tokyo-revengers, beastars, hunter-x-hunter, yu-yu-hakusho]
   anilistId: 135083
   popularity: 109470
   mangadexId: 9eb78304-0436-484d-9a79-a925b45e2731
@@ -2252,6 +2301,7 @@
   title: Monster
   titleNative: MONSTER
   aliases: ["Naoki Urasawa's Monster"]
+  related: [death-note, apothecary-diaries, black-butler, tokyo-ghoul, the-promised-neverland]
   anilistId: 30001
   popularity: 364623
   mangadexId: d9e30523-9d65-469e-92a2-302995770950
@@ -2278,6 +2328,7 @@
   title: Beastars
   titleNative: BEASTARS
   aliases: ["Beast Complex"]
+  related: [call-of-the-night, fruits-basket, kaguya-sama, chainsaw-man, one-piece]
   anilistId: 98587
   popularity: 219086
   mangadexId: f5e3baad-3cd4-427c-a2ec-ad7d776b370d
@@ -2318,6 +2369,7 @@
   title: The Seven Deadly Sins
   titleNative: 七つの大罪
   aliases: ["Nanatsu no Taizai", "7DS"]
+  related: [berserk, frieren, that-time-i-got-reincarnated-as-a-slime, one-piece, dorohedoro]
   anilistId: 74485
   popularity: 504541
   mangadexId: e52d9403-3356-403b-b7bb-d7d6a420dd50
@@ -2367,6 +2419,7 @@
   title: Fairy Tail
   titleNative: FAIRY TAIL
   aliases: ["FT"]
+  related: [one-piece, seven-deadly-sins, dorohedoro, that-time-i-got-reincarnated-as-a-slime, delicious-in-dungeon]
   anilistId: 30598
   popularity: 420360
   mangadexId: 227e3f72-863f-46f9-bafe-c43104ca29ee
@@ -2407,6 +2460,7 @@
   title: Gintama
   titleNative: 銀魂
   aliases: ["Gin Tama", "Silver Soul"]
+  related: [the-elusive-samurai, hells-paradise, one-punch-man, rurouni-kenshin, dragon-ball]
   anilistId: 30044
   popularity: 263984
   mangadexId: f65444dc-3694-4e31-a166-8afb2938ed55
@@ -2509,6 +2563,7 @@
 - slug: kingdom
   title: Kingdom
   titleNative: キングダム
+  related: [vinland-saga, berserk, golden-kamuy, one-piece, the-elusive-samurai]
   anilistId: 46765
   popularity: 253874
   mangadexId: 077a3fed-1634-424f-be7a-9a96b7f07b78
@@ -2569,6 +2624,7 @@
   title: Mashle
   titleNative: マッシュル-MASHLE-
   aliases: ["Mashle: Magic and Muscles"]
+  related: [100-girlfriends, spy-x-family, golden-kamuy, one-punch-man, kaguya-sama]
   anilistId: 114960
   popularity: 186237
   mangadexId: 558c2122-7342-4649-85e9-a866727bb2e8
@@ -2608,6 +2664,7 @@
   title: "Zom 100: Bucket List of the Dead"
   titleNative: ゾン100～ゾンビになるまでにしたい100のこと～
   aliases: ["Zom 100", "Zombie ni Naru Made ni Shitai 100 no Koto"]
+  related: [chainsaw-man, berserk, dorohedoro, golden-kamuy, tokyo-ghoul]
   anilistId: 104660
   popularity: 158446
   mangadexId: efd02206-1cd8-4823-b497-02bb8b8d09ca
@@ -2633,6 +2690,7 @@
   title: "Food Wars: Shokugeki no Soma"
   titleNative: 食戟のソーマ
   aliases: ["Shokugeki no Soma", "Food Wars!: Shokugeki no Soma"]
+  related: [100-girlfriends, ranma-1-2, fairy-tail, golden-kamuy, my-dress-up-darling]
   anilistId: 75757
   popularity: 398195
   mangadexId: 5f20891f-0136-4fa8-afb7-d72f2af23c65
@@ -2698,6 +2756,7 @@
   title: The Apothecary Diaries
   titleNative: 薬屋のひとりごと
   aliases: ["Kusuriya no Hitorigoto"]
+  related: [monster, black-butler, kingdom, oshi-no-ko, death-note]
   anilistId: 99022
   popularity: 202718
   mangadexId: e18fe8c6-f6dc-4f05-8462-7b2083ff9a6c
@@ -2726,6 +2785,7 @@
   title: Rent-a-Girlfriend
   titleNative: 彼女、お借りします
   aliases: ["Kanojo, Okarishimasu", "Kanojo Okarishimasu", "Rent-A-Girlfriend"]
+  related: [100-girlfriends, ranma-1-2, spy-x-family, grand-blue, chainsaw-man]
   anilistId: 99943
   popularity: 249392
   mangadexId: 32fdfe9b-6e11-4a13-9e36-dcd8ea77b4e4
@@ -2761,6 +2821,7 @@
   title: Hajime no Ippo
   titleNative: はじめの一歩
   aliases: ["Fighting Spirit", "The First Step"]
+  related: [yu-yu-hakusho, haikyuu, slam-dunk, blue-lock, golden-kamuy]
   anilistId: 30007
   popularity: 160191
   mangadexId: f7888782-0727-49b0-95ec-a3530c70f83b
@@ -2805,6 +2866,7 @@
   title: Slam Dunk
   titleNative: スラムダンク
   aliases: ["SLAM DUNK"]
+  related: [kurokos-basketball, blue-box, haikyuu, fruits-basket, wind-breaker]
   anilistId: 30051
   popularity: 251686
   mangadexId: 319df2e2-e6a6-4e3a-a31c-68539c140a84
@@ -2836,6 +2898,7 @@
   title: Made in Abyss
   titleNative: メイドインアビス
   aliases: ["MiA"]
+  related: [berserk, the-promised-neverland, dorohedoro, golden-kamuy, dr-stone]
   anilistId: 86551
   popularity: 356007
   mangadexId: 80422e14-b9ad-4fda-970f-de370d5fa4e5
@@ -2869,6 +2932,7 @@
 - slug: blue-period
   title: Blue Period
   titleNative: ブルーピリオド
+  related: [beastars, kaguya-sama, blue-box, berserk, mob-psycho-100]
   anilistId: 107237
   popularity: 180128
   mangadexId: f8e294c0-7c11-4c66-bdd7-4e25df52bf69
@@ -2890,6 +2954,7 @@
   title: Parasyte
   titleNative: 寄生獣
   aliases: ["Kiseijuu", "Parasyte: The Maxim"]
+  related: [tokyo-ghoul, berserk, chainsaw-man, made-in-abyss, the-promised-neverland]
   anilistId: 30401
   popularity: 466496
   mangadexId: 07823fcd-f2c9-458c-9824-3eae62b2a006
@@ -2916,6 +2981,7 @@
   title: Blue Exorcist
   titleNative: 青の祓魔師
   aliases: ["Ao no Exorcist", "Ao no Ekusoshisuto"]
+  related: [jujutsu-kaisen, dandadan, noragami, fire-force, berserk]
   anilistId: 43492
   popularity: 467714
   mangadexId: 3ee952f1-45c7-4c39-aea2-7df7676606d4
@@ -2970,6 +3036,7 @@
   title: Komi Can't Communicate
   titleNative: 古見さんは、コミュ症です。
   aliases: ["Komi-san wa Komyushou Desu", "Komi-san"]
+  related: [kaguya-sama, 100-girlfriends, spy-x-family, the-dangers-in-my-heart, grand-blue]
   anilistId: 97852
   popularity: 343967
   mangadexId: a96676e5-8ae2-425e-b549-7f15dd34a6d8
@@ -3004,6 +3071,7 @@
   title: Kuroko's Basketball
   titleNative: 黒子のバスケ
   aliases: ["Kuroko no Basket", "Kuroko no Basuke", "KnB"]
+  related: [slam-dunk, blue-box, haikyuu, ao-ashi, ranma-1-2]
   anilistId: 41652
   popularity: 300348
   mangadexId: f8e41a48-5ca9-41e3-94a7-a1379a4fda62
@@ -3044,6 +3112,7 @@
   title: Fruits Basket
   titleNative: フルーツバスケット
   aliases: ["Furuba"]
+  related: [kaguya-sama, dandadan, beastars, call-of-the-night, chainsaw-man]
   anilistId: 30102
   popularity: 217632
   mangadexId: e9b1d4ba-b8fb-48c3-8d52-5a4eefd05980
@@ -3085,6 +3154,7 @@
   title: "Mission: Yozakura Family"
   titleNative: 夜桜さんちの大作戦
   aliases: ["Yozakura-san Chi no Daisakusen"]
+  related: [spy-x-family, sakamoto-days, dandadan, fruits-basket, rurouni-kenshin]
   anilistId: 111149
   popularity: 53252
   mangadexId: ce7cd7b0-e595-4f0d-98e8-447da10d652d
@@ -3116,6 +3186,7 @@
   title: Medalist
   titleNative: メダリスト
   aliases: ["Medarisuto"]
+  related: [kaguya-sama, blue-box, oshi-no-ko, berserk, the-promised-neverland]
   anilistId: 118371
   popularity: 30383
   mangadexId: 4a433d6b-f51a-4c2f-a183-85419fe98efc
@@ -3144,6 +3215,7 @@
   title: The Fragrant Flower Blooms with Dignity
   titleNative: 薫る花は凛と咲く
   aliases: ["Kaoru Hana wa Rin to Saku"]
+  related: [fruits-basket, call-of-the-night, kaguya-sama, dandadan, beastars]
   anilistId: 140475
   popularity: 182780
   mangadexId: 418791c0-35cf-4f87-936b-acd9cddf0989
@@ -3165,6 +3237,7 @@
   title: The Elusive Samurai
   titleNative: 逃げ上手の若君
   aliases: ["Nige Jouzu no Wakagimi"]
+  related: [one-piece, hells-paradise, gintama, rurouni-kenshin, vinland-saga]
   anilistId: 128666
   popularity: 49073
   mangadexId: b6a5d154-7845-4129-b473-ba0aec3deffd
@@ -3189,6 +3262,7 @@
   title: Grand Blue Dreaming
   titleNative: ぐらんぶる
   aliases: ["Grand Blue", "Guraburu"]
+  related: [100-girlfriends, my-dress-up-darling, komi-cant-communicate, kaguya-sama, blue-box]
   anilistId: 87395
   popularity: 253317
   mangadexId: fffbfac3-b7ad-41ee-9581-b4d90ecec941
@@ -3222,6 +3296,7 @@
   title: Noragami
   titleNative: ノラガミ
   aliases: ["Noragami: Stray God", "Stray God"]
+  related: [dandadan, blue-exorcist, bleach, hells-paradise, yu-yu-hakusho]
   anilistId: 54692
   popularity: 528227
   mangadexId: e5ce88e2-8c46-482d-8acf-5c6d5a64a585
@@ -3257,6 +3332,7 @@
   title: Rurouni Kenshin
   titleNative: るろうに剣心
   aliases: ["Rurouni Kenshin: Meiji Kenkaku Romantan", "Samurai X"]
+  related: [hells-paradise, the-elusive-samurai, gintama, naruto, naruto-shippuden]
   anilistId: 30022
   popularity: 129624
   mangadexId: 754a46fa-62fa-457a-bc3b-4f31bf1373d4
@@ -3292,6 +3368,7 @@
   title: To Your Eternity
   titleNative: 不滅のあなたへ
   aliases: ["Fumetsu no Anata e"]
+  related: [berserk, the-promised-neverland, fruits-basket, dragon-ball, attack-on-titan]
   anilistId: 97830
   popularity: 229362
   mangadexId: 34e45b02-b5c8-4a4b-a21a-7b5059391dc8
@@ -3329,6 +3406,7 @@
   title: Seraph of the End
   titleNative: 終わりのセラフ
   aliases: ["Owari no Seraph", "Vampire Reign"]
+  related: [attack-on-titan, chainsaw-man, berserk, black-butler, one-piece]
   anilistId: 73661
   popularity: 332311
   mangadexId: 17ce37ea-1cda-4429-b062-c4b627814225
@@ -3362,6 +3440,7 @@
   title: Akame ga Kill!
   titleNative: アカメが斬る！
   aliases: ["Akame ga Kiru!", "Red Eyes Sword"]
+  related: [berserk, dorohedoro, one-piece, hunter-x-hunter, hells-paradise]
   anilistId: 55132
   popularity: 519057
   mangadexId: 8946189d-682f-4838-9c2a-3c2dd5132f2c
@@ -3390,6 +3469,7 @@
   title: Black Butler
   titleNative: 黒執事
   aliases: ["Kuroshitsuji"]
+  related: [berserk, apothecary-diaries, monster, death-note, vinland-saga]
   anilistId: 33866
   popularity: 290514
   mangadexId: 8bd19e5c-94f7-4368-a918-50f463857446
@@ -3448,6 +3528,7 @@
   title: That Time I Got Reincarnated as a Slime
   titleNative: 転生したらスライムだった件
   aliases: ["Tensei Shitara Slime Datta Ken", "TenSura"]
+  related: [delicious-in-dungeon, seven-deadly-sins, solo-leveling, dorohedoro, fairy-tail]
   anilistId: 86355
   popularity: 379670
   mangadexId: e78a489b-6632-4d61-b00b-5206f5b8b22b
@@ -3495,6 +3576,7 @@
   title: The Dangers in My Heart
   titleNative: 僕の心のヤバイやつ
   aliases: ["Boku no Kokoro no Yabai Yatsu", "BokuYaba"]
+  related: [komi-cant-communicate, kaguya-sama, blue-box, call-of-the-night, kaoru-hana-wa-rin-to-saku]
   anilistId: 101557
   popularity: 104186
   mangadexId: 3df1a9a3-a1be-47a3-9e90-9b3e55b1d0ac
@@ -3530,6 +3612,7 @@
   title: Ranma ½
   titleNative: らんま½
   aliases: ["Ranma 1/2", "Ranma"]
+  related: [100-girlfriends, dandadan, rent-a-girlfriend, yu-yu-hakusho, chainsaw-man]
   anilistId: 30023
   popularity: 73127
   mangadexId: d41bebac-1fd3-45dd-80f4-c371db540a2a
@@ -3565,6 +3648,7 @@
   title: Tower of God
   titleNative: 신의 탑
   aliases: ["Kami no Tou", "Sinui Tap", "ToG"]
+  related: [solo-leveling, hunter-x-hunter, one-piece, dragon-ball, berserk]
   anilistId: 85143
   popularity: 266335
   mangadexId: c0ee660b-f9f2-45c3-8068-5123ff53f84a
@@ -3596,6 +3680,7 @@
   title: Bocchi the Rock!
   titleNative: ぼっち・ざ・ろっく！
   aliases: ["Bocchi za Rokku", "BTR"]
+  related: [100-girlfriends, call-of-the-night, kaguya-sama, spy-x-family, grand-blue]
   anilistId: 111258
   popularity: 186108
   mangadexId: 2e0fdb3b-632c-4f8f-a311-5b56952db647

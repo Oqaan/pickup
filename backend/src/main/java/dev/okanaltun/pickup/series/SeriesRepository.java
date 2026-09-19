@@ -13,4 +13,7 @@ public interface SeriesRepository extends JpaRepository<Series, Integer> {
 
     @EntityGraph(attributePaths = "aliases")
     List<Series> findAllByOrderByPopularityDesc();
+
+    // Resolves the related slugs of a detail page to their titles and covers
+    List<Series> findBySlugIn(List<String> slugs);
 }
