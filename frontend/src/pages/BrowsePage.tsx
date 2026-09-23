@@ -10,8 +10,8 @@ import {
 import { cover } from "../cover";
 import { useSeo } from "../useSeo";
 
-// Three per row from 640px up, two below
-const COVER_SIZES = "(min-width: 640px) 220px, 45vw";
+// Five per row from 1024px up, three from 640px, two below
+const COVER_SIZES = "(min-width: 1024px) 210px, (min-width: 640px) 33vw, 45vw";
 
 export default function BrowsePage() {
   useSeo({
@@ -33,7 +33,7 @@ export default function BrowsePage() {
   }, []);
 
   return (
-    <main className="max-w-4xl mx-auto px-6 pt-12 pb-0">
+    <main className="max-w-6xl mx-auto px-6 pt-12 pb-0">
       <h1 className="font-display text-title text-sumi">All series</h1>
       <p className="font-body text-base text-sumi/70 mt-4 max-w-md leading-relaxed">
         Every series on pickup. Pick the one you were watching and get the
@@ -44,7 +44,7 @@ export default function BrowsePage() {
         {series.length} SERIES
       </p>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-10 mt-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-10 mt-4">
         {series.map((s) => (
           <Link
             key={s.slug}

@@ -17,8 +17,8 @@ type Remembered = { shown: number; scroll: number };
 
 type FuseModule = typeof import("fuse.js").default;
 
-// How wide a cover lands on screen: three per row from 640px up, two below
-const COVER_SIZES = "(min-width: 640px) 280px, 50vw";
+// How wide a cover lands on screen: five per row from 1024px up, three from 640px, two below
+const COVER_SIZES = "(min-width: 1024px) 210px, (min-width: 640px) 33vw, 50vw";
 
 // How many cards the list starts with, and how many each click adds
 const PER_PAGE = 10;
@@ -152,7 +152,7 @@ export default function HomePage() {
 
   if (error) {
     return (
-      <main className="max-w-4xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
+      <main className="max-w-6xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
         <p className="font-mono text-xs tracking-widest text-ash">
           SOMETHING WENT WRONG
         </p>
@@ -168,7 +168,7 @@ export default function HomePage() {
   }
 
   return (
-    <main className="max-w-4xl mx-auto px-6 pt-12 pb-0">
+    <main className="max-w-6xl mx-auto px-6 pt-12 pb-0">
       <h1 className="font-display text-title text-sumi max-w-lg">
         Stop watching.
         <br />
@@ -201,12 +201,12 @@ export default function HomePage() {
       </p>
 
       <div
-        className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-10 mt-4"
+        className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-10 mt-4"
         aria-busy={loading}
       >
         {loading ? (
           Array.from({ length: PER_PAGE }).map((_, i) => (
-            <div key={i} className={i === 9 ? "sm:hidden" : ""}>
+            <div key={i} className={i === 9 ? "sm:max-lg:hidden" : ""}>
               <div className="aspect-2/3 bg-tone/20" />
               <div className="h-3 w-3/4 bg-tone/20 mt-3" />
             </div>
@@ -233,7 +233,7 @@ export default function HomePage() {
                         ? { duration: 0 }
                         : { duration: 0.25, ease: [0.2, 0, 0, 1] as const },
                     })}
-                    className={clamped && i === 9 ? "sm:hidden" : ""}
+                    className={clamped && i === 9 ? "sm:max-lg:hidden" : ""}
                   >
                     <Link
                       to={`/anime/${s.slug}`}
@@ -255,9 +255,9 @@ export default function HomePage() {
                             // so it loads straight away. On the way back it sits
                             // above their scroll position and would only take
                             // bandwidth from the covers they are looking at
-                            loading={i < 4 && !returning ? "eager" : "lazy"}
+                            loading={i < 5 && !returning ? "eager" : "lazy"}
                             fetchPriority={
-                              i < 4 && !returning ? "high" : undefined
+                              i < 5 && !returning ? "high" : undefined
                             }
                             className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
                           />

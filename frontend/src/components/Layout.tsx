@@ -8,7 +8,7 @@ export default function Layout({ children }: Props) {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="border-b border-tone">
-        <div className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link
             to="/"
             className="font-display text-section text-sumi hover:text-jump"
@@ -38,7 +38,7 @@ export default function Layout({ children }: Props) {
       <div className="flex-1">{children}</div>
 
       <footer className="border-t border-tone mt-32">
-        <div className="max-w-4xl mx-auto px-6 py-12">
+        <div className="max-w-6xl mx-auto px-6 py-12">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
             <div>
               <p className="font-body text-sm text-sumi leading-relaxed">

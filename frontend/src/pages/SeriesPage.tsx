@@ -10,7 +10,7 @@ import {
 } from "../api";
 import { useSeo } from "../useSeo";
 import { seriesDescription, seriesTitle } from "../seo";
-import { cover } from "../cover";
+import { ANSWER_COVER_SIZES, cover } from "../cover";
 import CountUp from "../components/CountUp";
 import AdaptationProgress from "../components/AdaptationProgress";
 
@@ -86,7 +86,7 @@ export default function SeriesPage() {
     for (const a of series.adaptations) {
       if (!a.coverUrl) continue;
       const img = new Image();
-      const warmed = cover(a.coverUrl, [200, 400], "176px");
+      const warmed = cover(a.coverUrl, [200, 400], ANSWER_COVER_SIZES);
       img.sizes = warmed.sizes;
       img.srcset = warmed.srcSet;
       img.src = warmed.src;
@@ -150,27 +150,30 @@ export default function SeriesPage() {
   if (!series) {
     return (
       <main
-        className="max-w-2xl mx-auto px-6 pt-12 sm:pt-20 pb-0"
+        className="max-w-2xl lg:max-w-6xl mx-auto px-6 pt-12 sm:pt-20 pb-0 lg:grid lg:grid-cols-[18rem_minmax(0,1fr)] lg:gap-x-16"
         aria-busy="true"
       >
-        <div className="h-3 w-32 bg-tone/20 mb-8" />
-        <div className="h-12 w-64 bg-tone/30" />
-        <div className="h-3 w-24 bg-tone/20 mt-4" />
-        <div className="h-3 w-48 bg-tone/20 mt-12 sm:mt-16" />
-        <div className="flex gap-2 mt-4">
-          <div className="h-9 w-24 bg-tone/20" />
-          <div className="h-9 w-24 bg-tone/20" />
-        </div>
-        <div className="mt-12 sm:mt-16 pt-8 border-t border-tone flex flex-col sm:flex-row gap-6 sm:gap-8 sm:items-start">
-          <div className="flex-1 min-w-0">
-            <div className="h-3 w-32 bg-tone/20" />
-            <div className="h-14 sm:h-17 w-48 bg-tone/30 mt-3" />
-            <div className="h-3 w-56 bg-tone/20 mt-4" />
-            <div className="h-3 w-40 bg-tone/20 mt-1" />
+        <div className="hidden lg:block aspect-2/3 bg-tone/30" />
+        <div>
+          <div className="h-3 w-32 bg-tone/20 mb-8" />
+          <div className="h-12 w-64 bg-tone/30" />
+          <div className="h-3 w-24 bg-tone/20 mt-4" />
+          <div className="h-3 w-48 bg-tone/20 mt-12 sm:mt-16" />
+          <div className="flex gap-2 mt-4">
+            <div className="h-9 w-24 bg-tone/20" />
+            <div className="h-9 w-24 bg-tone/20" />
           </div>
-          <div className="w-44 sm:w-40 shrink-0">
-            <div className="aspect-2/3 bg-tone/30" />
-            <div className="h-3 w-14 bg-tone/20 mt-2 mx-auto" />
+          <div className="mt-12 sm:mt-16 pt-8 border-t border-tone flex flex-col sm:flex-row gap-6 sm:gap-8 sm:items-start">
+            <div className="flex-1 min-w-0">
+              <div className="h-3 w-32 bg-tone/20" />
+              <div className="h-14 sm:h-17 w-48 bg-tone/30 mt-3" />
+              <div className="h-3 w-56 bg-tone/20 mt-4" />
+              <div className="h-3 w-40 bg-tone/20 mt-1" />
+            </div>
+            <div className="w-44 sm:w-40 shrink-0 lg:hidden">
+              <div className="aspect-2/3 bg-tone/30" />
+              <div className="h-3 w-14 bg-tone/20 mt-2 mx-auto" />
+            </div>
           </div>
         </div>
       </main>
@@ -194,6 +197,30 @@ export default function SeriesPage() {
     </p>
   ) : null;
 
+  const answerCoverBlock = (className: string) => (
+    <AnimatePresence mode="popLayout" initial={false}>
+      {answerCover && (
+        <motion.div key={answerCover} {...swap} className={className}>
+          <img
+            {...cover(answerCover, [200, 400], ANSWER_COVER_SIZES)}
+            alt={
+              current.continueVolume
+                ? `Volume ${current.continueVolume} cover`
+                : `${series.title} cover`
+            }
+            fetchPriority="high"
+            className="w-full aspect-2/3 object-cover bg-tone/30"
+          />
+          {current.continueVolume && (
+            <p className="font-mono text-xs text-ash mt-2 text-center">
+              Vol. {current.continueVolume}
+            </p>
+          )}
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+
   const status =
     series.publicationStatus === "RELEASING"
       ? "Ongoing"
@@ -202,192 +229,173 @@ export default function SeriesPage() {
         : series.publicationStatus;
 
   return (
-    <main className="max-w-2xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
-      <div className="mb-8">{backToSearch}</div>
-      <h1 className="font-display text-title text-sumi">{series.title}</h1>
-      {series.titleNative && (
-        <p className="font-jp text-sm text-ash mt-2">{series.titleNative}</p>
-      )}
-      {series.aliases && series.aliases.length > 0 && (
-        <p className="font-mono text-xs text-ash mt-2">
-          aka {series.aliases.join(", ")}
+    <main className="max-w-2xl lg:max-w-6xl mx-auto px-6 pt-12 sm:pt-20 pb-0 lg:grid lg:grid-cols-[18rem_minmax(0,1fr)] lg:gap-x-16">
+      <div className="lg:col-start-2">
+        <div className="mb-8">{backToSearch}</div>
+        <h1 className="font-display text-title text-sumi">{series.title}</h1>
+        {series.titleNative && (
+          <p className="font-jp text-sm text-ash mt-2">{series.titleNative}</p>
+        )}
+        {series.aliases && series.aliases.length > 0 && (
+          <p className="font-mono text-xs text-ash mt-2">
+            aka {series.aliases.join(", ")}
+          </p>
+        )}
+        {series.notes && (
+          <p className="font-body text-sm text-sumi/70 mt-4 max-w-prose leading-relaxed">
+            {series.notes}
+          </p>
+        )}
+
+        <p className="font-mono text-xs tracking-widest text-ash mt-12 sm:mt-16">
+          HOW FAR HAVE YOU WATCHED?
         </p>
-      )}
-      {series.notes && (
-        <p className="font-body text-sm text-sumi/70 mt-4 max-w-prose leading-relaxed">
-          {series.notes}
-        </p>
-      )}
 
-      <p className="font-mono text-xs tracking-widest text-ash mt-12 sm:mt-16">
-        HOW FAR HAVE YOU WATCHED?
-      </p>
-
-      <div className="flex flex-wrap gap-2 mt-4">
-        {series.adaptations.map((a, i) => (
-          <button
-            key={a.name}
-            onClick={() => setSelected(i)}
-            aria-pressed={i === selected}
-            className={`font-body text-sm px-4 py-2 border cursor-pointer transition ${
-              i < selected
-                ? "border-sumi bg-sumi/10 text-sumi"
-                : i === selected
-                  ? "border-sumi bg-sumi text-paper"
-                  : "border-tone text-ash hover:border-sumi hover:text-sumi"
-            }`}
-          >
-            {a.name}
-          </button>
-        ))}
-      </div>
-
-      <div className="mt-12 sm:mt-16 pt-8 border-t border-tone flex flex-col sm:flex-row gap-6 sm:gap-8 sm:items-start relative">
-        <div className="flex-1 min-w-0">
-          {current.caughtUp ? (
-            <>
-              <p className="font-mono text-xs tracking-widest text-ash">
-                NOTHING LEFT
-              </p>
-              <p className="font-display text-answer-prose text-sumi text-balance mt-3">
-                You're all caught up.
-              </p>
-              <p className="font-body text-sm text-sumi/70 mt-4 max-w-prose leading-relaxed">
-                The anime covers the manga through to the end.
-              </p>
-              {notes}
-            </>
-          ) : current.continueChapter ? (
-            <>
-              <p className="font-mono text-xs tracking-widest text-ash">
-                START READING AT
-              </p>
-              <p className="font-display text-answer text-jump mt-3">
-                <CountUp value={current.continueChapter} />
-                <span className="font-body text-base text-sumi ml-3">
-                  chapter
-                </span>
-              </p>
-              <p className="font-mono text-xs text-sumi mt-4">
-                {current.continueVolume &&
-                  `Volume ${current.continueVolume} · `}
-                {current.name}
-                {current.episodeStart && current.episodeEnd
-                  ? ` · Episodes ${current.episodeStart}-${current.episodeEnd}`
-                  : current.episodes && ` · ${current.episodes} episodes`}
-              </p>
-              {series.totalChapters && (
-                <AdaptationProgress
-                  coveredChapter={
-                    current.lastCoveredChapter ?? current.continueChapter - 1
-                  }
-                  continueChapter={current.continueChapter}
-                  totalChapters={series.totalChapters}
-                  ongoing={series.publicationStatus === "RELEASING"}
-                />
-              )}
-              {current.animeOriginal && (
-                <p className="font-mono text-xs tracking-widest text-sumi border border-sumi px-3 py-2 mt-6 inline-block">
-                  ANIME ORIGINAL STORY
-                </p>
-              )}
-              {notes}
-            </>
-          ) : (
-            <>
-              <p className="font-mono text-xs tracking-widest text-ash">
-                NO STARTING POINT
-              </p>
-              <p className="font-display text-answer-prose text-sumi text-balance mt-3">
-                Not a continuation point.
-              </p>
-              {notes}
-            </>
-          )}
+        <div className="flex flex-wrap gap-2 mt-4">
+          {series.adaptations.map((a, i) => (
+            <button
+              key={a.name}
+              onClick={() => setSelected(i)}
+              aria-pressed={i === selected}
+              className={`font-body text-sm px-4 py-2 border cursor-pointer transition ${
+                i < selected
+                  ? "border-sumi bg-sumi/10 text-sumi"
+                  : i === selected
+                    ? "border-sumi bg-sumi text-paper"
+                    : "border-tone text-ash hover:border-sumi hover:text-sumi"
+              }`}
+            >
+              {a.name}
+            </button>
+          ))}
         </div>
 
-        <AnimatePresence mode="popLayout" initial={false}>
-          {answerCover && (
-            <motion.div
-              key={answerCover}
-              {...swap}
-              className="w-44 sm:w-40 shrink-0"
-            >
-              <img
-                {...cover(answerCover, [200, 400], "176px")}
-                alt={
-                  current.continueVolume
-                    ? `Volume ${current.continueVolume} cover`
-                    : `${series.title} cover`
-                }
-                fetchPriority="high"
-                className="w-full aspect-2/3 object-cover"
-              />
-              {current.continueVolume && (
-                <p className="font-mono text-xs text-ash mt-2 text-center">
-                  Vol. {current.continueVolume}
+        <div className="mt-12 sm:mt-16 pt-8 border-t border-tone flex flex-col sm:flex-row gap-6 sm:gap-8 sm:items-start relative">
+          <div className="flex-1 min-w-0">
+            {current.caughtUp ? (
+              <>
+                <p className="font-mono text-xs tracking-widest text-ash">
+                  NOTHING LEFT
                 </p>
-              )}
-            </motion.div>
-          )}
-        </AnimatePresence>
+                <p className="font-display text-answer-prose text-sumi text-balance mt-3">
+                  You're all caught up.
+                </p>
+                <p className="font-body text-sm text-sumi/70 mt-4 max-w-prose leading-relaxed">
+                  The anime covers the manga through to the end.
+                </p>
+                {notes}
+              </>
+            ) : current.continueChapter ? (
+              <>
+                <p className="font-mono text-xs tracking-widest text-ash">
+                  START READING AT
+                </p>
+                <p className="font-display text-answer text-jump mt-3">
+                  <CountUp value={current.continueChapter} />
+                  <span className="font-body text-base text-sumi ml-3">
+                    chapter
+                  </span>
+                </p>
+                <p className="font-mono text-xs text-sumi mt-4">
+                  {current.continueVolume &&
+                    `Volume ${current.continueVolume} · `}
+                  {current.name}
+                  {current.episodeStart && current.episodeEnd
+                    ? ` · Episodes ${current.episodeStart}-${current.episodeEnd}`
+                    : current.episodes && ` · ${current.episodes} episodes`}
+                </p>
+                {series.totalChapters && (
+                  <AdaptationProgress
+                    coveredChapter={
+                      current.lastCoveredChapter ?? current.continueChapter - 1
+                    }
+                    continueChapter={current.continueChapter}
+                    totalChapters={series.totalChapters}
+                    ongoing={series.publicationStatus === "RELEASING"}
+                  />
+                )}
+                {current.animeOriginal && (
+                  <p className="font-mono text-xs tracking-widest text-sumi border border-sumi px-3 py-2 mt-6 inline-block">
+                    ANIME ORIGINAL STORY
+                  </p>
+                )}
+                {notes}
+              </>
+            ) : (
+              <>
+                <p className="font-mono text-xs tracking-widest text-ash">
+                  NO STARTING POINT
+                </p>
+                <p className="font-display text-answer-prose text-sumi text-balance mt-3">
+                  Not a continuation point.
+                </p>
+                {notes}
+              </>
+            )}
+          </div>
+
+          {answerCoverBlock("w-44 sm:w-40 shrink-0 lg:hidden")}
+        </div>
       </div>
 
-      {hasInfo && (
-        <dl className="mt-10 grid grid-cols-3 gap-x-8 gap-y-6">
-          {series.author && (
-            <div className="col-span-3 sm:col-span-1">
-              <dt className="font-mono text-xs tracking-widest text-ash">
-                AUTHOR
-              </dt>
-              <dd className="font-body text-sm text-sumi mt-1">
-                {series.author}
-              </dd>
-            </div>
-          )}
-          {series.startYear && (
-            <div>
-              <dt className="font-mono text-xs tracking-widest text-ash">
-                STARTED
-              </dt>
-              <dd className="font-body text-sm text-sumi mt-1">
-                {series.startYear}
-              </dd>
-            </div>
-          )}
-          {status && (
-            <div>
-              <dt className="font-mono text-xs tracking-widest text-ash">
-                STATUS
-              </dt>
-              <dd className="font-body text-sm text-sumi mt-1">{status}</dd>
-            </div>
-          )}
-          {series.totalChapters && (
-            <div>
-              <dt className="font-mono text-xs tracking-widest text-ash">
-                CHAPTERS
-              </dt>
-              <dd className="font-body text-sm text-sumi mt-1">
-                {series.totalChapters}
-              </dd>
-            </div>
-          )}
-          {series.totalVolumes && (
-            <div>
-              <dt className="font-mono text-xs tracking-widest text-ash">
-                VOLUMES
-              </dt>
-              <dd className="font-body text-sm text-sumi mt-1">
-                {series.totalVolumes}
-              </dd>
-            </div>
-          )}
-        </dl>
-      )}
+      <aside className="lg:col-start-1 lg:row-start-1 lg:row-span-2">
+        {answerCoverBlock("hidden lg:block")}
+        {hasInfo && (
+          <dl className="mt-10 lg:mt-8 grid grid-cols-3 lg:grid-cols-2 gap-x-8 gap-y-6">
+            {series.author && (
+              <div className="col-span-3 sm:col-span-1 lg:col-span-2">
+                <dt className="font-mono text-xs tracking-widest text-ash">
+                  AUTHOR
+                </dt>
+                <dd className="font-body text-sm text-sumi mt-1">
+                  {series.author}
+                </dd>
+              </div>
+            )}
+            {series.startYear && (
+              <div>
+                <dt className="font-mono text-xs tracking-widest text-ash">
+                  STARTED
+                </dt>
+                <dd className="font-body text-sm text-sumi mt-1">
+                  {series.startYear}
+                </dd>
+              </div>
+            )}
+            {status && (
+              <div>
+                <dt className="font-mono text-xs tracking-widest text-ash">
+                  STATUS
+                </dt>
+                <dd className="font-body text-sm text-sumi mt-1">{status}</dd>
+              </div>
+            )}
+            {series.totalChapters && (
+              <div>
+                <dt className="font-mono text-xs tracking-widest text-ash">
+                  CHAPTERS
+                </dt>
+                <dd className="font-body text-sm text-sumi mt-1">
+                  {series.totalChapters}
+                </dd>
+              </div>
+            )}
+            {series.totalVolumes && (
+              <div>
+                <dt className="font-mono text-xs tracking-widest text-ash">
+                  VOLUMES
+                </dt>
+                <dd className="font-body text-sm text-sumi mt-1">
+                  {series.totalVolumes}
+                </dd>
+              </div>
+            )}
+          </dl>
+        )}
+      </aside>
 
       {(series.readingLinks.length > 0 || series.verifiedAt) && (
-        <div className="mt-12 sm:mt-16 pt-8 border-t border-tone flex items-start justify-between gap-6 max-w-2xl">
+        <div className="mt-12 sm:mt-16 pt-8 border-t border-tone flex items-start justify-between gap-6 max-w-2xl lg:col-start-2">
           <div>
             {series.readingLinks.length > 0 && (
               <>
@@ -424,7 +432,7 @@ export default function SeriesPage() {
       )}
 
       {related.length > 0 && (
-        <section className="mt-16 sm:mt-24 pt-8 border-t border-tone">
+        <section className="mt-16 sm:mt-24 pt-8 border-t border-tone lg:col-span-2">
           <p className="font-mono text-xs tracking-widest text-ash">
             MORE SERIES
           </p>
@@ -441,7 +449,11 @@ export default function SeriesPage() {
                 <div className="aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition">
                   {s.coverUrl && (
                     <img
-                      {...cover(s.coverUrl, [200, 400], "(min-width: 640px) 120px, 45vw")}
+                      {...cover(
+                        s.coverUrl,
+                        [200, 400],
+                        "(min-width: 1024px) 200px, (min-width: 640px) 120px, 45vw",
+                      )}
                       alt=""
                       loading="lazy"
                       className="w-full h-full object-cover"
