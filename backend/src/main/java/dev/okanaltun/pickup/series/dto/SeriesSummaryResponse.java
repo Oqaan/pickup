@@ -6,5 +6,6 @@ public record SeriesSummaryResponse(
                 String slug,
                 String title,
                 String coverUrl,
-                List<String> aliases) {
+                List<String> aliases,
+                long addedOrder) {
 }

@@ -29,7 +29,8 @@ public class SeriesService {
         public List<SeriesSummaryResponse> findAll() {
                 return repository.findAllByOrderByPopularityDesc().stream()
                                 .map(s -> new SeriesSummaryResponse(s.getSlug(), s.getTitle(), s.getCoverUrl(),
-                                                s.getAliases().stream().map(SeriesAlias::getAlias).toList()))
+                                                s.getAliases().stream().map(SeriesAlias::getAlias).toList(),
+                                                s.getId()))
                                 .toList();
         }
 

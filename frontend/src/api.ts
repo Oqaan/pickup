@@ -20,7 +20,12 @@ export function seededSeries(slug: string): SeriesDetail | null {
 // The full list the page came with, for when we can't call the API. No aliases in it
 export function seededList(): SeriesSummary[] | null {
   const raw = readIsland<
-    { slug: string; title: string; coverUrl: string | null }[]
+    {
+      slug: string;
+      title: string;
+      coverUrl: string | null;
+      addedOrder?: number;
+    }[]
   >("__pickup_list__");
   return raw ? raw.map((s) => ({ ...s, aliases: [] as string[] })) : null;
 }

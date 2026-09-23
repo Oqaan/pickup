@@ -41,6 +41,8 @@ export type SeriesSummary = {
   title: string;
   coverUrl: string | null;
   aliases: string[];
+  // Optional because Vercel can go live before Railway starts sending it
+  addedOrder?: number;
 };
 
 export type ReadingLink = {
