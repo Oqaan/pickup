@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pickup.moe/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-23</lastmod>
   </url>
   <url>
     <loc>https://pickup.moe/browse</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-23</lastmod>
   </url>
   <url>
     <loc>https://pickup.moe/about</loc>
@@ -366,5 +366,17 @@
   <url>
     <loc>https://pickup.moe/anime/wistoria</loc>
     <lastmod>2026-09-19</lastmod>
+  </url>
+  <url>
+    <loc>https://pickup.moe/anime/kakegurui</loc>
+    <lastmod>2026-09-23</lastmod>
+  </url>
+  <url>
+    <loc>https://pickup.moe/anime/bungo-stray-dogs</loc>
+    <lastmod>2026-09-23</lastmod>
+  </url>
+  <url>
+    <loc>https://pickup.moe/anime/witch-hat-atelier</loc>
+    <lastmod>2026-09-23</lastmod>
   </url>
 </urlset>
