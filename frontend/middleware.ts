@@ -34,7 +34,12 @@ type Series = {
   readingLinks: { label: string; url: string }[];
 };
 
-type Listed = { slug: string; title: string; coverUrl: string | null };
+type Listed = {
+  slug: string;
+  title: string;
+  coverUrl: string | null;
+  addedOrder?: number;
+};
 
 const esc = (s: string) =>
   s
@@ -68,7 +73,12 @@ const island = (id: string, data: unknown) =>
   )}</script>`;
 
 const listData = (list: Listed[]) =>
-  list.map((s) => ({ slug: s.slug, title: s.title, coverUrl: s.coverUrl }));
+  list.map((s) => ({
+    slug: s.slug,
+    title: s.title,
+    coverUrl: s.coverUrl,
+    addedOrder: s.addedOrder,
+  }));
 
 const shell = (origin: string) =>
   fetch(new URL("/index.html", origin)).then((r) => r.text());

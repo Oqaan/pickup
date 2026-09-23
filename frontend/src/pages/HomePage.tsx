@@ -19,6 +19,7 @@ type FuseModule = typeof import("fuse.js").default;
 
 // How wide a cover lands on screen: five per row from 1024px up, three from 640px, two below
 const COVER_SIZES = "(min-width: 1024px) 210px, (min-width: 640px) 33vw, 50vw";
+const SHELF_SIZES = "(min-width: 1024px) 210px, (min-width: 640px) 30vw, 42vw";
 
 // How many cards the list starts with, and how many each click adds
 const PER_PAGE = 10;
@@ -145,6 +146,11 @@ export default function HomePage() {
   // the next page. Only while there is a next page to wait for
   const clamped = limit === PER_PAGE && remaining > 0;
 
+  const newest = series
+    .filter((s) => s.addedOrder != null)
+    .sort((a, b) => b.addedOrder! - a.addedOrder!)
+    .slice(0, 5);
+
   const label =
     query.length < 2
       ? "MOST READ"
@@ -195,6 +201,39 @@ export default function HomePage() {
           className="flex-1 min-w-0 font-display text-input bg-transparent text-sumi placeholder:text-tone focus:outline-none"
         />
       </div>
+
+      {!searching && newest.length > 0 && (
+        <section className="mt-12 sm:mt-16">
+          <p className="font-mono text-xs tracking-widest text-jump">
+            NEWLY ADDED
+          </p>
+          <div className="flex lg:grid lg:grid-cols-5 gap-x-6 mt-4 -mx-6 px-6 scroll-px-6 lg:mx-0 lg:px-0 overflow-x-auto snap-x snap-mandatory">
+            {newest.map((s) => (
+              <Link
+                key={s.slug}
+                to={`/anime/${s.slug}`}
+                onClick={() => remember(historyKey, { scroll: window.scrollY })}
+                onPointerEnter={() => prefetchSeriesDetail(s.slug)}
+                onFocus={() => prefetchSeriesDetail(s.slug)}
+                className="group block shrink-0 w-[42%] sm:w-[30%] lg:w-auto snap-start"
+              >
+                <div className="aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition">
+                  {s.coverUrl && (
+                    <img
+                      {...cover(s.coverUrl, [300, 600], SHELF_SIZES)}
+                      alt=""
+                      className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
+                    />
+                  )}
+                </div>
+                <p className="font-body text-sm text-sumi group-hover:text-jump mt-3 leading-snug">
+                  {s.title}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       <p className="font-mono text-xs tracking-widest text-ash mt-12 sm:mt-16">
         {label}
