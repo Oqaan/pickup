@@ -5,7 +5,9 @@ import { v2 as cloudinary } from "cloudinary";
 // Reads CLOUDINARY_URL from the environment automatically.
 // Run with:
 // CLOUDINARY_URL=cloudinary://key:secret@cloud node scripts/upload-covers.mjs
+// Add --warm to rebuild the sizes of covers already on Cloudinary, only needed after changing EAGER
 
+const warm = process.argv.includes("--warm");
 const SEED = "backend/src/main/resources/seed/series.yaml";
 const FOLDER = "pickup/covers";
 
@@ -64,7 +66,7 @@ lines.forEach((line, i) => {
     return;
   }
   const cloudinaryMatch = line.match(cloudinaryRe);
-  if (cloudinaryMatch) {
+  if (warm && cloudinaryMatch) {
     // Public id = path after "/image/upload/", minus version prefix and extension
     const path = cloudinaryMatch[1].split("/image/upload/")[1];
     if (path) {
@@ -77,7 +79,9 @@ lines.forEach((line, i) => {
 });
 
 console.log(
-  `Found ${uploads.length} covers to upload, ${warms.length} already on Cloudinary to warm.`,
+  warm
+    ? `Found ${uploads.length} covers to upload, ${warms.length} already on Cloudinary to warm.`
+    : `Found ${uploads.length} covers to upload.`,
 );
 
 for (const u of uploads) {
