@@ -1,5 +1,5 @@
 import type { SeriesDetail, SeriesSummary } from "./types";
-import { cover } from "./cover";
+import { ANSWER_COVER_SIZES, cover } from "./cover";
 
 // The series the middleware left in the page, when it's the one we want. It's
 // a JSON island we read from the DOM, not a global, so the strict CSP doesn't
@@ -99,10 +99,10 @@ export function prefetchSeriesDetail(slug: string) {
   void fetchSeriesDetail(slug)
     .then((detail) => {
       // Warm the first season's cover so the click doesn't wait on a cold fetch
-      const url = detail.adaptations[0]?.coverUrl;
+      const url = detail.adaptations[0]?.coverUrl ?? detail.coverUrl;
       if (!url) return;
       const img = new Image();
-      const warmed = cover(url, [200, 400], "176px");
+      const warmed = cover(url, [200, 400], ANSWER_COVER_SIZES);
       img.sizes = warmed.sizes;
       img.srcset = warmed.srcSet;
       img.src = warmed.src;

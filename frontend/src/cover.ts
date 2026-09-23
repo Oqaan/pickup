@@ -21,3 +21,6 @@ export function cover(url: string, widths: number[], sizes: string) {
     sizes,
   };
 }
+
+// Shared with the hover prefetch, so both ask for the same file
+export const ANSWER_COVER_SIZES = "(min-width: 1024px) 288px, 176px";
