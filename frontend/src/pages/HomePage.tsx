@@ -178,18 +178,62 @@ export default function HomePage() {
 
   return (
     <main className="max-w-6xl mx-auto px-6 pt-12 pb-0">
-      <h1 className="font-display text-title text-sumi max-w-lg">
-        Stop watching.
-        <br />
-        Start reading.
-      </h1>
+      <div className="lg:flex lg:items-center lg:justify-between lg:gap-16">
+        <div>
+          <h1 className="font-display text-hero text-sumi">
+            Stop watching.
+            <br />
+            <span className="text-jump">Start reading.</span>
+          </h1>
+          <p className="font-body text-base text-sumi/70 mt-4 max-w-md leading-relaxed">
+            Wherever you left the anime, pick the series and get the chapter to
+            read from.
+          </p>
+        </div>
 
-      <p className="font-body text-base text-sumi/70 mt-4 max-w-md leading-relaxed">
-        Wherever you left the anime, pick the series and get the chapter to read
-        from.
-      </p>
+        <div className="hidden lg:block relative w-72 h-56 shrink-0">
+          {[0, 1, 2].map((i) => {
+            const s = series[i];
+            const place = {
+              left: `${i * 5}rem`,
+              marginTop: i === 1 ? 0 : "1rem",
+              transform: `rotate(${(i - 1) * 6}deg)`,
+              zIndex: i === 1 ? 2 : 1,
+            };
+            return s ? (
+              <Link
+                key={s.slug}
+                to={`/anime/${s.slug}`}
+                aria-label={s.title}
+                onPointerEnter={() => prefetchSeriesDetail(s.slug)}
+                onFocus={() => prefetchSeriesDetail(s.slug)}
+                className="absolute top-0 w-32 transition duration-200 hover:-translate-y-1"
+                style={place}
+              >
+                <div className="spine relative aspect-2/3 bg-tone/30">
+                  {s.coverUrl && (
+                    <img
+                      {...cover(s.coverUrl, [200, 400], "128px")}
+                      alt=""
+                      // Lazy so phones, where the fan is hidden, never download it
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                    />
+                  )}
+                </div>
+              </Link>
+            ) : (
+              <div
+                key={i}
+                className="absolute top-0 w-32 aspect-2/3 bg-tone/20"
+                style={place}
+              />
+            );
+          })}
+        </div>
+      </div>
 
-      <div className="mt-12 sm:mt-16">
+      <div className="mt-8 sm:mt-10">
         <SearchBar
           ref={searchRef}
           value={query}
@@ -208,14 +252,14 @@ export default function HomePage() {
       </div>
 
       {!searching && newest.length > 0 && (
-        <section className="mt-12 sm:mt-16">
+        <section className="mt-10 sm:mt-12">
           <p className="font-mono text-xs tracking-widest text-jump">
             NEWLY ADDED
           </p>
           <h2 className="font-display text-notice text-sumi mt-3">
             New on the shelf.
           </h2>
-          <div className="flex lg:grid lg:grid-cols-5 gap-x-6 mt-6 -mx-6 px-6 scroll-px-6 lg:mx-0 lg:px-0 overflow-x-auto snap-x snap-mandatory">
+          <div className="flex lg:grid lg:grid-cols-5 gap-x-6 mt-4 -mx-6 px-6 scroll-px-6 lg:mx-0 lg:px-0 overflow-x-auto lg:overflow-visible snap-x snap-mandatory">
             {newest.map((s) => (
               <Link
                 key={s.slug}
@@ -225,12 +269,12 @@ export default function HomePage() {
                 onFocus={() => prefetchSeriesDetail(s.slug)}
                 className="group block shrink-0 w-[42%] sm:w-[30%] lg:w-auto snap-start"
               >
-                <div className="aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition">
+                <div className="spine relative aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition duration-200 group-hover:-translate-y-1">
                   {s.coverUrl && (
                     <img
                       {...cover(s.coverUrl, [300, 600], SHELF_SIZES)}
                       alt=""
-                      className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
+                      className="w-full h-full object-cover"
                     />
                   )}
                 </div>
@@ -298,7 +342,7 @@ export default function HomePage() {
                       onFocus={() => prefetchSeriesDetail(s.slug)}
                       className="group block"
                     >
-                      <div className="relative aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition">
+                      <div className="spine relative aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition duration-200 group-hover:-translate-y-1">
                         {s.coverUrl && (
                           <img
                             {...cover(s.coverUrl, [300, 600], COVER_SIZES)}
@@ -311,13 +355,13 @@ export default function HomePage() {
                             fetchPriority={
                               i < 5 && !returning ? "high" : undefined
                             }
-                            className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
+                            className="w-full h-full object-cover"
                           />
                         )}
                         {!searching && i < 10 && (
                           <span
                             aria-hidden="true"
-                            className="absolute left-0 bottom-0 bg-paper pr-3 pt-2 font-display text-title text-jump"
+                            className="absolute z-10 left-0 bottom-0 bg-paper pr-3 pt-2 font-display text-title text-jump"
                           >
                             {i + 1}
                           </span>

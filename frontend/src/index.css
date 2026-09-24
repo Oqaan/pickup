@@ -18,6 +18,9 @@
   --text-answer-prose: 2.25rem;
   --text-answer-prose--line-height: 1.25;
 
+  --text-hero: clamp(3rem, 7vw, 3.75rem);
+  --text-hero--line-height: 1.05;
+
   --text-title: clamp(2.25rem, 6vw, 3rem);
   --text-title--line-height: 1.1;
 
@@ -41,4 +44,27 @@
 /* Reserve scrollbar width even when a page doesn't scroll, so page doesn't shift around when switching */
 html {
   scrollbar-gutter: stable;
+}
+
+/* Spine on the right like a Japanese volume, pages on the left, needs relative */
+.spine {
+  box-shadow:
+    -2px 0 0 -1px var(--color-paper),
+    -3px 0 0 -1px var(--color-tone),
+    -5px 0 0 -2px var(--color-paper),
+    -6px 0 0 -2px var(--color-tone),
+    var(--tw-ring-shadow, 0 0 #0000);
+}
+.spine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to left,
+    rgb(0 0 0 / 0.5) 0,
+    rgb(0 0 0 / 0.15) 2%,
+    rgb(255 255 255 / 0.28) 4%,
+    rgb(255 255 255 / 0) 10%
+  );
 }

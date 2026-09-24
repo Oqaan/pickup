@@ -14,7 +14,7 @@ export default function SearchBar({
   ref,
 }: Props) {
   return (
-    <label className="group flex items-center gap-3 h-14 px-4 border border-tone focus-within:border-sumi cursor-text transition">
+    <label className="group flex items-center gap-3 h-12 px-4 border border-tone focus-within:border-sumi cursor-text transition">
       <svg
         width="18"
         height="18"
