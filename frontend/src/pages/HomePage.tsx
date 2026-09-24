@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useMemo, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import type { SeriesSummary } from "../types";
 import {
   cachedSeriesList,
@@ -10,6 +10,7 @@ import { cover } from "../cover";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useSeo } from "../useSeo";
+import SearchBar from "../components/SearchBar";
 
 // Opening a series throws this page away, so save what the user had open.
 // Saved per history entry, so going back finds it and a fresh visit does not
@@ -90,6 +91,8 @@ export default function HomePage() {
     hidden: { opacity: 0, y: reduceMotion ? 0 : 8 },
     shown: { opacity: 1, y: 0 },
   };
+
+  const searchRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     fetchSeriesList()
@@ -186,19 +189,21 @@ export default function HomePage() {
         from.
       </p>
 
-      <div className="mt-12 sm:mt-20 flex items-baseline gap-4 border-b-2 border-tone focus-within:border-sumi pb-3">
-        <span className="font-display text-input text-jump select-none">→</span>
-        <input
+      <div className="mt-12 sm:mt-16">
+        <SearchBar
+          ref={searchRef}
           value={query}
-          onChange={(e) => {
-            setQuery(e.target.value);
+          onChange={(value) => {
+            setQuery(value);
             // A new query is a new list, so it starts at the first page again
             setSearchShown(PER_PAGE);
           }}
           onFocus={() => setWantsFuse(true)}
-          placeholder="Search a series"
-          aria-label="Search a series"
-          className="flex-1 min-w-0 font-display text-input bg-transparent text-sumi placeholder:text-tone focus:outline-none"
+          onClear={() => {
+            setQuery("");
+            setSearchShown(PER_PAGE);
+            searchRef.current?.focus();
+          }}
         />
       </div>
 
@@ -207,7 +212,10 @@ export default function HomePage() {
           <p className="font-mono text-xs tracking-widest text-jump">
             NEWLY ADDED
           </p>
-          <div className="flex lg:grid lg:grid-cols-5 gap-x-6 mt-4 -mx-6 px-6 scroll-px-6 lg:mx-0 lg:px-0 overflow-x-auto snap-x snap-mandatory">
+          <h2 className="font-display text-notice text-sumi mt-3">
+            New on the shelf.
+          </h2>
+          <div className="flex lg:grid lg:grid-cols-5 gap-x-6 mt-6 -mx-6 px-6 scroll-px-6 lg:mx-0 lg:px-0 overflow-x-auto snap-x snap-mandatory">
             {newest.map((s) => (
               <Link
                 key={s.slug}
@@ -238,9 +246,14 @@ export default function HomePage() {
       <p className="font-mono text-xs tracking-widest text-ash mt-12 sm:mt-16">
         {label}
       </p>
+      {!searching && (
+        <h2 className="font-display text-notice text-sumi mt-3">
+          Fan favorites.
+        </h2>
+      )}
 
       <div
-        className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-10 mt-4"
+        className={`grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-10 ${searching ? "mt-4" : "mt-6"}`}
         aria-busy={loading}
       >
         {loading ? (
@@ -285,7 +298,7 @@ export default function HomePage() {
                       onFocus={() => prefetchSeriesDetail(s.slug)}
                       className="group block"
                     >
-                      <div className="aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition">
+                      <div className="relative aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition">
                         {s.coverUrl && (
                           <img
                             {...cover(s.coverUrl, [300, 600], COVER_SIZES)}
@@ -300,6 +313,14 @@ export default function HomePage() {
                             }
                             className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
                           />
+                        )}
+                        {!searching && i < 10 && (
+                          <span
+                            aria-hidden="true"
+                            className="absolute left-0 bottom-0 bg-paper pr-3 pt-2 font-display text-title text-jump"
+                          >
+                            {i + 1}
+                          </span>
                         )}
                       </div>
                       <p className="font-body text-sm text-sumi group-hover:text-jump mt-3 leading-snug">
