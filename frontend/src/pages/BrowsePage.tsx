@@ -53,13 +53,13 @@ export default function BrowsePage() {
             onFocus={() => prefetchSeriesDetail(s.slug)}
             className="group block"
           >
-            <div className="aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition">
+            <div className="spine relative aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition duration-200 group-hover:-translate-y-1">
               {s.coverUrl && (
                 <img
                   {...cover(s.coverUrl, [300, 600], COVER_SIZES)}
                   alt=""
                   loading="lazy"
-                  className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
+                  className="w-full h-full object-cover"
                 />
               )}
             </div>

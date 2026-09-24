@@ -201,16 +201,18 @@ export default function SeriesPage() {
     <AnimatePresence mode="popLayout" initial={false}>
       {answerCover && (
         <motion.div key={answerCover} {...swap} className={className}>
-          <img
-            {...cover(answerCover, [200, 400], ANSWER_COVER_SIZES)}
-            alt={
-              current.continueVolume
-                ? `Volume ${current.continueVolume} cover`
-                : `${series.title} cover`
-            }
-            fetchPriority="high"
-            className="w-full aspect-2/3 object-cover bg-tone/30"
-          />
+          <div className="spine relative">
+            <img
+              {...cover(answerCover, [200, 400], ANSWER_COVER_SIZES)}
+              alt={
+                current.continueVolume
+                  ? `Volume ${current.continueVolume} cover`
+                  : `${series.title} cover`
+              }
+              fetchPriority="high"
+              className="w-full aspect-2/3 object-cover bg-tone/30"
+            />
+          </div>
           {current.continueVolume && (
             <p className="font-mono text-xs text-ash mt-2 text-center">
               Vol. {current.continueVolume}
@@ -446,7 +448,7 @@ export default function SeriesPage() {
                 // Hidden on mobile so the two-column grid stays an even 2x2
                 className={`group block ${i >= 4 ? "hidden sm:block" : ""}`}
               >
-                <div className="aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition">
+                <div className="spine relative aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition duration-200 group-hover:-translate-y-1">
                   {s.coverUrl && (
                     <img
                       {...cover(
