@@ -1,7 +1,7 @@
 import { next } from "@vercel/functions";
 
 export const config = {
-  matcher: ["/", "/browse", "/anime/:slug*"],
+  matcher: ["/", "/browse", "/about", "/anime/:slug*"],
 };
 
 const API = "https://api.pickup.moe";
@@ -88,10 +88,26 @@ const listData = (list: Listed[]) =>
 const shell = (origin: string) =>
   fetch(new URL("/index.html", origin)).then((r) => r.text());
 
-const respond = (html: string) =>
+const respond = (html: string, status = 200) =>
   new Response(html, {
+    status,
     headers: { "content-type": "text/html; charset=utf-8" },
   });
+
+// index.html carries the homepage's tags. Left in, a page would have two
+// canonicals and Google would drop it as a homepage copy
+const withTags = (html: string, tags: string) =>
+  html
+    .replace(/<title>.*?<\/title>/s, "")
+    .replace(/<meta\s+name="description"[^>]*>/s, "")
+    .replace(/<meta\s+property="og:[^"]*"[^>]*>/gs, "")
+    .replace(/<meta\s+name="twitter:[^"]*"[^>]*>/gs, "")
+    .replace(/<link\s+rel="canonical"[^>]*>/gs, "")
+    .replace("</head>", `${tags}</head>`);
+
+const ABOUT_TITLE = "About - pickup";
+const ABOUT_DESCRIPTION =
+  "How pickup works: every anime to manga stopping point is checked by hand, one series at a time.";
 
 function pickup(a: Adaptation): string {
   if (a.caughtUp) {
@@ -119,6 +135,7 @@ export default async function middleware(request: Request) {
   const url = new URL(request.url);
   if (url.pathname === "/") return homepage(url);
   if (url.pathname === "/browse") return browsePage(url);
+  if (url.pathname === "/about") return aboutPage(url);
   return seriesPage(url);
 }
 
@@ -234,27 +251,54 @@ async function browsePage(url: URL) {
   `;
 
   return respond(
-    html
-      .replace(/<title>.*?<\/title>/s, "")
-      .replace(/<meta\s+name="description"[^>]*>/s, "")
-      .replace(/<meta\s+property="og:[^"]*"[^>]*>/gs, "")
-      .replace(/<meta\s+name="twitter:[^"]*"[^>]*>/gs, "")
-      .replace(/<link\s+rel="canonical"[^>]*>/gs, "")
-      .replace("</head>", `${tags}</head>`)
-      .replace('<div id="root"></div>', `<div id="root">${body}</div>`),
+    withTags(html, tags).replace(
+      '<div id="root"></div>',
+      `<div id="root">${body}</div>`,
+    ),
   );
+}
+
+// Static page, only the tags need to be its own
+async function aboutPage(url: URL) {
+  const html = await shell(url.origin);
+  const pageUrl = "https://pickup.moe/about";
+  const tags = `
+    <title>${esc(ABOUT_TITLE)}</title>
+    <meta name="description" content="${esc(ABOUT_DESCRIPTION)}" />
+    <link rel="canonical" href="${esc(pageUrl)}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="${esc(ABOUT_TITLE)}" />
+    <meta property="og:description" content="${esc(ABOUT_DESCRIPTION)}" />
+    <meta property="og:url" content="${esc(pageUrl)}" />
+    <meta property="og:image" content="https://pickup.moe/og-default.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="${esc(ABOUT_TITLE)}" />
+    <meta name="twitter:description" content="${esc(ABOUT_DESCRIPTION)}" />
+  `;
+  return respond(withTags(html, tags));
+}
+
+// A real 404 so Google drops the address instead of indexing a homepage copy
+async function notFound(url: URL) {
+  const html = await shell(url.origin);
+  const tags = `
+    <title>Not found - pickup</title>
+    <meta name="robots" content="noindex" />
+  `;
+  return respond(withTags(html, tags), 404);
 }
 
 async function seriesPage(url: URL) {
   const slug = url.pathname.replace("/anime/", "").replace(/\/$/, "");
 
-  if (!SLUG.test(slug)) return next();
+  if (!SLUG.test(slug)) return notFound(url);
 
   const [html, seriesRes] = await Promise.all([
     shell(url.origin),
     api(`/api/series/${encodeURIComponent(slug)}`),
   ]);
 
+  if (seriesRes.status === 404) return notFound(url);
   if (!seriesRes.ok) return next();
 
   const series = (await seriesRes.json()) as Series;
@@ -262,7 +306,7 @@ async function seriesPage(url: URL) {
 
   const title = `Where to continue the ${series.title} manga`;
   const description = `Finished the ${series.title} anime? Find the exact chapter and volume to continue the manga from, for each season`;
-  const image = series.coverUrl ?? "";
+  const image = series.coverUrl ?? "https://pickup.moe/og-default.jpg";
   const pageUrl = `https://pickup.moe/anime/${slug}`;
 
   // Seeded into #root for crawlers, React clears it and renders the real UI on mount
@@ -326,12 +370,12 @@ async function seriesPage(url: URL) {
     <title>${esc(title)}</title>
     <meta name="description" content="${esc(description)}" />
     <link rel="canonical" href="${esc(pageUrl)}" />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="article" />
     <meta property="og:title" content="${esc(title)}" />
     <meta property="og:description" content="${esc(description)}" />
     <meta property="og:image" content="${esc(image)}" />
     <meta property="og:url" content="${esc(pageUrl)}" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="${esc(title)}" />
     <meta name="twitter:description" content="${esc(description)}" />
     <meta name="twitter:image" content="${esc(image)}" />
@@ -344,15 +388,9 @@ async function seriesPage(url: URL) {
   `;
 
   return respond(
-    html
-      .replace(/<title>.*?<\/title>/s, "")
-      .replace(/<meta\s+name="description"[^>]*>/s, "")
-      .replace(/<meta\s+property="og:[^"]*"[^>]*>/gs, "")
-      .replace(/<meta\s+name="twitter:[^"]*"[^>]*>/gs, "")
-      // index.html's canonical points at the homepage. If we leave it, each page
-      // has two canonicals and Google drops the series pages as homepage copies.
-      .replace(/<link\s+rel="canonical"[^>]*>/gs, "")
-      .replace("</head>", `${tags}</head>`)
-      .replace('<div id="root"></div>', `<div id="root">${body}</div>`),
+    withTags(html, tags).replace(
+      '<div id="root"></div>',
+      `<div id="root">${body}</div>`,
+    ),
   );
 }
