@@ -59,15 +59,17 @@ export default function SeriesPage() {
 
   const canonical = slug ? `/anime/${slug}` : undefined;
   useSeo(
-    series
-      ? {
-          title: seriesTitle(series.title),
-          description: seriesDescription(series),
-          canonical,
-          image: series.coverUrl ?? undefined,
-          ogType: "article",
-        }
-      : { title: "pickup", canonical },
+    error === "not-found"
+      ? { title: "Not found - pickup", noindex: true }
+      : series
+        ? {
+            title: seriesTitle(series.title),
+            description: seriesDescription(series),
+            canonical,
+            image: series.coverUrl ?? undefined,
+            ogType: "article",
+          }
+        : { title: "pickup", canonical },
   );
 
   useEffect(() => {

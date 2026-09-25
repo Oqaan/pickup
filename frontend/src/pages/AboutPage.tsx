@@ -1,10 +1,10 @@
 import { useSeo } from "../useSeo";
+import { ABOUT_DESCRIPTION, ABOUT_TITLE } from "../seo";
 
 export default function AboutPage() {
   useSeo({
-    title: "About - pickup",
-    description:
-      "How pickup works: every anime to manga stopping point is checked by hand, one series at a time.",
+    title: ABOUT_TITLE,
+    description: ABOUT_DESCRIPTION,
     canonical: "/about",
   });
   return (

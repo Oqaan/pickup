@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "pickup.middleware-key",
+      "type": "java.lang.String",
+      "description": "Shared secret the Vercel SEO middleware sends as X-Pickup-Key so its requests skip the rate limit. Empty disables the bypass."
+    }
+  ]
+}
