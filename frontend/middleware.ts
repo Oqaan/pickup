@@ -6,6 +6,11 @@ export const config = {
 
 const API = "https://api.pickup.moe";
 
+// Crawlers reach the API from a few shared Vercel addresses, so the key lets them skip the rate limit
+const KEY = process.env.PICKUP_MIDDLEWARE_KEY;
+const api = (path: string) =>
+  fetch(`${API}${path}`, KEY ? { headers: { "X-Pickup-Key": KEY } } : {});
+
 // Validated before it goes into a URL we fetch
 const SLUG = /^[a-z0-9-]{1,100}$/;
 
@@ -121,7 +126,7 @@ export default async function middleware(request: Request) {
 async function homepage(url: URL) {
   const [html, listRes] = await Promise.all([
     shell(url.origin),
-    fetch(`${API}/api/series`),
+    api("/api/series"),
   ]);
 
   if (!listRes.ok) return next();
@@ -183,7 +188,7 @@ async function homepage(url: URL) {
 async function browsePage(url: URL) {
   const [html, listRes] = await Promise.all([
     shell(url.origin),
-    fetch(`${API}/api/series`),
+    api("/api/series"),
   ]);
 
   if (!listRes.ok) return next();
@@ -247,7 +252,7 @@ async function seriesPage(url: URL) {
 
   const [html, seriesRes] = await Promise.all([
     shell(url.origin),
-    fetch(`${API}/api/series/${encodeURIComponent(slug)}`),
+    api(`/api/series/${encodeURIComponent(slug)}`),
   ]);
 
   if (!seriesRes.ok) return next();
