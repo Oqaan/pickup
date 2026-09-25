@@ -1,7 +1,3 @@
-server:
-  # Without this every caller looks like Railway's proxy and shares one rate limit
-  forward-headers-strategy: framework
-
 spring:
   application:
     name: pickup
@@ -13,6 +9,9 @@ spring:
     open-in-view: false
   flyway:
     enabled: true
+
+pickup:
+  middleware-key: ${PICKUP_MIDDLEWARE_KEY:}
 
 ---
 spring:
