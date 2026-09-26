@@ -3550,7 +3550,7 @@
   author: Fuse & Taiki Kawakami
   startYear: 2015
   publicationStatus: RELEASING
-  verifiedAt: 2026-09-15
+  verifiedAt: 2026-09-26
   notes: "The anime and Taiki Kawakami's manga both adapt Fuse's light novels, and the manga runs a little behind, so the chapters below are where to pick up its version of the story. The 2022 film Scarlet Bond is an original side story that isn't part of the manga."
   readingLinks:
     - label: K Manga
@@ -3575,16 +3575,16 @@
       episodes: 12
       sortOrder: 3
       continueChapter: 91
-      continueVolume: 19
+      continueVolume: 20
       lastCoveredChapter: 90
-      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1789489305/pickup/covers/that-time-i-got-reincarnated-as-a-slime-6e354b2c5bd.jpg
+      coverUrl: https://uploads.mangadex.org/covers/e78a489b-6632-4d61-b00b-5206f5b8b22b/493b3038-6a82-4a96-887f-abedf2330f0e.jpg
     - name: Season 3
       episodes: 24
       sortOrder: 4
       continueChapter: 116
-      continueVolume: 27
+      continueVolume: 26
       lastCoveredChapter: 115
-      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1789489309/pickup/covers/that-time-i-got-reincarnated-as-a-slime-edeb59a021a.jpg
+      coverUrl: https://uploads.mangadex.org/covers/e78a489b-6632-4d61-b00b-5206f5b8b22b/322e1d4e-5d1f-4e38-b456-327a4b51d0b8.jpg
 
 - slug: the-dangers-in-my-heart
   title: The Dangers in My Heart
