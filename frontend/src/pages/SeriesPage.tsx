@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
+import {
+  Link,
+  useLocation,
+  useNavigate,
+  useParams,
+  useSearchParams,
+} from "react-router-dom";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import type { SeriesDetail } from "../types";
 import {
@@ -14,14 +20,15 @@ import { ANSWER_COVER_SIZES, cover } from "../cover";
 import CountUp from "../components/CountUp";
 import AdaptationProgress from "../components/AdaptationProgress";
 
-export default function SeriesPage() {
+function SeriesView() {
   const { slug } = useParams();
   // Start with what the middleware embedded. A blank first render is what
   // Google was reading as a soft 404
   const [series, setSeries] = useState<SeriesDetail | null>(
     slug ? seededSeries(slug) : null,
   );
-  const [selected, setSelected] = useState(0);
+  const [picked, setPicked] = useState<number | null>(null);
+  const [searchParams] = useSearchParams();
   const [error, setError] = useState<string | null>(null);
   const reduceMotion = useReducedMotion();
   const navigate = useNavigate();
@@ -182,6 +189,11 @@ export default function SeriesPage() {
     );
   }
 
+  // A "new season" card links here with ?season=, so open on that one
+  const linked = series.adaptations.findIndex(
+    (a) => a.name === searchParams.get("season"),
+  );
+  const selected = picked ?? Math.max(linked, 0);
   const current = series.adaptations[selected];
   // Webtoons have no per-volume covers, so use the series cover instead of nothing
   const answerCover = current.coverUrl ?? series.coverUrl;
@@ -259,7 +271,7 @@ export default function SeriesPage() {
           {series.adaptations.map((a, i) => (
             <button
               key={a.name}
-              onClick={() => setSelected(i)}
+              onClick={() => setPicked(i)}
               aria-pressed={i === selected}
               className={`font-body text-sm px-4 py-2 border cursor-pointer transition ${
                 i < selected
@@ -474,4 +486,11 @@ export default function SeriesPage() {
       )}
     </main>
   );
+}
+
+// The route stays mounted between series, so without the key the picked season
+// would carry over and point past the end of a shorter list
+export default function SeriesPage() {
+  const { slug } = useParams();
+  return <SeriesView key={slug} />;
 }

@@ -1,5 +1,7 @@
 package dev.okanaltun.pickup.series;
 
+import java.time.LocalDate;
+
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -51,6 +53,9 @@ public class Adaptation {
 
     @Column(name = "caught_up", nullable = false)
     private boolean caughtUp = false;
+
+    @Column(name = "added_at")
+    private LocalDate addedAt;
 
     public Adaptation() {
     }

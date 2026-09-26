@@ -34,7 +34,8 @@ public record SeedSeries(
                         Boolean animeOriginal,
                         Boolean caughtUp,
                         String coverUrl,
-                        String notes) {
+                        String notes,
+                        String addedAt) {
         }
 
         public record SeedReadingLink(

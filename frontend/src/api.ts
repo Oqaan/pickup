@@ -1,4 +1,4 @@
-import type { SeriesDetail, SeriesSummary } from "./types";
+import type { NewSeason, SeriesDetail, SeriesSummary } from "./types";
 import { ANSWER_COVER_SIZES, cover } from "./cover";
 
 // The series the middleware left in the page, when it's the one we want. It's
@@ -25,6 +25,7 @@ export function seededList(): SeriesSummary[] | null {
       title: string;
       coverUrl: string | null;
       addedOrder?: number;
+      newSeason?: NewSeason | null;
     }[]
   >("__pickup_list__");
   return raw ? raw.map((s) => ({ ...s, aliases: [] as string[] })) : null;

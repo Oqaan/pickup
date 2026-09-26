@@ -114,6 +114,7 @@ public class SeedRunner implements CommandLineRunner {
                 adaptation.setCaughtUp(Boolean.TRUE.equals(a.caughtUp()));
                 adaptation.setNotes(a.notes());
                 adaptation.setCoverUrl(a.coverUrl());
+                adaptation.setAddedAt(a.addedAt() != null ? LocalDate.parse(a.addedAt()) : null);
                 // Adaptation owns the relationship; without setSeries() the series_id column
                 // stays null
                 adaptation.setSeries(series);
