@@ -35,9 +35,9 @@ export default function Layout({ children }: Props) {
         </div>
       </header>
 
-      <div className="flex-1">{children}</div>
+      <div className="flex-1 pb-24">{children}</div>
 
-      <footer className="border-t border-tone mt-32">
+      <footer className="border-t border-tone">
         <div className="max-w-6xl mx-auto px-6 py-12">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
             <div>

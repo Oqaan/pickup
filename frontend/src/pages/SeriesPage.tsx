@@ -99,7 +99,7 @@ export default function SeriesPage() {
 
   if (error === "not-found") {
     return (
-      <main className="max-w-2xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
+      <main className="max-w-2xl mx-auto px-6 pt-12 pb-0">
         <p className="font-mono text-xs tracking-widest text-ash">NOT FOUND</p>
         <h1 className="font-display text-notice text-sumi mt-3">
           No entry for "{slug}" yet.
@@ -128,7 +128,7 @@ export default function SeriesPage() {
 
   if (error) {
     return (
-      <main className="max-w-2xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
+      <main className="max-w-2xl mx-auto px-6 pt-12 pb-0">
         <p className="font-mono text-xs tracking-widest text-ash">
           SOMETHING WENT WRONG
         </p>
@@ -152,7 +152,7 @@ export default function SeriesPage() {
   if (!series) {
     return (
       <main
-        className="max-w-2xl lg:max-w-6xl mx-auto px-6 pt-12 sm:pt-20 pb-0 lg:grid lg:grid-cols-[18rem_minmax(0,1fr)] lg:gap-x-16"
+        className="max-w-2xl lg:max-w-6xl mx-auto px-6 pt-12 pb-0 lg:grid lg:grid-cols-[18rem_minmax(0,1fr)] lg:gap-x-16"
         aria-busy="true"
       >
         <div className="hidden lg:block aspect-2/3 bg-tone/30" />
@@ -233,7 +233,7 @@ export default function SeriesPage() {
         : series.publicationStatus;
 
   return (
-    <main className="max-w-2xl lg:max-w-6xl mx-auto px-6 pt-12 sm:pt-20 pb-0 lg:grid lg:grid-cols-[18rem_minmax(0,1fr)] lg:gap-x-16">
+    <main className="max-w-2xl lg:max-w-6xl mx-auto px-6 pt-12 pb-0 lg:grid lg:grid-cols-[18rem_minmax(0,1fr)] lg:gap-x-16">
       <div className="lg:col-start-2">
         <div className="mb-8">{backToSearch}</div>
         <h1 className="font-display text-title text-sumi">{series.title}</h1>
@@ -345,7 +345,7 @@ export default function SeriesPage() {
       <aside className="lg:col-start-1 lg:row-start-1 lg:row-span-2">
         {answerCoverBlock("hidden lg:block")}
         {hasInfo && (
-          <dl className="mt-10 lg:mt-8 grid grid-cols-3 lg:grid-cols-2 gap-x-8 gap-y-6">
+          <dl className="tabular-nums mt-10 lg:mt-8 grid grid-cols-3 lg:grid-cols-2 gap-x-8 gap-y-6">
             {series.author && (
               <div className="col-span-3 sm:col-span-1 lg:col-span-2">
                 <dt className="font-mono text-xs tracking-widest text-ash">

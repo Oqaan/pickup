@@ -161,7 +161,7 @@ export default function HomePage() {
 
   if (error) {
     return (
-      <main className="max-w-6xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
+      <main className="max-w-6xl mx-auto px-6 pt-12 pb-0">
         <p className="font-mono text-xs tracking-widest text-ash">
           SOMETHING WENT WRONG
         </p>
@@ -287,7 +287,10 @@ export default function HomePage() {
         </section>
       )}
 
-      <p className="font-mono text-xs tracking-widest text-ash mt-12 sm:mt-16">
+      <p
+        aria-live="polite"
+        className="font-mono text-xs tracking-widest text-ash mt-12 sm:mt-16"
+      >
         {label}
       </p>
       {!searching && (
