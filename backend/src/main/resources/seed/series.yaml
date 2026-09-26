@@ -1135,8 +1135,7 @@
   author: Rikito Nakamura & Yukiko Nozawa
   startYear: 2019
   publicationStatus: RELEASING
-  verifiedAt: 2026-08-23
-  notes: "Season 3 is still airing, so it will be added once it finishes."
+  verifiedAt: 2026-09-26
   readingLinks:
     - label: Seven Seas
       url: https://sevenseasentertainment.com/series/the-100-girlfriends-who-really-really-really-really-really-love-you/
@@ -1156,6 +1155,14 @@
       continueVolume: 7
       lastCoveredChapter: 50
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787507728/pickup/covers/100-girlfriends-5f4fa2c47e5.jpg
+    - name: "Season 3"
+      episodes: 12
+      sortOrder: 3
+      continueChapter: 86
+      continueVolume: 10
+      lastCoveredChapter: 85
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1790423066/pickup/covers/100-girlfriends-c11af66c6c8.jpg
+      notes: "Season 3 skips several side chapters between 51 and 85 and adapts chapters 134 and 135 early as its finale, so go back to chapter 51 if you want everything."
 
 - slug: the-summer-hikaru-died
   title: The Summer Hikaru Died
@@ -3270,7 +3277,7 @@
   author: Kenji Inoue & Kimitake Yoshioka
   startYear: 2014
   publicationStatus: RELEASING
-  verifiedAt: 2026-09-07
+  verifiedAt: 2026-09-26
   readingLinks:
     - label: Kodansha
       url: https://kodansha.us/series/grand-blue-dreaming/
@@ -3291,6 +3298,13 @@
       lastCoveredChapter: 45
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788785516/pickup/covers/grand-blue-1f10a4528d8.jpg
       notes: "The anime skips volume 6 (chapters 22 to 25) between seasons, so read it before continuing if you want everything."
+    - name: Season 3
+      episodes: 12
+      sortOrder: 3
+      continueChapter: 66
+      continueVolume: 17
+      lastCoveredChapter: 65
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1790423068/pickup/covers/grand-blue-153257877e4.jpg
 
 - slug: noragami
   title: Noragami
