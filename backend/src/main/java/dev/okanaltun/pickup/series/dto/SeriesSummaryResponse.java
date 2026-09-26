@@ -7,5 +7,6 @@ public record SeriesSummaryResponse(
                 String title,
                 String coverUrl,
                 List<String> aliases,
-                long addedOrder) {
+                long addedOrder,
+                NewSeasonResponse newSeason) {
 }

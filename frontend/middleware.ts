@@ -44,6 +44,7 @@ type Listed = {
   title: string;
   coverUrl: string | null;
   addedOrder?: number;
+  newSeason?: unknown;
 };
 
 const esc = (s: string) =>
@@ -83,6 +84,7 @@ const listData = (list: Listed[]) =>
     title: s.title,
     coverUrl: s.coverUrl,
     addedOrder: s.addedOrder,
+    newSeason: s.newSeason,
   }));
 
 const shell = (origin: string) =>

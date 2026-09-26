@@ -16,22 +16,40 @@ public class SeriesService {
         private final SeriesRepository repository;
         private final ReadingLinkRepository readingLinkRepository;
         private final SeriesAliasRepository seriesAliasRepository;
+        private final AdaptationRepository adaptationRepository;
 
         public SeriesService(SeriesRepository repository,
                         ReadingLinkRepository readingLinkRepository,
-                        SeriesAliasRepository seriesAliasRepository) {
+                        SeriesAliasRepository seriesAliasRepository,
+                        AdaptationRepository adaptationRepository) {
                 this.repository = repository;
                 this.readingLinkRepository = readingLinkRepository;
                 this.seriesAliasRepository = seriesAliasRepository;
+                this.adaptationRepository = adaptationRepository;
         }
 
         @Transactional(readOnly = true)
         public List<SeriesSummaryResponse> findAll() {
+                // One query for every dated season instead of loading each series' seasons
+                Map<Integer, Adaptation> newSeasons = adaptationRepository.findByAddedAtIsNotNull().stream()
+                                .collect(Collectors.toMap(a -> a.getSeries().getId(), a -> a,
+                                                (a, b) -> later(a, b) ? a : b));
+
                 return repository.findAllByOrderByPopularityDesc().stream()
                                 .map(s -> new SeriesSummaryResponse(s.getSlug(), s.getTitle(), s.getCoverUrl(),
                                                 s.getAliases().stream().map(SeriesAlias::getAlias).toList(),
-                                                s.getId()))
+                                                s.getId(),
+                                                newSeason(newSeasons.get(s.getId()))))
                                 .toList();
+        }
+
+        private static boolean later(Adaptation a, Adaptation b) {
+                int byDate = a.getAddedAt().compareTo(b.getAddedAt());
+                return byDate != 0 ? byDate > 0 : a.getSortOrder() > b.getSortOrder();
+        }
+
+        private static NewSeasonResponse newSeason(Adaptation a) {
+                return a == null ? null : new NewSeasonResponse(a.getName(), a.getAddedAt(), a.getCoverUrl());
         }
 
         @Transactional(readOnly = true)

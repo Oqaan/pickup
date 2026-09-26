@@ -1158,6 +1158,7 @@
     - name: "Season 3"
       episodes: 12
       sortOrder: 3
+      addedAt: 2026-09-26
       continueChapter: 86
       continueVolume: 10
       lastCoveredChapter: 85
@@ -3301,6 +3302,7 @@
     - name: Season 3
       episodes: 12
       sortOrder: 3
+      addedAt: 2026-09-26
       continueChapter: 66
       continueVolume: 17
       lastCoveredChapter: 65

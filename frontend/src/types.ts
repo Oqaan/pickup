@@ -36,6 +36,12 @@ export type RelatedSeries = {
   coverUrl: string | null;
 };
 
+export type NewSeason = {
+  name: string;
+  addedAt: string;
+  coverUrl: string | null;
+};
+
 export type SeriesSummary = {
   slug: string;
   title: string;
@@ -43,6 +49,7 @@ export type SeriesSummary = {
   aliases: string[];
   // Optional because Vercel can go live before Railway starts sending it
   addedOrder?: number;
+  newSeason?: NewSeason | null;
 };
 
 export type ReadingLink = {

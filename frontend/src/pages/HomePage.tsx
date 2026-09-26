@@ -11,6 +11,7 @@ import { Link, useLocation, useSearchParams } from "react-router-dom";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useSeo } from "../useSeo";
 import SearchBar from "../components/SearchBar";
+import Shelf from "../components/Shelf";
 
 // Opening a series throws this page away, so save what the user had open.
 // Saved per history entry, so going back finds it and a fresh visit does not
@@ -20,7 +21,6 @@ type FuseModule = typeof import("fuse.js").default;
 
 // How wide a cover lands on screen: five per row from 1024px up, three from 640px, two below
 const COVER_SIZES = "(min-width: 1024px) 210px, (min-width: 640px) 33vw, 50vw";
-const SHELF_SIZES = "(min-width: 1024px) 210px, (min-width: 640px) 30vw, 42vw";
 
 // How many cards the list starts with, and how many each click adds
 const PER_PAGE = 10;
@@ -154,6 +154,11 @@ export default function HomePage() {
     .sort((a, b) => b.addedOrder! - a.addedOrder!)
     .slice(0, 5);
 
+  const newSeasons = series
+    .flatMap((s) => (s.newSeason ? [{ ...s, newSeason: s.newSeason }] : []))
+    .sort((a, b) => b.newSeason.addedAt.localeCompare(a.newSeason.addedAt))
+    .slice(0, 5);
+
   const label =
     query.length < 2
       ? "MOST READ"
@@ -252,39 +257,34 @@ export default function HomePage() {
       </div>
 
       {!searching && newest.length > 0 && (
-        <section className="mt-10 sm:mt-12">
-          <p className="font-mono text-xs tracking-widest text-jump">
-            NEWLY ADDED
-          </p>
-          <h2 className="font-display text-notice text-sumi mt-3">
-            New on the shelf.
-          </h2>
-          <div className="flex lg:grid lg:grid-cols-5 gap-x-6 mt-4 -mx-6 px-6 scroll-px-6 lg:mx-0 lg:px-0 overflow-x-auto lg:overflow-visible snap-x snap-mandatory">
-            {newest.map((s) => (
-              <Link
-                key={s.slug}
-                to={`/anime/${s.slug}`}
-                onClick={() => remember(historyKey, { scroll: window.scrollY })}
-                onPointerEnter={() => prefetchSeriesDetail(s.slug)}
-                onFocus={() => prefetchSeriesDetail(s.slug)}
-                className="group block shrink-0 w-[42%] sm:w-[30%] lg:w-auto snap-start"
-              >
-                <div className="spine relative aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition duration-200 group-hover:-translate-y-1">
-                  {s.coverUrl && (
-                    <img
-                      {...cover(s.coverUrl, [300, 600], SHELF_SIZES)}
-                      alt=""
-                      className="w-full h-full object-cover"
-                    />
-                  )}
-                </div>
-                <p className="font-body text-sm text-sumi group-hover:text-jump mt-3 leading-snug">
-                  {s.title}
-                </p>
-              </Link>
-            ))}
-          </div>
-        </section>
+        <Shelf
+          label="NEWLY ADDED"
+          title="New on the shelf."
+          className="mt-10 sm:mt-12"
+          onOpen={() => remember(historyKey, { scroll: window.scrollY })}
+          cards={newest.map((s) => ({
+            slug: s.slug,
+            to: `/anime/${s.slug}`,
+            title: s.title,
+            coverUrl: s.coverUrl,
+          }))}
+        />
+      )}
+
+      {!searching && newSeasons.length > 0 && (
+        <Shelf
+          label="NEW SEASONS"
+          title="Fresh chapters to read."
+          className="mt-10"
+          onOpen={() => remember(historyKey, { scroll: window.scrollY })}
+          cards={newSeasons.map(({ slug, title, coverUrl, newSeason }) => ({
+            slug,
+            to: `/anime/${slug}?season=${encodeURIComponent(newSeason.name)}`,
+            title,
+            coverUrl: newSeason.coverUrl ?? coverUrl,
+            tag: newSeason.name.toUpperCase(),
+          }))}
+        />
       )}
 
       <p
