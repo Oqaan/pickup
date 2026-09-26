@@ -8,7 +8,7 @@ export default function AboutPage() {
     canonical: "/about",
   });
   return (
-    <main className="max-w-2xl mx-auto px-6 pt-16 pb-0">
+    <main className="max-w-2xl mx-auto px-6 pt-12 pb-0">
       <h1 className="font-display text-title text-sumi">About pickup</h1>
 
       <div className="mt-10 space-y-6 font-body text-base text-sumi/80 leading-relaxed">

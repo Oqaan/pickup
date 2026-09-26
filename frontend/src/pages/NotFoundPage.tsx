@@ -4,7 +4,7 @@ import { useSeo } from "../useSeo";
 export default function NotFoundPage() {
   useSeo({ title: "Not found - pickup", noindex: true });
   return (
-    <main className="max-w-2xl mx-auto px-6 pt-12 sm:pt-20 pb-0">
+    <main className="max-w-2xl mx-auto px-6 pt-12 pb-0">
       <p className="font-mono text-xs tracking-widest text-ash">404</p>
       <h1 className="font-display text-notice text-sumi mt-3">
         This page does not exist
