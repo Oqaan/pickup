@@ -22,6 +22,11 @@ type FuseModule = typeof import("fuse.js").default;
 // How wide a cover lands on screen: five per row from 1024px up, three from 640px, two below
 const COVER_SIZES = "(min-width: 1024px) 210px, (min-width: 640px) 33vw, 50vw";
 
+const SHELF_MAX = 15;
+const SEASON_WINDOW_START = new Date(Date.now() - 30 * 86_400_000)
+  .toISOString()
+  .slice(0, 10);
+
 // How many cards the list starts with, and how many each click adds
 const PER_PAGE = 10;
 const STEP = 30;
@@ -152,12 +157,19 @@ export default function HomePage() {
   const newest = series
     .filter((s) => s.addedOrder != null)
     .sort((a, b) => b.addedOrder! - a.addedOrder!)
-    .slice(0, 5);
+    .slice(0, SHELF_MAX);
 
   const newSeasons = series
     .flatMap((s) => (s.newSeason ? [{ ...s, newSeason: s.newSeason }] : []))
-    .sort((a, b) => b.newSeason.addedAt.localeCompare(a.newSeason.addedAt))
-    .slice(0, 5);
+    .sort((a, b) => b.newSeason.addedAt.localeCompare(a.newSeason.addedAt));
+  // Everything from the last month, but never fewer than a full row
+  const recentSeasons = newSeasons.filter(
+    (s) => s.newSeason.addedAt >= SEASON_WINDOW_START,
+  ).length;
+  const shownSeasons = newSeasons.slice(
+    0,
+    Math.min(Math.max(recentSeasons, 5), SHELF_MAX),
+  );
 
   const label =
     query.length < 2
@@ -271,13 +283,13 @@ export default function HomePage() {
         />
       )}
 
-      {!searching && newSeasons.length > 0 && (
+      {!searching && shownSeasons.length > 0 && (
         <Shelf
           label="NEW SEASONS"
           title="Fresh chapters to read."
           className="mt-10"
           onOpen={() => remember(historyKey, { scroll: window.scrollY })}
-          cards={newSeasons.map(({ slug, title, coverUrl, newSeason }) => ({
+          cards={shownSeasons.map(({ slug, title, coverUrl, newSeason }) => ({
             slug,
             to: `/anime/${slug}?season=${encodeURIComponent(newSeason.name)}`,
             title,
