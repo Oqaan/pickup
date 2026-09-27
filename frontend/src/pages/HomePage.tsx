@@ -15,7 +15,7 @@ import Shelf from "../components/Shelf";
 
 // Opening a series throws this page away, so save what the user had open.
 // Saved per history entry, so going back finds it and a fresh visit does not
-type Remembered = { shown: number; scroll: number };
+type Remembered = { scroll: number };
 
 type FuseModule = typeof import("fuse.js").default;
 
@@ -27,7 +27,7 @@ const SEASON_WINDOW_START = new Date(Date.now() - 30 * 86_400_000)
   .toISOString()
   .slice(0, 10);
 
-// How many cards the list starts with, and how many each click adds
+// The home shows the top ten, a search starts with ten results and each click adds more
 const PER_PAGE = 10;
 const STEP = 30;
 
@@ -41,7 +41,7 @@ const remembered = (key: string): Remembered | null => {
 };
 
 const remember = (key: string, patch: Partial<Remembered>) => {
-  const base = remembered(key) ?? { shown: PER_PAGE, scroll: 0 };
+  const base = remembered(key) ?? { scroll: 0 };
   sessionStorage.setItem(`home:${key}`, JSON.stringify({ ...base, ...patch }));
 };
 
@@ -75,9 +75,6 @@ export default function HomePage() {
   const [error, setError] = useState(false);
   const reduceMotion = useReducedMotion();
   const { key: historyKey } = useLocation();
-  const [shown, setShown] = useState(
-    () => remembered(historyKey)?.shown ?? PER_PAGE,
-  );
   const [searchShown, setSearchShown] = useState(PER_PAGE);
   const [Fuse, setFuse] = useState<FuseModule | null>(null);
   // A query from the URL needs the search library right away, not on first click
@@ -105,10 +102,6 @@ export default function HomePage() {
       .catch(() => setError(true))
       .finally(() => setLoading(false));
   }, []);
-
-  useEffect(() => {
-    remember(historyKey, { shown });
-  }, [historyKey, shown]);
 
   // Wait for the cards, the skeleton is too short to scroll that far
   useLayoutEffect(() => {
@@ -144,10 +137,8 @@ export default function HomePage() {
   const results =
     query.length >= 2 && fuse ? fuse.search(query).map((r) => r.item) : series;
 
-  // Both lists grow a page at a time. A search keeps its own count so that
-  // clearing the field puts the browsing list back where the user left it
   const searching = query.length >= 2;
-  const limit = searching ? searchShown : shown;
+  const limit = searching ? searchShown : PER_PAGE;
   const visible = results.slice(0, limit);
   const remaining = results.length - limit;
   // Three columns leave the tenth card alone on its own row, so it waits for
@@ -394,19 +385,24 @@ export default function HomePage() {
         )}
       </div>
 
-      {remaining > 0 && (
+      {searching && remaining > 0 && (
         <button
-          onClick={() =>
-            searching
-              ? setSearchShown((n) => n + STEP)
-              : setShown((n) => n + STEP)
-          }
+          onClick={() => setSearchShown((n) => n + STEP)}
           className="w-full border-t border-tone mt-10 pt-6 font-mono text-xs tracking-widest text-ash hover:text-jump cursor-pointer"
         >
           {remaining <= STEP
-            ? `SHOW ALL ${results.length} ${searching ? "RESULTS" : "SERIES"}`
+            ? `SHOW ALL ${results.length} RESULTS`
             : `SHOW ${STEP} MORE`}
         </button>
+      )}
+
+      {!searching && !loading && (
+        <Link
+          to="/browse"
+          className="block w-full border-t border-tone mt-10 pt-6 text-center font-mono text-xs tracking-widest text-ash hover:text-jump"
+        >
+          SEE ALL {series.length} SERIES →
+        </Link>
       )}
 
       {query.length >= 2 && results.length === 0 && (

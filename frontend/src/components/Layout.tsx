@@ -17,6 +17,14 @@ export default function Layout({ children }: Props) {
           </Link>
           <div className="flex items-center gap-6">
             <NavLink
+              to="/browse"
+              className={({ isActive }) =>
+                `font-mono text-xs tracking-widest hover:text-jump ${isActive ? "text-sumi" : "text-ash"}`
+              }
+            >
+              LIBRARY
+            </NavLink>
+            <NavLink
               to="/about"
               className={({ isActive }) =>
                 `font-mono text-xs tracking-widest hover:text-jump ${isActive ? "text-sumi" : "text-ash"}`
