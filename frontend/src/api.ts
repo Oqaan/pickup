@@ -26,6 +26,12 @@ export function seededList(): SeriesSummary[] | null {
       coverUrl: string | null;
       addedOrder?: number;
       newSeason?: NewSeason | null;
+      titleNative?: string | null;
+      publicationStatus?: string | null;
+      totalChapters?: number | null;
+      totalVolumes?: number | null;
+      adaptationCount?: number;
+      caughtUp?: boolean;
     }[]
   >("__pickup_list__");
   return raw ? raw.map((s) => ({ ...s, aliases: [] as string[] })) : null;

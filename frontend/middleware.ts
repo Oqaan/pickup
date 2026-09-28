@@ -45,6 +45,12 @@ type Listed = {
   coverUrl: string | null;
   addedOrder?: number;
   newSeason?: unknown;
+  titleNative?: string | null;
+  publicationStatus?: string | null;
+  totalChapters?: number | null;
+  totalVolumes?: number | null;
+  adaptationCount?: number;
+  caughtUp?: boolean;
 };
 
 const esc = (s: string) =>
@@ -85,6 +91,12 @@ const listData = (list: Listed[]) =>
     coverUrl: s.coverUrl,
     addedOrder: s.addedOrder,
     newSeason: s.newSeason,
+    titleNative: s.titleNative,
+    publicationStatus: s.publicationStatus,
+    totalChapters: s.totalChapters,
+    totalVolumes: s.totalVolumes,
+    adaptationCount: s.adaptationCount,
+    caughtUp: s.caughtUp,
   }));
 
 const shell = (origin: string) =>

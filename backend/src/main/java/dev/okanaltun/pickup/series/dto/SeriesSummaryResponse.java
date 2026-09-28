@@ -8,5 +8,11 @@ public record SeriesSummaryResponse(
                 String coverUrl,
                 List<String> aliases,
                 long addedOrder,
-                NewSeasonResponse newSeason) {
+                NewSeasonResponse newSeason,
+                String titleNative,
+                String publicationStatus,
+                Integer totalChapters,
+                Integer totalVolumes,
+                int adaptationCount,
+                boolean caughtUp) {
 }

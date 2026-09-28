@@ -50,6 +50,12 @@ export type SeriesSummary = {
   // Optional because Vercel can go live before Railway starts sending it
   addedOrder?: number;
   newSeason?: NewSeason | null;
+  titleNative?: string | null;
+  publicationStatus?: string | null;
+  totalChapters?: number | null;
+  totalVolumes?: number | null;
+  adaptationCount?: number;
+  caughtUp?: boolean;
 };
 
 export type ReadingLink = {

@@ -19,9 +19,24 @@ const PER_PAGE = 30;
 const SORTS = [
   { id: "popular", label: "LOOKED UP MOST" },
   { id: "az", label: "A-Z" },
+  { id: "longest", label: "LONGEST" },
 ] as const;
 
 type Sort = (typeof SORTS)[number]["id"];
+
+// Caught up wins, since then there is nothing left to read either way
+function tag(s: SeriesSummary) {
+  if (s.caughtUp) return { label: "ANIME CAUGHT UP", loud: false };
+  if (s.publicationStatus === "FINISHED")
+    return { label: "MANGA IS AHEAD", loud: true };
+  return { label: "MANGA ONGOING", loud: false };
+}
+
+function size(s: SeriesSummary) {
+  if (s.publicationStatus !== "FINISHED" || !s.totalChapters) return "Ongoing";
+  const vol = s.totalVolumes ? ` · ${s.totalVolumes} vol` : "";
+  return `${s.totalChapters} chapters${vol}`;
+}
 
 export default function BrowsePage() {
   useSeo({
@@ -43,11 +58,21 @@ export default function BrowsePage() {
   }, []);
 
   const [params, setParams] = useSearchParams();
-  const sort: Sort = params.get("sort") === "az" ? "az" : "popular";
+  const sort: Sort =
+    SORTS.find((s) => s.id === params.get("sort"))?.id ?? "popular";
   const sorted =
     sort === "az"
       ? [...series].sort((a, b) => a.title.localeCompare(b.title))
-      : series;
+      : sort === "longest"
+        ? // Ongoing series have no final count yet, so they go last
+          [...series].sort(
+            (a, b) =>
+              (b.publicationStatus === "FINISHED"
+                ? (b.totalChapters ?? 0)
+                : 0) -
+              (a.publicationStatus === "FINISHED" ? (a.totalChapters ?? 0) : 0),
+          )
+        : series;
 
   const pages = Math.max(1, Math.ceil(sorted.length / PER_PAGE));
   const page = Math.min(Math.max(Number(params.get("page")) || 1, 1), pages);
@@ -72,6 +97,11 @@ export default function BrowsePage() {
           <p className="font-mono text-xs tracking-widest text-ash mt-3">
             {series.length} SERIES, CHAPTER BY CHAPTER
           </p>
+          {sort === "longest" && (
+            <p className="font-mono text-xs tracking-widest text-ash mt-1">
+              FINISHED MANGA BY CHAPTER COUNT, ONGOING ONES FOLLOW AT THE END
+            </p>
+          )}
         </div>
         <div className="flex gap-2">
           {SORTS.map((s) => (
@@ -98,7 +128,7 @@ export default function BrowsePage() {
             to={`/anime/${s.slug}`}
             onPointerEnter={() => prefetchSeriesDetail(s.slug)}
             onFocus={() => prefetchSeriesDetail(s.slug)}
-            className="group block"
+            className="group flex flex-col"
           >
             <div className="spine relative aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition duration-200 group-hover:-translate-y-1">
               {s.coverUrl && (
@@ -113,6 +143,34 @@ export default function BrowsePage() {
             <p className="font-body text-sm text-sumi group-hover:text-jump mt-3 leading-snug">
               {s.title}
             </p>
+            {s.titleNative && (
+              <p className="font-jp text-xs text-ash mt-0.5 truncate">
+                {s.titleNative}
+              </p>
+            )}
+            <div className="font-mono text-xs text-ash mt-2 space-y-0.5 tabular-nums">
+              {s.adaptationCount != null && (
+                <p>
+                  {s.adaptationCount}{" "}
+                  {s.adaptationCount === 1 ? "adaptation" : "adaptations"}
+                </p>
+              )}
+              <p>{size(s)}</p>
+            </div>
+            {/* Pushed down so the tags in a row line up however long the titles run */}
+            {s.publicationStatus && (
+              <div className="mt-auto pt-3">
+                <span
+                  className={`inline-block font-mono text-xs tracking-widest px-2 py-1 border ${
+                    tag(s).loud
+                      ? "border-jump text-jump"
+                      : "border-tone text-ash"
+                  }`}
+                >
+                  {tag(s).label}
+                </span>
+              </div>
+            )}
           </Link>
         ))}
       </div>
