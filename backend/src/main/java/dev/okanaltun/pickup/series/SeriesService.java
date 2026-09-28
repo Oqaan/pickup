@@ -1,5 +1,6 @@
 package dev.okanaltun.pickup.series;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -30,16 +31,32 @@ public class SeriesService {
 
         @Transactional(readOnly = true)
         public List<SeriesSummaryResponse> findAll() {
-                // One query for every dated season instead of loading each series' seasons
-                Map<Integer, Adaptation> newSeasons = adaptationRepository.findByAddedAtIsNotNull().stream()
-                                .collect(Collectors.toMap(a -> a.getSeries().getId(), a -> a,
-                                                (a, b) -> later(a, b) ? a : b));
+                // Every season in one query instead of loading them series by series
+                Map<Integer, List<Adaptation>> seasons = adaptationRepository.findAll().stream()
+                                .collect(Collectors.groupingBy(a -> a.getSeries().getId()));
 
                 return repository.findAllByOrderByPopularityDesc().stream()
-                                .map(s -> new SeriesSummaryResponse(s.getSlug(), s.getTitle(), s.getCoverUrl(),
-                                                s.getAliases().stream().map(SeriesAlias::getAlias).toList(),
-                                                s.getId(),
-                                                newSeason(newSeasons.get(s.getId()))))
+                                .map(s -> {
+                                        List<Adaptation> own = seasons.getOrDefault(s.getId(), List.of());
+                                        Adaptation newest = own.stream()
+                                                        .filter(a -> a.getAddedAt() != null)
+                                                        .reduce((a, b) -> later(a, b) ? a : b)
+                                                        .orElse(null);
+                                        boolean caughtUp = own.stream()
+                                                        .max(Comparator.comparingInt(Adaptation::getSortOrder))
+                                                        .map(Adaptation::isCaughtUp)
+                                                        .orElse(false);
+                                        return new SeriesSummaryResponse(s.getSlug(), s.getTitle(), s.getCoverUrl(),
+                                                        s.getAliases().stream().map(SeriesAlias::getAlias).toList(),
+                                                        s.getId(),
+                                                        newSeason(newest),
+                                                        s.getTitleNative(),
+                                                        s.getPublicationStatus(),
+                                                        s.getTotalChapters(),
+                                                        s.getTotalVolumes(),
+                                                        own.size(),
+                                                        caughtUp);
+                                })
                                 .toList();
         }
 
