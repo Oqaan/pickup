@@ -7,6 +7,7 @@ import {
   seededList,
 } from "../api";
 import { cover } from "../cover";
+import { issueUrl } from "../issue";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useSeo } from "../useSeo";
@@ -417,11 +418,21 @@ export default function HomePage() {
         </Link>
       )}
 
-      {query.length >= 2 && results.length === 0 && (
-        <p className="font-body text-sm text-sumi/70 mt-8 max-w-prose">
-          Not in the database yet. It's a small list for now, growing as I
-          verify each entry by hand.
-        </p>
+      {searching && ready && results.length === 0 && (
+        <div className="mt-8">
+          <p className="font-body text-sm text-sumi/70 max-w-prose">
+            Not in the database yet. It's a small list for now, growing as I
+            verify each entry by hand.
+          </p>
+          <a
+            href={issueUrl(`Suggest: ${query}`)}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block mt-4 font-mono text-xs tracking-widest text-sumi hover:text-jump"
+          >
+            SUGGEST IT →
+          </a>
+        </div>
       )}
     </main>
   );

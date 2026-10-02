@@ -19,6 +19,7 @@ import { seriesDescription, seriesTitle } from "../seo";
 import { ANSWER_COVER_SIZES, cover } from "../cover";
 import CountUp from "../components/CountUp";
 import AdaptationProgress from "../components/AdaptationProgress";
+import { issueUrl } from "../issue";
 
 function SeriesView() {
   const { slug } = useParams();
@@ -121,7 +122,7 @@ function SeriesView() {
           </Link>
           <span className="text-tone">·</span>
           <a
-            href="https://github.com/Oqaan/pickup/issues/new"
+            href={issueUrl(`Suggest: ${slug}`)}
             target="_blank"
             rel="noreferrer"
             className="text-sumi hover:text-jump"
@@ -243,6 +244,22 @@ function SeriesView() {
       : series.publicationStatus === "FINISHED"
         ? "Finished"
         : series.publicationStatus;
+
+  const shownAnswer = current.caughtUp
+    ? "caught up"
+    : current.continueChapter
+      ? `chapter ${current.continueChapter}${current.continueVolume ? `, volume ${current.continueVolume}` : ""}`
+      : "no starting point";
+  const reportUrl = issueUrl(
+    `Wrong chapter: ${series.title}, ${current.name}`,
+    [
+      `Page: https://pickup.moe/anime/${series.slug}`,
+      `Season: ${current.name}`,
+      `Shown: ${shownAnswer}`,
+      "Should be: ",
+      "Source: ",
+    ].join("\n"),
+  );
 
   return (
     <main className="max-w-2xl lg:max-w-6xl mx-auto px-6 pt-12 pb-0 lg:grid lg:grid-cols-[18rem_minmax(0,1fr)] lg:gap-x-16">
@@ -410,33 +427,33 @@ function SeriesView() {
         )}
       </aside>
 
-      {(series.readingLinks.length > 0 || series.verifiedAt) && (
-        <div className="mt-12 sm:mt-16 pt-8 border-t border-tone flex items-start justify-between gap-6 max-w-2xl lg:col-start-2">
-          <div>
-            {series.readingLinks.length > 0 && (
-              <>
-                <p className="font-mono text-xs tracking-widest text-ash">
-                  WHERE TO READ
-                </p>
-                <div className="flex flex-wrap gap-3 mt-4">
-                  {series.readingLinks.map((l) => (
-                    <a
-                      key={l.url}
-                      href={l.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="font-body text-sm px-4 py-2 border border-tone text-sumi hover:bg-sumi hover:border-sumi hover:text-paper transition"
-                    >
-                      {l.label}
-                    </a>
-                  ))}
-                </div>
-              </>
-            )}
-          </div>
+      <div className="mt-12 sm:mt-16 pt-8 border-t border-tone flex items-start justify-between gap-6 max-w-2xl lg:col-start-2">
+        <div>
+          {series.readingLinks.length > 0 && (
+            <>
+              <p className="font-mono text-xs tracking-widest text-ash">
+                WHERE TO READ
+              </p>
+              <div className="flex flex-wrap gap-3 mt-4">
+                {series.readingLinks.map((l) => (
+                  <a
+                    key={l.url}
+                    href={l.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-body text-sm px-4 py-2 border border-tone text-sumi hover:bg-sumi hover:border-sumi hover:text-paper transition"
+                  >
+                    {l.label}
+                  </a>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
 
+        <div className="shrink-0 text-right font-mono text-xs tracking-widest">
           {series.verifiedAt && (
-            <p className="font-mono text-xs tracking-widest text-ash shrink-0">
+            <p className="text-ash">
               VERIFIED{" "}
               {new Date(series.verifiedAt).toLocaleDateString("en-US", {
                 month: "short",
@@ -446,8 +463,16 @@ function SeriesView() {
               })}
             </p>
           )}
+          <a
+            href={reportUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block mt-2 text-sumi hover:text-jump"
+          >
+            WRONG? REPORT IT
+          </a>
         </div>
-      )}
+      </div>
 
       {related.length > 0 && (
         <section className="mt-16 sm:mt-24 pt-8 border-t border-tone lg:col-span-2">
