@@ -15,9 +15,12 @@ import Shelf from "../components/Shelf";
 
 // Opening a series throws this page away, so save what the user had open.
 // Saved per history entry, so going back finds it and a fresh visit does not
-type Remembered = { scroll: number };
+type Remembered = { scroll: number; shown?: number };
 
 type FuseModule = typeof import("fuse.js").default;
+
+// Outlives the page so going back to a search doesn't flash the full list
+let loadedFuse: FuseModule | null = null;
 
 // How wide a cover lands on screen: five per row from 1024px up, three from 640px, two below
 const COVER_SIZES = "(min-width: 1024px) 210px, (min-width: 640px) 33vw, 50vw";
@@ -65,20 +68,22 @@ export default function HomePage() {
   const [series, setSeries] = useState<SeriesSummary[]>(
     () => cachedSeriesList() ?? seededList() ?? [],
   );
-  // A search Google links to arrives as /?q=term, so seed the field from it
-  const [searchParams] = useSearchParams();
-  const initialQuery = searchParams.get("q") ?? "";
-  const [query, setQuery] = useState(initialQuery);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const query = searchParams.get("q") ?? "";
+  const setQuery = (value: string) =>
+    setSearchParams(value ? { q: value } : {}, { replace: true });
   const [loading, setLoading] = useState(
     () => cachedSeriesList() === null && seededList() === null,
   );
   const [error, setError] = useState(false);
   const reduceMotion = useReducedMotion();
   const { key: historyKey } = useLocation();
-  const [searchShown, setSearchShown] = useState(PER_PAGE);
-  const [Fuse, setFuse] = useState<FuseModule | null>(null);
+  const [searchShown, setSearchShown] = useState(
+    () => remembered(historyKey)?.shown ?? PER_PAGE,
+  );
+  const [Fuse, setFuse] = useState<FuseModule | null>(() => loadedFuse);
   // A query from the URL needs the search library right away, not on first click
-  const [wantsFuse, setWantsFuse] = useState(initialQuery.length >= 2);
+  const [wantsFuse, setWantsFuse] = useState(query.length >= 2);
   // A saved scroll position means the user is coming back to a list they have
   // already seen. The cards then skip their entrance, which would otherwise
   // run as a wave down the page while they wait at the bottom for their spot
@@ -103,23 +108,19 @@ export default function HomePage() {
       .finally(() => setLoading(false));
   }, []);
 
-  // Wait for the cards, the skeleton is too short to scroll that far
-  useLayoutEffect(() => {
-    if (loading) return;
-    const y = remembered(historyKey)?.scroll ?? 0;
-    if (y > 0) window.scrollTo(0, y);
-  }, [loading, historyKey]);
-
   // Most visitors never search, so the search library is only fetched once
   // the field is clicked, well before the second character starts a search
   useEffect(() => {
-    if (!wantsFuse) return;
+    if (!wantsFuse || Fuse) return;
     let live = true;
-    void import("fuse.js").then((m) => live && setFuse(() => m.default));
+    void import("fuse.js").then((m) => {
+      loadedFuse = m.default;
+      if (live) setFuse(() => m.default);
+    });
     return () => {
       live = false;
     };
-  }, [wantsFuse]);
+  }, [wantsFuse, Fuse]);
 
   const fuse = useMemo(
     () =>
@@ -133,6 +134,14 @@ export default function HomePage() {
         : null,
     [Fuse, series],
   );
+
+  // Wait for the cards, the skeleton is too short to scroll that far
+  const ready = !loading && (query.length < 2 || fuse !== null);
+  useLayoutEffect(() => {
+    if (!ready) return;
+    const y = remembered(historyKey)?.scroll ?? 0;
+    if (y > 0) window.scrollTo(0, y);
+  }, [ready, historyKey]);
 
   const results =
     query.length >= 2 && fuse ? fuse.search(query).map((r) => r.item) : series;
@@ -304,9 +313,9 @@ export default function HomePage() {
 
       <div
         className={`grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-10 ${searching ? "mt-4" : "mt-6"}`}
-        aria-busy={loading}
+        aria-busy={!ready}
       >
-        {loading ? (
+        {!ready ? (
           Array.from({ length: PER_PAGE }).map((_, i) => (
             <div key={i} className={i === 9 ? "sm:max-lg:hidden" : ""}>
               <div className="aspect-2/3 bg-tone/20" />
@@ -341,7 +350,10 @@ export default function HomePage() {
                       to={`/anime/${s.slug}`}
                       // Save the scroll position on the way out
                       onClick={() =>
-                        remember(historyKey, { scroll: window.scrollY })
+                        remember(historyKey, {
+                          scroll: window.scrollY,
+                          shown: searchShown,
+                        })
                       }
                       // Load the series before the click, not after it
                       onPointerEnter={() => prefetchSeriesDetail(s.slug)}
