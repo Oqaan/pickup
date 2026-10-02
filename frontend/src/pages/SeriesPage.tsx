@@ -43,7 +43,7 @@ function SeriesView() {
       onClick={() => navigate(-1)}
       className="font-mono text-xs tracking-widest text-ash hover:text-jump cursor-pointer"
     >
-      ← BACK TO SEARCH
+      ← BACK
     </button>
   ) : (
     <Link
@@ -441,6 +441,8 @@ function SeriesView() {
               {new Date(series.verifiedAt).toLocaleDateString("en-US", {
                 month: "short",
                 year: "numeric",
+                // Plain dates parse as UTC, so local time can show the day before
+                timeZone: "UTC",
               })}
             </p>
           )}
