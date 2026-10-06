@@ -3255,8 +3255,7 @@
   publicationStatus: FINISHED
   totalChapters: 238
   totalVolumes: 27
-  verifiedAt: 2026-09-06
-  notes: "Only the first season is mapped here. Season 2 is currently airing and picks up right where this leaves off."
+  verifiedAt: 2026-10-06
   adaptations:
     - name: Season 1
       episodes: 12
@@ -3265,6 +3264,15 @@
       continueVolume: 4
       lastCoveredChapter: 31
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788697940/pickup/covers/the-elusive-samurai-a43f53a1742.jpg
+    - name: Season 2
+      episodes: 12
+      sortOrder: 2
+      addedAt: 2026-10-06
+      continueChapter: 63
+      continueVolume: 8
+      lastCoveredChapter: 62
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1791276884/pickup/covers/the-elusive-samurai-e37af375d56.jpg
+      notes: "The finale stops a few pages into the chapter, so you'll re-read the start."
 
 - slug: grand-blue
   title: Grand Blue Dreaming
