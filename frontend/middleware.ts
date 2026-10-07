@@ -2,7 +2,6 @@
 import { next } from "@vercel/functions";
 
 export const config = {
-  runtime: "nodejs",
   matcher: ["/", "/browse", "/about", "/legal", "/anime/:slug*"],
 };
 
