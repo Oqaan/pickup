@@ -68,9 +68,9 @@ export default function LegalPage() {
         </p>
 
         <p>
-          pickup has no accounts, sets no cookies and runs no analytics or
-          tracking. Still, any website needs a few services to reach you, and
-          those see some data. This is all of it.
+          pickup has no accounts, sets no cookies and does not track you across
+          sites. Still, any website needs a few services to reach you, and those
+          see some data. This is all of it.
         </p>
       </div>
 
@@ -100,6 +100,18 @@ export default function LegalPage() {
       <p className="mt-2 font-body text-base text-sumi/80 leading-relaxed">
         Covers are delivered by Cloudinary Inc. (USA), which receives your IP
         address and browser details like any image host does.
+      </p>
+
+      <h3 className="font-body font-semibold text-base text-sumi mt-8">
+        Visitor statistics
+      </h3>
+      <p className="mt-2 font-body text-base text-sumi/80 leading-relaxed">
+        To see which pages get used, the site runs Vercel Web Analytics. It
+        counts page views with the page address, the referring site, your
+        country and your browser, operating system and device type. It sets no
+        cookies. Visits are told apart by a hash of the request that is thrown
+        away after 24 hours, so you can't be recognised on a later day or on
+        other websites.
       </p>
 
       <h3 className="font-body font-semibold text-base text-sumi mt-8">
