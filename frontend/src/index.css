@@ -10,7 +10,7 @@
   --font-display: "Archivo Black", sans-serif;
   --font-body: "IBM Plex Sans", sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
-  --font-jp: "Zen Kaku Gothic New", sans-serif;
+  --font-jp: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
 
   --text-answer: clamp(3.75rem, 9vw, 4.5rem);
   --text-answer--line-height: 0.95;
