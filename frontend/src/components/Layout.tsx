@@ -155,6 +155,10 @@ export default function Layout({ children }: Props) {
               About
             </Link>
             <span>·</span>
+            <Link to="/legal" className="hover:text-jump">
+              Legal
+            </Link>
+            <span>·</span>
             <span>pickup hosts nothing, it only points you to the chapter</span>
           </div>
         </div>

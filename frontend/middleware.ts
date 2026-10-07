@@ -1,7 +1,7 @@
 import { next } from "@vercel/functions";
 
 export const config = {
-  matcher: ["/", "/browse", "/about", "/anime/:slug*"],
+  matcher: ["/", "/browse", "/about", "/legal", "/anime/:slug*"],
 };
 
 const API = "https://api.pickup.moe";
@@ -123,6 +123,9 @@ const ABOUT_TITLE = "About - pickup";
 const ABOUT_DESCRIPTION =
   "How pickup works: every anime to manga stopping point is checked by hand, one series at a time.";
 
+const LEGAL_TITLE = "Legal - pickup";
+const LEGAL_DESCRIPTION = "Imprint and privacy policy for pickup.moe.";
+
 function pickup(a: Adaptation): string {
   if (a.caughtUp) {
     const upto = a.lastCoveredChapter
@@ -150,6 +153,7 @@ export default async function middleware(request: Request) {
   if (url.pathname === "/") return homepage(url);
   if (url.pathname === "/browse") return browsePage(url);
   if (url.pathname === "/about") return aboutPage(url);
+  if (url.pathname === "/legal") return legalPage(url);
   return seriesPage(url);
 }
 
@@ -288,6 +292,17 @@ async function aboutPage(url: URL) {
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${esc(ABOUT_TITLE)}" />
     <meta name="twitter:description" content="${esc(ABOUT_DESCRIPTION)}" />
+  `;
+  return respond(withTags(html, tags));
+}
+
+async function legalPage(url: URL) {
+  const html = await shell(url.origin);
+  const tags = `
+    <title>${esc(LEGAL_TITLE)}</title>
+    <meta name="description" content="${esc(LEGAL_DESCRIPTION)}" />
+    <link rel="canonical" href="https://pickup.moe/legal" />
+    <meta name="robots" content="noindex" />
   `;
   return respond(withTags(html, tags));
 }
