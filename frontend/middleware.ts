@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import { next } from "@vercel/functions";
 
 export const config = {
