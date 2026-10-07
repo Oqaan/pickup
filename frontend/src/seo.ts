@@ -6,6 +6,9 @@ export const ABOUT_TITLE = "About - pickup";
 export const ABOUT_DESCRIPTION =
   "How pickup works: every anime to manga stopping point is checked by hand, one series at a time.";
 
+export const LEGAL_TITLE = "Legal - pickup";
+export const LEGAL_DESCRIPTION = "Imprint and privacy policy for pickup.moe.";
+
 export function seriesTitle(title: string) {
   return `Where to continue the ${title} manga`;
 }
