@@ -1798,6 +1798,7 @@
   totalChapters: 410
   totalVolumes: 40
   verifiedAt: 2026-08-27
+  notes: "Season 2 is still airing and will be added once it finishes."
   adaptations:
     - name: "Season 1"
       episodes: 24
@@ -3190,7 +3191,7 @@
   totalChapters: 259
   totalVolumes: 29
   verifiedAt: 2026-09-06
-  notes: "The anime moves quickly and condenses the manga as it goes, so it does not stop on a clean chapter break."
+  notes: "The anime moves quickly and condenses the manga as it goes, so it does not stop on a clean chapter break. Season 2 Part 2 is still airing and will be added once it finishes."
   adaptations:
     - name: Season 1
       episodes: 27
@@ -3671,7 +3672,7 @@
   totalChapters: 407
   totalVolumes: 38
   verifiedAt: 2026-09-18
-  notes: "This tracks the 2024 MAPPA remake on Netflix, not the 1990s anime. It follows the manga in order and only trims a little pacing filler. A third season is set for October 2026."
+  notes: "This tracks the 2024 MAPPA remake on Netflix, not the 1990s anime. It follows the manga in order and only trims a little pacing filler. Season 3 is still airing and will be added once it finishes."
   readingLinks:
     - label: Viz
       url: https://www.viz.com/ranma-1-2
