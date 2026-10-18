@@ -4,7 +4,7 @@
   aliases: ["JJK", "Sorcery Fight"]
   related: [chainsaw-man, blue-exorcist, dandadan, dorohedoro, yu-yu-hakusho]
   anilistId: 101517
-  popularity: 702979
+  popularity: 703781
   mangadexId: c52b2ce3-7f95-469c-96b0-479524fb7a1a
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154621/pickup/covers/jujutsu-kaisen-34bbf92fb92.jpg
   author: Gege Akutami
@@ -49,9 +49,9 @@
 - slug: vinland-saga
   title: Vinland Saga
   titleNative: ヴィンランド・サガ
-  related: [berserk, one-piece, golden-kamuy, kingdom, witch-hat-atelier]
+  related: [berserk, one-piece, golden-kamuy, the-case-study-of-vanitas, kingdom]
   anilistId: 30642
-  popularity: 454366
+  popularity: 454640
   mangadexId: 5d1fc77e-706a-4fc5-bea8-486c9be0145d
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154627/pickup/covers/vinland-saga-47e19a12b0f.jpg
   author: Makoto Yukimura
@@ -88,7 +88,7 @@
   aliases: ["SxF", "Spy Family"]
   related: [mission-yozakura-family, sakamoto-days, chainsaw-man, kaguya-sama, one-piece]
   anilistId: 108556
-  popularity: 437285
+  popularity: 437643
   mangadexId: 6b958848-c885-4735-9201-12ee77abcb3c
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154631/pickup/covers/spy-x-family-d8babd13573.jpg
   author: Tatsuya Endou
@@ -132,7 +132,7 @@
   aliases: ["CSM"]
   related: [berserk, dorohedoro, jujutsu-kaisen, attack-on-titan, tokyo-ghoul]
   anilistId: 105778
-  popularity: 922442
+  popularity: 923020
   mangadexId: a77742b1-befd-49a4-bff5-1ad4e6b0ef7b
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154635/pickup/covers/chainsaw-man-07b6e139194.jpg
   author: Tatsuki Fujimoto
@@ -171,7 +171,7 @@
   aliases: ["TG"]
   related: [berserk, chainsaw-man, dorohedoro, parasyte, attack-on-titan]
   anilistId: 63327
-  popularity: 713223
+  popularity: 713541
   mangadexId: 6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154638/pickup/covers/tokyo-ghoul-040e8ae94dd.jpg
   author: Sui Ishida
@@ -211,7 +211,7 @@
   aliases: ["DDD"]
   related: [toilet-bound-hanako-kun, noragami, blue-exorcist, jujutsu-kaisen, fruits-basket]
   anilistId: 132029
-  popularity: 271016
+  popularity: 271425
   mangadexId: 68112dc1-2b80-4f20-beb8-2f2a8716a430
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154641/pickup/covers/dandadan-1fea11e0fd2.jpg
   author: Yukinobu Tatsu
@@ -240,7 +240,7 @@
   titleNative: ドクターストーン
   related: [one-piece, made-in-abyss, golden-kamuy, vinland-saga, berserk]
   anilistId: 98416
-  popularity: 449655
+  popularity: 449713
   mangadexId: cfc3d743-bd89-48e2-991f-63e680cc4edf
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154646/pickup/covers/dr-stone-3415016f892.jpg
   author: Riichiro Inagaki & Boichi
@@ -313,7 +313,7 @@
   aliases: ["Sousou no Frieren"]
   related: [berserk, delicious-in-dungeon, witch-hat-atelier, seven-deadly-sins, black-clover]
   anilistId: 118586
-  popularity: 343175
+  popularity: 344868
   mangadexId: b0b721ff-c388-4486-aa0f-c2b0bb321512
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154655/pickup/covers/frieren-a741289ed52.jpg
   author: Kanehito Yamada
@@ -342,7 +342,7 @@
   titleNative: ブルーロック
   related: [blue-box, ao-ashi, haikyuu, slam-dunk, hajime-no-ippo]
   anilistId: 106130
-  popularity: 280382
+  popularity: 280789
   mangadexId: 4141c5dc-c525-4df5-afd7-cc7d192a832f
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154660/pickup/covers/blue-lock-9b8765606d0.jpg
   author: Muneyuki Kaneshiro & Yuusuke Nomura
@@ -375,7 +375,7 @@
   aliases: ["Mob Psycho"]
   related: [one-punch-man, call-of-the-night, chainsaw-man, yu-yu-hakusho, dandadan]
   anilistId: 85189
-  popularity: 532844
+  popularity: 532924
   mangadexId: 736a2bf0-f875-4b52-a7b4-e8c40505b68a
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154663/pickup/covers/mob-psycho-100-c09d7be1b2e.jpg
   author: ONE
@@ -412,7 +412,7 @@
   aliases: ["Kimetsu no Yaiba", "KnY"]
   related: [berserk, black-butler, vinland-saga, chainsaw-man, hells-paradise]
   anilistId: 87216
-  popularity: 792630
+  popularity: 792893
   mangadexId: 789642f8-ca89-4e4e-8f7b-eee4d17ea08b
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154666/pickup/covers/demon-slayer-6fa2282f282.jpg
   author: Koyoharu Gotouge
@@ -472,7 +472,7 @@
   aliases: ["Boku no Hero Academia", "MHA", "BNHA"]
   related: [wind-breaker, one-piece, hunter-x-hunter, fire-force, bungo-stray-dogs]
   anilistId: 85486
-  popularity: 756855
+  popularity: 756637
   mangadexId: 4f3bcae4-2d96-4c9d-932c-90181d9c873e
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154673/pickup/covers/my-hero-academia-c7a7101a8e2.jpg
   author: Kouhei Horikoshi
@@ -551,7 +551,7 @@
   aliases: ["HxH", "HunterHunter"]
   related: [one-piece, tower-of-god, yu-yu-hakusho, berserk, vinland-saga]
   anilistId: 30026
-  popularity: 732327
+  popularity: 732466
   mangadexId: db692d58-4b13-4174-ae8c-30c515c0689c
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154683/pickup/covers/hunter-x-hunter-aa112927f1e.jpg
   author: Yoshihiro Togashi
@@ -623,7 +623,7 @@
   titleNative: NARUTO -ナルト-
   related: [naruto-shippuden, dragon-ball, boruto, tower-of-god, hells-paradise]
   anilistId: 30011
-  popularity: 713769
+  popularity: 713832
   mangadexId: 6b1eb93e-473a-4ab3-9922-1a66d2a29a4a
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154693/pickup/covers/naruto-c5a3090c4ca.jpg
   author: Masashi Kishimoto
@@ -687,7 +687,7 @@
   aliases: ["Naruto Shippuuden"]
   related: [naruto, dragon-ball, boruto, tower-of-god, hells-paradise]
   anilistId: 30011
-  popularity: 629876
+  popularity: 629829
   mangadexId: 6b1eb93e-473a-4ab3-9922-1a66d2a29a4a
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154703/pickup/covers/naruto-shippuden-07cca30ed59.jpg
   author: Masashi Kishimoto
@@ -819,7 +819,7 @@
   title: Attack on Titan
   titleNative: 進撃の巨人
   aliases: ["Shingeki no Kyojin", "AoT", "SnK"]
-  related: [berserk, chainsaw-man, fullmetal-alchemist, hells-paradise, gachiakuta]
+  related: [berserk, chainsaw-man, hells-paradise, gachiakuta, fullmetal-alchemist]
   anilistId: 53390
   popularity: 1000000
   mangadexId: 304ceac3-8cdb-4fe7-acf7-2b6ff7a60613
@@ -888,7 +888,7 @@
   aliases: []
   related: [spy-x-family, one-piece, golden-kamuy, hunter-x-hunter, bungo-stray-dogs]
   anilistId: 125828
-  popularity: 197732
+  popularity: 197901
   mangadexId: 9d9b04ad-9a83-49f4-8ae4-a9a3780fe9c0
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786268615/pickup/covers/sakamoto-days-f8f16ab93f3.jpg
   author: Yuuto Suzuki
@@ -918,7 +918,7 @@
   aliases: ["Kaijuu 8-gou", "Monster #8"]
   related: [chainsaw-man, attack-on-titan, one-punch-man, undead-unluck, dandadan]
   anilistId: 120760
-  popularity: 242724
+  popularity: 242770
   mangadexId: 237d527f-adb5-420e-8e6e-b7dd006fbe47
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786639921/pickup/covers/kaiju-no-8-98abbd31483.jpg
   author: Naoya Matsumoto
@@ -949,9 +949,9 @@
   title: Blue Box
   titleNative: アオのハコ
   aliases: ["Ao no Hako"]
-  related: [kaguya-sama, blue-lock, slam-dunk, nagatoro, kurokos-basketball]
+  related: [kaguya-sama, slam-dunk, blue-lock, nagatoro, kurokos-basketball]
   anilistId: 132182
-  popularity: 132457
+  popularity: 132989
   mangadexId: ed5dddc0-999d-4fd2-a702-9fef1ec2c955
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786779761/pickup/covers/blue-box-d1571711faf.jpg
   author: Kouji Miura
@@ -974,9 +974,9 @@
   title: Oshi no Ko
   titleNative: 【推しの子】
   aliases: ["My Star", "Oshi no Ko"]
-  related: [kakegurui, fruits-basket, monster, my-dress-up-darling, bungo-stray-dogs]
+  related: [kakegurui, fruits-basket, my-dress-up-darling, monster, bungo-stray-dogs]
   anilistId: 117195
-  popularity: 274629
+  popularity: 274709
   mangadexId: 296cbc31-af1a-4b5b-a34b-fee2b4cad542
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786781292/pickup/covers/oshi-no-ko-b5c23352302.jpg
   author: Aka Akasaka & Mengo Yokoyari
@@ -1015,9 +1015,9 @@
   title: One Punch Man
   titleNative: ワンパンマン
   aliases: ["One-Punch Man", "OPM"]
-  related: [undead-unluck, mob-psycho-100, chainsaw-man, kaiju-no-8, gintama]
+  related: [undead-unluck, mob-psycho-100, chainsaw-man, kaiju-no-8, 100-girlfriends]
   anilistId: 74347
-  popularity: 803822
+  popularity: 803382
   mangadexId: d8a959f7-648e-4c8d-8f23-f1f3f8e129f3
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786790534/pickup/covers/one-punch-man-dfc14954f85.jpg
   author: ONE & Yusuke Murata
@@ -1055,7 +1055,7 @@
   aliases: []
   related: [berserk, chainsaw-man, tokyo-ghoul, made-in-abyss, claymore]
   anilistId: 31133
-  popularity: 259474
+  popularity: 259589
   mangadexId: 34f45c13-2b78-4900-8af2-d0bb551101f4
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787400627/pickup/covers/dorohedoro-d004bed49ba.jpg
   author: Q Hayashida
@@ -1092,7 +1092,7 @@
   aliases: ["Jigokuraku", "Hell's Paradise: Jigokuraku", "Jigoku Raku"]
   related: [berserk, attack-on-titan, rurouni-kenshin, the-elusive-samurai, dorohedoro]
   anilistId: 100994
-  popularity: 241683
+  popularity: 241752
   mangadexId: cb77e4a6-3921-43b9-9d64-7d78cd3205ce
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787502082/pickup/covers/hells-paradise-3a8e86f30b9.jpg
   author: Yuuji Kaku
@@ -1129,7 +1129,7 @@
   aliases: ["Kimi no Koto ga Dai Dai Dai Dai Daisuki na 100-nin no Kanojo", "100 Kanojo"]
   related: [nagatoro, kaguya-sama, the-quintessential-quintuplets, komi-cant-communicate, bocchi-the-rock]
   anilistId: 114416
-  popularity: 89422
+  popularity: 89548
   mangadexId: efb4278c-a761-406b-9d69-19603c5e4c8b
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787507726/pickup/covers/100-girlfriends-62f301f0476.jpg
   author: Rikito Nakamura & Yukiko Nozawa
@@ -1169,9 +1169,9 @@
   title: The Summer Hikaru Died
   titleNative: 光が死んだ夏
   aliases: ["Hikaru ga Shinda Natsu", "Hikanatsu"]
-  related: [death-note, the-promised-neverland, tokyo-ghoul, berserk, dorohedoro]
+  related: [the-promised-neverland, death-note, tokyo-ghoul, berserk, monster]
   anilistId: 138603
-  popularity: 92619
+  popularity: 92978
   mangadexId: 9e954c6b-7a02-4fd7-986d-6331c0ba95d4
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787564969/pickup/covers/the-summer-hikaru-died-2581a896d5d.jpg
   author: Mokumokuren
@@ -1199,7 +1199,7 @@
   aliases: ["BLEACH"]
   related: [dandadan, noragami, chainsaw-man, akame-ga-kill, mob-psycho-100]
   anilistId: 30012
-  popularity: 534227
+  popularity: 534117
   mangadexId: 239d6260-d71f-43b0-afff-074e3619e3de
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787597995/pickup/covers/bleach-3cbb1b1c663.jpg
   author: Tite Kubo
@@ -1319,9 +1319,9 @@
   title: Black Clover
   titleNative: ブラッククローバー
   aliases: ["BC"]
-  related: [berserk, dorohedoro, frieren, delicious-in-dungeon, seven-deadly-sins]
+  related: [berserk, frieren, dorohedoro, delicious-in-dungeon, seven-deadly-sins]
   anilistId: 86123
-  popularity: 438348
+  popularity: 439332
   mangadexId: e7eabe96-aa17-476f-b431-2497d5e9d060
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787600469/pickup/covers/black-clover-a8ce375586a.jpg
   author: Yuuki Tabata
@@ -1431,7 +1431,7 @@
   aliases: ["Na Honjaman Level Up", "Ore dake Level Up na Ken", "Only I Level Up"]
   related: [tower-of-god, dorohedoro, delicious-in-dungeon, fullmetal-alchemist, that-time-i-got-reincarnated-as-a-slime]
   anilistId: 105398
-  popularity: 775473
+  popularity: 775443
   mangadexId: 32d76d19-8a05-4db0-9fc2-e0b0648fe9d0
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787648851/pickup/covers/solo-leveling-abf3b54de8f.webp
   author: Chu-Gong & Seong-Rak Jang
@@ -1465,9 +1465,9 @@
   title: Tokyo Revengers
   titleNative: 東京卍リベンジャーズ
   aliases: ["Toukyou Revengers", "TokyoRev"]
-  related: [wind-breaker, beastars, yu-yu-hakusho, sakamoto-days, chainsaw-man]
+  related: [wind-breaker, beastars, sakamoto-days, yu-yu-hakusho, chainsaw-man]
   anilistId: 102988
-  popularity: 322662
+  popularity: 322829
   mangadexId: 59b36734-f2d6-46d7-97c0-06cfd2380852
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787649983/pickup/covers/tokyo-revengers-8489db46426.jpg
   author: Ken Wakui
@@ -1511,7 +1511,7 @@
   aliases: ["Kaguya-sama wa Kokurasetai", "Kaguya-sama"]
   related: [100-girlfriends, komi-cant-communicate, nagatoro, spy-x-family, fruits-basket]
   anilistId: 86635
-  popularity: 445632
+  popularity: 445681
   mangadexId: 37f5cce0-8070-4ada-96e5-fa24b1bd4ff9
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787655953/pickup/covers/kaguya-sama-57362fc528b.jpg
   author: Aka Akasaka
@@ -1571,9 +1571,9 @@
   title: The Promised Neverland
   titleNative: 約束のネバーランド
   aliases: ["Yakusoku no Neverland", "TPN", "YakuNeba"]
-  related: [berserk, made-in-abyss, witch-hat-atelier, tokyo-ghoul, death-note]
+  related: [berserk, made-in-abyss, tokyo-ghoul, death-note, witch-hat-atelier]
   anilistId: 87423
-  popularity: 492818
+  popularity: 492603
   mangadexId: 46e9cae5-4407-4576-9b9e-4c517ae9298e
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787658092/pickup/covers/the-promised-neverland-038919a7f21.jpg
   author: Kaiu Shirai & Posuka Demizu
@@ -1670,7 +1670,7 @@
   aliases: ["Haikyuu!!", "Haikyū!!"]
   related: [slam-dunk, ao-ashi, blue-box, kurokos-basketball, beastars]
   anilistId: 65243
-  popularity: 497612
+  popularity: 497433
   mangadexId: 8f8b7cb0-7109-46e8-b12c-0448a6453dfa
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787820536/pickup/covers/haikyuu-0bae0ab2189.jpg
   author: Haruichi Furudate
@@ -1732,7 +1732,7 @@
   aliases: ["Dungeon Meshi"]
   related: [frieren, witch-hat-atelier, berserk, that-time-i-got-reincarnated-as-a-slime, vinland-saga]
   anilistId: 86082
-  popularity: 145985
+  popularity: 146345
   mangadexId: d90ea6cb-7bc3-4d80-8af0-28557e6c4e17
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787821818/pickup/covers/delicious-in-dungeon-680fd595933.jpg
   author: Ryouko Kui
@@ -1756,7 +1756,7 @@
   aliases: ["Andeddo Anrakku"]
   related: [one-punch-man, kaiju-no-8, dandadan, fire-force, dragon-ball]
   anilistId: 114791
-  popularity: 81097
+  popularity: 81203
   mangadexId: cc1b8669-82b2-4232-99c1-40d48fc2d988
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787821819/pickup/covers/undead-unluck-20a777575f7.jpg
   author: Yoshifumi Tozuka
@@ -1789,7 +1789,7 @@
   aliases: ["Aoashi"]
   related: [haikyuu, blue-lock, slam-dunk, blue-box, kurokos-basketball]
   anilistId: 107279
-  popularity: 60223
+  popularity: 60758
   mangadexId: b73371d4-02dd-4db0-b448-d9afa3d698f1
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787821824/pickup/covers/ao-ashi-8d57a887026.jpg
   author: Naohiko Ueno & Yuugo Kobayashi
@@ -1815,7 +1815,7 @@
   aliases: ["Hagane no Renkinjutsushi", "FMA", "Fullmetal Alchemist: Brotherhood"]
   related: [berserk, one-piece, attack-on-titan, witch-hat-atelier, golden-kamuy]
   anilistId: 30025
-  popularity: 843800
+  popularity: 843699
   mangadexId: dd8a907a-3850-4f95-ba03-ba201a8399e3
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787850118/pickup/covers/fullmetal-alchemist-36c7ccec323.jpg
   author: Hiromu Arakawa
@@ -1838,7 +1838,7 @@
   aliases: ["Desu Nooto"]
   related: [monster, bungo-stray-dogs, the-promised-neverland, tokyo-ghoul, the-summer-hikaru-died]
   anilistId: 30021
-  popularity: 986021
+  popularity: 985970
   mangadexId: 75ee72ab-c6bf-4b87-badd-de839156934c
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787850119/pickup/covers/death-note-f0e0a22d5aa.jpg
   author: Tsugumi Ooba & Takeshi Obata
@@ -1861,7 +1861,7 @@
   aliases: ["Enen no Shouboutai", "En'en no Shouboutai"]
   related: [my-hero-academia, blue-exorcist, one-punch-man, dandadan, chainsaw-man]
   anilistId: 86310
-  popularity: 354962
+  popularity: 355005
   mangadexId: ec514ef4-fb77-43b9-b9b4-528229de1308
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787850120/pickup/covers/fire-force-1459136994f.jpg
   author: Atsushi Ookubo
@@ -1895,9 +1895,9 @@
   title: One Piece
   titleNative: ONE PIECE
   aliases: ["Wan Piisu"]
-  related: [vinland-saga, golden-kamuy, berserk, hunter-x-hunter, fullmetal-alchemist]
+  related: [vinland-saga, golden-kamuy, berserk, yona-of-the-dawn, hunter-x-hunter]
   anilistId: 30013
-  popularity: 873564
+  popularity: 873420
   mangadexId: a1c7c817-4e59-43b7-9365-09675a149a6f
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787853778/pickup/covers/one-piece-16ae8c35fb0.jpg
   author: Eiichirou Oda
@@ -2012,7 +2012,7 @@
   aliases: ["Gachi Akuta"]
   related: [attack-on-titan, berserk, chainsaw-man, heavenly-delusion, hunter-x-hunter]
   anilistId: 144946
-  popularity: 135335
+  popularity: 136026
   mangadexId: 192aa767-2479-42c1-9780-8d65a2efd36a
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787854152/pickup/covers/gachiakuta-d58fc771801.jpg
   author: Kei Urana
@@ -2034,7 +2034,7 @@
   aliases: ["Yofukashi no Uta"]
   related: [beastars, chainsaw-man, mob-psycho-100, fruits-basket, kaguya-sama]
   anilistId: 111233
-  popularity: 181194
+  popularity: 181563
   mangadexId: 259dfd8a-f06a-4825-8fa6-a2dcd7274230
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787918895/pickup/covers/call-of-the-night-b9cf77005b8.jpg
   author: Kotoyama
@@ -2066,7 +2066,7 @@
   aliases: ["Sono Bisque Doll wa Koi wo Suru", "Kisekoi"]
   related: [nagatoro, 100-girlfriends, grand-blue, kaguya-sama, oshi-no-ko]
   anilistId: 101583
-  popularity: 309891
+  popularity: 310518
   mangadexId: aa6c76f7-5f5f-46b6-a800-911145f81b9b
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787918900/pickup/covers/my-dress-up-darling-7cd2d23724d.jpg
   author: Shinichi Fukuda
@@ -2098,7 +2098,7 @@
   aliases: ["DB", "Dragon Ball Z", "DBZ"]
   related: [hunter-x-hunter, tower-of-god, naruto, naruto-shippuden, boruto]
   anilistId: 30042
-  popularity: 302955
+  popularity: 302863
   mangadexId: 40bc649f-7b49-4645-859e-6cd94136e722
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787933719/pickup/covers/dragon-ball-6341bee30ff.jpg
   author: Akira Toriyama
@@ -2133,7 +2133,7 @@
   aliases: ["Ansatsu Kyoushitsu", "AssClass"]
   related: [one-punch-man, dandadan, mob-psycho-100, spy-x-family, witch-hat-atelier]
   anilistId: 69883
-  popularity: 507464
+  popularity: 507320
   mangadexId: 333f4d22-7753-4e3b-b0da-0a69b2cdce4f
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787933721/pickup/covers/assassination-classroom-1b45279d6ba.jpg
   author: Yuusei Matsui
@@ -2167,7 +2167,7 @@
   aliases: ["YuYu Hakusho", "YYH", "Ghost Files"]
   related: [hunter-x-hunter, mob-psycho-100, jujutsu-kaisen, dandadan, toilet-bound-hanako-kun]
   anilistId: 30053
-  popularity: 172297
+  popularity: 172243
   mangadexId: 44a5cbe1-0204-4cc7-a1ff-0fda2ac004b6
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787933723/pickup/covers/yu-yu-hakusho-ae622971047.jpg
   author: Yoshihiro Togashi
@@ -2192,9 +2192,9 @@
   title: Dragon Ball Super
   titleNative: ドラゴンボール超
   aliases: ["DBS", "Dragon Ball Chou"]
-  related: [dragon-ball, gintama, dandadan, parasyte, kaiju-no-8]
+  related: [world-trigger, dragon-ball, gintama, dandadan, kaiju-no-8]
   anilistId: 86508
-  popularity: 209720
+  popularity: 209736
   mangadexId: 37b87be0-b1f4-4507-affa-06c99ebb27f8
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787933724/pickup/covers/dragon-ball-super-65dbf58e79a.jpg
   author: Toyotarou
@@ -2222,7 +2222,7 @@
   aliases: ["Golden Kamui"]
   related: [one-piece, berserk, vinland-saga, chainsaw-man, bungo-stray-dogs]
   anilistId: 86559
-  popularity: 138709
+  popularity: 138752
   mangadexId: 8847f905-550d-4fe6-bcda-ac2b896789c7
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787938108/pickup/covers/golden-kamuy-5498907ad76.jpg
   author: Satoru Noda
@@ -2277,9 +2277,9 @@
   title: Wind Breaker
   titleNative: ウィンドブレイカー
   aliases: ["Windbreaker"]
-  related: [my-hero-academia, tokyo-revengers, nagatoro, beastars, hunter-x-hunter]
+  related: [my-hero-academia, tokyo-revengers, nagatoro, beastars, yu-yu-hakusho]
   anilistId: 135083
-  popularity: 109664
+  popularity: 110043
   mangadexId: 9eb78304-0436-484d-9a79-a925b45e2731
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787938115/pickup/covers/wind-breaker-92492c8fe64.jpg
   author: Satoru Nii
@@ -2310,9 +2310,9 @@
   title: Monster
   titleNative: MONSTER
   aliases: ["Naoki Urasawa's Monster"]
-  related: [death-note, apothecary-diaries, bungo-stray-dogs, black-butler, tokyo-ghoul]
+  related: [death-note, apothecary-diaries, the-case-study-of-vanitas, bungo-stray-dogs, black-butler]
   anilistId: 30001
-  popularity: 364666
+  popularity: 364795
   mangadexId: d9e30523-9d65-469e-92a2-302995770950
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787939890/pickup/covers/monster-d30f01090a7.jpg
   author: Naoki Urasawa
@@ -2339,7 +2339,7 @@
   aliases: ["Beast Complex"]
   related: [call-of-the-night, fruits-basket, chainsaw-man, kaguya-sama, one-piece]
   anilistId: 98587
-  popularity: 219027
+  popularity: 218895
   mangadexId: f5e3baad-3cd4-427c-a2ec-ad7d776b370d
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787939892/pickup/covers/beastars-f5a8c0052bb.jpg
   author: Paru Itagaki
@@ -2380,7 +2380,7 @@
   aliases: ["Nanatsu no Taizai", "7DS"]
   related: [berserk, frieren, that-time-i-got-reincarnated-as-a-slime, claymore, one-piece]
   anilistId: 74485
-  popularity: 504394
+  popularity: 504033
   mangadexId: e52d9403-3356-403b-b7bb-d7d6a420dd50
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787939896/pickup/covers/seven-deadly-sins-35e3ee18847.jpg
   author: Nakaba Suzuki
@@ -2430,7 +2430,7 @@
   aliases: ["FT"]
   related: [one-piece, seven-deadly-sins, dorohedoro, that-time-i-got-reincarnated-as-a-slime, delicious-in-dungeon]
   anilistId: 30598
-  popularity: 420200
+  popularity: 419826
   mangadexId: 227e3f72-863f-46f9-bafe-c43104ca29ee
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787939901/pickup/covers/fairy-tail-2f05e7bca51.jpg
   author: Hiro Mashima
@@ -2469,9 +2469,9 @@
   title: Gintama
   titleNative: 銀魂
   aliases: ["Gin Tama", "Silver Soul"]
-  related: [the-elusive-samurai, hells-paradise, one-punch-man, rurouni-kenshin, dragon-ball]
+  related: [the-elusive-samurai, hells-paradise, one-punch-man, rurouni-kenshin, world-trigger]
   anilistId: 30044
-  popularity: 263961
+  popularity: 263874
   mangadexId: f65444dc-3694-4e31-a166-8afb2938ed55
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787960781/pickup/covers/gintama-4cc972ce61a.jpg
   author: Hideaki Sorachi
@@ -2572,9 +2572,9 @@
 - slug: kingdom
   title: Kingdom
   titleNative: キングダム
-  related: [vinland-saga, berserk, golden-kamuy, one-piece, the-elusive-samurai]
+  related: [yona-of-the-dawn, vinland-saga, berserk, golden-kamuy, one-piece]
   anilistId: 46765
-  popularity: 253886
+  popularity: 254030
   mangadexId: 077a3fed-1634-424f-be7a-9a96b7f07b78
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788012276/pickup/covers/kingdom-66ecc41a2d8.jpg
   author: Yasuhisa Hara
@@ -2633,9 +2633,9 @@
   title: Mashle
   titleNative: マッシュル-MASHLE-
   aliases: ["Mashle: Magic and Muscles"]
-  related: [spy-x-family, 100-girlfriends, wistoria, golden-kamuy, one-punch-man]
+  related: [100-girlfriends, spy-x-family, wistoria, one-punch-man, golden-kamuy]
   anilistId: 114960
-  popularity: 186486
+  popularity: 186969
   mangadexId: 558c2122-7342-4649-85e9-a866727bb2e8
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788012285/pickup/covers/mashle-aa1fd775ae8.jpg
   author: Hajime Koumoto
@@ -2675,7 +2675,7 @@
   aliases: ["Zom 100", "Zombie ni Naru Made ni Shitai 100 no Koto"]
   related: [chainsaw-man, berserk, dorohedoro, golden-kamuy, tokyo-ghoul]
   anilistId: 104660
-  popularity: 158576
+  popularity: 158873
   mangadexId: efd02206-1cd8-4823-b497-02bb8b8d09ca
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788012289/pickup/covers/zom-100-2cd37c6c189.jpg
   author: Haro Aso & Koutarou Takata
@@ -2699,9 +2699,9 @@
   title: "Food Wars: Shokugeki no Soma"
   titleNative: 食戟のソーマ
   aliases: ["Shokugeki no Soma", "Food Wars!: Shokugeki no Soma"]
-  related: [100-girlfriends, ranma-1-2, fairy-tail, golden-kamuy, my-dress-up-darling]
+  related: [100-girlfriends, ranma-1-2, fairy-tail, my-dress-up-darling, golden-kamuy]
   anilistId: 75757
-  popularity: 398007
+  popularity: 397604
   mangadexId: 5f20891f-0136-4fa8-afb7-d72f2af23c65
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788014663/pickup/covers/food-wars-ec46623c880.jpg
   author: Yuuto Tsukuda & Shun Saeki
@@ -2765,9 +2765,9 @@
   title: The Apothecary Diaries
   titleNative: 薬屋のひとりごと
   aliases: ["Kusuriya no Hitorigoto"]
-  related: [monster, black-butler, kingdom, bungo-stray-dogs, witch-hat-atelier]
+  related: [monster, black-butler, bungo-stray-dogs, kingdom, witch-hat-atelier]
   anilistId: 99022
-  popularity: 203544
+  popularity: 205812
   mangadexId: e18fe8c6-f6dc-4f05-8462-7b2083ff9a6c
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788097574/pickup/covers/apothecary-diaries-41ffa34090b.jpg
   author: Natsu Hyuuga & Nekokurage
@@ -2797,7 +2797,7 @@
   aliases: ["Kanojo, Okarishimasu", "Kanojo Okarishimasu", "Rent-A-Girlfriend"]
   related: [the-quintessential-quintuplets, nagatoro, 100-girlfriends, ranma-1-2, spy-x-family]
   anilistId: 99943
-  popularity: 249342
+  popularity: 249185
   mangadexId: 32fdfe9b-6e11-4a13-9e36-dcd8ea77b4e4
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788097578/pickup/covers/rent-a-girlfriend-c41713197eb.jpg
   author: Reiji Miyajima
@@ -2848,9 +2848,9 @@
   title: Hajime no Ippo
   titleNative: はじめの一歩
   aliases: ["Fighting Spirit", "The First Step"]
-  related: [yu-yu-hakusho, haikyuu, slam-dunk, blue-lock, golden-kamuy]
+  related: [yu-yu-hakusho, haikyuu, slam-dunk, blue-lock, grand-blue]
   anilistId: 30007
-  popularity: 160261
+  popularity: 160399
   mangadexId: f7888782-0727-49b0-95ec-a3530c70f83b
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788097582/pickup/covers/hajime-no-ippo-318aead7e5a.jpg
   author: George Morikawa
@@ -2895,7 +2895,7 @@
   aliases: ["SLAM DUNK"]
   related: [kurokos-basketball, blue-box, haikyuu, fruits-basket, wind-breaker]
   anilistId: 30051
-  popularity: 251682
+  popularity: 251680
   mangadexId: 319df2e2-e6a6-4e3a-a31c-68539c140a84
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788336797/pickup/covers/slam-dunk-89216df3778.jpg
   author: Takehiko Inoue
@@ -2927,7 +2927,7 @@
   aliases: ["MiA"]
   related: [berserk, dorohedoro, the-promised-neverland, golden-kamuy, dr-stone]
   anilistId: 86551
-  popularity: 356035
+  popularity: 356055
   mangadexId: 80422e14-b9ad-4fda-970f-de370d5fa4e5
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788336801/pickup/covers/made-in-abyss-a623aefcab5.jpg
   author: Akihito Tsukushi
@@ -2961,7 +2961,7 @@
   titleNative: ブルーピリオド
   related: [nagatoro, beastars, witch-hat-atelier, kaguya-sama, blue-box]
   anilistId: 107237
-  popularity: 180132
+  popularity: 180069
   mangadexId: f8e294c0-7c11-4c66-bdd7-4e25df52bf69
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788336806/pickup/covers/blue-period-6e268e98eb2.jpg
   author: Tsubasa Yamaguchi
@@ -2983,7 +2983,7 @@
   aliases: ["Kiseijuu", "Parasyte: The Maxim"]
   related: [tokyo-ghoul, berserk, chainsaw-man, land-of-the-lustrous, made-in-abyss]
   anilistId: 30401
-  popularity: 466404
+  popularity: 466144
   mangadexId: 07823fcd-f2c9-458c-9824-3eae62b2a006
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788433862/pickup/covers/parasyte-2b0c58affb0.jpg
   author: Hitoshi Iwaaki
@@ -3010,7 +3010,7 @@
   aliases: ["Ao no Exorcist", "Ao no Ekusoshisuto"]
   related: [jujutsu-kaisen, dandadan, noragami, fire-force, berserk]
   anilistId: 43492
-  popularity: 467496
+  popularity: 467000
   mangadexId: 3ee952f1-45c7-4c39-aea2-7df7676606d4
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788433864/pickup/covers/blue-exorcist-f0695d58d88.jpg
   author: Kazue Kato
@@ -3065,7 +3065,7 @@
   aliases: ["Komi-san wa Komyushou Desu", "Komi-san"]
   related: [kaguya-sama, 100-girlfriends, spy-x-family, nagatoro, the-dangers-in-my-heart]
   anilistId: 97852
-  popularity: 343793
+  popularity: 343439
   mangadexId: a96676e5-8ae2-425e-b549-7f15dd34a6d8
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788433873/pickup/covers/komi-cant-communicate-94612cb87e2.jpg
   author: Tomohito Oda
@@ -3100,7 +3100,7 @@
   aliases: ["Kuroko no Basket", "Kuroko no Basuke", "KnB"]
   related: [slam-dunk, blue-box, haikyuu, nagatoro, ao-ashi]
   anilistId: 41652
-  popularity: 300284
+  popularity: 300125
   mangadexId: f8e41a48-5ca9-41e3-94a7-a1379a4fda62
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788623274/pickup/covers/kurokos-basketball-d24749c8569.jpg
   author: Tadatoshi Fujimaki
@@ -3139,9 +3139,9 @@
   title: Fruits Basket
   titleNative: フルーツバスケット
   aliases: ["Furuba"]
-  related: [kaguya-sama, dandadan, beastars, call-of-the-night, toilet-bound-hanako-kun]
+  related: [yona-of-the-dawn, kaguya-sama, dandadan, beastars, call-of-the-night]
   anilistId: 30102
-  popularity: 217646
+  popularity: 217679
   mangadexId: e9b1d4ba-b8fb-48c3-8d52-5a4eefd05980
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788623279/pickup/covers/fruits-basket-805e3247759.jpg
   author: Natsuki Takaya
@@ -3183,7 +3183,7 @@
   aliases: ["Yozakura-san Chi no Daisakusen"]
   related: [spy-x-family, sakamoto-days, tonikawa, the-quintessential-quintuplets, dandadan]
   anilistId: 111149
-  popularity: 53280
+  popularity: 53354
   mangadexId: ce7cd7b0-e595-4f0d-98e8-447da10d652d
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788697923/pickup/covers/mission-yozakura-family-b998cea0ec9.jpg
   author: Hitsuji Gondaira
@@ -3213,9 +3213,9 @@
   title: Medalist
   titleNative: メダリスト
   aliases: ["Medarisuto"]
-  related: [witch-hat-atelier, blue-box, kaguya-sama, oshi-no-ko, berserk]
+  related: [witch-hat-atelier, kaguya-sama, blue-box, oshi-no-ko, berserk]
   anilistId: 118371
-  popularity: 30453
+  popularity: 30579
   mangadexId: 4a433d6b-f51a-4c2f-a183-85419fe98efc
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788697929/pickup/covers/medalist-1cdac9a0cc6.jpg
   author: Tsurumaikada
@@ -3244,7 +3244,7 @@
   aliases: ["Kaoru Hana wa Rin to Saku"]
   related: [fruits-basket, call-of-the-night, kaguya-sama, beastars, nagatoro]
   anilistId: 140475
-  popularity: 183240
+  popularity: 183977
   mangadexId: 418791c0-35cf-4f87-936b-acd9cddf0989
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788697934/pickup/covers/kaoru-hana-wa-rin-to-saku-b89da974ffc.jpg
   author: Saka Mikami
@@ -3264,9 +3264,9 @@
   title: The Elusive Samurai
   titleNative: 逃げ上手の若君
   aliases: ["Nige Jouzu no Wakagimi"]
-  related: [one-piece, gintama, hells-paradise, rurouni-kenshin, vinland-saga]
+  related: [gintama, hells-paradise, one-piece, rurouni-kenshin, vinland-saga]
   anilistId: 128666
-  popularity: 49221
+  popularity: 49484
   mangadexId: b6a5d154-7845-4129-b473-ba0aec3deffd
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788697938/pickup/covers/the-elusive-samurai-cb1f190f50f.jpg
   author: Yuusei Matsui
@@ -3299,7 +3299,7 @@
   aliases: ["Grand Blue", "Guraburu"]
   related: [100-girlfriends, my-dress-up-darling, komi-cant-communicate, kaguya-sama, zom-100]
   anilistId: 87395
-  popularity: 253575
+  popularity: 253750
   mangadexId: fffbfac3-b7ad-41ee-9581-b4d90ecec941
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788785509/pickup/covers/grand-blue-3d238ae4096.jpg
   author: Kenji Inoue & Kimitake Yoshioka
@@ -3341,7 +3341,7 @@
   aliases: ["Noragami: Stray God", "Stray God"]
   related: [toilet-bound-hanako-kun, dandadan, blue-exorcist, bleach, hells-paradise]
   anilistId: 54692
-  popularity: 528063
+  popularity: 527655
   mangadexId: e5ce88e2-8c46-482d-8acf-5c6d5a64a585
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788785519/pickup/covers/noragami-6261f84b0e4.jpg
   author: Adachitoka
@@ -3377,7 +3377,7 @@
   aliases: ["Rurouni Kenshin: Meiji Kenkaku Romantan", "Samurai X"]
   related: [hells-paradise, the-elusive-samurai, gintama, naruto, naruto-shippuden]
   anilistId: 30022
-  popularity: 129540
+  popularity: 129381
   mangadexId: 754a46fa-62fa-457a-bc3b-4f31bf1373d4
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788785527/pickup/covers/rurouni-kenshin-93b8c9a7e3f.jpg
   author: Nobuhiro Watsuki
@@ -3413,7 +3413,7 @@
   aliases: ["Fumetsu no Anata e"]
   related: [berserk, the-promised-neverland, land-of-the-lustrous, fruits-basket, tokyo-ghoul]
   anilistId: 97830
-  popularity: 229357
+  popularity: 229408
   mangadexId: 34e45b02-b5c8-4a4b-a21a-7b5059391dc8
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1789387005/pickup/covers/to-your-eternity-89f7f489f15.jpg
   author: Yoshitoki Ooima
@@ -3449,9 +3449,9 @@
   title: Seraph of the End
   titleNative: 終わりのセラフ
   aliases: ["Owari no Seraph", "Vampire Reign"]
-  related: [berserk, chainsaw-man, attack-on-titan, one-piece, black-butler]
+  related: [the-case-study-of-vanitas, chainsaw-man, berserk, attack-on-titan, one-piece]
   anilistId: 73661
-  popularity: 332233
+  popularity: 332019
   mangadexId: 17ce37ea-1cda-4429-b062-c4b627814225
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1789387017/pickup/covers/seraph-of-the-end-69e10d8d8cd.jpg
   author: Takaya Kagami & Yamato Yamamoto
@@ -3485,7 +3485,7 @@
   aliases: ["Akame ga Kiru!", "Red Eyes Sword"]
   related: [berserk, dorohedoro, one-piece, hunter-x-hunter, claymore]
   anilistId: 55132
-  popularity: 518987
+  popularity: 518725
   mangadexId: 8946189d-682f-4838-9c2a-3c2dd5132f2c
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1789387026/pickup/covers/akame-ga-kill-667b0f672e1.jpg
   author: Takahiro & Tetsuya Tashiro
@@ -3512,9 +3512,9 @@
   title: Black Butler
   titleNative: 黒執事
   aliases: ["Kuroshitsuji"]
-  related: [bungo-stray-dogs, berserk, apothecary-diaries, monster, vinland-saga]
+  related: [bungo-stray-dogs, the-case-study-of-vanitas, berserk, apothecary-diaries, monster]
   anilistId: 33866
-  popularity: 290406
+  popularity: 290160
   mangadexId: 8bd19e5c-94f7-4368-a918-50f463857446
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1789489277/pickup/covers/black-butler-6278c61ef86.jpg
   author: Yana Toboso
@@ -3571,9 +3571,9 @@
   title: That Time I Got Reincarnated as a Slime
   titleNative: 転生したらスライムだった件
   aliases: ["Tensei Shitara Slime Datta Ken", "TenSura"]
-  related: [delicious-in-dungeon, seven-deadly-sins, claymore, solo-leveling, fairy-tail]
+  related: [delicious-in-dungeon, seven-deadly-sins, claymore, solo-leveling, dorohedoro]
   anilistId: 86355
-  popularity: 379881
+  popularity: 380283
   mangadexId: e78a489b-6632-4d61-b00b-5206f5b8b22b
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1789489295/pickup/covers/that-time-i-got-reincarnated-as-a-slime-3695eb2d3dd.jpg
   author: Fuse & Taiki Kawakami
@@ -3628,7 +3628,7 @@
   aliases: ["Boku no Kokoro no Yabai Yatsu", "BokuYaba"]
   related: [komi-cant-communicate, kaguya-sama, blue-box, nagatoro, call-of-the-night]
   anilistId: 101557
-  popularity: 104348
+  popularity: 104670
   mangadexId: 3df1a9a3-a1be-47a3-9e90-9b3e55b1d0ac
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1789489313/pickup/covers/the-dangers-in-my-heart-f068f901f54.jpg
   author: Norio Sakurai
@@ -3664,7 +3664,7 @@
   aliases: ["Ranma 1/2", "Ranma"]
   related: [100-girlfriends, nagatoro, dandadan, the-quintessential-quintuplets, rent-a-girlfriend]
   anilistId: 30023
-  popularity: 73119
+  popularity: 73126
   mangadexId: d41bebac-1fd3-45dd-80f4-c371db540a2a
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1789725849/pickup/covers/ranma-1-2-e43fa25d5f5.jpg
   author: Rumiko Takahashi
@@ -3698,9 +3698,9 @@
   title: Tower of God
   titleNative: 신의 탑
   aliases: ["Kami no Tou", "Sinui Tap", "ToG"]
-  related: [solo-leveling, hunter-x-hunter, one-piece, berserk, dragon-ball]
+  related: [solo-leveling, hunter-x-hunter, one-piece, dragon-ball, berserk]
   anilistId: 85143
-  popularity: 266262
+  popularity: 266052
   mangadexId: c0ee660b-f9f2-45c3-8068-5123ff53f84a
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1789725857/pickup/covers/tower-of-god-2c540d0000d.jpg
   author: SIU
@@ -3732,7 +3732,7 @@
   aliases: ["Bocchi za Rokku", "BTR"]
   related: [100-girlfriends, call-of-the-night, nagatoro, kaguya-sama, grand-blue]
   anilistId: 111258
-  popularity: 186386
+  popularity: 186999
   mangadexId: 2e0fdb3b-632c-4f8f-a311-5b56952db647
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1789725859/pickup/covers/bocchi-the-rock-c37b00bc443.jpg
   author: Aki Hamaji
@@ -3756,9 +3756,9 @@
   title: Shangri-La Frontier
   titleNative: シャングリラ・フロンティア
   aliases: ["ShanFro"]
-  related: [one-piece, dragon-ball, berserk, land-of-the-lustrous, dorohedoro]
+  related: [one-piece, dragon-ball, land-of-the-lustrous, berserk, delicious-in-dungeon]
   anilistId: 122063
-  popularity: 111095
+  popularity: 111741
   mangadexId: 29ab6984-7c1d-4d45-b925-25aa082b492e
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1789825590/pickup/covers/shangri-la-frontier-4a41da2589e.jpg
   author: Ryosuke Fuji
@@ -3786,7 +3786,7 @@
   aliases: ["Mairimashita! Iruma-kun", "Iruma-kun"]
   related: [spy-x-family, that-time-i-got-reincarnated-as-a-slime, black-clover, fairy-tail, claymore]
   anilistId: 99324
-  popularity: 131362
+  popularity: 131516
   mangadexId: d7037b2a-874a-4360-8a7b-07f2899152fd
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1789825598/pickup/covers/iruma-kun-a181539f797.jpg
   author: Osamu Nishi
@@ -3828,7 +3828,7 @@
   aliases: ["Boruto: Naruto Next Generations", "Two Blue Vortex"]
   related: [naruto, naruto-shippuden, dragon-ball, hells-paradise, one-punch-man]
   anilistId: 87178
-  popularity: 212391
+  popularity: 212234
   mangadexId: 46e530ce-0766-4cbd-b005-5e6fb0ba5e71
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1789825604/pickup/covers/boruto-197a3a257f9.jpg
   author: Masashi Kishimoto & Mikio Ikemoto
@@ -3857,7 +3857,7 @@
   aliases: ["Tsue to Tsurugi no Wistoria"]
   related: [delicious-in-dungeon, solo-leveling, my-hero-academia, mashle, fullmetal-alchemist]
   anilistId: 125116
-  popularity: 95730
+  popularity: 96424
   mangadexId: e43a7f5b-6ae7-478d-a4d5-53c8dc3ce52f
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1789825610/pickup/covers/wistoria-e1f52fa3953.jpg
   author: Fujino Omori & Toshi Aoi
@@ -3888,7 +3888,7 @@
   aliases: ["Kakegurui: Compulsive Gambler", "Kakegurui xx"]
   related: [oshi-no-ko, kaguya-sama, nagatoro, beastars, rent-a-girlfriend]
   anilistId: 85793
-  popularity: 371815
+  popularity: 371631
   mangadexId: 0951feea-ba41-4ad0-9cb0-edadc77eae73
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1790161476/pickup/covers/kakegurui-2be24a97b3d.jpg
   author: Homura Kawamoto & Tooru Naomura
@@ -3917,9 +3917,9 @@
   title: Bungo Stray Dogs
   titleNative: 文豪ストレイドッグス
   aliases: ["Bungou Stray Dogs", "BSD"]
-  related: [death-note, golden-kamuy, black-butler, chainsaw-man, monster]
+  related: [death-note, black-butler, golden-kamuy, chainsaw-man, monster]
   anilistId: 85307
-  popularity: 355481
+  popularity: 355331
   mangadexId: 3fba42cf-2ad6-4c30-a7ab-46cb8149208a
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1790161485/pickup/covers/bungo-stray-dogs-6768462bb9e.jpg
   author: Kafka Asagiri & Harukawa35
@@ -3968,9 +3968,9 @@
   title: Witch Hat Atelier
   titleNative: とんがり帽子のアトリエ
   aliases: ["Tongari Boushi no Atelier"]
-  related: [berserk, vinland-saga, delicious-in-dungeon, fullmetal-alchemist, the-promised-neverland]
+  related: [berserk, vinland-saga, delicious-in-dungeon, yona-of-the-dawn, fullmetal-alchemist]
   anilistId: 98263
-  popularity: 189067
+  popularity: 190069
   mangadexId: 67e7453b-9ee5-4ae5-9316-215b03e4a71d
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1790161504/pickup/covers/witch-hat-atelier-293089bf7a5.jpg
   author: Kamome Shirahama
@@ -3992,7 +3992,7 @@
   aliases: ["Ijiranaide, Nagatoro-san", "Please Don't Bully Me, Nagatoro", "Nagatoro"]
   related: [100-girlfriends, kaguya-sama, my-dress-up-darling, ranma-1-2, rent-a-girlfriend]
   anilistId: 100664
-  popularity: 229355
+  popularity: 229125
   mangadexId: d86cf65b-5f6c-437d-a0af-19a31f94ec55
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1790163401/pickup/covers/nagatoro-ffc4a119190.jpg
   author: Nanashi
@@ -4023,7 +4023,7 @@
   aliases: ["Tonikaku Kawaii", "Fly Me to the Moon"]
   related: [spy-x-family, kaguya-sama, mission-yozakura-family, 100-girlfriends, the-quintessential-quintuplets]
   anilistId: 101177
-  popularity: 193069
+  popularity: 193111
   mangadexId: 30f3ac69-21b6-45ad-a110-d011b7aaadaa
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1790163410/pickup/covers/tonikawa-200c7882e7b.jpg
   author: Kenjirou Hata
@@ -4052,9 +4052,9 @@
   title: "The Ancient Magus' Bride"
   titleNative: 魔法使いの嫁
   aliases: ["Mahoutsukai no Yome", "Mahoyome"]
-  related: [noragami, toilet-bound-hanako-kun, fruits-basket, spy-x-family, 100-girlfriends]
+  related: [yona-of-the-dawn, noragami, toilet-bound-hanako-kun, fruits-basket, spy-x-family]
   anilistId: 85435
-  popularity: 232639
+  popularity: 232501
   mangadexId: 195023bf-cf9a-4772-94ef-09dd6eddea84
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1790163418/pickup/covers/the-ancient-magus-bride-04269aebf95.jpg
   author: Kore Yamazaki
@@ -4088,9 +4088,9 @@
   title: Heavenly Delusion
   titleNative: 天国大魔境
   aliases: ["Tengoku Daimakyo", "Tengoku Daimakyou"]
-  related: [attack-on-titan, berserk, dorohedoro, gachiakuta, made-in-abyss]
+  related: [attack-on-titan, berserk, gachiakuta, dorohedoro, made-in-abyss]
   anilistId: 101942
-  popularity: 146614
+  popularity: 146845
   mangadexId: eeb2ab0e-7dbc-4f0c-b476-8181d44217a8
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1790163430/pickup/covers/heavenly-delusion-fdf4c2863d5.jpg
   author: Masakazu Ishiguro
@@ -4113,7 +4113,7 @@
   aliases: ["Jibaku Shounen Hanako-kun", "Hanako-kun"]
   related: [noragami, dandadan, fruits-basket, yu-yu-hakusho, jujutsu-kaisen]
   anilistId: 98842
-  popularity: 165158
+  popularity: 165221
   mangadexId: a4b39b6e-a448-4644-a540-64ceff1d8305
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1790539396/pickup/covers/toilet-bound-hanako-kun-3281fd575fb.jpg
   author: AidaIro
@@ -4151,7 +4151,7 @@
   aliases: ["Houseki no Kuni"]
   related: [attack-on-titan, to-your-eternity, parasyte, beastars, berserk]
   anilistId: 74489
-  popularity: 221723
+  popularity: 222269
   mangadexId: cade38b7-64c4-4a29-8e3c-8c283291d6c6
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1790539408/pickup/covers/land-of-the-lustrous-efcb1bcfac4.jpg
   author: Haruko Ichikawa
@@ -4176,7 +4176,7 @@
   aliases: []
   related: [berserk, dorohedoro, chainsaw-man, akame-ga-kill, the-promised-neverland]
   anilistId: 30583
-  popularity: 283683
+  popularity: 283740
   mangadexId: be8fe64b-37da-4fba-b14d-603aba19be1f
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1790539413/pickup/covers/claymore-641f34fefb7.jpg
   author: Norihiro Yagi
@@ -4201,7 +4201,7 @@
   aliases: ["Gotoubun no Hanayome", "5Toubun no Hanayome"]
   related: [100-girlfriends, rent-a-girlfriend, ranma-1-2, nagatoro, fruits-basket]
   anilistId: 100230
-  popularity: 247788
+  popularity: 247994
   mangadexId: a2febd3e-6252-46eb-bd63-01d51deaaec5
   coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1790539417/pickup/covers/the-quintessential-quintuplets-ea653cbf8b7.jpg
   author: Negi Haruba
@@ -4231,3 +4231,136 @@
       sortOrder: 3
       lastCoveredChapter: 122
       caughtUp: true
+
+- slug: world-trigger
+  title: World Trigger
+  titleNative: ワールドトリガー
+  aliases: ["Warudo Torigā"]
+  related: [dragon-ball-super, gintama, one-piece, fullmetal-alchemist, kaiju-no-8]
+  anilistId: 78151
+  popularity: 107428
+  mangadexId: 7ae7067a-7e68-4bd2-a064-5e3e3c059078
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1792341964/pickup/covers/world-trigger-2501722bac9.jpg
+  author: Daisuke Ashihara
+  startYear: 2013
+  publicationStatus: RELEASING
+  verifiedAt: 2026-10-18
+  readingLinks:
+    - label: Viz
+      url: https://www.viz.com/world-trigger
+      sortOrder: 1
+  adaptations:
+    - name: "Season 1"
+      episodes: 73
+      sortOrder: 1
+      continueChapter: 120
+      continueVolume: 14
+      lastCoveredChapter: 119
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1792341966/pickup/covers/world-trigger-fdbe3b2d92e.jpg
+      notes: "The last two episodes rush ahead through the next few chapters as a preview, and Season 2 retells them properly, so some of it will look familiar."
+    - name: "Season 2"
+      episodes: 12
+      sortOrder: 2
+      continueChapter: 160
+      continueVolume: 18
+      lastCoveredChapter: 159
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1792341969/pickup/covers/world-trigger-da202c4ce8f.jpg
+      notes: "The finale stops partway into the chapter, so you'll re-read the start."
+    - name: "Season 3"
+      episodes: 14
+      sortOrder: 3
+      continueChapter: 197
+      continueVolume: 23
+      lastCoveredChapter: 196
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1792341972/pickup/covers/world-trigger-3c9070aeed5.jpg
+
+- slug: march-comes-in-like-a-lion
+  title: March Comes in Like a Lion
+  titleNative: 3月のライオン
+  aliases: ["3-gatsu no Lion", "Sangatsu no Lion"]
+  related: [fruits-basket, tonikawa, witch-hat-atelier, kaoru-hana-wa-rin-to-saku, spy-x-family]
+  anilistId: 31224
+  popularity: 168281
+  mangadexId: 0ca1627e-95dd-4118-892a-f144adf02256
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1792341974/pickup/covers/march-comes-in-like-a-lion-1ebc680ba8b.jpg
+  author: Chica Umino
+  startYear: 2007
+  publicationStatus: RELEASING
+  verifiedAt: 2026-10-18
+  adaptations:
+    - name: "Season 1"
+      episodes: 22
+      sortOrder: 1
+      continueChapter: 46
+      continueVolume: 5
+      lastCoveredChapter: 45
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1792341976/pickup/covers/march-comes-in-like-a-lion-da2c26e76e2.jpg
+    - name: "Season 2"
+      episodes: 22
+      sortOrder: 2
+      continueChapter: 90
+      continueVolume: 9
+      lastCoveredChapter: 89
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1792341978/pickup/covers/march-comes-in-like-a-lion-00e2ef55c95.jpg
+
+- slug: the-case-study-of-vanitas
+  title: The Case Study of Vanitas
+  titleNative: ヴァニタスの手記
+  aliases: ["Vanitas no Carte", "Vanitas no Shuki"]
+  related: [vinland-saga, berserk, black-butler, dorohedoro, seraph-of-the-end]
+  anilistId: 86568
+  popularity: 145452
+  mangadexId: e1d8b192-fa28-4651-bdaf-d4e0d4418ea8
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1792341980/pickup/covers/the-case-study-of-vanitas-7e89f36ee8b.jpg
+  author: Jun Mochizuki
+  startYear: 2015
+  publicationStatus: RELEASING
+  verifiedAt: 2026-10-18
+  readingLinks:
+    - label: Yen Press
+      url: https://yenpress.com/series/the-case-study-of-vanitas
+      sortOrder: 1
+  adaptations:
+    - name: "Part 1"
+      episodes: 12
+      sortOrder: 1
+      continueChapter: 23
+      continueVolume: 5
+      lastCoveredChapter: 22
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1792341982/pickup/covers/the-case-study-of-vanitas-ff9e925f3bf.jpg
+      notes: "The finale stops partway into the chapter, so you'll re-read the start."
+    - name: "Part 2"
+      episodes: 12
+      sortOrder: 2
+      continueChapter: 56
+      continueVolume: 10
+      lastCoveredChapter: 55
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1792341984/pickup/covers/the-case-study-of-vanitas-cfb99fc4ff7.jpg
+
+- slug: yona-of-the-dawn
+  title: Yona of the Dawn
+  titleNative: 暁のヨナ
+  aliases: ["Akatsuki no Yona", "AkaYona"]
+  related: [one-piece, kingdom, vinland-saga, fruits-basket, berserk]
+  anilistId: 51525
+  popularity: 214513
+  mangadexId: 3bb0279f-a01d-4aa4-93e4-305800f4b83e
+  coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1792341987/pickup/covers/yona-of-the-dawn-6a69e13da5e.jpg
+  author: Mizuho Kusanagi
+  startYear: 2009
+  publicationStatus: FINISHED
+  totalChapters: 276
+  totalVolumes: 48
+  verifiedAt: 2026-10-18
+  readingLinks:
+    - label: Viz
+      url: https://www.viz.com/yona-of-the-dawn
+      sortOrder: 1
+  adaptations:
+    - name: "Season 1"
+      episodes: 24
+      sortOrder: 1
+      continueChapter: 48
+      continueVolume: 9
+      lastCoveredChapter: 47
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1792341988/pickup/covers/yona-of-the-dawn-c6efb72701a.jpg
