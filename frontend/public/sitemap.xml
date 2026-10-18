@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pickup.moe/</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-10-18</lastmod>
   </url>
   <url>
     <loc>https://pickup.moe/browse</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-10-18</lastmod>
   </url>
   <url>
     <loc>https://pickup.moe/about</loc>
@@ -249,7 +249,7 @@
   </url>
   <url>
     <loc>https://pickup.moe/anime/rent-a-girlfriend</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-10-06</lastmod>
   </url>
   <url>
     <loc>https://pickup.moe/anime/hajime-no-ippo</loc>
@@ -301,7 +301,7 @@
   </url>
   <url>
     <loc>https://pickup.moe/anime/the-elusive-samurai</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-10-06</lastmod>
   </url>
   <url>
     <loc>https://pickup.moe/anime/grand-blue</loc>
@@ -333,7 +333,7 @@
   </url>
   <url>
     <loc>https://pickup.moe/anime/that-time-i-got-reincarnated-as-a-slime</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-10-06</lastmod>
   </url>
   <url>
     <loc>https://pickup.moe/anime/the-dangers-in-my-heart</loc>
@@ -357,7 +357,7 @@
   </url>
   <url>
     <loc>https://pickup.moe/anime/iruma-kun</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-10-06</lastmod>
   </url>
   <url>
     <loc>https://pickup.moe/anime/boruto</loc>
@@ -365,7 +365,7 @@
   </url>
   <url>
     <loc>https://pickup.moe/anime/wistoria</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-10-06</lastmod>
   </url>
   <url>
     <loc>https://pickup.moe/anime/kakegurui</loc>
@@ -410,5 +410,21 @@
   <url>
     <loc>https://pickup.moe/anime/the-quintessential-quintuplets</loc>
     <lastmod>2026-09-27</lastmod>
+  </url>
+  <url>
+    <loc>https://pickup.moe/anime/world-trigger</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pickup.moe/anime/march-comes-in-like-a-lion</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pickup.moe/anime/the-case-study-of-vanitas</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://pickup.moe/anime/yona-of-the-dawn</loc>
+    <lastmod>2026-10-18</lastmod>
   </url>
 </urlset>
