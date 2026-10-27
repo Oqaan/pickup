@@ -1207,8 +1207,8 @@
   publicationStatus: FINISHED
   totalChapters: 686
   totalVolumes: 74
-  verifiedAt: 2026-08-24
-  notes: "The original anime (2004-2012) has several filler stretches between arcs, so the arc blocks below are not continuous in episode count. Thousand-Year Blood War is the newer adaptation. Its fourth and final part is still airing and will be added once it finishes."
+  verifiedAt: 2026-10-27
+  notes: "The original anime (2004-2012) has several filler stretches between arcs, so the arc blocks below are not continuous in episode count. Thousand-Year Blood War is a separate series from 2022, so its episode numbers start again at 1."
   adaptations:
     - name: "Agent of the Shinigami arc"
       episodes: 20
@@ -1314,6 +1314,13 @@
       lastCoveredChapter: 661
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787598283/pickup/covers/bleach-9e0df9b730e.jpg
       notes: "The part ends partway into chapter 661, so start there again to catch the second half you haven't seen yet. It also adds anime-original scenes that aren't in the manga."
+    - name: "Thousand-Year Blood War: The Calamity"
+      episodes: 10
+      episodeStart: 41
+      episodeEnd: 50
+      sortOrder: 12
+      lastCoveredChapter: 686
+      caughtUp: true
 
 - slug: black-clover
   title: Black Clover
