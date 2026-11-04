@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pickup.moe/</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://pickup.moe/browse</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://pickup.moe/about</loc>
@@ -30,6 +30,10 @@
   <url>
     <loc>https://pickup.moe/anime/tokyo-ghoul</loc>
     <lastmod>2026-08-02</lastmod>
+  </url>
+  <url>
+    <loc>https://pickup.moe/anime/tokyo-ghoul-re</loc>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://pickup.moe/anime/dandadan</loc>
