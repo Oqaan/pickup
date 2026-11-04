@@ -85,8 +85,8 @@ for (const s of series) {
       const { year, month, day } = a.endDate;
       const ended = Date.UTC(year, (month ?? 1) - 1, day ?? 1);
       if (now - ended > days * DAY) continue;
-      // A season added on or after its finale is already in the catalog
-      const done = lastAdded && lastAdded >= fmt(ended);
+      // Caught-up seasons never get an addedAt, so a later verifiedAt counts too
+      const done = [lastAdded, s.verifiedAt].some((d) => d && d >= fmt(ended));
       finished.push({ slug: s.slug, title, ended, done });
     }
   }

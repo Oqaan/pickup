@@ -306,6 +306,7 @@
       sortOrder: 8
       lastCoveredChapter: 232
       caughtUp: true
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1793807725/pickup/covers/dr-stone-64fb37bbd5d.jpg
 
 - slug: frieren
   title: "Frieren: Beyond Journey's End"
@@ -405,6 +406,7 @@
       sortOrder: 3
       lastCoveredChapter: 101
       caughtUp: true
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1793807727/pickup/covers/mob-psycho-100-a18ce3b2731.jpg
 
 - slug: demon-slayer
   title: Demon Slayer
@@ -544,6 +546,7 @@
       sortOrder: 9
       lastCoveredChapter: 431
       caughtUp: true
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787651235/pickup/covers/my-hero-academia-866846bcfff.jpg
 
 - slug: hunter-x-hunter
   title: Hunter x Hunter
@@ -813,6 +816,7 @@
       sortOrder: 13
       lastCoveredChapter: 699
       caughtUp: true
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1793807733/pickup/covers/naruto-shippuden-550d758b157.jpg
       notes: "Only the epilogue chapter (700) is left after this."
 
 - slug: attack-on-titan
@@ -880,6 +884,7 @@
       sortOrder: 7
       lastCoveredChapter: 139
       caughtUp: true
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1793807736/pickup/covers/attack-on-titan-22333e5e571.jpg
       notes: "This covers the manga to its ending, chapter 139."
 
 - slug: sakamoto-days
@@ -1839,6 +1844,7 @@
       sortOrder: 1
       lastCoveredChapter: 108
       caughtUp: true
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1793807738/pickup/covers/fullmetal-alchemist-6dcf5f8c0dc.jpg
 
 - slug: death-note
   title: Death Note
@@ -1861,6 +1867,7 @@
       sortOrder: 1
       lastCoveredChapter: 108
       caughtUp: true
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1793807741/pickup/covers/death-note-294f450e193.jpg
       notes: "The anime covers the whole manga but stages the ending differently."
 
 - slug: fire-force
@@ -1898,6 +1905,7 @@
       sortOrder: 3
       lastCoveredChapter: 304
       caughtUp: true
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1793807744/pickup/covers/fire-force-f0efa39fb1e.jpg
 
 - slug: one-piece
   title: One Piece
@@ -2133,6 +2141,7 @@
       sortOrder: 2
       lastCoveredChapter: 519
       caughtUp: true
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1793807751/pickup/covers/dragon-ball-1cfb6bc567f.jpg
       notes: "Dragon Ball Z adapts the manga to its ending. Dragon Ball Super is a separate sequel manga and GT is anime only."
 
 - slug: assassination-classroom
@@ -2167,6 +2176,7 @@
       sortOrder: 2
       lastCoveredChapter: 180
       caughtUp: true
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1793807753/pickup/covers/assassination-classroom-d422e6de375.jpg
       notes: "The anime adapts the main story through to Koro-sensei and the graduation. Only a few bonus side stories in the final volume are left."
 
 - slug: yu-yu-hakusho
@@ -2194,6 +2204,7 @@
       sortOrder: 1
       lastCoveredChapter: 175
       caughtUp: true
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1793807756/pickup/covers/yu-yu-hakusho-a2bc360ee1a.jpg
       notes: "The 112 episode anime adapts the whole manga, including the final Three Kings arc, so there is nothing left to continue."
 
 - slug: dragon-ball-super
@@ -2339,6 +2350,7 @@
       sortOrder: 1
       lastCoveredChapter: 162
       caughtUp: true
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1793807758/pickup/covers/monster-3b094e4b4ac.jpg
       notes: "The 74 episode anime follows the manga almost scene for scene to the end, so there is nothing left to continue."
 
 - slug: beastars
@@ -2380,6 +2392,7 @@
       sortOrder: 3
       lastCoveredChapter: 196
       caughtUp: true
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1793807760/pickup/covers/beastars-24b6c8d11ce.jpg
       notes: "The final season reshapes the manga's messy ending but adapts it in full, so there is nothing left to continue."
 
 - slug: seven-deadly-sins
@@ -2430,6 +2443,7 @@
       sortOrder: 4
       lastCoveredChapter: 346
       caughtUp: true
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1793807763/pickup/covers/seven-deadly-sins-ae9ee39288f.jpg
       notes: "The four episode Signs of Holy War special is an original side story and adapts no manga chapters."
 
 - slug: fairy-tail
@@ -2471,6 +2485,7 @@
       sortOrder: 3
       lastCoveredChapter: 545
       caughtUp: true
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1793807769/pickup/covers/fairy-tail-697413bad6e.jpg
       notes: "The Final Series adapts the Alvarez arc to the manga's ending, so there is nothing left to continue."
 
 - slug: gintama
@@ -2575,6 +2590,7 @@
       sortOrder: 9
       lastCoveredChapter: 704
       caughtUp: true
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1793807773/pickup/covers/gintama-d25866ec0d9.jpg
       notes: "The 2021 film adapts the closing chapters of the Silver Soul arc (roughly 687-704) to the manga's ending."
 
 - slug: kingdom
@@ -2767,6 +2783,7 @@
       sortOrder: 5
       lastCoveredChapter: 315
       caughtUp: true
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1793807777/pickup/covers/food-wars-f76fbb4c257.jpg
       notes: "This season jumps straight from the Promotion Exams to the Beach Exam and BLUE arcs, adapting the manga through its finale at chapter 315."
 
 - slug: apothecary-diaries
@@ -2850,7 +2867,7 @@
       continueChapter: 256
       continueVolume: 30
       lastCoveredChapter: 255
-      coverUrl:
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1793807781/pickup/covers/rent-a-girlfriend-981fc3d2ee5.jpg
 
 - slug: hajime-no-ippo
   title: Hajime no Ippo
@@ -3813,14 +3830,16 @@
       episodes: 21
       sortOrder: 2
       continueChapter: 95
+      continueVolume: 11
       lastCoveredChapter: 94
-      coverUrl:
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1793807784/pickup/covers/iruma-kun-63f4cbda2c0.jpg
     - name: Season 3
       episodes: 21
       sortOrder: 3
       continueChapter: 147
+      continueVolume: 17
       lastCoveredChapter: 146
-      coverUrl:
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1793807786/pickup/covers/iruma-kun-15130237de1.jpg
       notes: "The finale stops partway into chapter 147, so you'll re-read the first few pages."
     - name: Season 4
       episodes: 24
@@ -3829,7 +3848,7 @@
       continueChapter: 215
       continueVolume: 25
       lastCoveredChapter: 214
-      coverUrl:
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1793807788/pickup/covers/iruma-kun-850045c474e.jpg
 - slug: boruto
   title: Boruto
   titleNative: BORUTO -ボルト- NARUTO NEXT GENERATIONS
@@ -4239,6 +4258,7 @@
       sortOrder: 3
       lastCoveredChapter: 122
       caughtUp: true
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1793807791/pickup/covers/the-quintessential-quintuplets-ed3f6679447.jpg
 
 - slug: world-trigger
   title: World Trigger
