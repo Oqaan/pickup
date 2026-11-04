@@ -86,8 +86,16 @@ console.log(
 
 for (const u of uploads) {
   try {
-    // Cloudinary fetches the image from the source host itself
-    const res = await cloudinary.uploader.upload(u.url, {
+    // MangaDex answers Cloudinary's fetcher with an HTML page, so download it here
+    const img = await fetch(u.url, {
+      headers: { "User-Agent": "pickup.moe (github.com/Oqaan/pickup)" },
+    });
+    const type = img.headers.get("content-type") ?? "";
+    if (!img.ok || !type.startsWith("image/")) {
+      throw new Error(`source returned ${img.status} ${type}`);
+    }
+    const data = Buffer.from(await img.arrayBuffer()).toString("base64");
+    const res = await cloudinary.uploader.upload(`data:${type};base64,${data}`, {
       public_id: u.name,
       folder: FOLDER,
       overwrite: true,

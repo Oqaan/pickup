@@ -16,16 +16,24 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const refreshAll = process.argv.includes("--all");
 
 async function fetchCovers(mangadexId) {
-  const res = await fetch(`${API}/cover?manga[]=${mangadexId}&limit=100`, {
-    headers: { "User-Agent": "pickup.moe (github.com/Oqaan/pickup)" },
-  });
-  if (!res.ok) throw new Error(`MangaDex returned ${res.status}`);
-  const body = await res.json();
-  return body.data.map((c) => ({
-    volume: c.attributes.volume,
-    locale: c.attributes.locale,
-    fileName: c.attributes.fileName,
-  }));
+  const covers = [];
+  for (let offset = 0; ; offset += 100) {
+    const res = await fetch(
+      `${API}/cover?manga[]=${mangadexId}&limit=100&offset=${offset}`,
+      { headers: { "User-Agent": "pickup.moe (github.com/Oqaan/pickup)" } },
+    );
+    if (!res.ok) throw new Error(`MangaDex returned ${res.status}`);
+    const body = await res.json();
+    for (const c of body.data) {
+      covers.push({
+        volume: c.attributes.volume,
+        locale: c.attributes.locale,
+        fileName: c.attributes.fileName,
+      });
+    }
+    if (offset + 100 >= body.total) return covers;
+    await sleep(300);
+  }
 }
 
 function pick(covers, volume) {
@@ -45,6 +53,15 @@ function url(mangadexId, cover, size = "512") {
     : `${CDN}/${mangadexId}/${cover.fileName}`;
 }
 
+// A caught-up season has no next volume, so it shows the one the story ends in
+function coverVolume(series, adaptation) {
+  if (adaptation.continueVolume) return adaptation.continueVolume;
+  if (adaptation.caughtUp && series.publicationStatus === "FINISHED") {
+    return series.totalVolumes;
+  }
+  return null;
+}
+
 const series = parse(readFileSync(YAML_PATH, "utf8"));
 
 for (const s of series) {
@@ -54,9 +71,9 @@ for (const s of series) {
   }
 
   const needsSeriesCover = refreshAll || !s.coverUrl;
-  const missingAdaptations = (s.adaptations ?? []).filter(
-    (a) => a.continueVolume && (refreshAll || !a.coverUrl),
-  );
+  const missingAdaptations = (s.adaptations ?? [])
+    .map((a) => ({ ...a, volume: coverVolume(s, a) }))
+    .filter((a) => a.volume && (refreshAll || !a.coverUrl));
 
   if (!needsSeriesCover && missingAdaptations.length === 0) continue;
 
@@ -71,8 +88,8 @@ for (const s of series) {
   }
 
   for (const a of missingAdaptations) {
-    const cover = pick(covers, a.continueVolume);
-    console.log(`  ${a.name} (vol ${a.continueVolume})`);
+    const cover = pick(covers, a.volume);
+    console.log(`  ${a.name} (vol ${a.volume})`);
     console.log(
       `    coverUrl: ${cover ? url(s.mangadexId, cover, null) : "not found"}`,
     );
