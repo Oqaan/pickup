@@ -7,6 +7,12 @@ type Props = {
 export default function Layout({ children }: Props) {
   return (
     <div className="min-h-screen flex flex-col">
+      <a
+        href="#content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-sumi focus:text-paper focus:px-4 focus:py-3 font-mono text-xs tracking-widest"
+      >
+        SKIP TO CONTENT
+      </a>
       <header className="border-b border-tone">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link
@@ -53,7 +59,9 @@ export default function Layout({ children }: Props) {
         </div>
       </header>
 
-      <div className="flex-1 pb-24">{children}</div>
+      <div id="content" tabIndex={-1} className="flex-1 pb-24 outline-none">
+        {children}
+      </div>
 
       <footer className="border-t border-tone">
         <div className="max-w-6xl mx-auto px-6 py-12">

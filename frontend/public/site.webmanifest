@@ -1,0 +1,13 @@
+{
+  "name": "pickup",
+  "short_name": "pickup",
+  "description": "Finished the anime? pickup tells you which manga chapter to start from, checked by hand for each series.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf9f6",
+  "theme_color": "#faf9f6",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
