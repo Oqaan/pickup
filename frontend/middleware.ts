@@ -17,7 +17,7 @@ const FRESH_MS = 15 * 60_000;
 const KEEP_SECONDS = 24 * 60 * 60;
 
 type Kept = { path: string; at: number; data: unknown };
-type Loaded<T> = { status: number; data: T | null };
+type Loaded<T> = { status: number; data: T | null; from: string };
 
 const cache = () => getCache({ namespace: "pickup" });
 
@@ -43,12 +43,12 @@ async function keep(path: string, data: unknown) {
 async function refresh<T>(path: string): Promise<Loaded<T>> {
   try {
     const res = await api(path);
-    if (!res.ok) return { status: res.status, data: null };
+    if (!res.ok) return { status: res.status, data: null, from: "api" };
     const data = (await res.json()) as T;
     waitUntil(keep(path, data));
-    return { status: 200, data };
+    return { status: 200, data, from: "api" };
   } catch {
-    return { status: 502, data: null };
+    return { status: 502, data: null, from: "api" };
   }
 }
 
@@ -57,9 +57,20 @@ async function refresh<T>(path: string): Promise<Loaded<T>> {
 async function load<T>(path: string): Promise<Loaded<T>> {
   const hit = await kept(path);
   if (!hit) return refresh<T>(path);
-  if (Date.now() - hit.at > FRESH_MS) waitUntil(refresh(path));
-  return { status: 200, data: hit.data as T };
+  const stale = Date.now() - hit.at > FRESH_MS;
+  if (stale) waitUntil(refresh(path));
+  return { status: 200, data: hit.data as T, from: stale ? "stale" : "cache" };
 }
+
+const timed = async <T>(work: Promise<T>) => {
+  const start = Date.now();
+  return { value: await work, ms: Date.now() - start };
+};
+
+// Shows up in the browser's network timings, to see where a slow page lost its time
+const timing = (shellMs: number, dataMs: number, from: string) => ({
+  "server-timing": `shell;dur=${shellMs}, data;dur=${dataMs};desc="${from}"`,
+});
 
 // Validated before it goes into a URL we fetch
 const SLUG = /^[a-z0-9-]{1,100}$/;
@@ -220,10 +231,13 @@ export default async function middleware(req: Request) {
 
 // Seed #root with a crawlable list of every series, React clears it on mount
 async function homepage(req: Request) {
-  const [html, { data: list }] = await Promise.all([
-    shell(req),
-    load<Listed[]>("/api/series"),
+  const [page, loaded] = await Promise.all([
+    timed(shell(req)),
+    timed(load<Listed[]>("/api/series")),
   ]);
+  const html = page.value;
+  const list = loaded.value.data;
+  const times = timing(page.ms, loaded.ms, loaded.value.from);
 
   if (!list) return next();
 
@@ -275,15 +289,20 @@ async function homepage(req: Request) {
         )}</head>`,
       )
       .replace('<div id="root"></div>', `<div id="root">${body}</div>`),
+    200,
+    times,
   );
 }
 
 // One page linking to every series, so Google reaches them all by links, not just the sitemap
 async function browsePage(req: Request) {
-  const [html, { data: list }] = await Promise.all([
-    shell(req),
-    load<Listed[]>("/api/series"),
+  const [page, loaded] = await Promise.all([
+    timed(shell(req)),
+    timed(load<Listed[]>("/api/series")),
   ]);
+  const html = page.value;
+  const list = loaded.value.data;
+  const times = timing(page.ms, loaded.ms, loaded.value.from);
 
   if (!list) return unavailable(req);
 
@@ -330,6 +349,8 @@ async function browsePage(req: Request) {
       '<div id="root"></div>',
       `<div id="root">${body}</div>`,
     ),
+    200,
+    times,
   );
 }
 
@@ -379,10 +400,13 @@ async function seriesPage(url: URL, req: Request) {
 
   if (!SLUG.test(slug)) return notFound(req);
 
-  const [html, { status, data: series }] = await Promise.all([
-    shell(req),
-    load<Series>(`/api/series/${encodeURIComponent(slug)}`),
+  const [page, loaded] = await Promise.all([
+    timed(shell(req)),
+    timed(load<Series>(`/api/series/${encodeURIComponent(slug)}`)),
   ]);
+  const html = page.value;
+  const { status, data: series } = loaded.value;
+  const times = timing(page.ms, loaded.ms, loaded.value.from);
 
   if (status === 404) return notFound(req);
   if (!series) return unavailable(req);
@@ -476,5 +500,7 @@ async function seriesPage(url: URL, req: Request) {
       '<div id="root"></div>',
       `<div id="root">${body}</div>`,
     ),
+    200,
+    times,
   );
 }
