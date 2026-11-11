@@ -518,7 +518,7 @@
   publicationStatus: FINISHED
   totalChapters: 431
   totalVolumes: 42
-  verifiedAt: 2026-08-25
+  verifiedAt: 2026-11-11
   adaptations:
     - name: Season 1
       episodes: 13
@@ -530,10 +530,11 @@
     - name: Season 2
       episodes: 25
       sortOrder: 2
-      continueChapter: 71
+      continueChapter: 70
       continueVolume: 8
       lastCoveredChapter: 70
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154675/pickup/covers/my-hero-academia-69d860655c4.jpg
+      notes: "This chapter is split across the two seasons, so you'll re-read a few pages."
     - name: Season 3
       episodes: 25
       sortOrder: 3
@@ -552,10 +553,11 @@
     - name: Season 5
       episodes: 25
       sortOrder: 5
-      continueChapter: 259
-      continueVolume: 27
+      continueChapter: 258
+      continueVolume: 26
       lastCoveredChapter: 258
-      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154678/pickup/covers/my-hero-academia-cba532f13a8.jpg
+      coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1794434491/pickup/covers/my-hero-academia-12a602addf9.jpg
+      notes: "The finale only shows a few pages of this chapter, so read it in full."
     - name: Season 6
       episodes: 25
       sortOrder: 6
@@ -3252,22 +3254,22 @@
   publicationStatus: FINISHED
   totalChapters: 259
   totalVolumes: 29
-  verifiedAt: 2026-09-06
+  verifiedAt: 2026-11-11
   notes: "The anime moves quickly and condenses the manga as it goes, so it does not stop on a clean chapter break. Season 2 Part 2 is still airing and will be added once it finishes."
   adaptations:
     - name: Season 1
       episodes: 27
       sortOrder: 1
-      continueChapter: 84
+      continueChapter: 86
       continueVolume: 10
-      lastCoveredChapter: 83
+      lastCoveredChapter: 85
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788697924/pickup/covers/mission-yozakura-family-c9b827c126f.jpg
     - name: Season 2 Part 1
       episodes: 12
       sortOrder: 2
-      continueChapter: 126
+      continueChapter: 130
       continueVolume: 15
-      lastCoveredChapter: 125
+      lastCoveredChapter: 129
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1788697927/pickup/covers/mission-yozakura-family-7a0c0420c72.jpg
 
 - slug: medalist
@@ -3482,14 +3484,14 @@
   publicationStatus: FINISHED
   totalChapters: 201
   totalVolumes: 25
-  verifiedAt: 2026-09-14
+  verifiedAt: 2026-11-11
   adaptations:
     - name: Season 1
       episodes: 20
       sortOrder: 1
-      continueChapter: 56
+      continueChapter: 55
       continueVolume: 7
-      lastCoveredChapter: 55
+      lastCoveredChapter: 54
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1789387007/pickup/covers/to-your-eternity-be273589fef.jpg
     - name: Season 2
       episodes: 20
