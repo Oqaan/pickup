@@ -161,10 +161,17 @@ const listData = (list: Listed[]) =>
   }));
 
 // A protected preview deploy answers with Vercel's login page unless the visitor's cookie comes along
-const shell = (req: Request) =>
-  fetch(new URL("/index.html", req.url), {
+let shellKept: string | null = null;
+
+const shell = async (req: Request) => {
+  if (shellKept) return shellKept;
+  const html = await fetch(new URL("/index.html", req.url), {
     headers: { cookie: req.headers.get("cookie") ?? "" },
   }).then((r) => r.text());
+  // Only the real page is kept, never Vercel's login page
+  if (html.includes('<div id="root"></div>')) shellKept = html;
+  return html;
+};
 
 const respond = (html: string, status = 200, headers = {}) =>
   new Response(html, {
