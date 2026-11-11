@@ -101,8 +101,11 @@ const listData = (list: Listed[]) =>
     caughtUp: s.caughtUp,
   }));
 
-const shell = (origin: string) =>
-  fetch(new URL("/index.html", origin)).then((r) => r.text());
+// A protected preview deploy answers with Vercel's login page unless the visitor's cookie comes along
+const shell = (req: Request) =>
+  fetch(new URL("/index.html", req.url), {
+    headers: { cookie: req.headers.get("cookie") ?? "" },
+  }).then((r) => r.text());
 
 const respond = (html: string, status = 200, headers = {}) =>
   new Response(html, {
@@ -113,8 +116,8 @@ const respond = (html: string, status = 200, headers = {}) =>
 // The plain shell still carries the homepage's tags, so with a 200 Google would
 // file the page as a homepage copy. A 503 makes it come back later, and the app
 // still starts for visitors
-const unavailable = async (url: URL) =>
-  respond(await shell(url.origin), 503, { "retry-after": "300" });
+const unavailable = async (req: Request) =>
+  respond(await shell(req), 503, { "retry-after": "300" });
 
 // index.html carries the homepage's tags. Left in, a page would have two
 // canonicals and Google would drop it as a homepage copy
@@ -156,21 +159,21 @@ function statusClause(s: Series): string {
   return "The manga is still ongoing.";
 }
 
-export default async function middleware(request: Request) {
-  const url = new URL(request.url);
+export default async function middleware(req: Request) {
+  const url = new URL(req.url);
   const path = url.pathname.replace(/(.)\/$/, "$1");
-  if (path === "/") return homepage(url);
-  if (path === "/browse") return browsePage(url);
-  if (path === "/about") return aboutPage(url);
-  if (path === "/legal") return legalPage(url);
-  if (path.startsWith("/anime/")) return seriesPage(url);
-  return notFound(url);
+  if (path === "/") return homepage(req);
+  if (path === "/browse") return browsePage(req);
+  if (path === "/about") return aboutPage(req);
+  if (path === "/legal") return legalPage(req);
+  if (path.startsWith("/anime/")) return seriesPage(url, req);
+  return notFound(req);
 }
 
 // Seed #root with a crawlable list of every series, React clears it on mount
-async function homepage(url: URL) {
+async function homepage(req: Request) {
   const [html, listRes] = await Promise.all([
-    shell(url.origin),
+    shell(req),
     api("/api/series"),
   ]);
 
@@ -230,13 +233,13 @@ async function homepage(url: URL) {
 }
 
 // One page linking to every series, so Google reaches them all by links, not just the sitemap
-async function browsePage(url: URL) {
+async function browsePage(req: Request) {
   const [html, listRes] = await Promise.all([
-    shell(url.origin),
+    shell(req),
     api("/api/series"),
   ]);
 
-  if (!listRes.ok) return unavailable(url);
+  if (!listRes.ok) return unavailable(req);
 
   const list = (await listRes.json()) as Listed[];
 
@@ -287,8 +290,8 @@ async function browsePage(url: URL) {
 }
 
 // Static page, only the tags need to be its own
-async function aboutPage(url: URL) {
-  const html = await shell(url.origin);
+async function aboutPage(req: Request) {
+  const html = await shell(req);
   const pageUrl = "https://pickup.moe/about";
   const tags = `
     <title>${esc(ABOUT_TITLE)}</title>
@@ -306,8 +309,8 @@ async function aboutPage(url: URL) {
   return respond(withTags(html, tags));
 }
 
-async function legalPage(url: URL) {
-  const html = await shell(url.origin);
+async function legalPage(req: Request) {
+  const html = await shell(req);
   const tags = `
     <title>${esc(LEGAL_TITLE)}</title>
     <meta name="description" content="${esc(LEGAL_DESCRIPTION)}" />
@@ -318,8 +321,8 @@ async function legalPage(url: URL) {
 }
 
 // A real 404 so Google drops the address instead of indexing a homepage copy
-async function notFound(url: URL) {
-  const html = await shell(url.origin);
+async function notFound(req: Request) {
+  const html = await shell(req);
   const tags = `
     <title>Not found - pickup</title>
     <meta name="robots" content="noindex" />
@@ -327,18 +330,18 @@ async function notFound(url: URL) {
   return respond(withTags(html, tags), 404);
 }
 
-async function seriesPage(url: URL) {
+async function seriesPage(url: URL, req: Request) {
   const slug = url.pathname.replace("/anime/", "").replace(/\/$/, "");
 
-  if (!SLUG.test(slug)) return notFound(url);
+  if (!SLUG.test(slug)) return notFound(req);
 
   const [html, seriesRes] = await Promise.all([
-    shell(url.origin),
+    shell(req),
     api(`/api/series/${encodeURIComponent(slug)}`),
   ]);
 
-  if (seriesRes.status === 404) return notFound(url);
-  if (!seriesRes.ok) return unavailable(url);
+  if (seriesRes.status === 404) return notFound(req);
+  if (!seriesRes.ok) return unavailable(req);
 
   const series = (await seriesRes.json()) as Series;
   const related = series.related ?? [];
