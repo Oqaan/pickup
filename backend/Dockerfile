@@ -11,6 +11,8 @@ RUN ./mvnw clean package -DskipTests -B
 FROM eclipse-temurin:21-jre
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
+RUN useradd --system --no-create-home pickup
+USER pickup
 ENV SPRING_PROFILES_ACTIVE=prod
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]

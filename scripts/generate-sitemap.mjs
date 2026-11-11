@@ -8,8 +8,16 @@ const OUT = "frontend/public/sitemap.xml";
 const asDate = (value) =>
   value instanceof Date ? value.toISOString().slice(0, 10) : value || null;
 
+// A season added later changes the page too, so the newest of both dates counts
+const changed = (s) =>
+  [s.verifiedAt, ...(s.adaptations ?? []).map((a) => a.addedAt)]
+    .map(asDate)
+    .filter(Boolean)
+    .sort()
+    .at(-1) ?? null;
+
 const series = parse(readFileSync(SEED, "utf8"));
-const verified = series.map((s) => asDate(s.verifiedAt)).filter(Boolean);
+const verified = series.map(changed).filter(Boolean);
 
 // The home page lists the series, so it changes whenever one of them does.
 // About has no date at all rather than one nobody remembers to bump
@@ -19,7 +27,7 @@ const entries = [
   { path: "/about" },
   ...series.map((s) => ({
     path: `/anime/${s.slug}`,
-    lastmod: asDate(s.verifiedAt),
+    lastmod: changed(s),
   })),
 ];
 
