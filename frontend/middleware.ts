@@ -1,5 +1,5 @@
 /// <reference types="node" />
-import { next } from "@vercel/functions";
+import { getCache, next, waitUntil } from "@vercel/functions";
 
 export const config = {
   // Every path without a file extension, so unknown ones get a real 404
@@ -12,6 +12,54 @@ const API = "https://api.pickup.moe";
 const KEY = process.env.PICKUP_MIDDLEWARE_KEY;
 const api = (path: string) =>
   fetch(`${API}${path}`, KEY ? { headers: { "X-Pickup-Key": KEY } } : {});
+
+const FRESH_MS = 15 * 60_000;
+const KEEP_SECONDS = 24 * 60 * 60;
+
+type Kept = { path: string; at: number; data: unknown };
+type Loaded<T> = { status: number; data: T | null };
+
+const cache = () => getCache({ namespace: "pickup" });
+
+async function kept(path: string): Promise<Kept | null> {
+  try {
+    const hit = (await cache().get(path)) as Kept | null;
+    // Cache keys are short hashes, so make sure the entry is really this path
+    return hit?.path === path ? hit : null;
+  } catch {
+    return null;
+  }
+}
+
+async function keep(path: string, data: unknown) {
+  try {
+    const entry: Kept = { path, at: Date.now(), data };
+    await cache().set(path, entry, { ttl: KEEP_SECONDS });
+  } catch {
+    // A page without the cache is only slower
+  }
+}
+
+async function refresh<T>(path: string): Promise<Loaded<T>> {
+  try {
+    const res = await api(path);
+    if (!res.ok) return { status: res.status, data: null };
+    const data = (await res.json()) as T;
+    waitUntil(keep(path, data));
+    return { status: 200, data };
+  } catch {
+    return { status: 502, data: null };
+  }
+}
+
+// Pages are built from the stored answer so they don't wait on the API. An old
+// answer is still served once while a new one is fetched, also when the API is down
+async function load<T>(path: string): Promise<Loaded<T>> {
+  const hit = await kept(path);
+  if (!hit) return refresh<T>(path);
+  if (Date.now() - hit.at > FRESH_MS) waitUntil(refresh(path));
+  return { status: 200, data: hit.data as T };
+}
 
 // Validated before it goes into a URL we fetch
 const SLUG = /^[a-z0-9-]{1,100}$/;
@@ -172,14 +220,12 @@ export default async function middleware(req: Request) {
 
 // Seed #root with a crawlable list of every series, React clears it on mount
 async function homepage(req: Request) {
-  const [html, listRes] = await Promise.all([
+  const [html, { data: list }] = await Promise.all([
     shell(req),
-    api("/api/series"),
+    load<Listed[]>("/api/series"),
   ]);
 
-  if (!listRes.ok) return next();
-
-  const list = (await listRes.json()) as Listed[];
+  if (!list) return next();
 
   const items = list
     .map((s) => `<li><a href="/anime/${esc(s.slug)}">${esc(s.title)}</a></li>`)
@@ -234,14 +280,12 @@ async function homepage(req: Request) {
 
 // One page linking to every series, so Google reaches them all by links, not just the sitemap
 async function browsePage(req: Request) {
-  const [html, listRes] = await Promise.all([
+  const [html, { data: list }] = await Promise.all([
     shell(req),
-    api("/api/series"),
+    load<Listed[]>("/api/series"),
   ]);
 
-  if (!listRes.ok) return unavailable(req);
-
-  const list = (await listRes.json()) as Listed[];
+  if (!list) return unavailable(req);
 
   const title = "All series on pickup";
   const description =
@@ -335,15 +379,13 @@ async function seriesPage(url: URL, req: Request) {
 
   if (!SLUG.test(slug)) return notFound(req);
 
-  const [html, seriesRes] = await Promise.all([
+  const [html, { status, data: series }] = await Promise.all([
     shell(req),
-    api(`/api/series/${encodeURIComponent(slug)}`),
+    load<Series>(`/api/series/${encodeURIComponent(slug)}`),
   ]);
 
-  if (seriesRes.status === 404) return notFound(req);
-  if (!seriesRes.ok) return unavailable(req);
-
-  const series = (await seriesRes.json()) as Series;
+  if (status === 404) return notFound(req);
+  if (!series) return unavailable(req);
   const related = series.related ?? [];
 
   const title = `Where to continue the ${series.title} manga`;
