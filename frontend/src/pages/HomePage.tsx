@@ -105,7 +105,8 @@ export default function HomePage() {
   useEffect(() => {
     fetchSeriesList()
       .then(setSeries)
-      .catch(() => setError(true))
+      // The list the page came with is still good enough to show
+      .catch(() => setError(seededList() === null))
       .finally(() => setLoading(false));
   }, []);
 
