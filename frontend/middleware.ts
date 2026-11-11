@@ -2,7 +2,8 @@
 import { next } from "@vercel/functions";
 
 export const config = {
-  matcher: ["/", "/browse", "/about", "/legal", "/anime/:slug*"],
+  // Every path without a file extension, so unknown ones get a real 404
+  matcher: ["/((?!assets/|_vercel/|.*\\..*).*)"],
 };
 
 const API = "https://api.pickup.moe";
@@ -103,11 +104,17 @@ const listData = (list: Listed[]) =>
 const shell = (origin: string) =>
   fetch(new URL("/index.html", origin)).then((r) => r.text());
 
-const respond = (html: string, status = 200) =>
+const respond = (html: string, status = 200, headers = {}) =>
   new Response(html, {
     status,
-    headers: { "content-type": "text/html; charset=utf-8" },
+    headers: { "content-type": "text/html; charset=utf-8", ...headers },
   });
+
+// The plain shell still carries the homepage's tags, so with a 200 Google would
+// file the page as a homepage copy. A 503 makes it come back later, and the app
+// still starts for visitors
+const unavailable = async (url: URL) =>
+  respond(await shell(url.origin), 503, { "retry-after": "300" });
 
 // index.html carries the homepage's tags. Left in, a page would have two
 // canonicals and Google would drop it as a homepage copy
@@ -151,11 +158,13 @@ function statusClause(s: Series): string {
 
 export default async function middleware(request: Request) {
   const url = new URL(request.url);
-  if (url.pathname === "/") return homepage(url);
-  if (url.pathname === "/browse") return browsePage(url);
-  if (url.pathname === "/about") return aboutPage(url);
-  if (url.pathname === "/legal") return legalPage(url);
-  return seriesPage(url);
+  const path = url.pathname.replace(/(.)\/$/, "$1");
+  if (path === "/") return homepage(url);
+  if (path === "/browse") return browsePage(url);
+  if (path === "/about") return aboutPage(url);
+  if (path === "/legal") return legalPage(url);
+  if (path.startsWith("/anime/")) return seriesPage(url);
+  return notFound(url);
 }
 
 // Seed #root with a crawlable list of every series, React clears it on mount
@@ -227,7 +236,7 @@ async function browsePage(url: URL) {
     api("/api/series"),
   ]);
 
-  if (!listRes.ok) return next();
+  if (!listRes.ok) return unavailable(url);
 
   const list = (await listRes.json()) as Listed[];
 
@@ -329,7 +338,7 @@ async function seriesPage(url: URL) {
   ]);
 
   if (seriesRes.status === 404) return notFound(url);
-  if (!seriesRes.ok) return next();
+  if (!seriesRes.ok) return unavailable(url);
 
   const series = (await seriesRes.json()) as Series;
   const related = series.related ?? [];

@@ -10,6 +10,10 @@ spring:
   flyway:
     enabled: true
 
+server:
+  compression:
+    enabled: true
+
 pickup:
   middleware-key: ${PICKUP_MIDDLEWARE_KEY:}
 
