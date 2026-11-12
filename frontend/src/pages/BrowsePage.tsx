@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useLocation, useSearchParams } from "react-router-dom";
 import type { SeriesSummary } from "../types";
 import {
   cachedSeriesList,
@@ -9,6 +9,7 @@ import {
 } from "../api";
 import { cover } from "../cover";
 import { useSeo } from "../useSeo";
+import { saveScroll, savedScroll } from "../scroll";
 
 // Five per row from 1024px up, three from 640px, two below
 const COVER_SIZES = "(min-width: 1024px) 210px, (min-width: 640px) 33vw, 45vw";
@@ -56,6 +57,16 @@ export default function BrowsePage() {
       .then(setSeries)
       .catch(() => {});
   }, []);
+
+  const { key: historyKey } = useLocation();
+  const ready = series.length > 0;
+
+  // Wait for the cards, an empty page is too short to scroll that far
+  useEffect(() => {
+    if (!ready) return;
+    const y = savedScroll(historyKey);
+    if (y > 0) window.scrollTo(0, y);
+  }, [ready, historyKey]);
 
   const [params, setParams] = useSearchParams();
   const sort: Sort =
@@ -128,6 +139,7 @@ export default function BrowsePage() {
             to={`/anime/${s.slug}`}
             onPointerEnter={() => prefetchSeriesDetail(s.slug)}
             onFocus={() => prefetchSeriesDetail(s.slug)}
+            onClick={() => saveScroll(historyKey)}
             className="group flex flex-col"
           >
             <div className="spine relative aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition duration-200 group-hover:-translate-y-1">
