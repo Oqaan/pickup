@@ -598,7 +598,7 @@
   author: Yoshihiro Togashi
   startYear: 1998
   publicationStatus: RELEASING
-  verifiedAt: 2026-08-05
+  verifiedAt: 2026-11-12
   notes: "This maps the 2011 anime. The manga continues well past where it ends, though it updates rarely."
   adaptations:
     - name: "Hunter Exam Arc"
@@ -625,9 +625,9 @@
       episodeStart: 37
       episodeEnd: 58
       sortOrder: 3
-      continueChapter: 118
+      continueChapter: 121
       continueVolume: 13
-      lastCoveredChapter: 117
+      lastCoveredChapter: 120
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1786154687/pickup/covers/hunter-x-hunter-cf26fbca6c1.jpg
     - name: "Greed Island Arc"
       episodes: 17
@@ -1380,7 +1380,7 @@
   publicationStatus: FINISHED
   totalChapters: 392
   totalVolumes: 38
-  verifiedAt: 2026-08-24
+  verifiedAt: 2026-11-12
   notes: "The anime ran as one continuous series in Japan, so the arc blocks below are what you can stop after. The new season is still airing and will be added once it finishes."
   adaptations:
     - name: "Magic Knights Entrance arc"
@@ -1424,9 +1424,9 @@
       episodeStart: 40
       episodeEnd: 51
       sortOrder: 5
-      continueChapter: 75
+      continueChapter: 76
       continueVolume: 9
-      lastCoveredChapter: 74
+      lastCoveredChapter: 75
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787600475/pickup/covers/black-clover-0f10e5102fd.jpg
     - name: "Witches' Forest arc"
       episodes: 14
@@ -2498,7 +2498,7 @@
   publicationStatus: FINISHED
   totalChapters: 545
   totalVolumes: 63
-  verifiedAt: 2026-08-28
+  verifiedAt: 2026-11-12
   readingLinks:
     - label: Kodansha
       url: https://kodansha.us/series/fairy-tail/
@@ -2514,9 +2514,9 @@
     - name: "Series 2"
       episodes: 102
       sortOrder: 2
-      continueChapter: 418
+      continueChapter: 420
       continueVolume: 49
-      lastCoveredChapter: 417
+      lastCoveredChapter: 419
       coverUrl: https://res.cloudinary.com/m8pa4ern/image/upload/v1787939904/pickup/covers/fairy-tail-18c7fa7b3ae.jpg
     - name: "Final Series"
       episodes: 51
