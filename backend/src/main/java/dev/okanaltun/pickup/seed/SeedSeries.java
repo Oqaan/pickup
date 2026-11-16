@@ -13,6 +13,7 @@ public record SeedSeries(
                 String publicationStatus,
                 Integer totalChapters,
                 Integer totalVolumes,
+                String sourceType,
                 String verifiedAt,
                 Integer anilistId,
                 Integer popularity,
