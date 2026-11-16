@@ -46,6 +46,9 @@ public class Series {
     @Column(name = "total_volumes")
     private Integer totalVolumes;
 
+    @Column(name = "source_type", nullable = false)
+    private String sourceType = "manga";
+
     @Column(name = "anilist_id")
     private Integer anilistId;
 

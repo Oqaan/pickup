@@ -14,6 +14,7 @@ public record SeriesDetailResponse(
         String publicationStatus,
         Integer totalChapters,
         Integer totalVolumes,
+        String sourceType,
         LocalDate verifiedAt,
         List<String> aliases,
         List<RelatedSeriesResponse> related,

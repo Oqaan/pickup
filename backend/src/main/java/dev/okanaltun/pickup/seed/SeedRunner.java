@@ -91,6 +91,7 @@ public class SeedRunner implements CommandLineRunner {
         series.setPublicationStatus(entry.publicationStatus());
         series.setTotalChapters(entry.totalChapters());
         series.setTotalVolumes(entry.totalVolumes());
+        series.setSourceType(entry.sourceType() != null ? entry.sourceType() : "manga");
         series.setVerifiedAt(
                 entry.verifiedAt() != null ? LocalDate.parse(entry.verifiedAt()) : null);
         series.setAnilistId(entry.anilistId());

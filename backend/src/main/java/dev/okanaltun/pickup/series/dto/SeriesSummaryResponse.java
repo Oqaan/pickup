@@ -13,6 +13,7 @@ public record SeriesSummaryResponse(
                 String publicationStatus,
                 Integer totalChapters,
                 Integer totalVolumes,
+                String sourceType,
                 int adaptationCount,
                 boolean caughtUp) {
 }

@@ -54,6 +54,7 @@ public class SeriesService {
                                                         s.getPublicationStatus(),
                                                         s.getTotalChapters(),
                                                         s.getTotalVolumes(),
+                                                        s.getSourceType(),
                                                         own.size(),
                                                         caughtUp);
                                 })
@@ -112,6 +113,7 @@ public class SeriesService {
                                 series.getPublicationStatus(),
                                 series.getTotalChapters(),
                                 series.getTotalVolumes(),
+                                series.getSourceType(),
                                 series.getVerifiedAt(),
                                 aliases,
                                 related,
