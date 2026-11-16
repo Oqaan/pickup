@@ -23,6 +23,7 @@ export type SeriesDetail = {
   publicationStatus: string | null;
   totalChapters: number | null;
   totalVolumes: number | null;
+  sourceType?: string;
   verifiedAt: string | null; // no date format in JSON
   aliases: string[];
   related: RelatedSeries[];

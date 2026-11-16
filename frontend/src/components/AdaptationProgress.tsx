@@ -5,28 +5,32 @@ import CountUp from "./CountUp";
 // still ahead
 
 type Props = {
-  coveredChapter: number;
-  continueChapter: number;
-  totalChapters: number;
+  covered: number;
+  next: number;
+  total: number;
   ongoing: boolean;
+  source: "manga" | "light novel";
+  unit: "chapter" | "volume";
 };
 
 export default function AdaptationProgress({
-  coveredChapter,
-  continueChapter,
-  totalChapters,
+  covered,
+  next,
+  total,
   ongoing,
+  source,
+  unit,
 }: Props) {
   const reduceMotion = useReducedMotion();
   // Floor so it never claims 100% while a chapter is still left to read
-  const pct = Math.min(100, Math.floor((coveredChapter / totalChapters) * 100));
-  const left = Math.max(0, totalChapters - continueChapter + 1);
+  const pct = Math.min(100, Math.floor((covered / total) * 100));
+  const left = Math.max(0, total - next + 1);
 
   return (
     <div className="mt-6 max-w-xs">
       <div className="flex items-baseline justify-between gap-4">
         <p className="font-mono text-xs tracking-widest text-ash">
-          MANGA ADAPTED
+          {source.toUpperCase()} ADAPTED
         </p>
         <p className="font-display text-section text-sumi leading-none">
           <CountUp value={pct} />%
@@ -38,7 +42,7 @@ export default function AdaptationProgress({
         aria-valuenow={pct}
         aria-valuemin={0}
         aria-valuemax={100}
-        aria-label="Share of the manga the anime has adapted"
+        aria-label={`Share of the ${source} the anime has adapted`}
       >
         <motion.div
           className="h-full bg-sumi"
@@ -51,7 +55,8 @@ export default function AdaptationProgress({
         />
       </div>
       <p className="font-mono text-xs text-ash mt-2">
-        <CountUp value={left} /> chapter{left === 1 ? "" : "s"} left
+        <CountUp value={left} /> {unit}
+        {left === 1 ? "" : "s"} left
         {ongoing ? " so far" : ""}
       </p>
     </div>
