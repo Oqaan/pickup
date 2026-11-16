@@ -196,6 +196,10 @@ function SeriesView() {
   );
   const selected = picked ?? Math.max(linked, 0);
   const current = series.adaptations[selected];
+  const novel = series.sourceType === "light_novel";
+  // Light novels have no running chapter count, so the volume is the answer
+  const answer = novel ? current.continueVolume : current.continueChapter;
+  const total = novel ? series.totalVolumes : series.totalChapters;
   // Webtoons have no per-volume covers, so use the series cover instead of nothing
   const answerCover = current.coverUrl ?? series.coverUrl;
 
@@ -247,9 +251,11 @@ function SeriesView() {
 
   const shownAnswer = current.caughtUp
     ? "caught up"
-    : current.continueChapter
-      ? `chapter ${current.continueChapter}${current.continueVolume ? `, volume ${current.continueVolume}` : ""}`
-      : "no starting point";
+    : novel && current.continueVolume
+      ? `volume ${current.continueVolume}`
+      : current.continueChapter
+        ? `chapter ${current.continueChapter}${current.continueVolume ? `, volume ${current.continueVolume}` : ""}`
+        : "no starting point";
   const reportUrl = issueUrl(
     `Wrong chapter: ${series.title}, ${current.name}`,
     [
@@ -314,37 +320,43 @@ function SeriesView() {
                   You're all caught up.
                 </p>
                 <p className="font-body text-sm text-sumi/70 mt-4 max-w-prose leading-relaxed">
-                  The anime covers the manga through to the end.
+                  The anime covers the {novel ? "light novel" : "manga"} through
+                  to the end.
                 </p>
                 {notes}
               </>
-            ) : current.continueChapter ? (
+            ) : answer ? (
               <>
                 <p className="font-mono text-xs tracking-widest text-ash">
                   START READING AT
                 </p>
                 <p className="font-display text-answer text-jump mt-3">
-                  <CountUp value={current.continueChapter} />
+                  <CountUp value={answer} />
                   <span className="font-body text-base text-sumi ml-3">
-                    chapter
+                    {novel ? "volume" : "chapter"}
                   </span>
                 </p>
                 <p className="font-mono text-xs text-sumi mt-4">
-                  {current.continueVolume &&
+                  {!novel &&
+                    current.continueVolume &&
                     `Volume ${current.continueVolume} · `}
                   {current.name}
                   {current.episodeStart && current.episodeEnd
                     ? ` · Episodes ${current.episodeStart}-${current.episodeEnd}`
                     : current.episodes && ` · ${current.episodes} episodes`}
                 </p>
-                {series.totalChapters && (
+                {total && (
                   <AdaptationProgress
-                    coveredChapter={
-                      current.lastCoveredChapter ?? current.continueChapter - 1
+                    covered={
+                      novel
+                        ? answer - 1
+                        : (current.lastCoveredChapter ?? answer - 1)
                     }
-                    continueChapter={current.continueChapter}
-                    totalChapters={series.totalChapters}
+                    next={answer}
+                    total={total}
                     ongoing={series.publicationStatus === "RELEASING"}
+                    source={novel ? "light novel" : "manga"}
+                    unit={novel ? "volume" : "chapter"}
                   />
                 )}
                 {current.animeOriginal && (
