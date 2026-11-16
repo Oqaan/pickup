@@ -3,6 +3,9 @@ spring:
     name: pickup
   profiles:
     default: dev
+  datasource:
+    hikari:
+      maximum-pool-size: 2
   jpa:
     hibernate:
       ddl-auto: validate
