@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
 import type { SeriesSummary } from "../types";
 import {
@@ -118,12 +118,24 @@ export default function BrowsePage() {
   const go = (next: { sort?: Sort; page?: number }) => {
     const nextSort = next.sort ?? sort;
     const nextPage = next.page ?? 1;
+    if (nextSort === sort && nextPage === page) {
+      window.scrollTo(0, 0);
+      return;
+    }
     const search = new URLSearchParams();
     if (nextSort !== "popular") search.set("sort", nextSort);
     if (nextPage > 1) search.set("page", String(nextPage));
+    toTop.current = true;
     setParams(search);
-    window.scrollTo(0, 0);
   };
+
+  // Jumping up before the new page has rendered flashes the old page's covers for a frame
+  const toTop = useRef(false);
+  useLayoutEffect(() => {
+    if (!toTop.current) return;
+    toTop.current = false;
+    window.scrollTo(0, 0);
+  }, [page, sort]);
 
   return (
     <main className="max-w-6xl mx-auto px-6 pt-12 pb-0">
