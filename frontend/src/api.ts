@@ -57,10 +57,15 @@ const API_BASE = import.meta.env.VITE_API_URL ?? "";
 let listCache: Promise<SeriesSummary[]> | null = null;
 let listValue: SeriesSummary[] | null = null;
 const detailCache = new Map<string, Promise<SeriesDetail>>();
+const detailValues = new Map<string, SeriesDetail>();
 
 // The list if it was already downloaded, otherwise null. Lets the home show
 // its cards right away instead of the skeleton when the user comes back
 export const cachedSeriesList = () => listValue;
+
+// Same for a series, so a prefetched page opens with its data instead of the skeleton
+export const cachedSeriesDetail = (slug: string) =>
+  detailValues.get(slug) ?? null;
 
 export function fetchSeriesList(): Promise<SeriesSummary[]> {
   listCache ??= fetch(`${API_BASE}/api/series`)
@@ -82,6 +87,7 @@ export function fetchSeriesList(): Promise<SeriesSummary[]> {
 export function primeSeriesDetail(slug: string, series: SeriesDetail | null) {
   if (series && !detailCache.has(slug)) {
     detailCache.set(slug, Promise.resolve(series));
+    detailValues.set(slug, series);
   }
 }
 
@@ -95,6 +101,10 @@ export function fetchSeriesDetail(slug: string): Promise<SeriesDetail> {
       if (!res.ok) throw new Error("Failed to load series");
       return res.json() as Promise<SeriesDetail>;
     })
+    .then((detail) => {
+      detailValues.set(slug, detail);
+      return detail;
+    })
     // Same as above: a failed request must not stay in the cache
     .catch((e: Error) => {
       detailCache.delete(slug);
@@ -107,11 +117,14 @@ export function fetchSeriesDetail(slug: string): Promise<SeriesDetail> {
 
 // Loads a series before it is clicked, so the click opens it instantly.
 // Errors are ignored, the real request will report them
-export function prefetchSeriesDetail(slug: string) {
+export function prefetchSeriesDetail(slug: string, season?: string) {
   void fetchSeriesDetail(slug)
     .then((detail) => {
-      // Warm the first season's cover so the click doesn't wait on a cold fetch
-      const url = detail.adaptations[0]?.coverUrl ?? detail.coverUrl;
+      // Warm the cover of the season the page opens on, so the click doesn't wait on a cold fetch
+      const opens =
+        detail.adaptations.find((a) => a.name === season) ??
+        detail.adaptations[0];
+      const url = opens?.coverUrl ?? detail.coverUrl;
       if (!url) return;
       warmCover(url, [200, 400], ANSWER_COVER_SIZES);
     })
