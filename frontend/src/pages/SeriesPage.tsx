@@ -9,6 +9,7 @@ import {
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import type { SeriesDetail } from "../types";
 import {
+  cachedSeriesDetail,
   fetchSeriesDetail,
   prefetchSeriesDetail,
   primeSeriesDetail,
@@ -16,7 +17,7 @@ import {
 } from "../api";
 import { useSeo } from "../useSeo";
 import { seriesDescription, seriesTitle } from "../seo";
-import { ANSWER_COVER_SIZES, cover } from "../cover";
+import { ANSWER_COVER_SIZES, cover, warmCover } from "../cover";
 import CountUp from "../components/CountUp";
 import AdaptationProgress from "../components/AdaptationProgress";
 import { issueUrl } from "../issue";
@@ -26,7 +27,7 @@ function SeriesView() {
   // Start with what the middleware embedded. A blank first render is what
   // Google was reading as a soft 404
   const [series, setSeries] = useState<SeriesDetail | null>(
-    slug ? seededSeries(slug) : null,
+    slug ? (seededSeries(slug) ?? cachedSeriesDetail(slug)) : null,
   );
   const [picked, setPicked] = useState<number | null>(null);
   const [searchParams] = useSearchParams();
@@ -94,12 +95,7 @@ function SeriesView() {
   useEffect(() => {
     if (!series) return;
     for (const a of series.adaptations) {
-      if (!a.coverUrl) continue;
-      const img = new Image();
-      const warmed = cover(a.coverUrl, [200, 400], ANSWER_COVER_SIZES);
-      img.sizes = warmed.sizes;
-      img.srcset = warmed.srcSet;
-      img.src = warmed.src;
+      if (a.coverUrl) warmCover(a.coverUrl, [200, 400], ANSWER_COVER_SIZES);
     }
   }, [series]);
 

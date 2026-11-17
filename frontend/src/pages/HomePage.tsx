@@ -294,6 +294,7 @@ export default function HomePage() {
           cards={shownSeasons.map(({ slug, title, coverUrl, newSeason }) => ({
             slug,
             to: `/anime/${slug}?season=${encodeURIComponent(newSeason.name)}`,
+            season: newSeason.name,
             title,
             coverUrl: newSeason.coverUrl ?? coverUrl,
             tag: newSeason.name.toUpperCase(),

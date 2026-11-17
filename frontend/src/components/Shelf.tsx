@@ -10,6 +10,7 @@ export type ShelfCard = {
   to: string;
   title: string;
   coverUrl: string | null;
+  season?: string;
   tag?: string;
 };
 
@@ -103,8 +104,8 @@ export default function Shelf({
             key={c.to}
             to={c.to}
             onClick={onOpen}
-            onPointerEnter={() => prefetchSeriesDetail(c.slug)}
-            onFocus={() => prefetchSeriesDetail(c.slug)}
+            onPointerEnter={() => prefetchSeriesDetail(c.slug, c.season)}
+            onFocus={() => prefetchSeriesDetail(c.slug, c.season)}
             className="group block shrink-0 w-[42%] sm:w-[30%] lg:w-[calc((100%-6rem)/5)] snap-start"
           >
             <div className="spine relative aspect-2/3 bg-tone/30 overflow-hidden ring-1 ring-transparent group-hover:ring-sumi transition duration-200 group-hover:-translate-y-1">
