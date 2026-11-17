@@ -55,6 +55,7 @@ export type SeriesSummary = {
   publicationStatus?: string | null;
   totalChapters?: number | null;
   totalVolumes?: number | null;
+  sourceType?: string;
   adaptationCount?: number;
   caughtUp?: boolean;
 };

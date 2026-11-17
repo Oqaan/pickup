@@ -71,7 +71,7 @@ function SeriesView() {
       ? { title: "Not found - pickup", noindex: true }
       : series
         ? {
-            title: seriesTitle(series.title),
+            title: seriesTitle(series),
             description: seriesDescription(series),
             canonical,
             image: series.coverUrl ?? undefined,
