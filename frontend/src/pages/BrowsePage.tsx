@@ -7,7 +7,7 @@ import {
   prefetchSeriesDetail,
   seededList,
 } from "../api";
-import { cover } from "../cover";
+import { cover, warmCover } from "../cover";
 import { useSeo } from "../useSeo";
 import { saveScroll, savedScroll } from "../scroll";
 
@@ -93,6 +93,26 @@ export default function BrowsePage() {
   const pages = Math.max(1, Math.ceil(sorted.length / PER_PAGE));
   const page = Math.min(Math.max(Number(params.get("page")) || 1, 1), pages);
   const visible = sorted.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+
+  const coversOf = (n: number) =>
+    sorted
+      .slice((n - 1) * PER_PAGE, n * PER_PAGE)
+      .flatMap((s) => (s.coverUrl ? [s.coverUrl] : []));
+  const warmPage = (n: number) =>
+    coversOf(n).forEach((url) => warmCover(url, [300, 600], COVER_SIZES));
+
+  // A string, so the effect only reruns when the next page really changes
+  const nextCovers = page < pages ? coversOf(page + 1).join(" ") : "";
+  useEffect(() => {
+    if (!nextCovers) return;
+    // Give the current page's own covers a head start
+    const id = setTimeout(() => {
+      nextCovers
+        .split(" ")
+        .forEach((url) => warmCover(url, [300, 600], COVER_SIZES));
+    }, 1500);
+    return () => clearTimeout(id);
+  }, [nextCovers]);
 
   // Page 1 and the default sort stay out of the URL, so the plain /browse is the page itself
   const go = (next: { sort?: Sort; page?: number }) => {
@@ -201,6 +221,8 @@ export default function BrowsePage() {
             <button
               key={n}
               onClick={() => go({ page: n })}
+              onPointerEnter={() => warmPage(n)}
+              onFocus={() => warmPage(n)}
               aria-current={n === page ? "page" : undefined}
               className={`w-10 h-10 font-mono text-xs border cursor-pointer transition ${
                 n === page
