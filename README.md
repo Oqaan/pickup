@@ -1,8 +1,8 @@
 # pickup
 
-Ever finished an anime and wondered where to continue in the manga?
+Ever finished an anime and wondered where to continue in the manga or light novel?
 
-Most anime adaptations don't cover the entire story, and figuring out where to continue usually means bouncing between Reddit threads and wiki pages. Pickup tells you exactly which chapter and volume to start from.
+Most anime adaptations don't cover the entire story, and figuring out where to continue usually means bouncing between Reddit threads and wiki pages. Pickup tells you exactly which chapter and volume to start from, or for light novels, which volume.
 
 Live at [pickup.moe](https://pickup.moe)
 
@@ -50,7 +50,7 @@ cd frontend && npm install && npm run dev
 
 The frontend proxies anything under `/api` to the backend on port 8080, so there's nothing else to configure.
 
-Seed data lives in `backend/src/main/resources/seed/series.yaml`. It's loaded automatically if the database is empty.
+Seed data lives in `backend/src/main/resources/seed/series.yaml`. It's synced into the database on every start, so editing the file and restarting is all it takes. Series removed from the file stay in the database on purpose, so an accidental deletion can't wipe live data.
 
 To wipe the database and reload everything:
 
@@ -79,14 +79,27 @@ CLOUDINARY_URL=cloudinary://key:secret@cloud node scripts/upload-covers.mjs
 
 This one does rewrite `series.yaml` in place, swapping each MangaDex URL for a Cloudinary one. It keeps comments and formatting intact by editing line by line.
 
+Finally, refresh the "More series" suggestions and the sitemap:
+
+```
+node scripts/fetch-related.mjs
+node scripts/generate-sitemap.mjs
+```
+
+The related list is computed from shared AniList genres and tags, so a new series also shows up on the pages of the series it resembles.
+
 AniList's chapter and volume counts often include one-shots, bonus chapters, and other extras. They're useful as a starting point, but I still check finished series against the wiki before trusting the numbers.
 
 ## How it's built
 
-The backend is Spring Boot with PostgreSQL. Flyway manages the database schema, while the frontend is built with React, TypeScript, Tailwind CSS, and Fuse.js for search.
+The backend is Spring Boot with PostgreSQL. Flyway manages the database schema, while the frontend is built with React, TypeScript, Tailwind CSS, and Fuse.js for search. The frontend runs on Vercel, the backend and database on Railway.
 
 A few implementation details that aren't obvious from the code:
 
+* All the data lives in one YAML file. Fixing a wrong chapter is just a small pull request, and it's live once the backend redeploys.
+* It's a single-page app, but search engines still get real content. A Vercel Edge middleware fetches the series from the API and writes the title, meta tags, FAQ structured data and a plain HTML version into the page before it's sent. The same data rides along as JSON, so the app doesn't open on an empty skeleton.
+* API responses are cached at the edge, so rendering a page usually takes around 10 ms instead of a round trip to the backend.
+* CI runs ESLint and the production build for the frontend, and the backend tests against a real PostgreSQL through Testcontainers.
 * Flyway owns the schema. Hibernate only validates it at startup. Schema changes always go into new migration files. Old migrations stay untouched once they've been committed.
 * Database entities never leave the service layer. Every API response has its own DTO, which keeps the API stable even if the database changes and avoids a bunch of lazy-loading headaches.
 * Reading links and aliases are loaded in separate queries instead of joining everything together. JPA doesn't handle fetching multiple collection relationships in a single query very gracefully, so splitting them up keeps things predictable.
