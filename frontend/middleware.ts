@@ -94,6 +94,7 @@ type Series = {
   publicationStatus: string;
   totalChapters: number | null;
   totalVolumes: number | null;
+  sourceType?: string;
   coverUrl: string | null;
   related: Related[];
   adaptations: Adaptation[];
@@ -110,6 +111,7 @@ type Listed = {
   publicationStatus?: string | null;
   totalChapters?: number | null;
   totalVolumes?: number | null;
+  sourceType?: string;
   adaptationCount?: number;
   caughtUp?: boolean;
 };
@@ -156,6 +158,7 @@ const listData = (list: Listed[]) =>
     publicationStatus: s.publicationStatus,
     totalChapters: s.totalChapters,
     totalVolumes: s.totalVolumes,
+    sourceType: s.sourceType,
     adaptationCount: s.adaptationCount,
     caughtUp: s.caughtUp,
   }));
@@ -203,21 +206,34 @@ const ABOUT_DESCRIPTION =
 const LEGAL_TITLE = "Legal - pickup";
 const LEGAL_DESCRIPTION = "Imprint and privacy policy for pickup.moe.";
 
-function pickup(a: Adaptation): string {
+const sourceName = (sourceType?: string | null) =>
+  sourceType === "light_novel" ? "light novel" : "manga";
+
+function pickup(a: Adaptation, s: Series): string {
+  const source = sourceName(s.sourceType);
   if (a.caughtUp) {
     const upto = a.lastCoveredChapter
       ? ` through chapter ${a.lastCoveredChapter}`
       : "";
-    return `you are caught up, the anime adapts the manga${upto}`;
+    return `you are caught up, the anime adapts the ${source}${upto}`;
+  }
+  if (s.sourceType === "light_novel" && a.continueVolume) {
+    return `continue the light novel from volume ${a.continueVolume}`;
   }
   if (a.continueChapter) {
     const vol = a.continueVolume ? ` in volume ${a.continueVolume}` : "";
-    return `continue the manga from chapter ${a.continueChapter}${vol}`;
+    return `continue the ${source} from chapter ${a.continueChapter}${vol}`;
   }
   return "";
 }
 
 function statusClause(s: Series): string {
+  if (s.sourceType === "light_novel") {
+    if (s.publicationStatus === "FINISHED" && s.totalVolumes) {
+      return `The light novel is complete at ${s.totalVolumes} volumes.`;
+    }
+    return "The light novel is still ongoing.";
+  }
   if (s.publicationStatus === "FINISHED" && s.totalChapters) {
     const vol = s.totalVolumes ? ` across ${s.totalVolumes} volumes` : "";
     return `The manga is complete at ${s.totalChapters} chapters${vol}.`;
@@ -419,8 +435,11 @@ async function seriesPage(url: URL, req: Request) {
   if (!series) return unavailable(req);
   const related = series.related ?? [];
 
-  const title = `Where to continue the ${series.title} manga`;
-  const description = `Finished the ${series.title} anime? Find the exact chapter and volume to continue the manga from, for each season`;
+  const source = sourceName(series.sourceType);
+  const answer =
+    series.sourceType === "light_novel" ? "volume" : "chapter and volume";
+  const title = `Where to continue the ${series.title} ${source}`;
+  const description = `Finished the ${series.title} anime? Find the exact ${answer} to continue the ${source} from, for each season`;
   const image = series.coverUrl ?? "https://pickup.moe/og-default.jpg";
   const pageUrl = `https://pickup.moe/anime/${slug}`;
 
@@ -432,7 +451,7 @@ async function seriesPage(url: URL, req: Request) {
   const items = (series.adaptations ?? [])
     .map((a) => {
       const eps = a.episodes ? ` (${a.episodes} episodes)` : "";
-      const sentence = pickup(a);
+      const sentence = pickup(a, series);
       const tail = sentence ? `: ${esc(cap(sentence))}.` : "";
       const note = a.notes ? ` ${esc(a.notes)}` : "";
       return `<li><strong>${esc(a.name)}</strong>${eps}${tail}${note}</li>`;
@@ -440,7 +459,7 @@ async function seriesPage(url: URL, req: Request) {
     .join("");
 
   const links = series.readingLinks?.length
-    ? `<p>Read the manga: ${series.readingLinks
+    ? `<p>Read the ${source}: ${series.readingLinks
         .map((l) => `<a href="${esc(l.url)}">${esc(l.label)}</a>`)
         .join(", ")}.</p>`
     : "";
@@ -462,7 +481,7 @@ async function seriesPage(url: URL, req: Request) {
   </article>${more}`;
 
   const faqAnswer = (series.adaptations ?? [])
-    .map((a) => ({ a, s: pickup(a) }))
+    .map((a) => ({ a, s: pickup(a, series) }))
     .filter(({ s }) => s)
     .map(({ a, s }) => `After ${a.name}, ${s}.`)
     .join(" ");
@@ -471,13 +490,13 @@ async function seriesPage(url: URL, req: Request) {
   if (faqAnswer) {
     questions.push({
       "@type": "Question",
-      name: `Where should I start the ${series.title} manga after the anime?`,
+      name: `Where should I start the ${series.title} ${source} after the anime?`,
       acceptedAnswer: { "@type": "Answer", text: faqAnswer },
     });
   }
   questions.push({
     "@type": "Question",
-    name: `Is the ${series.title} manga finished?`,
+    name: `Is the ${series.title} ${source} finished?`,
     acceptedAnswer: { "@type": "Answer", text: statusClause(series) },
   });
 

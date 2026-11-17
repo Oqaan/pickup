@@ -9,10 +9,15 @@ export const ABOUT_DESCRIPTION =
 export const LEGAL_TITLE = "Legal - pickup";
 export const LEGAL_DESCRIPTION = "Imprint and privacy policy for pickup.moe.";
 
-export function seriesTitle(title: string) {
-  return `Where to continue the ${title} manga`;
+const sourceName = (sourceType?: string | null) =>
+  sourceType === "light_novel" ? "light novel" : "manga";
+
+export function seriesTitle(series: SeriesDetail) {
+  return `Where to continue the ${series.title} ${sourceName(series.sourceType)}`;
 }
 
 export function seriesDescription(series: SeriesDetail) {
-  return `Finished the ${series.title} anime? Find the exact chapter and volume to continue the manga from, for each season`;
+  const answer =
+    series.sourceType === "light_novel" ? "volume" : "chapter and volume";
+  return `Finished the ${series.title} anime? Find the exact ${answer} to continue the ${sourceName(series.sourceType)} from, for each season`;
 }

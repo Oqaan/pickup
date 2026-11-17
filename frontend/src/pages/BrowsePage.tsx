@@ -27,13 +27,18 @@ type Sort = (typeof SORTS)[number]["id"];
 
 // Caught up wins, since then there is nothing left to read either way
 function tag(s: SeriesSummary) {
+  const source = s.sourceType === "light_novel" ? "NOVEL" : "MANGA";
   if (s.caughtUp) return { label: "ANIME CAUGHT UP", loud: false };
   if (s.publicationStatus === "FINISHED")
-    return { label: "MANGA IS AHEAD", loud: true };
-  return { label: "MANGA ONGOING", loud: false };
+    return { label: `${source} IS AHEAD`, loud: true };
+  return { label: `${source} ONGOING`, loud: false };
 }
 
 function size(s: SeriesSummary) {
+  if (s.sourceType === "light_novel") {
+    if (s.publicationStatus !== "FINISHED" || !s.totalVolumes) return "Ongoing";
+    return `${s.totalVolumes} volumes`;
+  }
   if (s.publicationStatus !== "FINISHED" || !s.totalChapters) return "Ongoing";
   const vol = s.totalVolumes ? ` · ${s.totalVolumes} vol` : "";
   return `${s.totalChapters} chapters${vol}`;
