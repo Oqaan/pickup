@@ -22,5 +22,14 @@ export function cover(url: string, widths: number[], sizes: string) {
   };
 }
 
+// Loads a cover into the browser cache, so the real <img> later shows it at once
+export function warmCover(url: string, widths: number[], sizes: string) {
+  const img = new Image();
+  const warmed = cover(url, widths, sizes);
+  img.sizes = warmed.sizes;
+  img.srcset = warmed.srcSet;
+  img.src = warmed.src;
+}
+
 // Shared with the hover prefetch, so both ask for the same file
 export const ANSWER_COVER_SIZES = "(min-width: 1024px) 288px, 176px";
