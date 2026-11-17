@@ -20,7 +20,7 @@ For each season I:
 
 Not every anime ends neatly at the end of a chapter. Sometimes a finale only adapts half a chapter, and sometimes a series barely follows the manga at all. *Tokyo Ghoul √A* is the classic example. Whenever that happens, I leave a note instead of pretending there's a clean chapter to continue from.
 
-Cover art comes from MangaDex and is re-hosted on Cloudinary. The popularity ordering comes from MyAnimeList member counts, blended so a series ranks by whichever medium it's bigger in, anime or manga. I still look up every ID manually because title searches tend to return spin-offs, one-shots, and alternate editions just as often as the series I actually want.
+Cover art comes from MangaDex, or from the English publisher for light novels, and is re-hosted on Cloudinary. The popularity ordering comes from MyAnimeList member counts, blended so a series ranks by whichever medium it's bigger in, anime or manga. I still look up every ID manually because title searches tend to return spin-offs, one-shots, and alternate editions just as often as the series I actually want.
 
 ## Running it locally
 
@@ -108,6 +108,6 @@ A few implementation details that aren't obvious from the code:
 
 Pickup doesn't host manga or link to unofficial scans.
 
-Cover art originates from MangaDex and is served through Cloudinary, and whenever official reading platforms are available, those are linked instead.
+Cover art originates from MangaDex or the light novel's publisher and is served through Cloudinary, and whenever official reading platforms are available, those are linked instead.
 
 If you spot an incorrect chapter or a missing series, feel free to open an issue.

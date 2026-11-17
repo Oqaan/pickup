@@ -36,8 +36,13 @@ const warms = [];
 
 const slugRe = /^\s*-?\s*slug:\s*(\S+)/;
 // Covers come from MangaDex, series it doesn't have covers for, such as
-// webtoons, fall back to the images on their fandom wiki
-const COVER_HOSTS = ["uploads.mangadex.org", "static.wikia.nocookie.net"];
+// webtoons, fall back to the images on their fandom wiki. Light novels use the
+// publisher's covers, because Fandom's image host blocks scripts
+const COVER_HOSTS = [
+  "uploads.mangadex.org",
+  "static.wikia.nocookie.net",
+  "sevenseasentertainment.com",
+];
 const sourceRe = new RegExp(
   `^(\\s*)coverUrl:\\s*(https://(?:${COVER_HOSTS.map((h) => h.replace(/\./g, "\\.")).join("|")})/\\S+)`,
 );
