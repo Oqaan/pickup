@@ -42,6 +42,7 @@ const COVER_HOSTS = [
   "uploads.mangadex.org",
   "static.wikia.nocookie.net",
   "sevenseasentertainment.com",
+  "images.yenpress.com",
 ];
 const sourceRe = new RegExp(
   `^(\\s*)coverUrl:\\s*(https://(?:${COVER_HOSTS.map((h) => h.replace(/\./g, "\\.")).join("|")})/\\S+)`,
