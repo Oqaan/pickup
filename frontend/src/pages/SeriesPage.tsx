@@ -20,6 +20,7 @@ import { seriesDescription, seriesTitle } from "../seo";
 import { ANSWER_COVER_SIZES, cover, warmCover } from "../cover";
 import CountUp from "../components/CountUp";
 import AdaptationProgress from "../components/AdaptationProgress";
+import SeasonPicker from "../components/SeasonPicker";
 import { issueUrl } from "../issue";
 
 function SeriesView() {
@@ -192,10 +193,17 @@ function SeriesView() {
   );
   const selected = picked ?? Math.max(linked, 0);
   const current = series.adaptations[selected];
+  const seasonNames = series.adaptations.map((a) => a.name);
   const novel = series.sourceType === "light_novel";
   // Light novels have no running chapter count, so the volume is the answer
   const answer = novel ? current.continueVolume : current.continueChapter;
   const total = novel ? series.totalVolumes : series.totalChapters;
+  // Where each season stops in the source, for the segments in the progress bar
+  const seasonEnds = series.adaptations.map((a) => {
+    if (a.caughtUp) return total;
+    if (novel) return a.continueVolume ? a.continueVolume - 1 : null;
+    return a.lastCoveredChapter ?? (a.continueChapter ? a.continueChapter - 1 : null);
+  });
   // Webtoons have no per-volume covers, so use the series cover instead of nothing
   const answerCover = current.coverUrl ?? series.coverUrl;
 
@@ -286,24 +294,11 @@ function SeriesView() {
           HOW FAR HAVE YOU WATCHED?
         </p>
 
-        <div className="flex flex-wrap gap-2 mt-4">
-          {series.adaptations.map((a, i) => (
-            <button
-              key={a.name}
-              onClick={() => setPicked(i)}
-              aria-pressed={i === selected}
-              className={`font-body text-sm px-4 py-2 border cursor-pointer transition ${
-                i < selected
-                  ? "border-sumi bg-sumi/10 text-sumi"
-                  : i === selected
-                    ? "border-sumi bg-sumi text-paper"
-                    : "border-tone text-ash hover:border-sumi hover:text-sumi"
-              }`}
-            >
-              {a.name}
-            </button>
-          ))}
-        </div>
+        <SeasonPicker
+          names={seasonNames}
+          selected={selected}
+          onPick={setPicked}
+        />
 
         <div className="mt-12 sm:mt-16 pt-8 border-t border-tone flex flex-col sm:flex-row gap-6 sm:gap-8 sm:items-start relative">
           <div className="flex-1 min-w-0">
@@ -319,6 +314,18 @@ function SeriesView() {
                   The anime covers the {novel ? "light novel" : "manga"} through
                   to the end.
                 </p>
+                {total && (
+                  <AdaptationProgress
+                    covered={total}
+                    next={total + 1}
+                    total={total}
+                    ends={seasonEnds}
+                    selected={selected}
+                    ongoing={false}
+                    source={novel ? "light novel" : "manga"}
+                    unit={novel ? "volume" : "chapter"}
+                  />
+                )}
                 {notes}
               </>
             ) : answer ? (
@@ -350,6 +357,8 @@ function SeriesView() {
                     }
                     next={answer}
                     total={total}
+                    ends={seasonEnds}
+                    selected={selected}
                     ongoing={series.publicationStatus === "RELEASING"}
                     source={novel ? "light novel" : "manga"}
                     unit={novel ? "volume" : "chapter"}
